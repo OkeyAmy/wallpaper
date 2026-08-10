@@ -1,0 +1,43 @@
+# Anime Wallpaper Archive
+
+> A curated, automatically synced archive of 21 anime wallpapers,
+> published as a static site at https://wallpapers.okeyamy.xyz and indexed by extracted colour palette.
+
+Last synced: 2026-08-10T08:48:47+00:00
+
+## What it is
+
+An open archive of anime wallpapers. A scheduled job reads curated community
+feeds daily, rejects anything below 1280x720, converts each image to WebP,
+extracts a five-colour dominant palette, and appends it to a static JSON index.
+No accounts, no tracking, no ads, no paywall.
+
+## Collection
+
+- Total wallpapers: 21
+- Desktop / ultrawide (landscape): 21
+- Phone (portrait): 0
+- Maximum resolution: up to 3840x2160 (4K)
+- Format: WebP, quality 82, with a 640px thumbnail per item
+- Source feeds: manual ingest
+
+## Distinctive feature
+
+Every wallpaper is indexed by the colours actually present in the image rather
+than by manual tags. Users filter by hue to find a wallpaper matching a desktop
+theme, and copy the extracted hex values directly into terminal, window manager
+or editor colourschemes. This is aimed at the Linux ricing use case
+(Hyprland, i3, AwesomeWM, Waybar, Kitty, Neovim).
+
+## Machine-readable index
+
+- https://wallpapers.okeyamy.xyz/data/wallpapers.json — full index: id, dimensions, aspect ratio, byte
+  size, five-colour palette, source subreddit, original poster, permalink.
+- https://wallpapers.okeyamy.xyz/sitemap.xml
+- JSON-LD (ImageGallery + FAQPage) is embedded in the homepage.
+
+## Rights
+
+Copyright remains with the original artists. Each item retains a link to the
+source post and the account that posted it. Takedown requests are handled via
+an issue on the project repository and are applied at the next sync.

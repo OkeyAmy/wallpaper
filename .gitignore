@@ -1,0 +1,36 @@
+# ── local-only working files ─────────────────────────────────────
+# Drop zone for wallpapers you are about to ingest. The ingest script
+# consumes these and writes the processed copy into wallpapers/, so the
+# originals never belong in the repo.
+incoming/*
+!incoming/.gitkeep
+
+# Local session/tooling state
+.remember/
+.claude/
+.impeccable/
+*.local
+*.log
+NOTES.local.md
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+.mypy_cache/
+.ruff_cache/
+.pytest_cache/
+
+# Editors / OS
+.vscode/
+.idea/
+*.swp
+.DS_Store
+Thumbs.db
+
+# Secrets — Reddit credentials live in GitHub Actions secrets, never here
+.env
+.env.*
+!.env.example

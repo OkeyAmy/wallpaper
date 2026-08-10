@@ -1,0 +1,64 @@
+name: sync wallpapers
+
+on:
+  schedule:
+    - cron: "0 6 * * *"        # 06:00 UTC daily
+  workflow_dispatch:           # manual "Run workflow" button
+    inputs:
+      max_new:
+        description: "Max wallpapers to add this run"
+        default: "40"
+
+permissions:
+  contents: write              # the job commits new wallpapers back to the repo
+
+concurrency:
+  group: sync
+  cancel-in-progress: false    # never interrupt a run mid-commit
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Install dependencies
+        run: pip install -r scripts/requirements.txt
+
+      - name: Pull new wallpapers
+        env:
+          REDDIT_CLIENT_ID: ${{ secrets.REDDIT_CLIENT_ID }}
+          REDDIT_CLIENT_SECRET: ${{ secrets.REDDIT_CLIENT_SECRET }}
+          REDDIT_USERNAME: ${{ secrets.REDDIT_USERNAME }}
+          REDDIT_PASSWORD: ${{ secrets.REDDIT_PASSWORD }}
+          # via env, never interpolated into the shell line: a workflow_dispatch
+          # input is attacker-controlled text as far as the runner is concerned
+          MAX_NEW: ${{ inputs.max_new || '40' }}
+        run: |
+          case "$MAX_NEW" in
+            ''|*[!0-9]*) echo "max_new must be an integer" >&2; exit 1 ;;
+          esac
+          python scripts/sync_reddit.py --max-new "$MAX_NEW"
+
+      - name: Rebuild index, sitemap and structured data
+        run: python scripts/build_site.py
+
+      - name: Commit
+        run: |
+          git config user.name  "wallpaper-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add -A wallpapers data index.html sitemap.xml robots.txt llms.txt
+          if git diff --staged --quiet; then
+            echo "nothing new to commit"
+            exit 0
+          fi
+          count=$(git diff --staged --name-only -- wallpapers | grep -c 'thumbs/' || true)
+          git commit -m "sync: ${count} new wallpapers"
+          git push

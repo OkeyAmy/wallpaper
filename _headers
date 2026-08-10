@@ -1,0 +1,20 @@
+# Cloudflare Pages header rules.
+
+/*
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  X-Frame-Options: DENY
+  Permissions-Policy: geolocation=(), microphone=(), camera=(), interest-cohort=()
+  Content-Security-Policy: default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; script-src 'self'; connect-src 'self'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'
+
+# Content-hashed filenames — safe to cache hard and forever.
+/wallpapers/*
+  Cache-Control: public, max-age=31536000, immutable
+  X-Robots-Tag: index
+
+# The index changes on every sync; revalidate so new wallpapers show up.
+/data/wallpapers.json
+  Cache-Control: public, max-age=0, must-revalidate
+
+/assets/*
+  Cache-Control: public, max-age=86400
