@@ -8,6 +8,9 @@ on:
       max_new:
         description: "Max wallpapers to add this run"
         default: "40"
+      max_items:
+        description: "Archive size cap (older entries are pruned)"
+        default: "2500"
 
 permissions:
   contents: write              # the job commits new wallpapers back to the repo
@@ -45,20 +48,71 @@ jobs:
           case "$MAX_NEW" in
             ''|*[!0-9]*) echo "max_new must be an integer" >&2; exit 1 ;;
           esac
+          if [ -z "$REDDIT_CLIENT_ID" ]; then
+            echo "::warning::No Reddit credentials configured — the API blocks"\
+                 "anonymous requests from CI, so this run will find nothing."
+          fi
           python scripts/sync_reddit.py --max-new "$MAX_NEW"
+
+      - name: Prune to the archive size cap
+        env:
+          MAX_ITEMS: ${{ inputs.max_items || '2500' }}
+        run: |
+          case "$MAX_ITEMS" in
+            ''|*[!0-9]*) echo "max_items must be an integer" >&2; exit 1 ;;
+          esac
+          python scripts/prune.py --max-items "$MAX_ITEMS"
 
       - name: Rebuild index, sitemap and structured data
         run: python scripts/build_site.py
+
+      - name: Verify the build is servable
+        run: |
+          python - <<'PY'
+          import json, pathlib, re, sys
+
+          root = pathlib.Path(".")
+          data = json.loads((root / "data/wallpapers.json").read_text())
+          items = data["items"]
+
+          missing = [i["id"] for i in items
+                     if not (root / i["file"]).exists() or not (root / i["thumb"]).exists()]
+          if missing:
+              sys.exit(f"manifest references {len(missing)} missing files: {missing[:5]}")
+
+          doc = (root / "index.html").read_text()
+          for block in re.findall(r'<script type="application/ld\+json"[^>]*>(.*?)</script>',
+                                  doc, re.S):
+              json.loads(block.replace('<\\/', '</'))     # raises on malformed JSON-LD
+
+          # Cloudflare Pages refuses a deployment above 20,000 files
+          files = sum(1 for p in root.rglob("*")
+                      if p.is_file() and ".git" not in p.parts)
+          if files > 19_000:
+              sys.exit(f"{files} files — approaching the Pages 20,000 limit")
+
+          print(f"ok: {len(items)} items, {files} files")
+          PY
 
       - name: Commit
         run: |
           git config user.name  "wallpaper-bot"
           git config user.email "actions@users.noreply.github.com"
-          git add -A wallpapers data index.html sitemap.xml robots.txt llms.txt
+          git add -A wallpapers data assets index.html sitemap.xml robots.txt llms.txt
           if git diff --staged --quiet; then
             echo "nothing new to commit"
             exit 0
           fi
-          count=$(git diff --staged --name-only -- wallpapers | grep -c 'thumbs/' || true)
+          count=$(git diff --staged --name-only --diff-filter=A -- wallpapers/thumbs | wc -l)
           git commit -m "sync: ${count} new wallpapers"
-          git push
+
+          # checkout is shallow, so a plain `pull --rebase` can fail for want of
+          # a merge base — and it would fail precisely when the remote has moved,
+          # which is the only case it exists to handle. Try the push first and
+          # only deepen history on the retry path, where the cost is rare.
+          if ! git push origin "HEAD:${GITHUB_REF_NAME}"; then
+            echo "push rejected — deepening history and rebasing onto the remote"
+            git fetch --deepen=50 origin "${GITHUB_REF_NAME}"
+            git rebase "origin/${GITHUB_REF_NAME}"
+            git push origin "HEAD:${GITHUB_REF_NAME}"
+          fi

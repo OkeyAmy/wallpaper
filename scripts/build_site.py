@@ -27,10 +27,27 @@ STATIC_LINKS = 120       # additional text-only links for crawl depth
 LD_ITEMS = 100           # items described in JSON-LD
 
 
-def stamp_manifest(items: list[dict]) -> str:
-    generated = datetime.now(timezone.utc).isoformat(timespec="seconds")
+def stamp_manifest(items: list[dict]) -> tuple[str, bool]:
+    """Write the manifest, keeping the old timestamp when nothing changed.
+
+    A fresh timestamp on every run would make each scheduled build produce a
+    diff even when the sync found nothing, so the archive would collect an
+    empty commit and trigger a pointless redeploy every single day. The
+    timestamp only moves when the item set actually moves.
+    """
+    previous = {}
+    if MANIFEST.exists():
+        try:
+            previous = json.loads(MANIFEST.read_text())
+        except json.JSONDecodeError:
+            previous = {}
+
+    unchanged = previous.get("items") == items and bool(previous.get("generated"))
+    generated = previous["generated"] if unchanged else \
+        datetime.now(timezone.utc).isoformat(timespec="seconds")
+
     MANIFEST.write_text(json.dumps({"generated": generated, "items": items}, indent=1))
-    return generated
+    return generated, not unchanged
 
 
 def replace_block(text: str, tag: str, payload: str) -> str:
@@ -319,7 +336,7 @@ def main() -> int:
     # newest first, so the static fallback and JSON-LD show current work
     items.sort(key=lambda x: (x.get("added", ""), x.get("id", "")), reverse=True)
 
-    generated = stamp_manifest(items)
+    generated, changed = stamp_manifest(items)
 
     doc = INDEX.read_text()
     doc = replace_block(doc, "SEO:LD", build_jsonld(items, generated))
@@ -329,11 +346,15 @@ def main() -> int:
     (ROOT / "sitemap.xml").write_text(build_sitemap(generated))
     (ROOT / "robots.txt").write_text(build_robots())
     (ROOT / "llms.txt").write_text(build_llms(items, generated))
-    if items:
+
+    # the OG card is a pure function of the newest items, so only redraw it
+    # when they changed — PNG output is not byte-stable enough to rely on
+    if items and (changed or not (ROOT / "assets" / "og.png").exists()):
         build_og(items)
 
     total = sum(it.get("bytes", 0) for it in items)
-    print(f"built {len(items)} items / {total / 1e6:.1f} MB / generated {generated}")
+    state = "changed" if changed else "unchanged"
+    print(f"built {len(items)} items / {total / 1e6:.1f} MB / {state} / generated {generated}")
     return 0
 
 
