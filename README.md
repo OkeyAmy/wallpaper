@@ -1,14 +1,15 @@
 # wallpapers.okeyamy.xyz
 
-A self-updating anime wallpaper archive. A scheduled job reads curated
-subreddits daily, filters and re-encodes what it finds, extracts a colour
+A self-updating anime wallpaper archive. A scheduled job pulls from curated
+sources daily, filters and re-encodes what it finds, extracts a colour
 palette from each image, and commits the result. Cloudflare Pages serves the
 repo as a static site — there is no server, no database, and no build step.
 
 ```
 GitHub Actions (daily cron)
-  └─ sync_reddit.py    fetch → filter → dedupe → WebP → palette
-  └─ build_site.py     manifest + JSON-LD + sitemap + robots + llms.txt + OG card
+  └─ sync_danbooru.py   fetch → filter → dedupe → WebP → palette
+  └─ prune.py           drop oldest entries once a free-tier ceiling is hit
+  └─ build_site.py      manifest + JSON-LD + sitemap + robots + llms.txt + OG card
   └─ git push
         └─ Cloudflare Pages redeploys automatically
 ```
@@ -32,8 +33,11 @@ only code and a JSON manifest and stays a few megabytes no matter how long
 the sync runs — which matters because deleting a file from git does not
 reclaim its history, so an image-in-repo archive grows forever.
 
-Set these and the pipeline uses R2; leave them unset and it falls back to
-writing into `wallpapers/` so the project still runs with no cloud account:
+Set these and the pipeline uses R2. Locally, leaving them unset falls back to
+writing into `wallpapers/` so the project still runs with no cloud account —
+but the GitHub Actions workflow requires all five and fails its preflight
+check without them, rather than silently publishing a manifest that points
+at storage nothing was actually uploaded to:
 
 ```
 R2_ACCOUNT_ID  R2_ACCESS_KEY_ID  R2_SECRET_ACCESS_KEY  R2_BUCKET
@@ -62,24 +66,34 @@ Set in `scripts/pipeline.py`:
 - WebP quality 82, plus a 640px thumbnail
 - Deduplicated by SHA-256 **and** by difference hash, so the same image
   reposted at a different size or JPEG quality is caught too
-- NSFW-flagged, video and gallery posts are skipped
+- Rejected as a duplicate before anything is uploaded, not after — a
+  content-addressed key means a duplicate would otherwise collide with the
+  original's storage location
+- Danbooru queries are `rating:general` only
 
-## Reddit credentials
+## Adding your own wallpapers
 
-Anonymous access works locally but Reddit generally blocks the public JSON
-endpoints from cloud IPs, so GitHub Actions needs OAuth. Create a **script**
-app at https://www.reddit.com/prefs/apps, then add four repository secrets
-(Settings → Secrets and variables → Actions):
+Drop image files into `incoming/` and run `scripts/ingest_local.py`. To credit
+wherever an image actually came from, add a same-named `.source` sidecar:
 
-`REDDIT_CLIENT_ID`, `REDDIT_CLIENT_SECRET`, `REDDIT_USERNAME`, `REDDIT_PASSWORD`
+```
+incoming/nice.png
+incoming/nice.png.source
+```
 
-Without them the workflow still runs; it just tends to get rate-limited.
+```
+https://twitter.com/artist/status/12345
+artist_handle
+```
+
+Line 1 is the source link, line 2 is the artist/handle (optional). Both files
+are consumed on ingest — the sidecar is deleted along with the source image
+once its contents are written into the item's `permalink`/`author` fields.
 
 ## Deploying
 
-Hosting is **Cloudflare Pages**, not Vercel: static egress is unmetered, which
-is the entire cost model of a wallpaper site. Vercel's Hobby tier caps
-bandwidth at 100 GB/month and disallows commercial use.
+Static egress on Cloudflare Pages is unmetered, which matters because a
+wallpaper site's entire cost is bandwidth.
 
 1. Push this repo to GitHub (public — Actions minutes are unlimited on public repos).
 2. R2 → Create bucket. Add an R2 API token (Object Read & Write) and set the
@@ -103,17 +117,6 @@ only, so the actual defence is at the edge — in the Cloudflare dashboard:
 
 That breaks the sequential crawl pattern used to clone a whole gallery without
 affecting anyone browsing normally.
-
-## SEO / AI discoverability
-
-The gallery renders client-side, so the build step injects content crawlers
-can actually read:
-
-- A static `<a>` + `<img>` gallery inside `#grid`, replaced by the interactive
-  grid once JS loads (and left in place if the index fails to load)
-- JSON-LD `ImageGallery` (every item, with dimensions and credit) and `FAQPage`
-- `sitemap.xml`, `robots.txt`, and `llms.txt` — a plain-text brief for AI crawlers
-- Per-wallpaper deep links (`/#w-<id>`) that update the page title
 
 ## Licence
 
