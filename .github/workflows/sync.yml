@@ -10,10 +10,20 @@ on:
         default: "40"
       max_items:
         description: "Archive size cap (older entries are pruned)"
-        default: "2500"
+        default: "4000"
 
 permissions:
-  contents: write              # the job commits new wallpapers back to the repo
+  contents: write              # the job commits the manifest back to the repo
+
+# Images go to R2, so the repository only ever carries code and a manifest.
+# Without these the pipeline falls back to committing images into the repo,
+# which works but makes the repo grow without bound.
+env:
+  R2_ACCOUNT_ID: ${{ secrets.R2_ACCOUNT_ID }}
+  R2_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
+  R2_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
+  R2_BUCKET: ${{ secrets.R2_BUCKET }}
+  R2_PUBLIC_BASE: ${{ secrets.R2_PUBLIC_BASE }}
 
 concurrency:
   group: sync
@@ -54,14 +64,15 @@ jobs:
           fi
           python scripts/sync_reddit.py --max-new "$MAX_NEW"
 
-      - name: Prune to the archive size cap
+      - name: Prune to the free-tier ceiling
         env:
-          MAX_ITEMS: ${{ inputs.max_items || '2500' }}
+          MAX_ITEMS: ${{ inputs.max_items || '4000' }}
         run: |
           case "$MAX_ITEMS" in
             ''|*[!0-9]*) echo "max_items must be an integer" >&2; exit 1 ;;
           esac
-          python scripts/prune.py --max-items "$MAX_ITEMS"
+          # 8 GiB keeps storage under R2's 10 GB free tier with headroom
+          python scripts/prune.py --max-items "$MAX_ITEMS" --max-bytes 8589934592
 
       - name: Rebuild index, sitemap and structured data
         run: python scripts/build_site.py
@@ -75,10 +86,13 @@ jobs:
           data = json.loads((root / "data/wallpapers.json").read_text())
           items = data["items"]
 
-          missing = [i["id"] for i in items
-                     if not (root / i["file"]).exists() or not (root / i["thumb"]).exists()]
-          if missing:
-              sys.exit(f"manifest references {len(missing)} missing files: {missing[:5]}")
+          # in R2 mode the images are not on disk, so only check local mode
+          if not data.get("cdn"):
+              missing = [i["id"] for i in items
+                         if not (root / i["file"]).exists()
+                         or not (root / i["thumb"]).exists()]
+              if missing:
+                  sys.exit(f"manifest references {len(missing)} missing files: {missing[:5]}")
 
           doc = (root / "index.html").read_text()
           for block in re.findall(r'<script type="application/ld\+json"[^>]*>(.*?)</script>',

@@ -14,6 +14,8 @@ from pathlib import Path
 
 from PIL import Image
 
+from storage import get_storage
+
 # Pillow refuses very large images by default (decompression-bomb guard).
 # Wallpapers are legitimately big, so raise the ceiling rather than remove it.
 Image.MAX_IMAGE_PIXELS = 120_000_000
@@ -203,6 +205,15 @@ def slugify(text: str, limit: int = 70) -> str:
 
 # --- ingest ----------------------------------------------------------------
 
+def _encode(img: Image.Image, quality: int) -> bytes:
+    """WebP bytes for an image, without touching the filesystem — the storage
+    backend decides where (or whether) they land on disk."""
+    import io
+    buf = io.BytesIO()
+    img.convert("RGB").save(buf, "WEBP", quality=quality, method=5)
+    return buf.getvalue()
+
+
 def ingest_image(
     raw: bytes,
     *,
@@ -213,6 +224,7 @@ def ingest_image(
     author: str = "",
     permalink: str = "",
     tags: list[str] | None = None,
+    storage=None,
 ) -> Item | None:
     """Decode, validate, re-encode and describe one image.
 
@@ -243,26 +255,26 @@ def ingest_image(
     if max(full.width, full.height) > MAX_EDGE:
         full.thumbnail((MAX_EDGE, MAX_EDGE), Image.Resampling.LANCZOS)
 
-    FULL_DIR.mkdir(parents=True, exist_ok=True)
-    THUMB_DIR.mkdir(parents=True, exist_ok=True)
+    full_key = f"wallpapers/{ident}.webp"
+    thumb_key = f"wallpapers/thumbs/{ident}.webp"
 
-    full_path = FULL_DIR / f"{ident}.webp"
-    thumb_path = THUMB_DIR / f"{ident}.webp"
-
-    full.convert("RGB").save(full_path, "WEBP", quality=FULL_QUALITY, method=5)
-
+    full_bytes = _encode(full, FULL_QUALITY)
     thumb = img.copy()
     thumb.thumbnail((THUMB_WIDTH, THUMB_WIDTH * 3), Image.Resampling.LANCZOS)
-    thumb.convert("RGB").save(thumb_path, "WEBP", quality=THUMB_QUALITY, method=5)
+    thumb_bytes = _encode(thumb, THUMB_QUALITY)
+
+    store = storage or get_storage()
+    store.put(full_key, full_bytes)
+    store.put(thumb_key, thumb_bytes)
 
     return Item(
         id=ident,
-        file=f"wallpapers/{ident}.webp",
-        thumb=f"wallpapers/thumbs/{ident}.webp",
+        file=full_key,
+        thumb=thumb_key,
         w=full.width,
         h=full.height,
         ratio=aspect_label(full.width, full.height),
-        bytes=full_path.stat().st_size,
+        bytes=len(full_bytes),
         palette=palette,
         source=source,
         added=added,
@@ -296,8 +308,8 @@ def is_duplicate(candidate: Item, existing: list[dict]) -> bool:
     return False
 
 
-def discard(item: Item) -> None:
-    """Remove files written for an item we then decided to reject."""
-    for rel in (item.file, item.thumb):
-        p = ROOT / rel
-        p.unlink(missing_ok=True)
+def discard(item: Item, storage=None) -> None:
+    """Remove whatever was written for an item we then decided to reject."""
+    store = storage or get_storage()
+    for key in (item.file, item.thumb):
+        store.delete(key)

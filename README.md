@@ -19,10 +19,39 @@ GitHub Actions (daily cron)
 | --- | --- |
 | `index.html` | The whole site. Static gallery is injected at build time. |
 | `assets/` | Stylesheet, runtime, favicon, generated OG card |
-| `wallpapers/` | Processed WebP images + `thumbs/` (committed — this is the site's content) |
 | `data/wallpapers.json` | The index the frontend reads |
+| `wallpapers/` | Processed WebP images — only in local mode; empty once storage is on R2 |
 | `incoming/` | Local drop zone for your own uploads (git-ignored) |
 | `scripts/` | The pipeline |
+| `_headers`, `robots.txt`, `sitemap.xml`, `llms.txt` | Generated — edit `build_site.py`, not these |
+
+## Storage
+
+Images live in **Cloudflare R2**, not in git. The repository therefore holds
+only code and a JSON manifest and stays a few megabytes no matter how long
+the sync runs — which matters because deleting a file from git does not
+reclaim its history, so an image-in-repo archive grows forever.
+
+Set these and the pipeline uses R2; leave them unset and it falls back to
+writing into `wallpapers/` so the project still runs with no cloud account:
+
+```
+R2_ACCOUNT_ID  R2_ACCESS_KEY_ID  R2_SECRET_ACCESS_KEY  R2_BUCKET
+R2_PUBLIC_BASE   # public bucket URL, e.g. https://cdn.okeyamy.xyz
+```
+
+`R2_PUBLIC_BASE` also drives the `img-src` in the generated CSP, so the
+image host can never fall out of sync with the security policy.
+
+### Why this cannot exceed the free tier
+
+`prune.py` runs before every build and drops the oldest entries once either
+ceiling is reached:
+
+- **8 GiB stored** — under R2's 10 GB free allowance, with headroom
+- **4,000 items** — well under Cloudflare Pages' 20,000-file deploy limit
+
+R2 bills nothing for egress, so traffic alone can never generate a charge.
 
 ## Ingest policy
 
@@ -48,12 +77,18 @@ Without them the workflow still runs; it just tends to get rate-limited.
 
 ## Deploying
 
+Hosting is **Cloudflare Pages**, not Vercel: static egress is unmetered, which
+is the entire cost model of a wallpaper site. Vercel's Hobby tier caps
+bandwidth at 100 GB/month and disallows commercial use.
+
 1. Push this repo to GitHub (public — Actions minutes are unlimited on public repos).
-2. Cloudflare Pages → Create project → connect the repo.
+2. R2 → Create bucket. Add an R2 API token (Object Read & Write) and set the
+   five `R2_*` values as repository secrets.
+3. Give the bucket a public URL: either enable its `r2.dev` domain or attach a
+   custom one such as `cdn.okeyamy.xyz`. That value is `R2_PUBLIC_BASE`.
+4. Cloudflare Pages → Create project → connect the repo.
    Build command: *none*. Output directory: `/`.
-3. Custom domain → `wallpapers.okeyamy.xyz`.
-4. Point the `okeyamy.xyz` nameservers at Cloudflare from your registrar (gen.xyz),
-   so the subdomain and the bot rules live in the same place.
+5. Custom domain → `wallpapers.okeyamy.xyz`.
 
 ### Anti-scraping
 

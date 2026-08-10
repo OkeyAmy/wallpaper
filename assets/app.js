@@ -32,6 +32,7 @@ const state = {
   sort: 'new',
   lbIndex: -1,
   seed: Date.now(),
+  cdn: '',
 };
 
 /* ── colour utils ────────────────────────────────────────────── */
@@ -106,6 +107,13 @@ async function boot() {
     fail(err);
     return;
   }
+
+  // only accept an https origin as the CDN base, so a tampered manifest
+  // cannot repoint every image at an arbitrary scheme
+  try {
+    const u = new URL(data.cdn);
+    if (u.protocol === 'https:') state.cdn = u.origin + u.pathname.replace(/\/$/, '');
+  } catch { state.cdn = ''; }
 
   state.all = (data.items || []).map((it, i) => ({
     ...it,
@@ -264,11 +272,14 @@ const escapeAttr = escapeHtml;
 // only ever emit a literal hex colour into a style attribute
 const safeHex = c => (/^#[0-9a-fA-F]{6}$/.test(String(c)) ? String(c) : '#808080');
 
-// asset paths must stay relative and same-origin — no protocol, no host hop
-const safePath = p => {
+// Images live either beside the page or in an object-storage bucket. The
+// manifest's `cdn` field decides which; keys stay relative either way.
+const assetUrl = p => {
   const s = String(p || '');
-  return /^[\w./-]+$/.test(s) && !s.includes('..') ? s : '';
+  if (!/^[\w./-]+$/.test(s) || s.includes('..')) return '';   // reject host hops
+  return state.cdn ? `${state.cdn}/${s}` : s;
 };
+const safePath = assetUrl;
 
 // external links: http(s) only, so a crafted permalink can't become javascript:
 const safeUrl = u => {
