@@ -16,8 +16,9 @@ permissions:
   contents: write              # the job commits the manifest back to the repo
 
 # Images go to R2, so the repository only ever carries code and a manifest.
-# Without these the pipeline falls back to committing images into the repo,
-# which works but makes the repo grow without bound.
+# The "R2 configured?" preflight step below fails the job outright if these
+# are missing, rather than letting the pipeline silently fall back to local
+# storage and repoint the live manifest at files that don't exist.
 env:
   R2_ACCOUNT_ID: ${{ secrets.R2_ACCOUNT_ID }}
   R2_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
@@ -45,24 +46,29 @@ jobs:
       - name: Install dependencies
         run: pip install -r scripts/requirements.txt
 
-      - name: Pull new wallpapers
+      - name: R2 configured?
+        run: |
+          missing=""
+          for v in R2_ACCOUNT_ID R2_ACCESS_KEY_ID R2_SECRET_ACCESS_KEY R2_BUCKET R2_PUBLIC_BASE; do
+            [ -z "${!v}" ] && missing="$missing $v"
+          done
+          if [ -n "$missing" ]; then
+            echo "::error::Missing repo secrets:$missing — without all five,"\
+                 "storage falls back to committing images into the repo and"\
+                 "the manifest repoints at URLs that don't exist. Add them"\
+                 "under Settings -> Secrets and variables -> Actions before"\
+                 "this workflow can run."
+            exit 1
+          fi
+
+      - name: Pull new wallpapers (Danbooru)
         env:
-          REDDIT_CLIENT_ID: ${{ secrets.REDDIT_CLIENT_ID }}
-          REDDIT_CLIENT_SECRET: ${{ secrets.REDDIT_CLIENT_SECRET }}
-          REDDIT_USERNAME: ${{ secrets.REDDIT_USERNAME }}
-          REDDIT_PASSWORD: ${{ secrets.REDDIT_PASSWORD }}
-          # via env, never interpolated into the shell line: a workflow_dispatch
-          # input is attacker-controlled text as far as the runner is concerned
           MAX_NEW: ${{ inputs.max_new || '40' }}
         run: |
           case "$MAX_NEW" in
             ''|*[!0-9]*) echo "max_new must be an integer" >&2; exit 1 ;;
           esac
-          if [ -z "$REDDIT_CLIENT_ID" ]; then
-            echo "::warning::No Reddit credentials configured — the API blocks"\
-                 "anonymous requests from CI, so this run will find nothing."
-          fi
-          python scripts/sync_reddit.py --max-new "$MAX_NEW"
+          python scripts/sync_danbooru.py --max-new "$MAX_NEW"
 
       - name: Prune to the free-tier ceiling
         env:
@@ -86,13 +92,9 @@ jobs:
           data = json.loads((root / "data/wallpapers.json").read_text())
           items = data["items"]
 
-          # in R2 mode the images are not on disk, so only check local mode
           if not data.get("cdn"):
-              missing = [i["id"] for i in items
-                         if not (root / i["file"]).exists()
-                         or not (root / i["thumb"]).exists()]
-              if missing:
-                  sys.exit(f"manifest references {len(missing)} missing files: {missing[:5]}")
+              sys.exit("manifest has no cdn set — R2 preflight should have "
+                        "caught this; refusing to publish a broken index")
 
           doc = (root / "index.html").read_text()
           for block in re.findall(r'<script type="application/ld\+json"[^>]*>(.*?)</script>',
@@ -112,13 +114,15 @@ jobs:
         run: |
           git config user.name  "wallpaper-bot"
           git config user.email "actions@users.noreply.github.com"
-          git add -A wallpapers data assets index.html sitemap.xml robots.txt llms.txt
+          git add -A data assets index.html sitemap.xml robots.txt llms.txt _headers
           if git diff --staged --quiet; then
             echo "nothing new to commit"
             exit 0
           fi
-          count=$(git diff --staged --name-only --diff-filter=A -- wallpapers/thumbs | wc -l)
-          git commit -m "sync: ${count} new wallpapers"
+
+          before=$(git show HEAD:data/wallpapers.json 2>/dev/null | python3 -c "import json,sys; print(len(json.load(sys.stdin).get('items',[])))" 2>/dev/null || echo 0)
+          after=$(python3 -c "import json; print(len(json.load(open('data/wallpapers.json')).get('items',[])))")
+          git commit -m "sync: ${after} wallpapers (was ${before})"
 
           # checkout is shallow, so a plain `pull --rebase` can fail for want of
           # a merge base — and it would fail precisely when the remote has moved,

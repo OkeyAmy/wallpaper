@@ -224,12 +224,22 @@ def ingest_image(
     author: str = "",
     permalink: str = "",
     tags: list[str] | None = None,
+    existing: list[dict] | None = None,
     storage=None,
 ) -> Item | None:
     """Decode, validate, re-encode and describe one image.
 
     Returns None when the image fails policy (too small, corrupt, not an
-    image at all) — callers treat that as "skip", not as an error.
+    image at all) or is a duplicate of something in ``existing`` — callers
+    treat that as "skip", not as an error.
+
+    Duplicate detection runs *before* anything is written to storage. The
+    encoded key is content-addressed (``sha256(raw)[:12]``), so a duplicate
+    upload would land on the exact key the original occupies — deleting it
+    afterwards as "this rejected candidate's own file" would actually delete
+    the live, already-published image. Checking first means a duplicate
+    never touches storage at all, which avoids that failure mode entirely
+    rather than relying on cleanup after the fact.
     """
     import io
 
@@ -248,6 +258,10 @@ def ingest_image(
     digest = sha256_bytes(raw)
     ident = digest[:12]
     fingerprint = dhash(img)
+
+    if existing is not None and is_duplicate_hash(digest, fingerprint, existing):
+        return None
+
     palette = extract_palette(img)
 
     # cap the long edge before encoding — 8K sources are bandwidth, not value
@@ -299,17 +313,41 @@ def load_items() -> list[dict]:
         return []
 
 
-def is_duplicate(candidate: Item, existing: list[dict]) -> bool:
+def is_duplicate_hash(sha256: str, dhash_value: str, existing: list[dict]) -> bool:
+    """Pure hash comparison — used by ingest_image *before* it uploads
+    anything, which is what lets duplicates be rejected without ever
+    writing (and therefore never needing to unwrite) a file."""
     for old in existing:
-        if old.get("sha256") == candidate.sha256:
+        if old.get("sha256") == sha256:
             return True
-        if hamming(old.get("dhash", ""), candidate.dhash) <= DHASH_DISTANCE:
+        if hamming(old.get("dhash", ""), dhash_value) <= DHASH_DISTANCE:
             return True
     return False
 
 
+def is_duplicate(candidate: Item, existing: list[dict]) -> bool:
+    """Back-compat wrapper around is_duplicate_hash for an already-built Item.
+
+    Prefer passing ``existing=`` to ingest_image instead: that checks before
+    upload. Calling this *after* ingest_image and then discard()-ing on a
+    hit is the pattern that used to delete live files — see discard()'s
+    docstring.
+    """
+    return is_duplicate_hash(candidate.sha256, candidate.dhash, existing)
+
+
 def discard(item: Item, storage=None) -> None:
-    """Remove whatever was written for an item we then decided to reject."""
+    """Delete an item's files from storage.
+
+    Danger: if ``item`` was built from bytes identical to something already
+    in the archive, its key (content-addressed as sha256[:12]) is the same
+    key the original occupies — calling discard() on it deletes the live
+    file, not a orphaned one. ingest_image() avoids this by checking
+    ``existing`` before it ever uploads, so a duplicate never reaches this
+    function in the first place. Only call discard() on an item you are
+    certain was actually written by *this* call (e.g. cleaning up a test
+    ingest), never as a generic "reject this candidate" step.
+    """
     store = storage or get_storage()
     for key in (item.file, item.thumb):
         store.delete(key)

@@ -21,7 +21,7 @@ from urllib.parse import urlparse
 
 import requests
 
-from pipeline import DATA_DIR, MANIFEST, Item, discard, ingest_image, is_duplicate, load_items
+from pipeline import DATA_DIR, MANIFEST, Item, ingest_image, load_items
 
 UA = "web:okeyamy-wallpaper-archive:1.0 (by /u/okeyamy)"
 
@@ -117,7 +117,6 @@ def main() -> int:
     existing = load_items()
     accepted: list[Item] = []
     today = date.today().isoformat()
-    seen_ids = {it.get("id") for it in existing}
 
     for sub, sort, window in FEEDS:
         if len(accepted) >= args.max_new:
@@ -136,6 +135,9 @@ def main() -> int:
             if not raw:
                 continue
 
+            # duplicate check happens inside ingest_image, before upload —
+            # rejecting after the fact would delete the live file when the
+            # candidate's content-addressed key collides with the original's
             item = ingest_image(
                 raw,
                 source="reddit",
@@ -144,17 +146,12 @@ def main() -> int:
                 sub=post.get("subreddit", sub),
                 author=post.get("author", ""),
                 permalink="https://www.reddit.com" + post.get("permalink", ""),
+                existing=existing + [a.to_dict() for a in accepted],
             )
             if item is None:
                 continue
 
-            # compare against what is already published *and* what this run added
-            if item.id in seen_ids or is_duplicate(item, existing + [a.to_dict() for a in accepted]):
-                discard(item)
-                continue
-
             accepted.append(item)
-            seen_ids.add(item.id)
             print(f"  + {item.id}  {item.w}×{item.h}  {item.title[:48]}")
             time.sleep(0.6)          # stay well inside Reddit's rate limit
 

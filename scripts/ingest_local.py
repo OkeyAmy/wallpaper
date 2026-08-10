@@ -27,7 +27,7 @@ import json
 from datetime import date
 from pathlib import Path
 
-from pipeline import DATA_DIR, MANIFEST, ROOT, discard, ingest_image, is_duplicate, load_items
+from pipeline import DATA_DIR, MANIFEST, ROOT, ingest_image, load_items
 
 INCOMING = ROOT / "incoming"
 SUFFIXES = {".jpg", ".jpeg", ".png", ".webp", ".bmp", ".tiff"}
@@ -67,6 +67,10 @@ def main() -> int:
         permalink, author = read_sidecar(path)
         sidecar = path.with_name(path.name + ".source")
 
+        # duplicate check happens inside ingest_image, before anything is
+        # uploaded — a duplicate's content-addressed key would otherwise
+        # collide with the original's, so rejecting after upload would
+        # delete the live file instead of a copy of it
         item = ingest_image(
             path.read_bytes(),
             source="local",
@@ -75,14 +79,10 @@ def main() -> int:
             author=author,
             permalink=permalink,
             tags=args.tag,
+            existing=existing + [a.to_dict() for a in added],
         )
         if item is None:
-            print(f"  ! skipped (too small or unreadable): {path.name}")
-            continue
-
-        if is_duplicate(item, existing + [a.to_dict() for a in added]):
-            discard(item)
-            print(f"  = duplicate, skipped: {path.name}")
+            print(f"  ! skipped (too small, unreadable, or a duplicate already in the archive): {path.name}")
             continue
 
         added.append(item)

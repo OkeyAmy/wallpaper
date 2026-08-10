@@ -21,7 +21,7 @@ from datetime import date
 
 import requests
 
-from pipeline import DATA_DIR, MANIFEST, Item, discard, ingest_image, is_duplicate, load_items
+from pipeline import DATA_DIR, MANIFEST, Item, ingest_image, load_items
 
 UA = "web:okeyamy-wallpaper-archive:1.0 (by anonymous)"
 API = "https://danbooru.donmai.us/posts.json"
@@ -33,11 +33,25 @@ API = "https://danbooru.donmai.us/posts.json"
 # is a search modifier and doesn't count against that, but a literal
 # "wallpaper" tag does not exist on Danbooru and silently returns zero
 # results, so each entry here is rating:general + exactly one real tag.
+#
+# `highres` and `absurdres` look like the obvious tags for a wallpaper
+# archive, but they cover millions of posts each, and Danbooru 500s on
+# sorting a tag set that large for anonymous requests (order:score AND
+# order:random both fail, confirmed directly against the API — it isn't
+# transient). Left out on purpose. The list below is deliberately wide
+# rather than long, since a short list queried daily with order:score
+# mostly returns the same top posts run after run.
 QUERIES = [
-    "rating:general highres order:score",
-    "rating:general absurdres order:score",
     "rating:general scenery order:score",
     "rating:general landscape order:score",
+    "rating:general sky order:score",
+    "rating:general nature order:score",
+    "rating:general cityscape order:score",
+    "rating:general night order:score",
+    "rating:general sunset order:score",
+    "rating:general mountain order:score",
+    "rating:general building order:score",
+    "rating:general architecture order:score",
 ]
 
 MIN_SCORE = 15
@@ -70,7 +84,6 @@ def main() -> int:
     args = ap.parse_args()
 
     existing = load_items()
-    seen_ids = {it.get("id") for it in existing}
     accepted: list[Item] = []
     today = date.today().isoformat()
 
@@ -103,6 +116,9 @@ def main() -> int:
                          or " ".join(post.get("tag_string_general", "").split()[:6])
                          or "untitled")
 
+                # duplicate check happens inside ingest_image, before upload —
+                # rejecting after the fact would delete the live file when the
+                # candidate's content-addressed key collides with the original's
                 item = ingest_image(
                     raw,
                     source="danbooru",
@@ -112,16 +128,12 @@ def main() -> int:
                     author=post.get("tag_string_artist", "").replace("_", " "),
                     permalink=f"https://danbooru.donmai.us/posts/{post['id']}",
                     tags=post.get("tag_string_general", "").split()[:15],
+                    existing=existing + [a.to_dict() for a in accepted],
                 )
                 if item is None:
                     continue
 
-                if item.id in seen_ids or is_duplicate(item, existing + [a.to_dict() for a in accepted]):
-                    discard(item)
-                    continue
-
                 accepted.append(item)
-                seen_ids.add(item.id)
                 print(f"  + {item.id}  {item.w}×{item.h}  {item.title[:48]}")
                 time.sleep(0.5)          # polite pacing on an anonymous, unauthenticated client
 

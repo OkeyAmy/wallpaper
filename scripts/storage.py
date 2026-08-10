@@ -30,11 +30,17 @@ ROOT = Path(__file__).resolve().parent.parent
 # prune, migrate) sees the same R2 config without each having to remember to
 # call load_dotenv itself — a script that forgot would silently fall back to
 # local storage, which is exactly the bug this caused before it lived here.
+# python-dotenv is a hard requirement (see requirements.txt) specifically so
+# this can never silently no-op on a machine that's missing it.
 try:
     from dotenv import load_dotenv
     load_dotenv(ROOT / ".env.local")
 except ImportError:
-    pass
+    import sys
+    print("! python-dotenv is not installed — .env.local will NOT be loaded, "
+          "so R2 env vars may be missing and storage will silently fall back "
+          "to writing images into the repo. Run: pip install -r scripts/requirements.txt",
+          file=sys.stderr)
 
 
 class LocalStorage:
