@@ -7,7 +7,7 @@
 const $  = (s, r = document) => r.querySelector(s);
 const $$ = (s, r = document) => [...r.querySelectorAll(s)];
 
-const PAGE = 24;                       // cells per progressive batch
+const PAGE_SIZE = 100;                 // wallpapers shown per page
 const REDUCED = matchMedia('(prefers-reduced-motion: reduce)');
 
 const HUES = [
@@ -33,6 +33,7 @@ const state = {
   lbIndex: -1,
   seed: Date.now(),
   cdn: '',
+  page: 0,
 };
 
 /* ── colour utils ────────────────────────────────────────────── */
@@ -188,8 +189,7 @@ function apply() {
   else                           v = seededShuffle(v, state.seed);
 
   state.view = v;
-  state.shown = 0;
-  $('#grid').innerHTML = '';
+  state.page = 0;
   $('#grid').setAttribute('aria-busy', 'false');
 
   const filtered = state.ratio !== 'all' || state.hues.size || q;
@@ -199,21 +199,40 @@ function apply() {
     ? `stdout ── ${v.length} of ${state.all.length} units matched`
     : `stdout ── 0 units matched`;
 
-  more();
+  renderPage();
 }
 
-function more() {
-  const slice = state.view.slice(state.shown, state.shown + PAGE);
-  if (!slice.length) {
-    $('#loadmsg').hidden = true;
-    return;
-  }
+function pageCount() {
+  return Math.max(1, Math.ceil(state.view.length / PAGE_SIZE));
+}
 
+function renderPage({ scroll = false } = {}) {
+  const total = pageCount();
+  state.page = Math.max(0, Math.min(state.page, total - 1));
+  const start = state.page * PAGE_SIZE;
+  const slice = state.view.slice(start, start + PAGE_SIZE);
+
+  $('#grid').innerHTML = '';
   const frag = document.createDocumentFragment();
-  slice.forEach((it, i) => frag.appendChild(cell(it, state.shown + i, i)));
+  slice.forEach((it, i) => frag.appendChild(cell(it, start + i, i)));
   $('#grid').appendChild(frag);
-  state.shown += slice.length;
-  $('#loadmsg').hidden = state.shown >= state.view.length;
+  $('#loadmsg').hidden = true;
+
+  const pager = $('#pager');
+  pager.hidden = state.view.length <= PAGE_SIZE;
+  $('#pagePos').textContent = `PAGE ${state.page + 1}/${total}`;
+  $('#pagePrev').disabled = state.page === 0;
+  $('#pageNext').disabled = state.page >= total - 1;
+
+  if (scroll) $('.cmd')?.scrollIntoView({ block: 'start', behavior: REDUCED.matches ? 'instant' : 'smooth' });
+}
+
+function goToPage(n) {
+  const total = pageCount();
+  const clamped = Math.max(0, Math.min(n, total - 1));
+  if (clamped === state.page) return;
+  state.page = clamped;
+  renderPage({ scroll: true });
 }
 
 function cell(it, absIndex, stagger) {
@@ -341,7 +360,8 @@ function openFromHash() {
   if (!m) return;
   const i = state.view.findIndex(x => x.id === m[1]);
   if (i < 0) return;
-  while (state.shown <= i && state.shown < state.view.length) more();
+  state.page = Math.floor(i / PAGE_SIZE);
+  renderPage();
   const target = $(`.cell[data-index="${i}"]`);
   // bring the tile on-screen first so the lightbox has a real origin to
   // grow from, and so closing returns the user to the item they arrived at
@@ -410,8 +430,13 @@ function stepLb(dir) {
   const next = (state.lbIndex + dir + n) % n;
   state.lbIndex = next;
   paintLb(state.view[next], next);
-  // pull the next page in if paging off the end of what's rendered
-  while (state.shown <= next && state.shown < state.view.length) more();
+  // stepping past a page boundary switches the grid underneath the lightbox,
+  // so it matches what closing (or sharing the link) will land back on
+  const targetPage = Math.floor(next / PAGE_SIZE);
+  if (targetPage !== state.page) {
+    state.page = targetPage;
+    renderPage();
+  }
 }
 
 async function copyText(text, btn) {
@@ -477,10 +502,8 @@ function wire() {
     if (b) copyText(b.dataset.hex, $('#lbCopy'));
   });
 
-  // infinite scroll
-  new IntersectionObserver(entries => {
-    if (entries.some(e => e.isIntersecting)) more();
-  }, { rootMargin: '900px 0px' }).observe($('#sentinel'));
+  $('#pagePrev').addEventListener('click', () => goToPage(state.page - 1));
+  $('#pageNext').addEventListener('click', () => goToPage(state.page + 1));
 
   document.addEventListener('keydown', onKey);
 }
@@ -506,6 +529,8 @@ function onKey(e) {
 
   if (e.key === '/') { e.preventDefault(); $('#q').focus(); return; }
   if (e.key === 'r') { $('.sortbtn[data-sort="rand"]')?.click?.(); return; }
+  if (e.key === '[') { goToPage(state.page - 1); return; }
+  if (e.key === ']') { goToPage(state.page + 1); return; }
   if (['1', '2', '3', '4'].includes(e.key)) {
     $$('.wsp__i')[Number(e.key) - 1]?.click();
   }

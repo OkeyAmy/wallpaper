@@ -26,6 +26,16 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 
+# Loaded here, once, so every entry point (ingest_local, sync_*, build_site,
+# prune, migrate) sees the same R2 config without each having to remember to
+# call load_dotenv itself — a script that forgot would silently fall back to
+# local storage, which is exactly the bug this caused before it lived here.
+try:
+    from dotenv import load_dotenv
+    load_dotenv(ROOT / ".env.local")
+except ImportError:
+    pass
+
 
 class LocalStorage:
     """Files under the repository, served directly by Cloudflare Pages."""

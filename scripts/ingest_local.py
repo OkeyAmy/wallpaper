@@ -6,6 +6,18 @@
 
 Accepted files are converted, indexed and deleted from incoming/ so the
 folder stays a queue rather than a second copy of the archive.
+
+To credit wherever an image actually came from (someone sent it to you, you
+saved it from a post, etc.), drop a same-named sidecar file next to it:
+
+    nice.png
+    nice.png.source        <- plain text
+
+    https://twitter.com/artist/status/12345
+    artist_handle
+
+Line 1 is the source link (required), line 2 is the artist/handle (optional).
+Without a sidecar the item just has no source link, same as before.
 """
 
 from __future__ import annotations
@@ -19,6 +31,20 @@ from pipeline import DATA_DIR, MANIFEST, ROOT, discard, ingest_image, is_duplica
 
 INCOMING = ROOT / "incoming"
 SUFFIXES = {".jpg", ".jpeg", ".png", ".webp", ".bmp", ".tiff"}
+
+
+def read_sidecar(image_path: Path) -> tuple[str, str]:
+    """(permalink, author) from a `<image>.source` sidecar, or ("", "") if none."""
+    sidecar = image_path.with_name(image_path.name + ".source")
+    if not sidecar.exists():
+        return "", ""
+    lines = [ln.strip() for ln in sidecar.read_text().splitlines() if ln.strip()]
+    permalink = lines[0] if lines else ""
+    author = lines[1] if len(lines) > 1 else ""
+    if permalink and not permalink.startswith(("http://", "https://")):
+        print(f"  ! ignoring malformed source link in {sidecar.name}: {permalink!r}")
+        return "", author
+    return permalink, author
 
 
 def main() -> int:
@@ -38,11 +64,16 @@ def main() -> int:
     today = date.today().isoformat()
 
     for path in files:
+        permalink, author = read_sidecar(path)
+        sidecar = path.with_name(path.name + ".source")
+
         item = ingest_image(
             path.read_bytes(),
             source="local",
             added=today,
             title=path.stem.replace("_", " ").replace("-", " "),
+            author=author,
+            permalink=permalink,
             tags=args.tag,
         )
         if item is None:
@@ -55,9 +86,11 @@ def main() -> int:
             continue
 
         added.append(item)
-        print(f"  + {item.id}  {item.w}×{item.h}  {path.name}")
+        credit = f"  (source: {permalink})" if permalink else ""
+        print(f"  + {item.id}  {item.w}×{item.h}  {path.name}{credit}")
         if not args.keep:
             path.unlink()
+            sidecar.unlink(missing_ok=True)
 
     if not added:
         print("no new wallpapers")

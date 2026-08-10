@@ -16,13 +16,8 @@ from __future__ import annotations
 
 import argparse
 import sys
-from pathlib import Path
-
-from dotenv import load_dotenv
 
 from pipeline import ROOT, load_items
-
-load_dotenv(Path(__file__).parent.parent / ".env.local")
 from storage import LocalStorage, get_storage
 
 

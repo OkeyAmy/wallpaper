@@ -1,6 +1,6 @@
 {
- "generated": "2026-08-10T13:53:39+00:00",
- "cdn": "https://pub-6993bdd015c9448f9d652aff422de5a5.r2.dev",
+ "generated": "2026-08-10T20:21:33+00:00",
+ "cdn": "https://cdn.okeyamy.xyz",
  "items": [
   {
    "id": "fc45d3c36134",
@@ -50,6 +50,31 @@
    "permalink": "",
    "sha256": "eaddca76c077a7a266a84f8af357be2ebe08a1b7b9c718dde1a75bafd4dc0725",
    "dhash": "888884a4a4a48090",
+   "tags": []
+  },
+  {
+   "id": "dda4e2db3e91",
+   "file": "wallpapers/dda4e2db3e91.webp",
+   "thumb": "wallpapers/thumbs/dda4e2db3e91.webp",
+   "w": 1920,
+   "h": 1080,
+   "ratio": "16:9",
+   "bytes": 5966,
+   "palette": [
+    "#1e3c1e",
+    "#5d5d26",
+    "#203d1e",
+    "#15371d",
+    "#314620"
+   ],
+   "source": "local",
+   "added": "2026-08-10",
+   "title": "friend gift",
+   "sub": "",
+   "author": "some_artist_handle",
+   "permalink": "https://www.pixiv.net/en/artworks/123456789",
+   "sha256": "dda4e2db3e91c67c7dd5f3db6cfa4b8d18a2ad3fb6b5de529a7336492a5ce080",
+   "dhash": "000090c0c0603030",
    "tags": []
   },
   {

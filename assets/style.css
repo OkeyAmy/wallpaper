@@ -467,7 +467,6 @@ kbd {
   .btn--red:hover { background: var(--red-hot); border-color: var(--red-hot); color: #fff; }
 }
 
-.sentinel { height: 1px; }
 .loadmsg {
   text-align: center;
   font-size: 10px;
@@ -475,6 +474,40 @@ kbd {
   padding: 1.6rem 0 0;
 }
 .loadmsg[hidden] { display: none; }
+
+.pager {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.2rem;
+  margin-top: clamp(1.5rem, 4vw, 2.5rem);
+  padding-top: clamp(1.5rem, 4vw, 2.5rem);
+  border-top: 1px solid var(--line);
+}
+.pager__pos {
+  font-size: 10.5px;
+  letter-spacing: .16em;
+  color: var(--dim);
+  min-width: 8ch;
+  text-align: center;
+}
+.pager__btn {
+  font-size: 10.5px;
+  letter-spacing: .12em;
+  font-weight: 500;
+  padding: .65rem 1.1rem;
+  border: 1px solid var(--line-hi);
+  color: var(--fg);
+  background: var(--bg-1);
+  transition: background-color 160ms var(--ease-out), color 160ms var(--ease-out),
+              border-color 160ms var(--ease-out), transform 130ms var(--ease-out),
+              opacity 160ms var(--ease-out);
+}
+.pager__btn:disabled { opacity: .3; pointer-events: none; }
+.pager__btn:active { transform: scale(.97); }
+@media (hover: hover) and (pointer: fine) {
+  .pager__btn:not(:disabled):hover { background: var(--fg); color: var(--bg); border-color: var(--fg); }
+}
 
 /* ═══ README / EDITORIAL ═══════════════════════════════════════ */
 .readme {
