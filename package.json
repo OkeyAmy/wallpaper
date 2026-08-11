@@ -1,0 +1,7 @@
+{
+  "name": "wallpaper-archive",
+  "private": true,
+  "devDependencies": {
+    "wrangler": "3.114.17"
+  }
+}

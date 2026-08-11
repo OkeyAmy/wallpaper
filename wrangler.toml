@@ -1,0 +1,16 @@
+# The Cloudflare project for this repo deploys via `wrangler deploy` (a
+# Worker), not `wrangler pages deploy` — so the classic Pages `functions/`
+# directory convention never applied here; those files were being silently
+# ignored. This config makes the deploy explicit: serve the repo as static
+# assets, with one Worker-side route (/dl/:name, in worker.js) for the
+# same-origin download proxy that route needs.
+name = "wallpaper-archive"
+main = "worker.js"
+compatibility_date = "2026-08-01"
+
+[assets]
+directory = "./"
+binding = "ASSETS"
+
+[vars]
+R2_PUBLIC_BASE = "https://cdn.okeyamy.xyz"
