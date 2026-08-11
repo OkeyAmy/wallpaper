@@ -17,7 +17,19 @@ saved it from a post, etc.), drop a same-named sidecar file next to it:
     artist_handle
 
 Line 1 is the source link (required), line 2 is the artist/handle (optional).
-Without a sidecar the item just has no source link, same as before.
+The sidecar's name must match the image's name *exactly*, including the
+extension (nice.png -> nice.png.source, not nice.jpg.source) — a mismatch
+isn't treated as an error, since a missing sidecar is a normal, silent case
+when a wallpaper simply has no source. To catch a rename typo instead of
+losing the credit silently, watch the run's output for a "no .source found"
+line, and check for a leftover "orphaned .source file" warning at the end.
+
+For a whole batch that shares one source (e.g. a folder of forwards from the
+same channel), skip per-image sidecars and pass it once:
+
+    python scripts/ingest_local.py --source https://t.me/somechannel --author "some channel"
+
+A per-image .source sidecar still wins over these if both are present.
 """
 
 from __future__ import annotations
@@ -51,7 +63,13 @@ def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--keep", action="store_true", help="don't delete source files after ingest")
     ap.add_argument("--tag", action="append", default=[], help="tag to attach (repeatable)")
+    ap.add_argument("--source", default="", help="fallback source link for images with no .source sidecar")
+    ap.add_argument("--author", default="", help="fallback author/handle, used the same way")
     args = ap.parse_args()
+
+    if args.source and not args.source.startswith(("http://", "https://")):
+        print(f"! --source must be a URL, got: {args.source!r}")
+        return 1
 
     INCOMING.mkdir(exist_ok=True)
     files = sorted(p for p in INCOMING.iterdir() if p.suffix.lower() in SUFFIXES)
@@ -65,6 +83,8 @@ def main() -> int:
 
     for path in files:
         permalink, author = read_sidecar(path)
+        permalink = permalink or args.source
+        author = author or args.author
         sidecar = path.with_name(path.name + ".source")
 
         # duplicate check happens inside ingest_image, before anything is
@@ -86,11 +106,20 @@ def main() -> int:
             continue
 
         added.append(item)
-        credit = f"  (source: {permalink})" if permalink else ""
+        credit = f"  (source: {permalink})" if permalink else "  (no .source found — no credit attached)"
         print(f"  + {item.id}  {item.w}×{item.h}  {path.name}{credit}")
         if not args.keep:
             path.unlink()
             sidecar.unlink(missing_ok=True)
+
+    # a .source file whose image was never in `files` (wrong extension, typo,
+    # or the image failed to ingest) sits here unused — that's the exact
+    # silent failure this file names in its docstring, so surface it loudly
+    orphans = sorted(INCOMING.glob("*.source"))
+    if orphans:
+        print(f"\n! {len(orphans)} orphaned .source file(s) — no matching image, so their credit was NOT attached:")
+        for o in orphans:
+            print(f"    {o.name}  (expects an image literally named {o.stem!r})")
 
     if not added:
         print("no new wallpapers")

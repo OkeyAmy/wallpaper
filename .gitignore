@@ -5,6 +5,10 @@
 incoming/*
 !incoming/.gitkeep
 
+# Same idea — any local staging folder for pre-processing (e.g. upscale_batch.py
+# source material) before it lands in incoming/
+old/
+
 # Local session/tooling state
 .remember/
 .claude/
@@ -22,6 +26,9 @@ env/
 .mypy_cache/
 .ruff_cache/
 .pytest_cache/
+
+# Downloaded on first run by upscale_batch.py — not source, don't commit
+scripts/.cache/
 
 # Editors / OS
 .vscode/

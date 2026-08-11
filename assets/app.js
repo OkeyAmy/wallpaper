@@ -385,7 +385,7 @@ function paintLb(it, i) {
     ['ASPECT',     it.ratio || (it.w / it.h).toFixed(2)],
     ['SIZE',       bytes(it.bytes)],
     ['SOURCE',     it.sub ? `r/${it.sub}` : (it.source || 'local ingest')],
-    ['POSTER',     it.author ? `u/${it.author}` : '—'],
+    ['POSTER',     it.author ? (it.source === 'reddit' ? `u/${it.author}` : it.author) : '—'],
     ['INDEXED',    it.added || '—'],
     ['HUE',        it._hue.toUpperCase()],
   ];
@@ -397,26 +397,15 @@ function paintLb(it, i) {
     return `<button style="background:${hex}" data-hex="${hex}" title="Copy ${hex}">${hex.slice(1)}</button>`;
   }).join('');
 
+  // /dl/<file> is a same-origin Pages Function that proxies the R2 object
+  // with Content-Disposition: attachment — the browser's `download`
+  // attribute is spec-ignored on cross-origin links, and R2 sends no CORS
+  // headers, so a direct link (or a fetch()+blob) to the CDN URL cannot
+  // trigger a save; going through our own origin sidesteps both.
   const dl = $('#lbDl');
-  const filename = `${String(it.id || 'wallpaper').replace(/[^\w-]/g, '')}.${full.split('.').pop() || 'webp'}`;
-  dl.onclick = async (e) => {
-    e.preventDefault();
-    try {
-      const res = await fetch(full);
-      const blob = await res.blob();
-      const url = URL.createObjectURL(blob);
-      const a = document.createElement('a');
-      a.href = url;
-      a.download = filename;
-      document.body.appendChild(a);
-      a.click();
-      document.body.removeChild(a);
-      URL.revokeObjectURL(url);
-    } catch (err) {
-      console.error('Download failed:', err);
-      alert('Download failed');
-    }
-  };
+  const basename = full.split('/').pop();
+  dl.href = `/dl/${basename}`;
+  dl.setAttribute('download', basename);
 
   const src = $('#lbSrc');
   const perma = safeUrl(it.permalink);
