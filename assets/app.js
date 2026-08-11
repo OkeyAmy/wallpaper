@@ -398,8 +398,25 @@ function paintLb(it, i) {
   }).join('');
 
   const dl = $('#lbDl');
-  dl.href = full;
-  dl.setAttribute('download', `${String(it.id || 'wallpaper').replace(/[^\w-]/g, '')}.${full.split('.').pop() || 'webp'}`);
+  const filename = `${String(it.id || 'wallpaper').replace(/[^\w-]/g, '')}.${full.split('.').pop() || 'webp'}`;
+  dl.onclick = async (e) => {
+    e.preventDefault();
+    try {
+      const res = await fetch(full);
+      const blob = await res.blob();
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = filename;
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      URL.revokeObjectURL(url);
+    } catch (err) {
+      console.error('Download failed:', err);
+      alert('Download failed');
+    }
+  };
 
   const src = $('#lbSrc');
   const perma = safeUrl(it.permalink);
