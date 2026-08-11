@@ -30,6 +30,9 @@ env/
 # Downloaded on first run by upscale_batch.py — not source, don't commit
 scripts/.cache/
 
+# Installed during the Cloudflare build; never belongs in the repo
+node_modules/
+
 # Editors / OS
 .vscode/
 .idea/

@@ -1,7 +1,8 @@
 {
   "name": "wallpaper-archive",
   "private": true,
+  "comment": "wrangler is pinned, not ranged: the latest release (4.121.0) depends on an unpublished miniflare 5.x alpha, so `npx wrangler` resolving 'latest' fails at install. 4.115.0 is the newest release whose miniflare dependency actually exists.",
   "devDependencies": {
-    "wrangler": "3.114.17"
+    "wrangler": "4.115.0"
   }
 }

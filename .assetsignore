@@ -1,0 +1,19 @@
+# Assets dir is the repo root, so anything not part of the served site has to
+# be excluded here. node_modules is the blocking one: wrangler's own workerd
+# binary is 97 MiB and Workers rejects any asset over 25 MiB.
+node_modules
+scripts
+old
+incoming
+.git
+.github
+.remember
+.claude
+.impeccable
+worker.js
+wrangler.toml
+package.json
+package-lock.json
+.assetsignore
+.gitignore
+README.md
