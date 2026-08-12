@@ -15,8 +15,15 @@ saved it from a post, etc.), drop a same-named sidecar file next to it:
 
     https://twitter.com/artist/status/12345
     artist_handle
+    Ganyu standing in the snow
 
-Line 1 is the source link (required), line 2 is the artist/handle (optional).
+Line 1 is the source link (required), line 2 is the artist/handle (optional),
+line 3 is a human-readable title (optional, but worth writing).
+
+The title matters more than it looks: it becomes the image's alt text and the
+name search engines index it under. A camera-roll filename like
+IMG-20260810-WA0002.png says nothing, so a file with no title is deliberately
+left untitled rather than named after itself.
 The sidecar's name must match the image's name *exactly*, including the
 extension (nice.png -> nice.png.source, not nice.jpg.source) — a mismatch
 isn't treated as an error, since a missing sidecar is a normal, silent case
@@ -45,18 +52,23 @@ INCOMING = ROOT / "incoming"
 SUFFIXES = {".jpg", ".jpeg", ".png", ".webp", ".bmp", ".tiff"}
 
 
-def read_sidecar(image_path: Path) -> tuple[str, str]:
-    """(permalink, author) from a `<image>.source` sidecar, or ("", "") if none."""
+def read_sidecar(image_path: Path) -> tuple[str, str, str]:
+    """(permalink, author, title) from a `<image>.source` sidecar.
+
+    Returns empty strings for anything the sidecar doesn't supply, and for a
+    missing sidecar entirely — that's a normal case, not an error.
+    """
     sidecar = image_path.with_name(image_path.name + ".source")
     if not sidecar.exists():
-        return "", ""
+        return "", "", ""
     lines = [ln.strip() for ln in sidecar.read_text().splitlines() if ln.strip()]
     permalink = lines[0] if lines else ""
     author = lines[1] if len(lines) > 1 else ""
+    title = lines[2] if len(lines) > 2 else ""
     if permalink and not permalink.startswith(("http://", "https://")):
         print(f"  ! ignoring malformed source link in {sidecar.name}: {permalink!r}")
-        return "", author
-    return permalink, author
+        return "", author, title
+    return permalink, author, title
 
 
 def main() -> int:
@@ -65,6 +77,12 @@ def main() -> int:
     ap.add_argument("--tag", action="append", default=[], help="tag to attach (repeatable)")
     ap.add_argument("--source", default="", help="fallback source link for images with no .source sidecar")
     ap.add_argument("--author", default="", help="fallback author/handle, used the same way")
+    ap.add_argument("--title", default="",
+                    help="descriptive title, used when a sidecar doesn't give one. "
+                         "Becomes the alt text and the name search engines index")
+    ap.add_argument("--character", action="append", default=[],
+                    help="named subject, e.g. --character Ganyu (repeatable). "
+                         "Puts the wallpaper on that character's page")
     args = ap.parse_args()
 
     if args.source and not args.source.startswith(("http://", "https://")):
@@ -82,9 +100,13 @@ def main() -> int:
     today = date.today().isoformat()
 
     for path in files:
-        permalink, author = read_sidecar(path)
+        permalink, author, title = read_sidecar(path)
         permalink = permalink or args.source
         author = author or args.author
+        # No fallback to the filename stem: camera-roll and download names
+        # ("IMG-20260810-WA0002", "original") are worse than nothing, since
+        # they'd become the alt text and the indexed name for the image.
+        title = title or args.title
         sidecar = path.with_name(path.name + ".source")
 
         # duplicate check happens inside ingest_image, before anything is
@@ -95,10 +117,11 @@ def main() -> int:
             path.read_bytes(),
             source="local",
             added=today,
-            title=path.stem.replace("_", " ").replace("-", " "),
+            title=title,
             author=author,
             permalink=permalink,
             tags=args.tag,
+            character=args.character,
             existing=existing + [a.to_dict() for a in added],
         )
         if item is None:
@@ -108,6 +131,9 @@ def main() -> int:
         added.append(item)
         credit = f"  (source: {permalink})" if permalink else "  (no .source found — no credit attached)"
         print(f"  + {item.id}  {item.w}×{item.h}  {path.name}{credit}")
+        if not title:
+            print("      ! no title — indexes as a generic 'anime wallpaper'. "
+                  "Add a 3rd sidecar line or pass --title")
         if not args.keep:
             path.unlink()
             sidecar.unlink(missing_ok=True)

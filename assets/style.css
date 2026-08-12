@@ -553,6 +553,28 @@ kbd {
 .seolist a { font-size: 10.5px; color: var(--dim); }
 .seolist a:hover { color: var(--fg); }
 
+/* ═══ CHARACTER PAGES (w/<slug>.html) ══════════════════════════ */
+/* Their own scale rather than .mega: those pages lead with the wallpapers,
+   and a 15rem wordmark would push the grid off the first screen. */
+.hub__h {
+  font-size: clamp(1.6rem, 5vw, 3rem);
+  line-height: 1.05;
+  letter-spacing: -.02em;
+  font-weight: 800;
+  margin-bottom: .5rem;
+}
+.hub__lede {
+  font-size: 12px;
+  line-height: 1.8;
+  color: var(--dim);
+  text-transform: none;
+  letter-spacing: .02em;
+  max-width: 62ch;
+  margin-bottom: 1.6rem;
+}
+.hub__back { display: inline-block; margin: 1.8rem 0; font-size: 11px; color: var(--red); }
+.hub__back:hover { color: var(--fg); }
+
 /* ═══ FOOTER ═══════════════════════════════════════════════════ */
 .foot {
   margin-top: clamp(3.5rem, 9vw, 7rem);

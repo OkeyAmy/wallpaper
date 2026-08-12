@@ -56,6 +56,10 @@ class Item:
     sha256: str = ""
     dhash: str = ""
     tags: list[str] = field(default_factory=list)
+    # Named subject(s), kept separate from `title` because the site groups
+    # wallpapers into one page per character — a free-text title can't be
+    # grouped on, but this can.
+    character: list[str] = field(default_factory=list)
 
     def to_dict(self) -> dict:
         return asdict(self)
@@ -197,6 +201,23 @@ def aspect_label(w: int, h: int) -> str:
     return f"{a}:{b}"
 
 
+def clean_character_tags(tag_string: str, limit: int = 4) -> list[str]:
+    """Readable character names from a Danbooru `tag_string_character`.
+
+    Danbooru disambiguates same-named characters across series
+    (`ganyu_(genshin_impact)`), but people search the bare name, so the suffix
+    goes. That collapses variant tags of one character onto the same string
+    (`akemi_homura` and `akemi_homura_(magical_girl)` both become "akemi
+    homura"), hence the dedupe — without it a post lists the same person twice.
+    """
+    seen: list[str] = []
+    for tag in (tag_string or "").split():
+        name = re.sub(r"_\(.*\)$", "", tag).replace("_", " ").strip()
+        if name and name not in seen:
+            seen.append(name)
+    return seen[:limit]
+
+
 def slugify(text: str, limit: int = 70) -> str:
     s = re.sub(r"\[[^\]]*\]|\([^)]*\)", " ", text or "")     # drop [4K] / (1920x1080)
     s = re.sub(r"\s+", " ", s).strip(" -–—|")
@@ -224,6 +245,7 @@ def ingest_image(
     author: str = "",
     permalink: str = "",
     tags: list[str] | None = None,
+    character: list[str] | None = None,
     existing: list[dict] | None = None,
     storage=None,
 ) -> Item | None:
@@ -299,6 +321,7 @@ def ingest_image(
         sha256=digest,
         dhash=fingerprint,
         tags=tags or [],
+        character=character or [],
     )
 
 

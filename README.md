@@ -84,11 +84,38 @@ incoming/nice.png.source
 ```
 https://twitter.com/artist/status/12345
 artist_handle
+Ganyu standing in the snow
 ```
 
-Line 1 is the source link, line 2 is the artist/handle (optional). Both files
-are consumed on ingest — the sidecar is deleted along with the source image
-once its contents are written into the item's `permalink`/`author` fields.
+Line 1 is the source link, line 2 is the artist/handle (optional), line 3 is a
+title (optional). Both files are consumed on ingest — the sidecar is deleted
+along with the source image once its contents are written into the item's
+`permalink`/`author`/`title` fields.
+
+The title is worth writing. It becomes the image's alt text and the name it is
+indexed under, and an image with no title is deliberately left untitled rather
+than named after its file — `IMG-20260810-WA0002` describes nothing. Naming the
+subject puts it on that character's page:
+
+```bash
+python scripts/ingest_local.py --title "Ganyu in the snow" --character Ganyu
+```
+
+Both flags apply to every image in the batch; a `.source` sidecar wins over
+`--title` for the image it belongs to. `scripts/build_site.py` prints a count of
+items it could not describe, so a missing title shows up at build time rather
+than in a search result months later.
+
+### Character pages
+
+`build_site.py` writes one page per character into `w/`, served at
+`/w/<character>`, for every character with at least `MIN_HUB_ITEMS` wallpapers
+(2). Characters below the line still appear on the homepage and in the image
+sitemap — they just don't get a page whose only content is a single image.
+
+`scripts/backfill_metadata.py` is a one-off that repaired the titles and
+character tags of items ingested before any of this existed. It has already
+been run; it is kept because it is idempotent and documents what was wrong.
 
 ## Deploying
 

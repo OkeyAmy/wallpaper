@@ -71,6 +71,58 @@ const bytes = n => {
   return `${n < 10 && i ? n.toFixed(1) : Math.round(n)} ${u[i]}`;
 };
 
+/* Mirrors subject()/credit_label() in scripts/build_site.py. The static HTML
+   that script bakes in is what a crawler sees; this is what a reader sees
+   once the script runs. They have to agree, or the page changes meaning the
+   moment it hydrates. */
+const SCENE_TAGS = new Set([
+  'scenery', 'landscape', 'cityscape', 'sky', 'clouds', 'night', 'sunset',
+  'sunrise', 'mountain', 'ocean', 'sea', 'beach', 'forest', 'field',
+  'flower', 'flowers', 'rain', 'snow', 'stars', 'starry_sky', 'moon',
+  'space', 'ruins', 'architecture', 'building', 'bridge', 'train',
+  'cherry_blossoms', 'autumn', 'winter', 'summer', 'spring', 'fog',
+  'reflection', 'silhouette', 'sunlight', 'waterfall', 'river', 'lake',
+  'temple', 'shrine', 'castle', 'street', 'road', 'window', 'mecha',
+  'robot', 'dragon', 'fire', 'lightning', 'aurora', 'desert', 'island',
+]);
+
+// matches Python's str.capitalize(): the tail is lowercased, not preserved
+const titleCase = s => String(s).split(' ')
+  .map(w => w.charAt(0).toUpperCase() + w.slice(1).toLowerCase()).join(' ');
+
+function subjectOf(it) {
+  const names = it.character || [];
+  if (names.length) {
+    const pretty = names.slice(0, 3).map(titleCase);
+    return pretty.length === 1
+      ? pretty[0]
+      : `${pretty.slice(0, -1).join(', ')} and ${pretty[pretty.length - 1]}`;
+  }
+
+  const title = (it.title || '').trim();
+  if (title) return title;
+
+  return (it.tags || []).filter(t => SCENE_TAGS.has(t))
+    .slice(0, 3).map(t => t.replace(/_/g, ' ')).join(', ');
+}
+
+function creditLabel(it) {
+  const author = (it.author || '').trim();
+  if (it.source === 'reddit') return author ? `u/${author}` : (it.sub ? `r/${it.sub}` : 'reddit');
+  if (it.source === 'danbooru') return author ? `${author} (Danbooru)` : 'Danbooru';
+  return author || 'direct upload';
+}
+
+const orientation = it =>
+  it.h > it.w ? 'phone' : (it.w / it.h >= 2.2 ? 'ultrawide' : 'desktop');
+
+// alt text and the per-wallpaper document title
+function describe(it) {
+  const what = subjectOf(it);
+  const spec = `${it.w}×${it.h} ${orientation(it)} anime wallpaper`;
+  return what ? `${what} — ${spec}` : spec.charAt(0).toUpperCase() + spec.slice(1);
+}
+
 const ratioClass = (w, h) => {
   const r = w / h;
   if (r >= 2.2) return 'uw';
@@ -121,7 +173,7 @@ async function boot() {
     _i: i,
     _ratio: ratioClass(it.w, it.h),
     _hue: hueBucket((it.palette && it.palette[0]) || '#808080'),
-    _hay: [it.title, it.sub, it.author, ...(it.tags || []), ...(it.palette || [])]
+    _hay: [it.title, it.sub, it.author, ...(it.character || []), ...(it.tags || []), ...(it.palette || [])]
       .filter(Boolean).join(' ').toLowerCase(),
   }));
 
@@ -243,21 +295,21 @@ function cell(it, absIndex, stagger) {
   el.dataset.index = absIndex;
   // stagger is decorative and capped — a long cascade reads as slow, not alive
   el.style.setProperty('--d', String(Math.min(stagger, 11)));
-  el.setAttribute('aria-label', `${it.title || 'Wallpaper'} — ${it.w}×${it.h}`);
+  el.setAttribute('aria-label', `${subjectOf(it) || 'Wallpaper'} — ${it.w}×${it.h}`);
 
   const pal = (it.palette || []).slice(0, 5)
     .map(c => `<i style="background:${safeHex(c)}"></i>`).join('');
 
   el.innerHTML = `
     <img class="cell__img" loading="lazy" decoding="async"
-         src="${escapeAttr(safePath(it.thumb))}" alt="${escapeAttr(it.title || 'Wallpaper')}"
+         src="${escapeAttr(safePath(it.thumb))}" alt="${escapeAttr(describe(it))}"
          width="${Number(it.w) || 0}" height="${Number(it.h) || 0}">
     <span class="cell__reg">+</span>
     <span class="cell__pal">${pal}</span>
     <span class="cell__hud">
       <span style="min-width:0">
-        <span class="cell__name">${escapeHtml(it.title || 'UNTITLED')}</span><br>
-        <span class="cell__sub">${escapeHtml(it.sub ? 'r/' + it.sub : it.source || 'LOCAL')}</span>
+        <span class="cell__name">${escapeHtml(subjectOf(it) || 'UNTITLED')}</span><br>
+        <span class="cell__sub">${escapeHtml(creditLabel(it))}</span>
       </span>
       <span class="cell__res">${Number(it.w) || 0}×${Number(it.h) || 0}</span>
     </span>`;
@@ -349,9 +401,9 @@ function syncHash(it) {
   const want = it ? `#w-${it.id}` : '';
   if (location.hash !== want) history.replaceState(null, '', want || location.pathname);
   if (it) {
-    document.title = `${it.title || 'Wallpaper'} — ${it.w}×${it.h} anime wallpaper | okeyamy`;
+    document.title = `${describe(it)} | okeyamy`;
   } else {
-    document.title = 'Anime Wallpaper Archive — 4K & Phone Wallpapers, Palette-Indexed | okeyamy';
+    document.title = 'Anime Wallpapers — 4K, Ultrawide & Phone, Palette-Indexed';
   }
 }
 
@@ -374,18 +426,18 @@ function paintLb(it, i) {
   const full = safePath(it.file);
   img.classList.remove('is-loaded');
   img.src = full;
-  img.alt = it.title || 'Wallpaper';
+  img.alt = describe(it);
 
   $('#lbIdx').textContent   = `${String(i + 1).padStart(2, '0')}/${String(state.view.length).padStart(2, '0')}`;
-  $('#lbTitle').textContent = it.title || 'UNTITLED';
+  $('#lbTitle').textContent = subjectOf(it) || 'UNTITLED';
   $('#lbSpec').textContent  = `${it.w}×${it.h} · ${bytes(it.bytes)} · ${it._ratio.toUpperCase()}`;
 
   const rows = [
     ['RESOLUTION', `${it.w} × ${it.h}`],
     ['ASPECT',     it.ratio || (it.w / it.h).toFixed(2)],
     ['SIZE',       bytes(it.bytes)],
-    ['SOURCE',     it.sub ? `r/${it.sub}` : (it.source || 'local ingest')],
-    ['POSTER',     it.author ? (it.source === 'reddit' ? `u/${it.author}` : it.author) : '—'],
+    ['SOURCE',     it.source === 'reddit' && it.sub ? `r/${it.sub}` : (it.source || 'local ingest')],
+    ['POSTER',     creditLabel(it)],
     ['INDEXED',    it.added || '—'],
     ['HUE',        it._hue.toUpperCase()],
   ];

@@ -7,10 +7,17 @@
   Permissions-Policy: geolocation=(), microphone=(), camera=(), interest-cohort=()
   Content-Security-Policy: default-src 'self'; img-src 'self' data: https://cdn.okeyamy.xyz; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; script-src 'self'; connect-src 'self'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'
 
-# Content-hashed filenames — safe to cache hard and forever.
+# Content-hashed filenames — safe to cache hard and forever. Only reached
+# when images are served from this origin; once R2_PUBLIC_BASE is set they
+# come from the CDN and this rule (and any X-Robots-Tag on it) is moot, which
+# is why indexing is not declared here.
 /wallpapers/*
   Cache-Control: public, max-age=31536000, immutable
-  X-Robots-Tag: index
+
+# Character pages are regenerated on every sync — an item can join or leave
+# one — so they must not be served stale.
+/w/*
+  Cache-Control: public, max-age=0, must-revalidate
 
 # The index changes on every sync; revalidate so new wallpapers show up.
 /data/wallpapers.json

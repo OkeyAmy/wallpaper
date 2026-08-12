@@ -19,7 +19,8 @@ No accounts, no tracking, no ads, no paywall.
 - Phone (portrait): 47
 - Maximum resolution: up to 3840x2160 (4K)
 - Format: WebP, quality 82, with a 640px thumbnail per item
-- Source feeds: r/danbooru
+- Source feeds: Danbooru, manual ingest
+- Character pages: 22 at https://wallpapers.okeyamy.xyz/w/<character> — Naruto, Remilia Scarlet, Artoria Pendragon, Flandre Scarlet, Frieren, Ganyu, Izayoi Sakuya, Kirisame Marisa, Akemi Homura, Alice Margatroid, Blaidd The Half-wolf, Fern
 
 ## Distinctive feature
 

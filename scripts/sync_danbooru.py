@@ -21,7 +21,9 @@ from datetime import date
 
 import requests
 
-from pipeline import DATA_DIR, MANIFEST, Item, ingest_image, load_items
+from pipeline import (
+    DATA_DIR, MANIFEST, Item, clean_character_tags, ingest_image, load_items,
+)
 
 UA = "web:okeyamy-wallpaper-archive:1.0 (by anonymous)"
 API = "https://danbooru.donmai.us/posts.json"
@@ -111,6 +113,8 @@ def main() -> int:
                     print(f"  ! download failed: {e}", file=sys.stderr)
                     continue
 
+                characters = clean_character_tags(post.get("tag_string_character", ""))
+
                 title = (post.get("tag_string_character")
                          or post.get("tag_string_copyright")
                          or " ".join(post.get("tag_string_general", "").split()[:6])
@@ -128,6 +132,7 @@ def main() -> int:
                     author=post.get("tag_string_artist", "").replace("_", " "),
                     permalink=f"https://danbooru.donmai.us/posts/{post['id']}",
                     tags=post.get("tag_string_general", "").split()[:15],
+                    character=characters,
                     existing=existing + [a.to_dict() for a in accepted],
                 )
                 if item is None:

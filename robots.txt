@@ -45,6 +45,7 @@ Allow: /
 
 User-agent: *
 Allow: /$
+Allow: /w/
 Allow: /assets/
 Allow: /data/wallpapers.json
 Disallow: /wallpapers/
