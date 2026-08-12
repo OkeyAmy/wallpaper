@@ -9,6 +9,10 @@ incoming/*
 # source material) before it lands in incoming/
 old/
 
+# Local reference material for the DM-submission workflow — never published,
+# stays on this machine only.
+sample-submission/
+
 # Local session/tooling state
 .remember/
 .claude/
