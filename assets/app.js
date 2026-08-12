@@ -531,7 +531,10 @@ async function copyText(text, btn) {
    The fetch goes through /dl/ rather than straight to the CDN so it stays
    same-origin: R2 sends no CORS headers, and a cross-origin image taints the
    canvas, which makes toBlob throw instead of returning a file. */
-const DOWNLOAD_QUALITY = 0.92;
+// High, because this is a second lossy pass over an already-lossy source and
+// the artifacts compound. 0.95 costs ~180 KB over 0.92 on a 3360x1440 image;
+// R2 charges no egress, so the bytes are free and the pixels are not.
+const DOWNLOAD_QUALITY = 0.95;
 
 async function convertAndDownload(it, btn) {
   const basename = it.file.split('/').pop();

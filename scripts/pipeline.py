@@ -29,7 +29,14 @@ MANIFEST = DATA_DIR / "wallpapers.json"
 # --- ingest policy ---------------------------------------------------------
 MIN_PIXELS = 1280 * 720          # anything smaller isn't a usable wallpaper
 MAX_EDGE = 3840                  # cap the long edge; 4K is the useful ceiling
-FULL_QUALITY = 82
+
+# WebP quality for the full-size image. Measured on a 3636x1440 Danbooru
+# original (4098 KB JPEG): q82 stored it in 228 KB, q92 in 545 KB, q95 in
+# 848 KB. q82 was costing visible detail in gradients and fine linework for a
+# saving that buys nothing here — R2 gives 10 GB free and charges no egress,
+# and the whole archive is 60 MB. q92 is the knee of that curve; q95 is 3.7x
+# the bytes for a difference you have to pixel-peep to find.
+FULL_QUALITY = 92
 THUMB_WIDTH = 640
 THUMB_QUALITY = 72
 PALETTE_SIZE = 5
