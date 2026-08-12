@@ -517,6 +517,53 @@ async function copyText(text, btn) {
   }
 }
 
+/* The source is always WebP. A PNG/JPEG download has to be re-encoded in the
+   browser — there's no server-side image codec here, and adding one just for
+   this would mean a Worker-side WASM decoder. Going through /dl/ first (not
+   the CDN URL directly) keeps the fetch same-origin so the canvas isn't
+   tainted; R2 sends no CORS headers, so a cross-origin fetch would produce a
+   canvas that refuses to export. */
+async function convertAndDownload(it, format, btn) {
+  const basename = it.file.split('/').pop();
+  const stem = basename.replace(/\.\w+$/, '');
+  const was = btn.textContent;
+  btn.textContent = '↓ CONVERTING…';
+  btn.setAttribute('aria-disabled', 'true');
+
+  try {
+    const res = await fetch(`/dl/${basename}`);
+    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+    const bitmap = await createImageBitmap(await res.blob());
+
+    const canvas = document.createElement('canvas');
+    canvas.width = bitmap.width;
+    canvas.height = bitmap.height;
+    canvas.getContext('2d').drawImage(bitmap, 0, 0);
+    bitmap.close();
+
+    const mime = format === 'png' ? 'image/png' : 'image/jpeg';
+    const outBlob = await new Promise(resolve =>
+      canvas.toBlob(resolve, mime, format === 'jpg' ? 0.92 : undefined));
+    if (!outBlob) throw new Error('canvas export produced nothing');
+
+    const url = URL.createObjectURL(outBlob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = `${stem}.${format}`;
+    document.body.appendChild(a);
+    a.click();
+    a.remove();
+    setTimeout(() => URL.revokeObjectURL(url), 4000);
+  } catch {
+    // decode/export failed (unsupported format, huge image, blocked canvas) —
+    // a working WebP download beats a button that silently does nothing
+    location.href = `/dl/${basename}`;
+  } finally {
+    btn.textContent = was;
+    btn.removeAttribute('aria-disabled');
+  }
+}
+
 /* ── wiring ──────────────────────────────────────────────────── */
 function wire() {
   $$('.wsp__i').forEach(b => b.addEventListener('click', () => {
@@ -560,6 +607,16 @@ function wire() {
   lb.addEventListener('click', e => { if (e.target.closest('[data-close]')) closeLb(); });
   $('#lbPrev').addEventListener('click', () => stepLb(-1));
   $('#lbNext').addEventListener('click', () => stepLb(1));
+  $('#lbDl').addEventListener('click', e => {
+    const it = state.view[state.lbIndex];
+    if (!it) return;
+    const fmt = $('#lbFmt').value;
+    // webp needs no conversion — the href/download attrs paintLb already set
+    // point straight at /dl/, so the default anchor navigation is the download
+    if (fmt === 'webp') return;
+    e.preventDefault();
+    convertAndDownload(it, fmt, e.currentTarget);
+  });
   $('#lbCopy').addEventListener('click', e => {
     const it = state.view[state.lbIndex];
     if (it) copyText((it.palette || []).join('\n'), e.currentTarget);
