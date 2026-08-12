@@ -8,6 +8,11 @@ const $  = (s, r = document) => r.querySelector(s);
 const $$ = (s, r = document) => [...r.querySelectorAll(s)];
 
 const PAGE_SIZE = 100;                 // wallpapers shown per page
+// Matches EAGER_CELLS in scripts/build_site.py — the static grid a crawler
+// sees and the grid this script hydrates into must agree on which image is
+// the LCP candidate, or the eager one gets swapped for a lazy one the moment
+// this runs.
+const EAGER_CELLS = 4;
 const REDUCED = matchMedia('(prefers-reduced-motion: reduce)');
 
 const HUES = [
@@ -300,8 +305,12 @@ function cell(it, absIndex, stagger) {
   const pal = (it.palette || []).slice(0, 5)
     .map(c => `<i style="background:${safeHex(c)}"></i>`).join('');
 
+  const loadAttrs = stagger < EAGER_CELLS
+    ? 'loading="eager" fetchpriority="high"'
+    : 'loading="lazy"';
+
   el.innerHTML = `
-    <img class="cell__img" loading="lazy" decoding="async"
+    <img class="cell__img" ${loadAttrs} decoding="async"
          src="${escapeAttr(safePath(it.thumb))}" alt="${escapeAttr(describe(it))}"
          width="${Number(it.w) || 0}" height="${Number(it.h) || 0}">
     <span class="cell__reg">+</span>

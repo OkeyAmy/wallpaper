@@ -38,6 +38,11 @@ LD_ITEMS = 100           # items described in JSON-LD
 MIN_HUB_ITEMS = 2
 HUB_GRID_CELLS = 60      # real <img> per hub page before falling back to links
 
+# Cells above the fold that should load eagerly. lazy-loading every cell
+# means the browser also defers the one image that's actually the page's LCP
+# candidate, which is a direct hit to a Core Web Vitals ranking signal.
+EAGER_CELLS = 4
+
 
 def asset_base() -> str:
     """Public URL prefix for images.
@@ -227,13 +232,17 @@ def credit_link(it: dict) -> str:
     return f'<a class="cell__sub" href="{html.escape(url, quote=True)}" rel="noopener">{label} ↗</a>'
 
 
-def static_cell(it: dict, href: str) -> str:
+def static_cell(it: dict, href: str, eager: bool = False) -> str:
     alt = html.escape(describe(it))
+    # loading="eager" alone doesn't raise priority — without fetchpriority the
+    # browser still schedules it behind render-blocking CSS/JS at the same rung
+    # as a lazy image that happened to be requested early.
+    load_attrs = 'loading="eager" fetchpriority="high"' if eager else 'loading="lazy"'
     return (
         f'<div class="cell is-ready" role="listitem">'
         f'<a href="{html.escape(href, quote=True)}">'
         f'<img class="cell__img is-loaded" src="{asset_url(it["thumb"])}" alt="{alt}" '
-        f'width="{it["w"]}" height="{it["h"]}" loading="lazy" decoding="async"></a>'
+        f'width="{it["w"]}" height="{it["h"]}" {load_attrs} decoding="async"></a>'
         f'<span class="cell__hud"><span style="min-width:0">'
         f'<span class="cell__name">{html.escape(subject(it) or "Untitled")}</span><br>'
         f'{credit_link(it)}</span>'
@@ -267,8 +276,8 @@ def build_static_grid(items: list[dict], hubs: list[dict]) -> str:
             page_of.setdefault(it["id"], hub_url(g["slug"]))
 
     cells = [
-        static_cell(it, page_of.get(it["id"], asset_url(it["file"])))
-        for it in items[:STATIC_CELLS]
+        static_cell(it, page_of.get(it["id"], asset_url(it["file"])), eager=i < EAGER_CELLS)
+        for i, it in enumerate(items[:STATIC_CELLS])
     ]
 
     nav = build_hub_nav(hubs)
@@ -321,7 +330,10 @@ def build_hub_page(hub: dict, generated: str) -> str:
     # kept under ~60 chars so search results show the whole thing
     title = f"{name} Wallpapers — 4K, Phone & Desktop"[:60]
 
-    cells = "\n".join(static_cell(it, asset_url(it["file"])) for it in items[:HUB_GRID_CELLS])
+    cells = "\n".join(
+        static_cell(it, asset_url(it["file"]), eager=i < EAGER_CELLS)
+        for i, it in enumerate(items[:HUB_GRID_CELLS])
+    )
 
     rest = items[HUB_GRID_CELLS:]
     if rest:
@@ -343,9 +355,21 @@ def build_hub_page(hub: dict, generated: str) -> str:
         "isPartOf": {"@type": "WebSite", "name": "Anime Wallpaper Archive", "url": SITE + "/"},
         "image": [image_object(it) for it in items[:LD_ITEMS]],
     }
-    ld_block = ('<script type="application/ld+json">'
-                + json.dumps(ld, separators=(",", ":")).replace("</", "<\\/")
+    breadcrumb = {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {"@type": "ListItem", "position": 1, "name": "Anime Wallpaper Archive", "item": SITE + "/"},
+            {"@type": "ListItem", "position": 2, "name": f"{name} wallpapers", "item": url},
+        ],
+    }
+
+    def ld_script(obj: dict) -> str:
+        return ('<script type="application/ld+json">'
+                + json.dumps(obj, separators=(",", ":")).replace("</", "<\\/")
                 + "</script>")
+
+    ld_block = ld_script(ld) + "\n" + ld_script(breadcrumb)
 
     return f"""<!DOCTYPE html>
 <html lang="en" data-theme="tty">
