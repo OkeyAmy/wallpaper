@@ -517,17 +517,27 @@ async function copyText(text, btn) {
   }
 }
 
-/* The source is always WebP. A PNG/JPEG download has to be re-encoded in the
-   browser — there's no server-side image codec here, and adding one just for
-   this would mean a Worker-side WASM decoder. Going through /dl/ first (not
-   the CDN URL directly) keeps the fetch same-origin so the canvas isn't
-   tainted; R2 sends no CORS headers, so a cross-origin fetch would produce a
-   canvas that refuses to export. */
-async function convertAndDownload(it, format, btn) {
+/* Wallpapers are stored as WebP, which not every wallpaper picker and phone
+   lock screen accepts, so the download is re-encoded to JPEG in the browser —
+   there's no server-side image codec here, and adding one would mean a
+   Worker-side WASM decoder.
+
+   JPEG rather than PNG: the source is already lossy, so PNG cannot recover
+   anything, it only stores the same q82 artifacts without compressing them —
+   measured at 3.99 MB against JPEG's 550 KB for one 3360×1440 wallpaper. The
+   pipeline converts every image to RGB before encoding, so there is no
+   transparency for JPEG to drop.
+
+   The fetch goes through /dl/ rather than straight to the CDN so it stays
+   same-origin: R2 sends no CORS headers, and a cross-origin image taints the
+   canvas, which makes toBlob throw instead of returning a file. */
+const DOWNLOAD_QUALITY = 0.92;
+
+async function convertAndDownload(it, btn) {
   const basename = it.file.split('/').pop();
   const stem = basename.replace(/\.\w+$/, '');
   const was = btn.textContent;
-  btn.textContent = '↓ CONVERTING…';
+  btn.textContent = '↓ PREPARING…';
   btn.setAttribute('aria-disabled', 'true');
 
   try {
@@ -541,22 +551,22 @@ async function convertAndDownload(it, format, btn) {
     canvas.getContext('2d').drawImage(bitmap, 0, 0);
     bitmap.close();
 
-    const mime = format === 'png' ? 'image/png' : 'image/jpeg';
     const outBlob = await new Promise(resolve =>
-      canvas.toBlob(resolve, mime, format === 'jpg' ? 0.92 : undefined));
+      canvas.toBlob(resolve, 'image/jpeg', DOWNLOAD_QUALITY));
     if (!outBlob) throw new Error('canvas export produced nothing');
 
     const url = URL.createObjectURL(outBlob);
     const a = document.createElement('a');
     a.href = url;
-    a.download = `${stem}.${format}`;
+    a.download = `${stem}.jpg`;
     document.body.appendChild(a);
     a.click();
     a.remove();
     setTimeout(() => URL.revokeObjectURL(url), 4000);
   } catch {
-    // decode/export failed (unsupported format, huge image, blocked canvas) —
-    // a working WebP download beats a button that silently does nothing
+    // decode or export failed (memory ceiling on a huge image, blocked
+    // canvas) — the original WebP is still a working wallpaper, and a button
+    // that does nothing is worse than one that hands over the source format
     location.href = `/dl/${basename}`;
   } finally {
     btn.textContent = was;
@@ -610,12 +620,10 @@ function wire() {
   $('#lbDl').addEventListener('click', e => {
     const it = state.view[state.lbIndex];
     if (!it) return;
-    const fmt = $('#lbFmt').value;
-    // webp needs no conversion — the href/download attrs paintLb already set
-    // point straight at /dl/, so the default anchor navigation is the download
-    if (fmt === 'webp') return;
+    // the anchor's href still points at /dl/, so this stays a real link for
+    // middle-click and "save link as" — and is what runs if the script breaks
     e.preventDefault();
-    convertAndDownload(it, fmt, e.currentTarget);
+    convertAndDownload(it, e.currentTarget);
   });
   $('#lbCopy').addEventListener('click', e => {
     const it = state.view[state.lbIndex];

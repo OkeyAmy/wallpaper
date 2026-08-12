@@ -718,19 +718,6 @@ kbd {
 .lb__acts { display: grid; gap: 6px; }
 .lb__acts .btn { justify-content: center; }
 
-.lbFmt {
-  font: inherit; font-size: 10.5px; letter-spacing: .1em; font-weight: 500;
-  padding: .65rem 1rem;
-  border: 1px solid var(--line-hi);
-  background: var(--bg-1); color: var(--fg);
-  -webkit-appearance: none; appearance: none;
-  text-align: center;
-}
-.lbFmt:focus-visible { outline: 2px solid var(--red); outline-offset: 2px; }
-@media (hover: hover) and (pointer: fine) {
-  .lbFmt:hover { border-color: var(--fg); }
-}
-
 .lb__nav { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; margin-top: auto; }
 .lb__nav button {
   padding: .75rem;
