@@ -190,6 +190,12 @@
     <image:image><image:loc>https://cdn.okeyamy.xyz/wallpapers/08e3be046f10.webp</image:loc><image:title>Naruto — 1920×1080 desktop anime wallpaper</image:title></image:image>
   </url>
   <url>
+    <loc>https://wallpapers.okeyamy.xyz/w/</loc>
+    <lastmod>2026-08-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
     <loc>https://wallpapers.okeyamy.xyz/w/naruto</loc>
     <lastmod>2026-08-13</lastmod>
     <changefreq>weekly</changefreq>

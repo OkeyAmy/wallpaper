@@ -440,7 +440,77 @@ def build_hub_page(hub: dict, generated: str, versions: dict[str, str]) -> str:
   <p class="hub__lede">{html.escape(summary)}</p>
   <div class="grid" role="list">
 {cells}
-  </div>
+</div>
+  <a class="hub__back" href="/">← Browse the full wallpaper archive</a>
+</main>
+<footer class="foot">
+  <p><a href="/w/">All characters</a> — <a href="/">Browse the full wallpaper archive</a>
+  · Copyright remains with the original artists. Every wallpaper links back to
+  the post it came from.</p>
+</footer>
+</body>
+</html>
+"""
+
+
+def build_character_index(hubs: list[dict], generated: str, versions: dict[str, str]) -> str:
+    """The w/ landing page: one link per character, so a crawler that lands on
+    /w/ (via the homepage footer) can reach every /w/<character> page.
+
+    A single column of links is deliberate — a grid of thumbnails here would
+    duplicate every character's homepage cells and dilute the crawl budget on
+    images that are already reachable from each character page.
+    """
+    links = "".join(
+        f'<li><a href="{hub_url(g["slug"])}">{html.escape(display_name(g["name"]))} '
+        f'wallpapers ({len(g["items"])})</a></li>'
+        for g in hubs
+    )
+    title = "All Characters — Anime Wallpaper Archive"
+    description = f"{len(hubs)} characters indexed in the archive, each with their own wallpaper page."
+    ld = {
+        "@context": "https://schema.org",
+        "@type": "CollectionPage",
+        "name": "All Characters",
+        "description": description,
+        "url": SITE + "/w/",
+        "dateModified": generated,
+        "isPartOf": {"@type": "WebSite", "name": "Anime Wallpaper Archive", "url": SITE + "/"},
+    }
+
+    def ld_script(obj: dict) -> str:
+        return ('<script type="application/ld+json">'
+                + json.dumps(obj, separators=(",", ":")).replace("</", "<\\/")
+                + "</script>")
+
+    return f"""<!DOCTYPE html>
+<html lang="en" data-theme="tty">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>{html.escape(title)}</title>
+<meta name="description" content="{html.escape(description)}">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#0A0A0A">
+<link rel="canonical" href="{SITE}/w/">
+<meta property="og:title" content="{html.escape(title)}">
+<meta property="og:description" content="{html.escape(description)}">
+<meta property="og:type" content="website">
+<meta property="og:url" content="{SITE}/w/">
+<meta property="og:image" content="{SITE}/assets/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="{versioned_asset('/assets/style.css', versions)}">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+{ld_script(ld)}
+</head>
+<body>
+<header class="bar" role="banner">
+  <a href="/" class="bar__logo">WALLPAPER ARCHIVE</a>
+</header>
+<main class="wrap">
+  <h1 class="hub__h">All characters</h1>
+  <p class="hub__lede">{html.escape(description)}</p>
+  <div class="seolist"><h2 class="foot__h">[ BY CHARACTER ]</h2><ul>{links}</ul></div>
   <a class="hub__back" href="/">← Browse the full wallpaper archive</a>
 </main>
 <footer class="foot">
@@ -457,9 +527,12 @@ def write_hub_pages(hubs: list[dict], generated: str, versions: dict[str, str]) 
 
     Stale files matter here: a character page that stops being generated but
     stays on disk keeps getting served and keeps claiming a canonical URL.
+    w/index.html is the w/ landing page, not a character page — it is written
+    separately by build_character_index() and must never be swept away here.
     """
     HUB_DIR.mkdir(exist_ok=True)
     wanted = {f"{g['slug']}.html" for g in hubs}
+    wanted.add("index.html")
 
     for old in HUB_DIR.glob("*.html"):
         if old.name not in wanted:
@@ -657,6 +730,12 @@ def build_sitemap(generated: str, items: list[dict], hubs: list[dict]) -> str:
         "    <changefreq>daily</changefreq>\n    <priority>1.0</priority>\n"
         f"{image_entries(items)}  </url>\n"
     ]
+    urls.append(
+        f"  <url>\n    <loc>{SITE}/w/</loc>\n"
+        f"    <lastmod>{day}</lastmod>\n"
+        "    <changefreq>weekly</changefreq>\n    <priority>0.9</priority>\n"
+        "  </url>\n"
+    )
     for g in hubs:
         urls.append(
             f"  <url>\n    <loc>{SITE}{hub_url(g['slug'])}</loc>\n"
@@ -869,6 +948,7 @@ def main() -> int:
     INDEX.write_text(doc)
 
     write_hub_pages(hubs, generated, versions)
+    (HUB_DIR / "index.html").write_text(build_character_index(hubs, generated, versions))
     (ROOT / "sitemap.xml").write_text(build_sitemap(generated, items, hubs))
     (ROOT / "robots.txt").write_text(build_robots())
     (ROOT / "_headers").write_text(build_headers())
