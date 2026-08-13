@@ -23,18 +23,28 @@
 /data/wallpapers.json
   Cache-Control: public, max-age=0, must-revalidate
 
-/assets/*
-  Cache-Control: public, max-age=86400
-
-# app.js and style.css are requested with ?v=<content-hash> (asset_versions /
-# stamp_asset_versions) — a code change is a new URL, not a cache problem, so
-# the old TTL-based staleness this replaces can't recur. Declared after the
-# wildcard above: precedence between these hasn't been verified against
-# Cloudflare's actual matching order, only the effective response header has
-# (see build_site.py's asset_versions docstring for why the TTL alone,
-# without the version query, was never going to be enough).
+# Enumerated rather than a /assets/* wildcard on principle, not preference:
+# confirmed live that Cloudflare merges every matching rule's headers instead
+# of the more specific one overriding — a wildcard entry plus a specific one
+# for the same path produced a single Cache-Control value with "public,
+# max-age=86400" and "public, max-age=31536000, immutable" both present,
+# which is not a header any cache is required to resolve sanely. Distinct,
+# non-overlapping paths sidestep the merge entirely rather than depending on
+# a precedence rule that turned out not to hold.
+#
+# app.js and style.css are requested with ?v=<content-hash>
+# (asset_versions / stamp_asset_versions) — a code change is a new URL, not
+# a cache problem.
 /assets/app.js
   Cache-Control: public, max-age=31536000, immutable
 
 /assets/style.css
   Cache-Control: public, max-age=31536000, immutable
+
+# Unversioned — og.png is redrawn whenever the newest items change, and
+# favicon.svg has no build-time hash to key off. Short TTLs, not immutable.
+/assets/og.png
+  Cache-Control: public, max-age=3600
+
+/assets/favicon.svg
+  Cache-Control: public, max-age=86400
