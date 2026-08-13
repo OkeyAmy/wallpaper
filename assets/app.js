@@ -566,10 +566,11 @@ async function convertAndDownload(it, btn) {
     a.click();
     a.remove();
     setTimeout(() => URL.revokeObjectURL(url), 4000);
-  } catch {
+  } catch (err) {
     // decode or export failed (memory ceiling on a huge image, blocked
     // canvas) — the original WebP is still a working wallpaper, and a button
     // that does nothing is worse than one that hands over the source format
+    console.error('[wallpaper] JPEG conversion failed, falling back to WebP:', err);
     location.href = `/dl/${basename}`;
   } finally {
     btn.textContent = was;
