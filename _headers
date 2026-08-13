@@ -25,3 +25,16 @@
 
 /assets/*
   Cache-Control: public, max-age=86400
+
+# app.js and style.css are requested with ?v=<content-hash> (asset_versions /
+# stamp_asset_versions) — a code change is a new URL, not a cache problem, so
+# the old TTL-based staleness this replaces can't recur. Declared after the
+# wildcard above: precedence between these hasn't been verified against
+# Cloudflare's actual matching order, only the effective response header has
+# (see build_site.py's asset_versions docstring for why the TTL alone,
+# without the version query, was never going to be enough).
+/assets/app.js
+  Cache-Control: public, max-age=31536000, immutable
+
+/assets/style.css
+  Cache-Control: public, max-age=31536000, immutable

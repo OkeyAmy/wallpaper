@@ -11,6 +11,7 @@ writes sitemap.xml, robots.txt and llms.txt.
 
 from __future__ import annotations
 
+import hashlib
 import html
 import io
 import json
@@ -84,6 +85,45 @@ def stamp_manifest(items: list[dict]) -> tuple[str, bool]:
     MANIFEST.write_text(json.dumps(
         {"generated": generated, "cdn": cdn, "items": items}, indent=1))
     return generated, not unchanged
+
+
+def asset_versions() -> dict[str, str]:
+    """sha256[:8] of each fingerprinted asset's current bytes.
+
+    /assets/* is cached for a day (build_headers), so a code change can serve
+    stale JS to a returning visitor for up to 24h — lowering the TTL doesn't
+    help anyone already holding a cached entry, since a shorter header on the
+    server doesn't shorten a freshness lifetime the browser already computed.
+    A content hash in the URL sidesteps the problem instead of shortening it:
+    index.html is revalidated on every load, so a changed hash there is a
+    guaranteed cache miss on the new URL, whatever the old one's TTL says.
+    """
+    return {
+        name: hashlib.sha256((ROOT / "assets" / name).read_bytes()).hexdigest()[:8]
+        for name in ("app.js", "style.css")
+    }
+
+
+def versioned_asset(path: str, versions: dict[str, str]) -> str:
+    """/assets/<name> with its content hash appended, e.g. /assets/app.js?v=1a2b3c4d."""
+    name = path.rsplit("/", 1)[-1]
+    return f"{path}?v={versions[name]}" if name in versions else path
+
+
+def stamp_asset_versions(html: str, versions: dict[str, str]) -> str:
+    """Rewrite /assets/app.js and /assets/style.css references to carry ?v=<hash>.
+
+    The pattern matches an existing ?v=... too, so this is idempotent — safe
+    to run against index.html's checked-in copy, which already carries
+    whatever hash the last build produced.
+    """
+    for name, digest in versions.items():
+        html = re.sub(
+            rf'(/assets/{re.escape(name)})(\?v=[0-9a-f]+)?',
+            rf'\1?v={digest}',
+            html,
+        )
+    return html
 
 
 def replace_block(text: str, tag: str, payload: str) -> str:
@@ -321,7 +361,7 @@ def hub_summary(name: str, items: list[dict]) -> str:
     )
 
 
-def build_hub_page(hub: dict, generated: str) -> str:
+def build_hub_page(hub: dict, generated: str, versions: dict[str, str]) -> str:
     name = display_name(hub["name"])
     items = hub["items"]
     summary = hub_summary(hub["name"], items)
@@ -387,7 +427,7 @@ def build_hub_page(hub: dict, generated: str) -> str:
 <meta property="og:url" content="{url}">
 <meta property="og:image" content="{asset_url(items[0]['file'])}">
 <meta name="twitter:card" content="summary_large_image">
-<link rel="stylesheet" href="/assets/style.css">
+<link rel="stylesheet" href="{versioned_asset('/assets/style.css', versions)}">
 <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
 {ld_block}
 </head>
@@ -412,7 +452,7 @@ def build_hub_page(hub: dict, generated: str) -> str:
 """
 
 
-def write_hub_pages(hubs: list[dict], generated: str) -> None:
+def write_hub_pages(hubs: list[dict], generated: str, versions: dict[str, str]) -> None:
     """Write w/<slug>.html, removing pages whose character fell below the line.
 
     Stale files matter here: a character page that stops being generated but
@@ -426,7 +466,7 @@ def write_hub_pages(hubs: list[dict], generated: str) -> None:
             old.unlink()
 
     for g in hubs:
-        (HUB_DIR / f"{g['slug']}.html").write_text(build_hub_page(g, generated))
+        (HUB_DIR / f"{g['slug']}.html").write_text(build_hub_page(g, generated, versions))
 
 
 def image_object(it: dict) -> dict:
@@ -559,6 +599,19 @@ def build_headers() -> str:
 
 /assets/*
   Cache-Control: public, max-age=86400
+
+# app.js and style.css are requested with ?v=<content-hash> (asset_versions /
+# stamp_asset_versions) — a code change is a new URL, not a cache problem, so
+# the old TTL-based staleness this replaces can't recur. Declared after the
+# wildcard above: precedence between these hasn't been verified against
+# Cloudflare's actual matching order, only the effective response header has
+# (see build_site.py's asset_versions docstring for why the TTL alone,
+# without the version query, was never going to be enough).
+/assets/app.js
+  Cache-Control: public, max-age=31536000, immutable
+
+/assets/style.css
+  Cache-Control: public, max-age=31536000, immutable
 """
 
 
@@ -797,13 +850,15 @@ def main() -> int:
 
     generated, changed = stamp_manifest(items)
     hubs = collect_hubs(items)
+    versions = asset_versions()
 
     doc = INDEX.read_text()
     doc = replace_block(doc, "SEO:LD", build_jsonld(items, generated))
     doc = replace_block(doc, "SEO:GRID", "\n" + build_static_grid(items, hubs) + "\n")
+    doc = stamp_asset_versions(doc, versions)
     INDEX.write_text(doc)
 
-    write_hub_pages(hubs, generated)
+    write_hub_pages(hubs, generated, versions)
     (ROOT / "sitemap.xml").write_text(build_sitemap(generated, items, hubs))
     (ROOT / "robots.txt").write_text(build_robots())
     (ROOT / "_headers").write_text(build_headers())
