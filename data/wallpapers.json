@@ -9,7 +9,7 @@
    "w": 3636,
    "h": 1440,
    "ratio": "2.52:1",
-   "bytes": 233322,
+   "bytes": 557772,
    "palette": [
     "#80a0b2",
     "#c4d2da",
@@ -45,7 +45,8 @@
    "character": [
     "asmoday",
     "lumine"
-   ]
+   ],
+   "q": 92
   },
   {
    "id": "f5fee9f5ea5c",
@@ -54,7 +55,7 @@
    "w": 3360,
    "h": 1440,
    "ratio": "7:3",
-   "bytes": 229532,
+   "bytes": 645826,
    "palette": [
     "#2e3b4c",
     "#e0ebf7",
@@ -89,7 +90,8 @@
    ],
    "character": [
     "ganyu"
-   ]
+   ],
+   "q": 92
   },
   {
    "id": "f533f78bf5ad",
@@ -98,7 +100,7 @@
    "w": 2210,
    "h": 1702,
    "ratio": "1.30:1",
-   "bytes": 343232,
+   "bytes": 571770,
    "palette": [
     "#18140b",
     "#e9cfae",
@@ -133,7 +135,8 @@
    ],
    "character": [
     "hatsune miku"
-   ]
+   ],
+   "q": 92
   },
   {
    "id": "eea9cb4e4fcf",
@@ -142,7 +145,7 @@
    "w": 2715,
    "h": 3840,
    "ratio": "0.71:1",
-   "bytes": 725410,
+   "bytes": 1407780,
    "palette": [
     "#588cb9",
     "#1a4a82",
@@ -178,7 +181,8 @@
    "character": [
     "hanashiro anzu",
     "touno kaoru"
-   ]
+   ],
+   "q": 92
   },
   {
    "id": "e4a4aec25603",
@@ -187,7 +191,7 @@
    "w": 2100,
    "h": 2800,
    "ratio": "3:4",
-   "bytes": 1461184,
+   "bytes": 2218806,
    "palette": [
     "#49548b",
     "#6f7dc3",
@@ -222,7 +226,8 @@
    ],
    "character": [
     "nilou"
-   ]
+   ],
+   "q": 92
   },
   {
    "id": "e3554584e7f4",
@@ -231,7 +236,7 @@
    "w": 1776,
    "h": 2485,
    "ratio": "0.71:1",
-   "bytes": 479322,
+   "bytes": 722686,
    "palette": [
     "#30454d",
     "#c75e66",
@@ -267,7 +272,8 @@
    "character": [
     "kaenbyou rin",
     "komeiji satori"
-   ]
+   ],
+   "q": 92
   },
   {
    "id": "de880af71371",
@@ -276,7 +282,7 @@
    "w": 3840,
    "h": 2122,
    "ratio": "1.81:1",
-   "bytes": 745546,
+   "bytes": 1822046,
    "palette": [
     "#9d595d",
     "#f8c3b7",
@@ -312,7 +318,8 @@
    "character": [
     "fatalis",
     "monster hunter"
-   ]
+   ],
+   "q": 92
   },
   {
    "id": "daeb61aac96f",
@@ -321,7 +328,7 @@
    "w": 3840,
    "h": 2148,
    "ratio": "1.79:1",
-   "bytes": 577910,
+   "bytes": 1045086,
    "palette": [
     "#b1aa9e",
     "#e9e6da",
@@ -357,7 +364,8 @@
    "character": [
     "chen qianyu",
     "perlica"
-   ]
+   ],
+   "q": 92
   },
   {
    "id": "d441171bf17b",
@@ -366,7 +374,7 @@
    "w": 1371,
    "h": 2048,
    "ratio": "0.67:1",
-   "bytes": 1011378,
+   "bytes": 1407092,
    "palette": [
     "#5e4f34",
     "#463523",
@@ -404,7 +412,8 @@
     "ancestor spirit",
     "ancient dragon lansseax",
     "blaidd the half-wolf"
-   ]
+   ],
+   "q": 92
   },
   {
    "id": "d271649ca0de",
@@ -413,7 +422,7 @@
    "w": 3360,
    "h": 1440,
    "ratio": "7:3",
-   "bytes": 284220,
+   "bytes": 756630,
    "palette": [
     "#3a7acd",
     "#2661b7",
@@ -448,7 +457,8 @@
    ],
    "character": [
     "navia"
-   ]
+   ],
+   "q": 92
   },
   {
    "id": "cff6adb6f8dc",
@@ -457,7 +467,7 @@
    "w": 3840,
    "h": 1792,
    "ratio": "15:7",
-   "bytes": 639046,
+   "bytes": 1117148,
    "palette": [
     "#332857",
     "#0b0d22",
@@ -493,7 +503,8 @@
    "character": [
     "raiden shogun",
     "yae miko"
-   ]
+   ],
+   "q": 92
   },
   {
    "id": "bf44a708dc2d",
@@ -502,7 +513,7 @@
    "w": 1300,
    "h": 2363,
    "ratio": "0.55:1",
-   "bytes": 471412,
+   "bytes": 800266,
    "palette": [
     "#646b72",
     "#9199a3",
@@ -539,7 +550,8 @@
     "konpaku youmu",
     "saigyou ayakashi",
     "saigyouji yuyuko"
-   ]
+   ],
+   "q": 92
   },
   {
    "id": "bca33b4d3b6b",
@@ -548,7 +560,7 @@
    "w": 609,
    "h": 3840,
    "ratio": "0.16:1",
-   "bytes": 520288,
+   "bytes": 798984,
    "palette": [
     "#eae1d0",
     "#906e2f",
@@ -585,7 +597,8 @@
     "hisou tensoku",
     "oogama",
     "saigyou ayakashi"
-   ]
+   ],
+   "q": 92
   },
   {
    "id": "bb90b4911a26",
@@ -594,7 +607,7 @@
    "w": 1200,
    "h": 1067,
    "ratio": "1.12:1",
-   "bytes": 222648,
+   "bytes": 372726,
    "palette": [
     "#433d31",
     "#bd9e8d",
@@ -630,7 +643,8 @@
    "character": [
     "izayoi sakuya",
     "remilia scarlet"
-   ]
+   ],
+   "q": 92
   },
   {
    "id": "b4b1f2c307fd",
@@ -639,7 +653,7 @@
    "w": 2697,
    "h": 1050,
    "ratio": "2.57:1",
-   "bytes": 428810,
+   "bytes": 688776,
    "palette": [
     "#1b2338",
     "#243c6d",
@@ -672,7 +686,8 @@
     "lamp",
     "lantern"
    ],
-   "character": []
+   "character": [],
+   "q": 92
   },
   {
    "id": "aacba916a32b",
@@ -681,7 +696,7 @@
    "w": 2394,
    "h": 3734,
    "ratio": "0.64:1",
-   "bytes": 2015238,
+   "bytes": 3852638,
    "palette": [
     "#253553",
     "#485571",
@@ -719,7 +734,8 @@
     "frieren",
     "himmel",
     "macht"
-   ]
+   ],
+   "q": 92
   },
   {
    "id": "a7ba0ecd33bf",
@@ -728,7 +744,7 @@
    "w": 1200,
    "h": 1067,
    "ratio": "1.12:1",
-   "bytes": 220000,
+   "bytes": 383442,
    "palette": [
     "#433b32",
     "#ceac7a",
@@ -765,7 +781,8 @@
     "hijiri byakuren",
     "kirisame marisa",
     "yorigami jo'on"
-   ]
+   ],
+   "q": 92
   },
   {
    "id": "a6702f3a6314",
@@ -774,7 +791,7 @@
    "w": 3186,
    "h": 1826,
    "ratio": "1.74:1",
-   "bytes": 393016,
+   "bytes": 703120,
    "palette": [
     "#4f795a",
     "#132f24",
@@ -809,7 +826,8 @@
    ],
    "character": [
     "yat sen"
-   ]
+   ],
+   "q": 92
   },
   {
    "id": "9df99318813d",
@@ -818,7 +836,7 @@
    "w": 3840,
    "h": 2304,
    "ratio": "5:3",
-   "bytes": 215522,
+   "bytes": 375456,
    "palette": [
     "#929e94",
     "#c3c0a9",
@@ -854,7 +872,8 @@
    "character": [
     "kaenbyou rin",
     "komeiji koishi"
-   ]
+   ],
+   "q": 92
   },
   {
    "id": "9caa24b1c29c",
@@ -863,7 +882,7 @@
    "w": 1912,
    "h": 1433,
    "ratio": "1.33:1",
-   "bytes": 83684,
+   "bytes": 160028,
    "palette": [
     "#365281",
     "#071c3d",
@@ -898,7 +917,8 @@
    ],
    "character": [
     "shameimaru aya"
-   ]
+   ],
+   "q": 92
   },
   {
    "id": "9b44b23c0874",
@@ -907,7 +927,7 @@
    "w": 3840,
    "h": 2160,
    "ratio": "16:9",
-   "bytes": 582758,
+   "bytes": 1398678,
    "palette": [
     "#272c33",
     "#38464f",
@@ -942,7 +962,8 @@
    ],
    "character": [
     "helldiver"
-   ]
+   ],
+   "q": 92
   },
   {
    "id": "9aa2b2376b22",
@@ -951,7 +972,7 @@
    "w": 3840,
    "h": 2638,
    "ratio": "1.46:1",
-   "bytes": 2260556,
+   "bytes": 3497104,
    "palette": [
     "#344d50",
     "#b4dcf0",
@@ -987,7 +1008,8 @@
    "character": [
     "ganyu",
     "xianyun"
-   ]
+   ],
+   "q": 92
   },
   {
    "id": "9855b1104bf4",
@@ -996,7 +1018,7 @@
    "w": 3733,
    "h": 2000,
    "ratio": "1.87:1",
-   "bytes": 447376,
+   "bytes": 773724,
    "palette": [
     "#8ac1f3",
     "#72a7de",
@@ -1029,7 +1051,8 @@
     "full_body",
     "gloves"
    ],
-   "character": []
+   "character": [],
+   "q": 92
   },
   {
    "id": "8b3db4a295f3",
@@ -1038,7 +1061,7 @@
    "w": 3840,
    "h": 2160,
    "ratio": "16:9",
-   "bytes": 565914,
+   "bytes": 1046134,
    "palette": [
     "#020425",
     "#0c0f58",
@@ -1073,7 +1096,8 @@
    ],
    "character": [
     "mona"
-   ]
+   ],
+   "q": 92
   },
   {
    "id": "890bab420a76",
@@ -1082,7 +1106,7 @@
    "w": 2560,
    "h": 1440,
    "ratio": "16:9",
-   "bytes": 911934,
+   "bytes": 1413512,
    "palette": [
     "#655535",
     "#ccb586",
@@ -1120,7 +1144,8 @@
     "aki shizuha",
     "alice margatroid",
     "chen"
-   ]
+   ],
+   "q": 92
   },
   {
    "id": "8520855f185b",
@@ -1129,7 +1154,7 @@
    "w": 1200,
    "h": 1787,
    "ratio": "0.67:1",
-   "bytes": 346248,
+   "bytes": 566222,
    "palette": [
     "#899e6a",
     "#dcc3af",
@@ -1165,7 +1190,8 @@
    "character": [
     "crystalfly",
     "nahida"
-   ]
+   ],
+   "q": 92
   },
   {
    "id": "824c2d3fa605",
@@ -1174,7 +1200,7 @@
    "w": 3552,
    "h": 2246,
    "ratio": "1.58:1",
-   "bytes": 798062,
+   "bytes": 1660260,
    "palette": [
     "#273e1e",
     "#95c369",
@@ -1209,7 +1235,8 @@
    ],
    "character": [
     "kita ikuyo"
-   ]
+   ],
+   "q": 92
   },
   {
    "id": "7f57af51f7c5",
@@ -1218,7 +1245,7 @@
    "w": 3100,
    "h": 2046,
    "ratio": "1.52:1",
-   "bytes": 1232118,
+   "bytes": 2120696,
    "palette": [
     "#73b8b8",
     "#3b5254",
@@ -1251,7 +1278,8 @@
     "cityscape",
     "cloud"
    ],
-   "character": []
+   "character": [],
+   "q": 92
   },
   {
    "id": "790c7c264a61",
@@ -1260,7 +1288,7 @@
    "w": 2000,
    "h": 1012,
    "ratio": "1.98:1",
-   "bytes": 113500,
+   "bytes": 275536,
    "palette": [
     "#86518e",
     "#d9c8eb",
@@ -1296,7 +1324,8 @@
    "character": [
     "ouro kronii",
     "watson amelia"
-   ]
+   ],
+   "q": 92
   },
   {
    "id": "777c5b1f42eb",
@@ -1305,7 +1334,7 @@
    "w": 3606,
    "h": 2016,
    "ratio": "1.79:1",
-   "bytes": 382772,
+   "bytes": 1113264,
    "palette": [
     "#acaa98",
     "#3a2d20",
@@ -1340,7 +1369,8 @@
    ],
    "character": [
     "amber"
-   ]
+   ],
+   "q": 92
   },
   {
    "id": "7449ddfb3aea",
@@ -1349,7 +1379,7 @@
    "w": 3840,
    "h": 2261,
    "ratio": "1.70:1",
-   "bytes": 733262,
+   "bytes": 1440676,
    "palette": [
     "#314051",
     "#121e2d",
@@ -1384,7 +1414,8 @@
    ],
    "character": [
     "kirara"
-   ]
+   ],
+   "q": 92
   },
   {
    "id": "7410096031d5",
@@ -1393,7 +1424,7 @@
    "w": 3000,
    "h": 1586,
    "ratio": "1.89:1",
-   "bytes": 370402,
+   "bytes": 743990,
    "palette": [
     "#6c8087",
     "#e5eef1",
@@ -1430,7 +1461,8 @@
     "blaidd the half-wolf",
     "miniature ranni",
     "ranni the witch"
-   ]
+   ],
+   "q": 92
   },
   {
    "id": "610d16179ea5",
@@ -1439,7 +1471,7 @@
    "w": 3840,
    "h": 2160,
    "ratio": "16:9",
-   "bytes": 709852,
+   "bytes": 1318780,
    "palette": [
     "#9369b1",
     "#f3ccf7",
@@ -1477,7 +1509,8 @@
     "apricot the lich",
     "bubi",
     "furby"
-   ]
+   ],
+   "q": 92
   },
   {
    "id": "4e69e7e9724e",
@@ -1486,7 +1519,7 @@
    "w": 3840,
    "h": 2160,
    "ratio": "16:9",
-   "bytes": 547690,
+   "bytes": 952518,
    "palette": [
     "#8aa0ba",
     "#93b1da",
@@ -1523,7 +1556,8 @@
     "flandre scarlet",
     "hong meiling",
     "remilia scarlet"
-   ]
+   ],
+   "q": 92
   },
   {
    "id": "4a501a11c2ea",
@@ -1532,7 +1566,7 @@
    "w": 3840,
    "h": 2016,
    "ratio": "40:21",
-   "bytes": 227332,
+   "bytes": 461742,
    "palette": [
     "#1c2738",
     "#313d4a",
@@ -1565,7 +1599,8 @@
    ],
    "character": [
     "santa claus"
-   ]
+   ],
+   "q": 92
   },
   {
    "id": "3cb002d85f9e",
@@ -1574,7 +1609,7 @@
    "w": 2161,
    "h": 3840,
    "ratio": "0.56:1",
-   "bytes": 409406,
+   "bytes": 757960,
    "palette": [
     "#2a302c",
     "#d4bd9e",
@@ -1610,7 +1645,8 @@
    "character": [
     "gitao",
     "gotoh hitori"
-   ]
+   ],
+   "q": 92
   },
   {
    "id": "35f71250217f",
@@ -1619,7 +1655,7 @@
    "w": 2392,
    "h": 3840,
    "ratio": "0.62:1",
-   "bytes": 447050,
+   "bytes": 984492,
    "palette": [
     "#53534a",
     "#463a22",
@@ -1654,7 +1690,8 @@
    ],
    "character": [
     "melina"
-   ]
+   ],
+   "q": 92
   },
   {
    "id": "2a237cbbfaf6",
@@ -1663,7 +1700,7 @@
    "w": 3200,
    "h": 1800,
    "ratio": "16:9",
-   "bytes": 390918,
+   "bytes": 796948,
    "palette": [
     "#374167",
     "#4e5983",
@@ -1701,7 +1738,8 @@
     "hong meiling",
     "izayoi sakuya",
     "remilia scarlet"
-   ]
+   ],
+   "q": 92
   },
   {
    "id": "20fcc38463f1",
@@ -1710,7 +1748,7 @@
    "w": 2304,
    "h": 1296,
    "ratio": "16:9",
-   "bytes": 246506,
+   "bytes": 489180,
    "palette": [
     "#1e212d",
     "#d5e2ec",
@@ -1747,7 +1785,8 @@
     "ak-12",
     "an-94",
     "m4a1"
-   ]
+   ],
+   "q": 92
   },
   {
    "id": "01e9df085943",
@@ -1756,7 +1795,7 @@
    "w": 1900,
    "h": 1070,
    "ratio": "1.78:1",
-   "bytes": 104474,
+   "bytes": 210208,
    "palette": [
     "#16110c",
     "#3e2e19",
@@ -1789,7 +1828,8 @@
     "desk",
     "indoors"
    ],
-   "character": []
+   "character": [],
+   "q": 92
   },
   {
    "id": "fef04e89a069",
@@ -1798,7 +1838,7 @@
    "w": 1440,
    "h": 2560,
    "ratio": "9:16",
-   "bytes": 508792,
+   "bytes": 1239082,
    "palette": [
     "#e1e6e5",
     "#717a79",
@@ -1835,7 +1875,8 @@
     "fern",
     "frieren",
     "stark"
-   ]
+   ],
+   "q": 92
   },
   {
    "id": "fd94a41c6e08",
@@ -1844,7 +1885,7 @@
    "w": 3840,
    "h": 1510,
    "ratio": "2.54:1",
-   "bytes": 362718,
+   "bytes": 814058,
    "palette": [
     "#966c6d",
     "#dfac9a",
@@ -1882,7 +1923,8 @@
     "ruin defender",
     "ruin drake",
     "ruin golem"
-   ]
+   ],
+   "q": 92
   },
   {
    "id": "f215b8f52f44",
@@ -1891,7 +1933,7 @@
    "w": 2048,
    "h": 1810,
    "ratio": "1.13:1",
-   "bytes": 451364,
+   "bytes": 739454,
    "palette": [
     "#444140",
     "#312223",
@@ -1929,7 +1971,8 @@
     "akashiya moka",
     "akaza akari",
     "akemi homura"
-   ]
+   ],
+   "q": 92
   },
   {
    "id": "f1b036be02f4",
@@ -1988,7 +2031,7 @@
    "w": 3840,
    "h": 2174,
    "ratio": "1.77:1",
-   "bytes": 430074,
+   "bytes": 791916,
    "palette": [
     "#422c2a",
     "#251715",
@@ -2026,7 +2069,8 @@
     "diluc",
     "hu tao",
     "keqing"
-   ]
+   ],
+   "q": 92
   },
   {
    "id": "e7e1a7353ab8",
@@ -2381,7 +2425,7 @@
    "w": 2645,
    "h": 3840,
    "ratio": "0.69:1",
-   "bytes": 1612062,
+   "bytes": 2743106,
    "palette": [
     "#af6c3c",
     "#734d31",
@@ -2414,7 +2458,8 @@
     "grand_scale",
     "handrail"
    ],
-   "character": []
+   "character": [],
+   "q": 92
   },
   {
    "id": "c64dadf7e9fe",
@@ -2451,7 +2496,7 @@
    "w": 2259,
    "h": 3840,
    "ratio": "0.59:1",
-   "bytes": 396478,
+   "bytes": 737390,
    "palette": [
     "#d3e4ed",
     "#71bce6",
@@ -2487,7 +2532,8 @@
    "character": [
     "hu tao",
     "sangonomiya kokomi"
-   ]
+   ],
+   "q": 92
   },
   {
    "id": "c2c8400767d4",
@@ -2496,7 +2542,7 @@
    "w": 848,
    "h": 1200,
    "ratio": "0.71:1",
-   "bytes": 275390,
+   "bytes": 436134,
    "palette": [
     "#382f3d",
     "#201a2a",
@@ -2531,7 +2577,8 @@
    ],
    "character": [
     "konpaku youmu"
-   ]
+   ],
+   "q": 92
   },
   {
    "id": "c02659279bcd",
@@ -2540,7 +2587,7 @@
    "w": 2160,
    "h": 1440,
    "ratio": "3:2",
-   "bytes": 132988,
+   "bytes": 262900,
    "palette": [
     "#055bca",
     "#053fb0",
@@ -2573,7 +2620,8 @@
     "scenery",
     "sitting"
    ],
-   "character": []
+   "character": [],
+   "q": 92
   },
   {
    "id": "be8a3d4a7301",
@@ -2582,7 +2630,7 @@
    "w": 1920,
    "h": 1080,
    "ratio": "16:9",
-   "bytes": 172990,
+   "bytes": 434210,
    "palette": [
     "#252f3a",
     "#344453",
@@ -2617,7 +2665,8 @@
    ],
    "character": [
     "ninomae ina'nis"
-   ]
+   ],
+   "q": 92
   },
   {
    "id": "bd1c467ceed5",
@@ -2654,7 +2703,7 @@
    "w": 2000,
    "h": 1091,
    "ratio": "1.83:1",
-   "bytes": 171188,
+   "bytes": 346948,
    "palette": [
     "#11343f",
     "#051a20",
@@ -2687,7 +2736,8 @@
     "english_text",
     "holding"
    ],
-   "character": []
+   "character": [],
+   "q": 92
   },
   {
    "id": "b5e1dcbee99e",
@@ -2696,7 +2746,7 @@
    "w": 2500,
    "h": 1800,
    "ratio": "25:18",
-   "bytes": 220868,
+   "bytes": 430876,
    "palette": [
     "#eac758",
     "#fbe06e",
@@ -2729,7 +2779,8 @@
     "long_hair",
     "motor_vehicle"
    ],
-   "character": []
+   "character": [],
+   "q": 92
   },
   {
    "id": "b567f2a14a8c",
@@ -2738,7 +2789,7 @@
    "w": 1400,
    "h": 1980,
    "ratio": "0.71:1",
-   "bytes": 232856,
+   "bytes": 440326,
    "palette": [
     "#8cb1d5",
     "#0a0e18",
@@ -2771,7 +2822,8 @@
     "landscape",
     "lantern"
    ],
-   "character": []
+   "character": [],
+   "q": 92
   },
   {
    "id": "b55fb741a52b",
@@ -2833,7 +2885,7 @@
    "w": 848,
    "h": 1200,
    "ratio": "0.71:1",
-   "bytes": 74824,
+   "bytes": 137638,
    "palette": [
     "#4ca2d1",
     "#1b263c",
@@ -2866,7 +2918,8 @@
     "hat_ribbon",
     "high_up"
    ],
-   "character": []
+   "character": [],
+   "q": 92
   },
   {
    "id": "a0a46b7816ad",
@@ -2875,7 +2928,7 @@
    "w": 3000,
    "h": 1500,
    "ratio": "2:1",
-   "bytes": 219132,
+   "bytes": 424202,
    "palette": [
     "#435f72",
     "#0b181e",
@@ -2908,7 +2961,8 @@
     "outdoors",
     "rock"
    ],
-   "character": []
+   "character": [],
+   "q": 92
   },
   {
    "id": "a045031b7b66",
@@ -2917,7 +2971,7 @@
    "w": 2000,
    "h": 1125,
    "ratio": "16:9",
-   "bytes": 191056,
+   "bytes": 370692,
    "palette": [
     "#556782",
     "#98bad9",
@@ -2950,7 +3004,8 @@
     "outdoors",
     "parking_lot"
    ],
-   "character": []
+   "character": [],
+   "q": 92
   },
   {
    "id": "99b99de03726",
@@ -3062,7 +3117,7 @@
    "w": 1550,
    "h": 1450,
    "ratio": "31:29",
-   "bytes": 103524,
+   "bytes": 201054,
    "palette": [
     "#0c1b22",
     "#28444a",
@@ -3099,7 +3154,8 @@
     "kochiya sanae",
     "moriya suwako",
     "yasaka kanako"
-   ]
+   ],
+   "q": 92
   },
   {
    "id": "8daacfa0e982",
@@ -3186,7 +3242,7 @@
    "w": 1200,
    "h": 800,
    "ratio": "3:2",
-   "bytes": 87652,
+   "bytes": 154326,
    "palette": [
     "#565f8a",
     "#a4b8dd",
@@ -3221,7 +3277,8 @@
    ],
    "character": [
     "ookami mio"
-   ]
+   ],
+   "q": 92
   },
   {
    "id": "723d26963658",
@@ -3230,7 +3287,7 @@
    "w": 2000,
    "h": 924,
    "ratio": "2.16:1",
-   "bytes": 132396,
+   "bytes": 239772,
    "palette": [
     "#1d1f20",
     "#e7edef",
@@ -3265,7 +3322,8 @@
    ],
    "character": [
     "jessica"
-   ]
+   ],
+   "q": 92
   },
   {
    "id": "71b8f4e0c420",
@@ -3274,7 +3332,7 @@
    "w": 1543,
    "h": 2048,
    "ratio": "0.75:1",
-   "bytes": 206060,
+   "bytes": 360090,
    "palette": [
     "#5b5940",
     "#c1deed",
@@ -3309,7 +3367,8 @@
    ],
    "character": [
     "vhs"
-   ]
+   ],
+   "q": 92
   },
   {
    "id": "71336af336ec",
@@ -3346,7 +3405,7 @@
    "w": 2560,
    "h": 1080,
    "ratio": "2.37:1",
-   "bytes": 393300,
+   "bytes": 954180,
    "palette": [
     "#d2d9d9",
     "#3f4a51",
@@ -3382,7 +3441,8 @@
    "character": [
     "vladilena millize",
     "xm2 reginleif"
-   ]
+   ],
+   "q": 92
   },
   {
    "id": "686a2c83a9de",
@@ -3416,7 +3476,7 @@
    "w": 2706,
    "h": 2667,
    "ratio": "1.01:1",
-   "bytes": 770300,
+   "bytes": 1253508,
    "palette": [
     "#969895",
     "#303c77",
@@ -3454,7 +3514,8 @@
     "artoria pendragon",
     "ash ketchum",
     "chii"
-   ]
+   ],
+   "q": 92
   },
   {
    "id": "675aad40d185",
@@ -3463,7 +3524,7 @@
    "w": 1500,
    "h": 2500,
    "ratio": "3:5",
-   "bytes": 375276,
+   "bytes": 828790,
    "palette": [
     "#c99d8f",
     "#f6dec8",
@@ -3501,7 +3562,8 @@
     "azusa",
     "hiyori",
     "misaki"
-   ]
+   ],
+   "q": 92
   },
   {
    "id": "6451646d814c",
@@ -3510,7 +3572,7 @@
    "w": 2831,
    "h": 3840,
    "ratio": "0.74:1",
-   "bytes": 587128,
+   "bytes": 1172312,
    "palette": [
     "#253763",
     "#141729",
@@ -3546,7 +3608,8 @@
    "character": [
     "kafka",
     "silver wolf"
-   ]
+   ],
+   "q": 92
   },
   {
    "id": "6369f0341ed6",
@@ -3611,7 +3674,7 @@
    "w": 2004,
    "h": 1001,
    "ratio": "2.00:1",
-   "bytes": 282368,
+   "bytes": 609716,
    "palette": [
     "#404c5c",
     "#bde3fc",
@@ -3649,7 +3712,8 @@
     "gawr gura",
     "hakos baelz",
     "irys"
-   ]
+   ],
+   "q": 92
   },
   {
    "id": "57c42b4736b3",
@@ -3686,7 +3750,7 @@
    "w": 3840,
    "h": 2117,
    "ratio": "1.81:1",
-   "bytes": 387586,
+   "bytes": 700754,
    "palette": [
     "#435060",
     "#dbe2e7",
@@ -3724,7 +3788,8 @@
     "kal'tsit",
     "misery",
     "pith"
-   ]
+   ],
+   "q": 92
   },
   {
    "id": "49cfdb6f54f2",
@@ -3733,7 +3798,7 @@
    "w": 3840,
    "h": 2160,
    "ratio": "16:9",
-   "bytes": 701294,
+   "bytes": 1447964,
    "palette": [
     "#373e3c",
     "#a6bd7a",
@@ -3768,7 +3833,8 @@
    ],
    "character": [
     "shameimaru aya"
-   ]
+   ],
+   "q": 92
   },
   {
    "id": "452a071c3bde",
@@ -3777,7 +3843,7 @@
    "w": 1827,
    "h": 1000,
    "ratio": "1.83:1",
-   "bytes": 406772,
+   "bytes": 643218,
    "palette": [
     "#5e363b",
     "#d17759",
@@ -3815,7 +3881,8 @@
     "kirisame marisa",
     "shanghai doll",
     "shinki"
-   ]
+   ],
+   "q": 92
   },
   {
    "id": "404482f10aa7",
@@ -3852,7 +3919,7 @@
    "w": 857,
    "h": 1202,
    "ratio": "0.71:1",
-   "bytes": 144752,
+   "bytes": 251088,
    "palette": [
     "#61412a",
     "#2a140c",
@@ -3888,7 +3955,8 @@
    "character": [
     "koakuma",
     "patchouli knowledge"
-   ]
+   ],
+   "q": 92
   },
   {
    "id": "3b2bf0c9029e",
@@ -3897,7 +3965,7 @@
    "w": 1920,
    "h": 1080,
    "ratio": "16:9",
-   "bytes": 154256,
+   "bytes": 282534,
    "palette": [
     "#202b36",
     "#f5d1d2",
@@ -3935,7 +4003,8 @@
     "asuna",
     "hakurei reimu",
     "kaname madoka"
-   ]
+   ],
+   "q": 92
   },
   {
    "id": "3a91a9a16ff1",
@@ -3969,7 +4038,7 @@
    "w": 3840,
    "h": 2145,
    "ratio": "1.79:1",
-   "bytes": 1425096,
+   "bytes": 2495752,
    "palette": [
     "#072a4b",
     "#0e5481",
@@ -4005,7 +4074,8 @@
    "character": [
     "helldiver",
     "hulk"
-   ]
+   ],
+   "q": 92
   },
   {
    "id": "39352aac5529",
@@ -4014,7 +4084,7 @@
    "w": 2480,
    "h": 3508,
    "ratio": "0.71:1",
-   "bytes": 2733450,
+   "bytes": 4022438,
    "palette": [
     "#d5ac78",
     "#e5c99a",
@@ -4050,7 +4120,8 @@
    "character": [
     "fern",
     "frieren"
-   ]
+   ],
+   "q": 92
   },
   {
    "id": "368a645ae78f",
@@ -4059,7 +4130,7 @@
    "w": 2880,
    "h": 1440,
    "ratio": "2:1",
-   "bytes": 517606,
+   "bytes": 895498,
    "palette": [
     "#c29289",
     "#872e3e",
@@ -4095,7 +4166,8 @@
    "character": [
     "raiden shogun",
     "yae miko"
-   ]
+   ],
+   "q": 92
   },
   {
    "id": "3589d2a45a49",
@@ -4104,7 +4176,7 @@
    "w": 1429,
    "h": 2200,
    "ratio": "0.65:1",
-   "bytes": 557914,
+   "bytes": 957836,
    "palette": [
     "#b0a39c",
     "#020722",
@@ -4137,7 +4209,8 @@
     "scenery",
     "scythe"
    ],
-   "character": []
+   "character": [],
+   "q": 92
   },
   {
    "id": "2f46d19368c0",
@@ -4171,7 +4244,7 @@
    "w": 1234,
    "h": 1622,
    "ratio": "0.76:1",
-   "bytes": 323482,
+   "bytes": 517532,
    "palette": [
     "#4385be",
     "#2e6599",
@@ -4204,7 +4277,8 @@
     "plant",
     "power_lines"
    ],
-   "character": []
+   "character": [],
+   "q": 92
   },
   {
    "id": "23961ea22af3",
@@ -4241,7 +4315,7 @@
    "w": 1556,
    "h": 1101,
    "ratio": "1.41:1",
-   "bytes": 285706,
+   "bytes": 411588,
    "palette": [
     "#e9d3c7",
     "#96150f",
@@ -4279,7 +4353,8 @@
     "kaname madoka",
     "kero",
     "kinomoto sakura"
-   ]
+   ],
+   "q": 92
   },
   {
    "id": "2023b90e5687",
@@ -4288,7 +4363,7 @@
    "w": 1920,
    "h": 1122,
    "ratio": "1.71:1",
-   "bytes": 466394,
+   "bytes": 705062,
    "palette": [
     "#4e5885",
     "#e2b0a9",
@@ -4326,7 +4401,8 @@
     "izayoi sakuya",
     "kirisame marisa",
     "remilia scarlet"
-   ]
+   ],
+   "q": 92
   },
   {
    "id": "1fe282b9cdef",
@@ -4335,7 +4411,7 @@
    "w": 3840,
    "h": 2581,
    "ratio": "1.49:1",
-   "bytes": 1845312,
+   "bytes": 3297080,
    "palette": [
     "#f8eed8",
     "#214060",
@@ -4368,7 +4444,8 @@
     "ocean",
     "outdoors"
    ],
-   "character": []
+   "character": [],
+   "q": 92
   },
   {
    "id": "1faa4b038bdc",
@@ -4430,7 +4507,7 @@
    "w": 3840,
    "h": 2160,
    "ratio": "16:9",
-   "bytes": 687724,
+   "bytes": 1571054,
    "palette": [
     "#273c5f",
     "#4166ad",
@@ -4465,7 +4542,8 @@
    ],
    "character": [
     "ganyu"
-   ]
+   ],
+   "q": 92
   },
   {
    "id": "186796f0d9e4",
@@ -4530,7 +4608,7 @@
    "w": 1125,
    "h": 1400,
    "ratio": "0.80:1",
-   "bytes": 168082,
+   "bytes": 294322,
    "palette": [
     "#f7f8e6",
     "#ece5b7",
@@ -4566,7 +4644,8 @@
    "character": [
     "artoria pendragon",
     "saber"
-   ]
+   ],
+   "q": 92
   },
   {
    "id": "0e022dbd8ad6",
@@ -4575,7 +4654,7 @@
    "w": 3360,
    "h": 1440,
    "ratio": "7:3",
-   "bytes": 303456,
+   "bytes": 659232,
    "palette": [
     "#cccdd0",
     "#43423f",
@@ -4611,7 +4690,8 @@
    "character": [
     "hoshimi miyabi",
     "tailless"
-   ]
+   ],
+   "q": 92
   },
   {
    "id": "0d3131c5ed4c",
