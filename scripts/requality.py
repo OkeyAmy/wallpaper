@@ -36,7 +36,8 @@ import requests
 from PIL import Image
 
 from pipeline import (
-    FULL_QUALITY, MANIFEST, MAX_EDGE, _encode, sha256_bytes,
+    FULL_QUALITY, MANIFEST, MAX_EDGE, THUMB_QUALITY, THUMB_WIDTH,
+    _encode, sha256_bytes,
 )
 from storage import get_storage
 
@@ -90,6 +91,14 @@ def main() -> int:
         if args.limit and done >= args.limit:
             break
 
+        # resumability: a prior run (this one included — it can be killed by
+        # session teardown) marks each item it finished, so re-running after
+        # an interruption skips straight to the work still outstanding
+        # instead of re-downloading ~4 MB per item just to find out it was
+        # already done
+        if it.get("q") == FULL_QUALITY:
+            continue
+
         pid = post_id(it["permalink"])
         if not pid:
             continue
@@ -101,8 +110,16 @@ def main() -> int:
             continue
 
         # the post's file must still be the one this item was made from, or
-        # we would be publishing a different image under an unchanged URL
-        if it.get("sha256") and sha256_bytes(raw) != it["sha256"]:
+        # we would be publishing a different image under an unchanged URL.
+        # A *missing* sha256 must refuse, not proceed — the previous version
+        # of this check (`if it.get("sha256") and ...`) skipped verification
+        # entirely for any item without one, which is backwards: no hash on
+        # record means "unverifiable," not "trust it."
+        if not it.get("sha256"):
+            print(f"  ! {it['id']}  no sha256 on record — cannot verify, left alone")
+            skipped += 1
+            continue
+        if sha256_bytes(raw) != it["sha256"]:
             print(f"  ! {it['id']}  original has changed upstream — left alone")
             skipped += 1
             continue
@@ -127,19 +144,38 @@ def main() -> int:
         # at least this good; replacing it would spend a write to lose detail
         if len(new_bytes) <= old:
             print(f"  = {it['id']}  {old/1024:.0f} KB already >= q{FULL_QUALITY} — left alone")
+            it["q"] = FULL_QUALITY          # already at target — don't re-check it next run
             skipped += 1
-            continue
+        else:
+            print(f"  ~ {it['id']}  {img.width}x{img.height}  "
+                  f"{old/1024:.0f} KB -> {len(new_bytes)/1024:.0f} KB")
 
-        print(f"  ~ {it['id']}  {img.width}x{img.height}  "
-              f"{old/1024:.0f} KB -> {len(new_bytes)/1024:.0f} KB")
+            before_bytes += old
+            after_bytes += len(new_bytes)
+            done += 1
 
-        before_bytes += old
-        after_bytes += len(new_bytes)
-        done += 1
+            if not args.dry_run:
+                store.put(it["file"], new_bytes)
+                it["bytes"] = len(new_bytes)
 
+                # the thumbnail is what most visitors actually look at, and
+                # the decoded original is already in memory here — recomputing
+                # it in a separate pass later would mean re-downloading all
+                # of these a second time
+                thumb = img.copy()
+                thumb.thumbnail((THUMB_WIDTH, THUMB_WIDTH * 3), Image.Resampling.LANCZOS)
+                store.put(it["thumb"], _encode(thumb, THUMB_QUALITY))
+
+                it["q"] = FULL_QUALITY
+
+        # written after every item, not just at the end: a run killed
+        # mid-list (session teardown did exactly this once already) must not
+        # leave R2 holding upgraded objects the manifest doesn't know about —
+        # prune.py trusts `bytes` to decide what to delete against the 8 GiB
+        # cap, so an under-reporting manifest lets real storage drift past it
         if not args.dry_run:
-            store.put(it["file"], new_bytes)
-            it["bytes"] = len(new_bytes)
+            doc["items"] = items
+            MANIFEST.write_text(json.dumps(doc, indent=1))
 
     verb = "would re-encode" if args.dry_run else "re-encoded"
     print(f"\n{verb} {done} / skipped {skipped}")
@@ -149,11 +185,7 @@ def main() -> int:
 
     if args.dry_run:
         print("dry run — nothing uploaded, manifest untouched")
-        return 0
-
-    if done:
-        doc["items"] = items
-        MANIFEST.write_text(json.dumps(doc, indent=1))
+    elif done or skipped:
         print("manifest updated — run scripts/build_site.py next")
     return 0
 
