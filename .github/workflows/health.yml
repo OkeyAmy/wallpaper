@@ -1,0 +1,43 @@
+name: health check
+
+# Checks the deployed site, not the build.
+#
+# Everything else in this repo verifies its own output and then trusts that
+# what it pushed is what visitors get. That assumption is the one that breaks
+# silently: a Worker route changes, a cache rule serves a stale asset, an R2
+# object goes missing while the manifest still advertises it, the CDN hostname
+# stops resolving. The build stays green throughout, and on a site nobody
+# watches the pages just quietly stop being indexed.
+#
+# A failing run here is the alert. There is no email to configure and no
+# service to keep paying for — a red cross on the repo is the one signal that
+# still works years later, which is the whole requirement.
+#
+# It runs an hour after the daily sync, giving the Cloudflare deploy time to
+# go out, and never writes anything.
+
+on:
+  schedule:
+    - cron: "0 7 * * *"        # 07:00 UTC, an hour after sync.yml
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  health:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - run: pip install -r scripts/requirements.txt
+
+      - name: Check the live site
+        run: python scripts/healthcheck.py --sample 20 --max-pages 60

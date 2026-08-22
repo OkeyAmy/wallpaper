@@ -14,6 +14,7 @@ from pathlib import Path
 
 from PIL import Image
 
+from quality import reject_reasons
 from storage import get_storage
 
 # Pillow refuses very large images by default (decompression-bomb guard).
@@ -255,12 +256,20 @@ def ingest_image(
     character: list[str] | None = None,
     existing: list[dict] | None = None,
     storage=None,
+    enforce_policy: bool = True,
 ) -> Item | None:
     """Decode, validate, re-encode and describe one image.
 
     Returns None when the image fails policy (too small, corrupt, not an
-    image at all) or is a duplicate of something in ``existing`` — callers
-    treat that as "skip", not as an error.
+    image at all, or not wallpaper material per quality.py) or is a duplicate
+    of something in ``existing`` — callers treat that as "skip", not as an
+    error.
+
+    The quality gate lives here rather than in each caller because this is the
+    one function every wallpaper passes through, so a rule added to quality.py
+    takes effect for the scraper and for hand-dropped files at the same time.
+    ``enforce_policy=False`` is the deliberate override for a file you have
+    looked at and want anyway.
 
     Duplicate detection runs *before* anything is written to storage. The
     encoded key is content-addressed (``sha256(raw)[:12]``), so a duplicate
@@ -283,6 +292,13 @@ def ingest_image(
 
     if img.mode not in ("RGB", "L"):
         img = img.convert("RGB")
+
+    # Backstop. Callers that want to report *why* screen with quality.py
+    # themselves first (ingest_local does, so it can name the reason in its
+    # output); this catches anything that doesn't.
+    if enforce_policy and reject_reasons(tags=tags or (), w=img.width,
+                                         h=img.height, img=img):
+        return None
 
     digest = sha256_bytes(raw)
     ident = digest[:12]

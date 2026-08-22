@@ -1,5 +1,5 @@
 {
- "generated": "2026-08-22T06:54:11+00:00",
+ "generated": "2026-08-22T17:25:07+00:00",
  "cdn": "https://cdn.okeyamy.xyz",
  "items": [
   {
@@ -1807,51 +1807,6 @@
    ]
   },
   {
-   "id": "fe2e298b6478",
-   "file": "wallpapers/fe2e298b6478.webp",
-   "thumb": "wallpapers/thumbs/fe2e298b6478.webp",
-   "w": 1656,
-   "h": 1462,
-   "ratio": "1.13:1",
-   "bytes": 219626,
-   "palette": [
-    "#211c1a",
-    "#a94d3e",
-    "#e5a7aa",
-    "#592422",
-    "#e9c9c4"
-   ],
-   "source": "danbooru",
-   "added": "2026-08-21",
-   "title": "gotoh hitori kita ikuyo",
-   "sub": "danbooru",
-   "author": "krill55",
-   "permalink": "https://danbooru.donmai.us/posts/6049646",
-   "sha256": "fe2e298b64785458e1260d0ced063b5ce285dd6970595d1e768e754e976709d8",
-   "dhash": "b7ece4e0c0c0b064",
-   "tags": [
-    "2girls",
-    "anime_coloring",
-    "cardigan",
-    "closed_eyes",
-    "cowboy_shot",
-    "cube_hair_ornament",
-    "dutch_angle",
-    "green_eyes",
-    "grey_skirt",
-    "guitar_case",
-    "hair_ornament",
-    "instrument_case",
-    "instrument_case_on_back",
-    "jacket",
-    "kiss"
-   ],
-   "character": [
-    "gotoh hitori",
-    "kita ikuyo"
-   ]
-  },
-  {
    "id": "fb0c75a1b30d",
    "file": "wallpapers/fb0c75a1b30d.webp",
    "thumb": "wallpapers/thumbs/fb0c75a1b30d.webp",
@@ -2120,51 +2075,6 @@
    ]
   },
   {
-   "id": "e4f5d3221a3a",
-   "file": "wallpapers/e4f5d3221a3a.webp",
-   "thumb": "wallpapers/thumbs/e4f5d3221a3a.webp",
-   "w": 1080,
-   "h": 857,
-   "ratio": "1.26:1",
-   "bytes": 260170,
-   "palette": [
-    "#d09d98",
-    "#eacab8",
-    "#9a2c3d",
-    "#f9e6e2",
-    "#e8b15d"
-   ],
-   "source": "danbooru",
-   "added": "2026-08-21",
-   "title": "kim pine satonaka chie",
-   "sub": "danbooru",
-   "author": "omar dogan",
-   "permalink": "https://danbooru.donmai.us/posts/6809589",
-   "sha256": "e4f5d3221a3a9b25dac95dfbf51c25b7009b4202f86524eebe2fe5db517548a6",
-   "dhash": "b130184a94b060f0",
-   "tags": [
-    "1girl",
-    "amplifier",
-    "arm_support",
-    "artist_name",
-    "black_skirt",
-    "bob_cut",
-    "breasts",
-    "brown_eyes",
-    "cosplay",
-    "couch",
-    "cup",
-    "disposable_cup",
-    "double_vertical_stripe",
-    "drink",
-    "east-west_crossover"
-   ],
-   "character": [
-    "kim pine",
-    "satonaka chie"
-   ]
-  },
-  {
    "id": "e4ce994ee44b",
    "file": "wallpapers/e4ce994ee44b.webp",
    "thumb": "wallpapers/thumbs/e4ce994ee44b.webp",
@@ -2345,51 +2255,6 @@
    ]
   },
   {
-   "id": "b4c108f93109",
-   "file": "wallpapers/b4c108f93109.webp",
-   "thumb": "wallpapers/thumbs/b4c108f93109.webp",
-   "w": 1943,
-   "h": 2720,
-   "ratio": "0.71:1",
-   "bytes": 384934,
-   "palette": [
-    "#272d39",
-    "#2b4867",
-    "#3f6486",
-    "#e0d0c9",
-    "#7b8492"
-   ],
-   "source": "danbooru",
-   "added": "2026-08-21",
-   "title": "ellen joe wise",
-   "sub": "danbooru",
-   "author": "namikare",
-   "permalink": "https://danbooru.donmai.us/posts/7918197",
-   "sha256": "b4c108f93109f0f5b0cf881d4893b46c3242b469f2626d6045888cd17110dcaf",
-   "dhash": "8e168e160e4b5325",
-   "tags": [
-    "1boy",
-    "1girl",
-    "anger_vein",
-    "angry",
-    "animal_hood",
-    "black_hair",
-    "blush",
-    "cheek_poking",
-    "chibi",
-    "chibi_inset",
-    "choker",
-    "clueless",
-    "comic",
-    "crossed_bangs",
-    "drooling"
-   ],
-   "character": [
-    "ellen joe",
-    "wise"
-   ]
-  },
-  {
    "id": "b1a416332e9d",
    "file": "wallpapers/b1a416332e9d.webp",
    "thumb": "wallpapers/thumbs/b1a416332e9d.webp",
@@ -2435,53 +2300,6 @@
    ]
   },
   {
-   "id": "aa76042cfb4f",
-   "file": "wallpapers/aa76042cfb4f.webp",
-   "thumb": "wallpapers/thumbs/aa76042cfb4f.webp",
-   "w": 2700,
-   "h": 2400,
-   "ratio": "9:8",
-   "bytes": 702512,
-   "palette": [
-    "#fadeb4",
-    "#d3834f",
-    "#ecc38b",
-    "#fcefdc",
-    "#b53123"
-   ],
-   "source": "danbooru",
-   "added": "2026-08-21",
-   "title": "cheemsburger peni parker sp//dr spider-ham uncle murphy",
-   "sub": "danbooru",
-   "author": "khyle.",
-   "permalink": "https://danbooru.donmai.us/posts/6444048",
-   "sha256": "aa76042cfb4f03eb468c56b2c8d4914b9ac7513ca0b32c24bcfabe1ce3c4c009",
-   "dhash": "6ede8bc094b08a6c",
-   "tags": [
-    "1girl",
-    ":d",
-    "ad_(object)",
-    "animal",
-    "backpack",
-    "bag",
-    "black_hair",
-    "black_shirt",
-    "blush",
-    "burger",
-    "chromatic_aberration",
-    "closed_eyes",
-    "closed_mouth",
-    "cup",
-    "disposable_cup"
-   ],
-   "character": [
-    "cheemsburger",
-    "peni parker",
-    "sp//dr",
-    "spider-ham"
-   ]
-  },
-  {
    "id": "a997e26f7e2c",
    "file": "wallpapers/a997e26f7e2c.webp",
    "thumb": "wallpapers/thumbs/a997e26f7e2c.webp",
@@ -2523,100 +2341,6 @@
    ],
    "character": [
     "riza hawkeye"
-   ]
-  },
-  {
-   "id": "a216404b0913",
-   "file": "wallpapers/a216404b0913.webp",
-   "thumb": "wallpapers/thumbs/a216404b0913.webp",
-   "w": 1920,
-   "h": 2300,
-   "ratio": "0.83:1",
-   "bytes": 1020408,
-   "palette": [
-    "#d29661",
-    "#fdf0bc",
-    "#deba8c",
-    "#b05c35",
-    "#5f422b"
-   ],
-   "source": "danbooru",
-   "added": "2026-08-21",
-   "title": "belle lordly trashcan lumine stelle trailblazer",
-   "sub": "danbooru",
-   "author": "littleredhoodd",
-   "permalink": "https://danbooru.donmai.us/posts/8703686",
-   "sha256": "a216404b0913b6d4c6e6ae5fb3b4090e4a3d609ae211ec5152a7af6b0947b0ff",
-   "dhash": "b370303037b35a7a",
-   "tags": [
-    "3d",
-    "3girls",
-    "astral_express_(honkai:_star_rail)",
-    "balloon",
-    "black_jacket",
-    "black_shirt",
-    "blonde_hair",
-    "blue_hair",
-    "company_connection",
-    "cooking",
-    "crossover",
-    "fire",
-    "frown",
-    "grey_hair",
-    "grill"
-   ],
-   "character": [
-    "belle",
-    "lordly trashcan",
-    "lumine",
-    "stelle"
-   ]
-  },
-  {
-   "id": "9a15d5ece288",
-   "file": "wallpapers/9a15d5ece288.webp",
-   "thumb": "wallpapers/thumbs/9a15d5ece288.webp",
-   "w": 3840,
-   "h": 1425,
-   "ratio": "2.69:1",
-   "bytes": 818556,
-   "palette": [
-    "#966f85",
-    "#f8cbd1",
-    "#ba7d8f",
-    "#d8949d",
-    "#5c2b39"
-   ],
-   "source": "danbooru",
-   "added": "2026-08-21",
-   "title": "a-chan a-chan airani iofifteen airani iofifteen akai haato akai haato",
-   "sub": "danbooru",
-   "author": "torriet",
-   "permalink": "https://danbooru.donmai.us/posts/4415608",
-   "sha256": "9a15d5ece288b01f1f20d0688aa2762cda8c2bbd67b65b612c7da2b666f4b00b",
-   "dhash": "c8c2eacad3d2b2b3",
-   "tags": [
-    "6+girls",
-    ":3",
-    ":>",
-    ":o",
-    ":p",
-    ">_<",
-    "?",
-    "ahoge",
-    "all_fours",
-    "angel_wings",
-    "animal_ear_fluff",
-    "animal_ears",
-    "arm_strap",
-    "arm_up",
-    "bag"
-   ],
-   "character": [
-    "a-chan",
-    "airani iofifteen",
-    "akai haato",
-    "aki rosenthal"
    ]
   },
   {
@@ -2891,48 +2615,6 @@
    ]
   },
   {
-   "id": "62d7c53e5fae",
-   "file": "wallpapers/62d7c53e5fae.webp",
-   "thumb": "wallpapers/thumbs/62d7c53e5fae.webp",
-   "w": 1447,
-   "h": 2200,
-   "ratio": "0.66:1",
-   "bytes": 278964,
-   "palette": [
-    "#d3c89c",
-    "#121420",
-    "#b5aa91",
-    "#675e4f",
-    "#837769"
-   ],
-   "source": "danbooru",
-   "added": "2026-08-21",
-   "title": "original",
-   "sub": "danbooru",
-   "author": "wakamatsu372",
-   "permalink": "https://danbooru.donmai.us/posts/6330360",
-   "sha256": "62d7c53e5fae34eb4d3c49bcb942b687f6ec1caebf993de791b4884187c35ffc",
-   "dhash": "83961e9838e486ce",
-   "tags": [
-    "1boy",
-    "1girl",
-    "2koma",
-    "arm_around_shoulder",
-    "black_hair",
-    "blue_sweater",
-    "brown_hair",
-    "comic",
-    "crossdressing",
-    "crossdressing_(ftm)",
-    "crossdressing_(mtf)",
-    "dark_skin",
-    "eyes_visible_through_hair",
-    "hand_on_another's_shoulder",
-    "hetero"
-   ],
-   "character": []
-  },
-  {
    "id": "6262a047171e",
    "file": "wallpapers/6262a047171e.webp",
    "thumb": "wallpapers/thumbs/6262a047171e.webp",
@@ -3161,52 +2843,6 @@
    ]
   },
   {
-   "id": "3df1805b10c9",
-   "file": "wallpapers/3df1805b10c9.webp",
-   "thumb": "wallpapers/thumbs/3df1805b10c9.webp",
-   "w": 1079,
-   "h": 1439,
-   "ratio": "0.75:1",
-   "bytes": 238430,
-   "palette": [
-    "#736f64",
-    "#aa9980",
-    "#e8ddc6",
-    "#c8b290",
-    "#91826c"
-   ],
-   "source": "danbooru",
-   "added": "2026-08-21",
-   "title": "nerissa ravencroft nerissa ravencroft shiori novella shiori novella yo",
-   "sub": "danbooru",
-   "author": "yomosaka",
-   "permalink": "https://danbooru.donmai.us/posts/7933316",
-   "sha256": "3df1805b10c9ff38e2d55c4e64cd64a06ffe01d336ec701da4e1a5ff9ef1385d",
-   "dhash": "cccc98910d319397",
-   "tags": [
-    "2girls",
-    "asymmetrical_horns",
-    "black_hair",
-    "blue_hair",
-    "closed_mouth",
-    "colored_inner_hair",
-    "crying_emoji",
-    "demon_horns",
-    "emoji",
-    "english_text",
-    "full_body",
-    "grey_hair",
-    "hands_up",
-    "horns",
-    "knife"
-   ],
-   "character": [
-    "nerissa ravencroft",
-    "shiori novella",
-    "yorick"
-   ]
-  },
-  {
    "id": "2b10cb56afbd",
    "file": "wallpapers/2b10cb56afbd.webp",
    "thumb": "wallpapers/thumbs/2b10cb56afbd.webp",
@@ -3295,94 +2931,6 @@
    ]
   },
   {
-   "id": "1f2e829288b5",
-   "file": "wallpapers/1f2e829288b5.webp",
-   "thumb": "wallpapers/thumbs/1f2e829288b5.webp",
-   "w": 2879,
-   "h": 3840,
-   "ratio": "0.75:1",
-   "bytes": 663002,
-   "palette": [
-    "#be9ca0",
-    "#f5e3e1",
-    "#222631",
-    "#56515b",
-    "#d8c4ca"
-   ],
-   "source": "danbooru",
-   "added": "2026-08-21",
-   "title": "azki azki",
-   "sub": "danbooru",
-   "author": "micon",
-   "permalink": "https://danbooru.donmai.us/posts/6385399",
-   "sha256": "1f2e829288b54e4af1edb79c764b41cfb02e9e518f26f5ef67ee42c7ef78feca",
-   "dhash": "f0e8f092a2a6d8e8",
-   "tags": [
-    "1girl",
-    ":d",
-    "ascot",
-    "asymmetrical_clothes",
-    "black_hair",
-    "blazer",
-    "blush",
-    "braid",
-    "brown_jacket",
-    "center_frills",
-    "collared_dress",
-    "colored_inner_hair",
-    "dress",
-    "evil_smile",
-    "frilled_dress"
-   ],
-   "character": [
-    "azki"
-   ]
-  },
-  {
-   "id": "1ee9cf2c8879",
-   "file": "wallpapers/1ee9cf2c8879.webp",
-   "thumb": "wallpapers/thumbs/1ee9cf2c8879.webp",
-   "w": 862,
-   "h": 2048,
-   "ratio": "0.42:1",
-   "bytes": 528248,
-   "palette": [
-    "#272a48",
-    "#f2ce9c",
-    "#a57c47",
-    "#435194",
-    "#37386e"
-   ],
-   "source": "danbooru",
-   "added": "2026-08-21",
-   "title": "mona mona",
-   "sub": "danbooru",
-   "author": "haragaita i",
-   "permalink": "https://danbooru.donmai.us/posts/5632931",
-   "sha256": "1ee9cf2c88792cebd416121fa41e03c32d2557126aadad9bfebd193a293b4bfe",
-   "dhash": "f0e870f09c8cf390",
-   "tags": [
-    "1girl",
-    "armillary_sphere",
-    "black_hair",
-    "breasts",
-    "bubble",
-    "candle",
-    "closed_mouth",
-    "full_body",
-    "green_eyes",
-    "grey_eyes",
-    "hands_on_own_knees",
-    "hat",
-    "indoors",
-    "long_hair",
-    "looking_at_viewer"
-   ],
-   "character": [
-    "mona"
-   ]
-  },
-  {
    "id": "1a92ead94011",
    "file": "wallpapers/1a92ead94011.webp",
    "thumb": "wallpapers/thumbs/1a92ead94011.webp",
@@ -3424,94 +2972,6 @@
    ],
    "character": [
     "citlali"
-   ]
-  },
-  {
-   "id": "18e2ff61c2f2",
-   "file": "wallpapers/18e2ff61c2f2.webp",
-   "thumb": "wallpapers/thumbs/18e2ff61c2f2.webp",
-   "w": 900,
-   "h": 1200,
-   "ratio": "3:4",
-   "bytes": 81406,
-   "palette": [
-    "#560824",
-    "#261f46",
-    "#130d2d",
-    "#d6a4c5",
-    "#93598b"
-   ],
-   "source": "danbooru",
-   "added": "2026-08-21",
-   "title": "supergirl supergirl",
-   "sub": "danbooru",
-   "author": "xuuikie ashe",
-   "permalink": "https://danbooru.donmai.us/posts/7988197",
-   "sha256": "18e2ff61c2f2a2c3171921bfa50d46c089da158dce3a2c4adc48dc0cded3d56a",
-   "dhash": "b2f0d2b66d4c2e0e",
-   "tags": [
-    "1girl",
-    "alternate_breast_size_(larger)",
-    "black_nails",
-    "blonde_hair",
-    "blue_eyes",
-    "bodysuit",
-    "breasts",
-    "cape",
-    "cowboy_shot",
-    "hands_on_own_hips",
-    "large_breasts",
-    "looking_at_viewer",
-    "night",
-    "short_hair",
-    "sky"
-   ],
-   "character": [
-    "supergirl"
-   ]
-  },
-  {
-   "id": "0983f4c0fc6a",
-   "file": "wallpapers/0983f4c0fc6a.webp",
-   "thumb": "wallpapers/thumbs/0983f4c0fc6a.webp",
-   "w": 2480,
-   "h": 3508,
-   "ratio": "0.71:1",
-   "bytes": 941490,
-   "palette": [
-    "#c68e7a",
-    "#80312b",
-    "#22203e",
-    "#d9a9a1",
-    "#a4776b"
-   ],
-   "source": "danbooru",
-   "added": "2026-08-21",
-   "title": "mika",
-   "sub": "danbooru",
-   "author": "yo owl",
-   "permalink": "https://danbooru.donmai.us/posts/8515432",
-   "sha256": "0983f4c0fc6a917bec574f5ab3e20bb87fcd52283012c0ad035d331c006e27a2",
-   "dhash": "333109049ce8e97e",
-   "tags": [
-    "1girl",
-    "alternate_costume",
-    "blurry",
-    "blurry_foreground",
-    "box",
-    "capelet",
-    "christmas",
-    "dress",
-    "feathered_wings",
-    "gift",
-    "gift_box",
-    "grin",
-    "hair_bun",
-    "halo",
-    "legs"
-   ],
-   "character": [
-    "mika"
    ]
   },
   {
@@ -3562,99 +3022,6 @@
    ]
   },
   {
-   "id": "03683e46e5c6",
-   "file": "wallpapers/03683e46e5c6.webp",
-   "thumb": "wallpapers/thumbs/03683e46e5c6.webp",
-   "w": 1920,
-   "h": 1358,
-   "ratio": "1.41:1",
-   "bytes": 771880,
-   "palette": [
-    "#421e29",
-    "#efd8b7",
-    "#e8bb9f",
-    "#d49b85",
-    "#946766"
-   ],
-   "source": "danbooru",
-   "added": "2026-08-21",
-   "title": "aki minoriko aki shizuha alice margatroid chen cirno clownpiece daiyou",
-   "sub": "danbooru",
-   "author": "dahuang",
-   "permalink": "https://danbooru.donmai.us/posts/3312557",
-   "sha256": "03683e46e5c6938f958b25d137acfc817c033e127d5b816c7ba0b56abb4ff8c1",
-   "dhash": "c2785c2dc86831d9",
-   "tags": [
-    "6+girls",
-    ":d",
-    ">_<",
-    "ajirogasa",
-    "american_flag_dress",
-    "american_flag_legwear",
-    "animal_ears",
-    "animal_hat",
-    "antennae",
-    "apron",
-    "ascot",
-    "barefoot",
-    "bell",
-    "bishamonten's_pagoda",
-    "black_ascot"
-   ],
-   "character": [
-    "aki minoriko",
-    "aki shizuha",
-    "alice margatroid",
-    "chen"
-   ]
-  },
-  {
-   "id": "fa06612e0505",
-   "file": "wallpapers/fa06612e0505.webp",
-   "thumb": "wallpapers/thumbs/fa06612e0505.webp",
-   "w": 1004,
-   "h": 1900,
-   "ratio": "0.53:1",
-   "bytes": 511692,
-   "palette": [
-    "#414f74",
-    "#def5f5",
-    "#714351",
-    "#312c41",
-    "#afc5d0"
-   ],
-   "source": "danbooru",
-   "added": "2026-08-20",
-   "title": "admire groove air groove trainer",
-   "sub": "danbooru",
-   "author": "ido (teketeke)",
-   "permalink": "https://danbooru.donmai.us/posts/9858950",
-   "sha256": "fa06612e050520175d948abdd859d6392353666868a80913f1d45b9f8c8696a0",
-   "dhash": "4f47ab3393b42545",
-   "tags": [
-    "...?",
-    "1boy",
-    "2girls",
-    "4koma",
-    "anger_vein",
-    "animal_ears",
-    "averting_eyes",
-    "blue_hair",
-    "brown_hair",
-    "comic",
-    "covering_own_mouth",
-    "eyes_visible_through_hair",
-    "faceless",
-    "faceless_male",
-    "flustered"
-   ],
-   "character": [
-    "admire groove",
-    "air groove",
-    "trainer"
-   ]
-  },
-  {
    "id": "f4cb48109829",
    "file": "wallpapers/f4cb48109829.webp",
    "thumb": "wallpapers/thumbs/f4cb48109829.webp",
@@ -3698,53 +3065,6 @@
     "bronya zaychik",
     "seele",
     "seele vollerei"
-   ]
-  },
-  {
-   "id": "f2343ba0a3e3",
-   "file": "wallpapers/f2343ba0a3e3.webp",
-   "thumb": "wallpapers/thumbs/f2343ba0a3e3.webp",
-   "w": 1448,
-   "h": 2048,
-   "ratio": "0.71:1",
-   "bytes": 422456,
-   "palette": [
-    "#ce8d67",
-    "#efccac",
-    "#e2aa7e",
-    "#ffeccd",
-    "#7c5145"
-   ],
-   "source": "danbooru",
-   "added": "2026-08-20",
-   "title": "assam darjeeling kay orange pekoe rosehip",
-   "sub": "danbooru",
-   "author": "hone (honehone083)",
-   "permalink": "https://danbooru.donmai.us/posts/3631456",
-   "sha256": "f2343ba0a3e35433a7a9ab94063444c0d65a701306d09c2bd81f02d60a7f42d9",
-   "dhash": "ed27313353992f67",
-   "tags": [
-    "5girls",
-    "alternate_costume",
-    "bare_arms",
-    "blonde_hair",
-    "blue_eyes",
-    "blush",
-    "braid",
-    "cake",
-    "cityscape",
-    "collarbone",
-    "cup",
-    "dated",
-    "dessert",
-    "earrings",
-    "food"
-   ],
-   "character": [
-    "assam",
-    "darjeeling",
-    "kay",
-    "orange pekoe"
    ]
   },
   {
@@ -3882,51 +3202,6 @@
    ]
   },
   {
-   "id": "d52889e25f49",
-   "file": "wallpapers/d52889e25f49.webp",
-   "thumb": "wallpapers/thumbs/d52889e25f49.webp",
-   "w": 1536,
-   "h": 2048,
-   "ratio": "3:4",
-   "bytes": 284936,
-   "palette": [
-    "#d8d8c1",
-    "#f2eee1",
-    "#2c2d24",
-    "#56534d",
-    "#443940"
-   ],
-   "source": "danbooru",
-   "added": "2026-08-20",
-   "title": "fern frieren",
-   "sub": "danbooru",
-   "author": "rakeemspoon",
-   "permalink": "https://danbooru.donmai.us/posts/7930421",
-   "sha256": "d52889e25f4900558877666b233310f6e3aa1def4a1d9a6cddf76be463d76996",
-   "dhash": "c1cccc5ad95359bc",
-   "tags": [
-    "2girls",
-    ":3",
-    "boots",
-    "capelet",
-    "clenched_hands",
-    "closed_mouth",
-    "crying_emoji",
-    "dark",
-    "earrings",
-    "elf",
-    "emoji",
-    "english_text",
-    "full_body",
-    "hands_up",
-    "jewelry"
-   ],
-   "character": [
-    "fern",
-    "frieren"
-   ]
-  },
-  {
    "id": "adae1c23c87b",
    "file": "wallpapers/adae1c23c87b.webp",
    "thumb": "wallpapers/thumbs/adae1c23c87b.webp",
@@ -3971,52 +3246,6 @@
    ]
   },
   {
-   "id": "ab6195a68f1b",
-   "file": "wallpapers/ab6195a68f1b.webp",
-   "thumb": "wallpapers/thumbs/ab6195a68f1b.webp",
-   "w": 2192,
-   "h": 1644,
-   "ratio": "4:3",
-   "bytes": 325104,
-   "palette": [
-    "#6a6abc",
-    "#504ba3",
-    "#e9dcdb",
-    "#5e4d7c",
-    "#4c3d5d"
-   ],
-   "source": "danbooru",
-   "added": "2026-08-20",
-   "title": "firefly stelle trailblazer",
-   "sub": "danbooru",
-   "author": "saint laurent paris",
-   "permalink": "https://danbooru.donmai.us/posts/7420482",
-   "sha256": "ab6195a68f1b71c251df013fdf852d595d5d3cddd3e3c768b12680113c0b39b5",
-   "dhash": "59ecd8e9292169e3",
-   "tags": [
-    "2girls",
-    "aqua_skirt",
-    "black_gloves",
-    "black_hairband",
-    "black_jacket",
-    "bow",
-    "bowtie",
-    "breasts",
-    "cellphone",
-    "cityscape",
-    "coat",
-    "collared_shirt",
-    "cropped_jacket",
-    "fingerless_gloves",
-    "gloves"
-   ],
-   "character": [
-    "firefly",
-    "stelle",
-    "trailblazer"
-   ]
-  },
-  {
    "id": "a5d6ec0766ef",
    "file": "wallpapers/a5d6ec0766ef.webp",
    "thumb": "wallpapers/thumbs/a5d6ec0766ef.webp",
@@ -4058,50 +3287,6 @@
    ],
    "character": [
     "lofi girl"
-   ]
-  },
-  {
-   "id": "a4e5fb21135e",
-   "file": "wallpapers/a4e5fb21135e.webp",
-   "thumb": "wallpapers/thumbs/a4e5fb21135e.webp",
-   "w": 2205,
-   "h": 3299,
-   "ratio": "0.67:1",
-   "bytes": 250136,
-   "palette": [
-    "#656463",
-    "#242423",
-    "#403f3e",
-    "#eaeaea",
-    "#838383"
-   ],
-   "source": "danbooru",
-   "added": "2026-08-20",
-   "title": "nayuta",
-   "sub": "danbooru",
-   "author": "masoq",
-   "permalink": "https://danbooru.donmai.us/posts/7237354",
-   "sha256": "a4e5fb21135e83173ac5c5fa7150a047728d147640010086d1b2ba6c43e9fdac",
-   "dhash": "daceead492969686",
-   "tags": [
-    "1girl",
-    "arms_behind_back",
-    "backlighting",
-    "blood",
-    "blood_on_face",
-    "blood_splatter",
-    "blouse",
-    "blurry",
-    "blurry_background",
-    "blush",
-    "braid",
-    "braided_ponytail",
-    "collarbone",
-    "comic",
-    "cowboy_shot"
-   ],
-   "character": [
-    "nayuta"
    ]
   },
   {
@@ -4241,50 +3426,6 @@
    ]
   },
   {
-   "id": "8eaaa5e26e2b",
-   "file": "wallpapers/8eaaa5e26e2b.webp",
-   "thumb": "wallpapers/thumbs/8eaaa5e26e2b.webp",
-   "w": 2150,
-   "h": 3036,
-   "ratio": "0.71:1",
-   "bytes": 382666,
-   "palette": [
-    "#626262",
-    "#4b4b4b",
-    "#ababab",
-    "#e3e3e3",
-    "#8a8a8a"
-   ],
-   "source": "danbooru",
-   "added": "2026-08-20",
-   "title": "maya",
-   "sub": "danbooru",
-   "author": "takaman (gaffe)",
-   "permalink": "https://danbooru.donmai.us/posts/5640946",
-   "sha256": "8eaaa5e26e2becc68bf358b1b6d23b4a9c2d02f4d2973d2d3206ae5a0247d51e",
-   "dhash": "1696949697969616",
-   "tags": [
-    "1girl",
-    "bag",
-    "bob_cut",
-    "building",
-    "city",
-    "cityscape",
-    "doorway",
-    "greyscale",
-    "grocery_bag",
-    "hair_ornament",
-    "hand_in_pocket",
-    "jacket",
-    "monochrome",
-    "shopping_bag",
-    "short_hair"
-   ],
-   "character": [
-    "maya"
-   ]
-  },
-  {
    "id": "8bf203004a72",
    "file": "wallpapers/8bf203004a72.webp",
    "thumb": "wallpapers/thumbs/8bf203004a72.webp",
@@ -4418,50 +3559,6 @@
     "albedo",
     "amber",
     "arama"
-   ]
-  },
-  {
-   "id": "8a3c1e1a9449",
-   "file": "wallpapers/8a3c1e1a9449.webp",
-   "thumb": "wallpapers/thumbs/8a3c1e1a9449.webp",
-   "w": 2966,
-   "h": 3840,
-   "ratio": "0.77:1",
-   "bytes": 755644,
-   "palette": [
-    "#2a5a7f",
-    "#3f779d",
-    "#1e2a38",
-    "#699dc0",
-    "#99a5ba"
-   ],
-   "source": "danbooru",
-   "added": "2026-08-20",
-   "title": "anby demara anby demara",
-   "sub": "danbooru",
-   "author": "white kojinak",
-   "permalink": "https://danbooru.donmai.us/posts/9094429",
-   "sha256": "8a3c1e1a944982f65c947b65e49868fbd129df68f875006a979febc17a594468",
-   "dhash": "606cf0e0e9e89696",
-   "tags": [
-    "1girl",
-    "blood",
-    "blood_on_hand",
-    "braid",
-    "breasts",
-    "bright_pupils",
-    "dress",
-    "english_text",
-    "gloves",
-    "grey_hair",
-    "light_smile",
-    "looking_at_viewer",
-    "medium_breasts",
-    "night",
-    "open_mouth"
-   ],
-   "character": [
-    "anby demara"
    ]
   },
   {
@@ -4645,96 +3742,6 @@
    ]
   },
   {
-   "id": "5e942b3b239f",
-   "file": "wallpapers/5e942b3b239f.webp",
-   "thumb": "wallpapers/thumbs/5e942b3b239f.webp",
-   "w": 1792,
-   "h": 2048,
-   "ratio": "7:8",
-   "bytes": 252920,
-   "palette": [
-    "#4c276c",
-    "#1e274d",
-    "#334880",
-    "#42253c",
-    "#927f98"
-   ],
-   "source": "danbooru",
-   "added": "2026-08-20",
-   "title": "agnes tachyon agnes tachyon",
-   "sub": "danbooru",
-   "author": "johnholl0w",
-   "permalink": "https://danbooru.donmai.us/posts/9902611",
-   "sha256": "5e942b3b239f80335b3e235a5952513fe1a9f5b4140e22fed9b78c3937a2aef9",
-   "dhash": "8a92b6d4ebabe9f0",
-   "tags": [
-    "1girl",
-    "animal_ears",
-    "brown_hair",
-    "collarbone",
-    "droopy_ears",
-    "english_text",
-    "fire",
-    "food",
-    "horse_ears",
-    "horse_girl",
-    "looking_down",
-    "night",
-    "off_shoulder",
-    "omelet",
-    "solo"
-   ],
-   "character": [
-    "agnes tachyon"
-   ]
-  },
-  {
-   "id": "5cfc5e738cda",
-   "file": "wallpapers/5cfc5e738cda.webp",
-   "thumb": "wallpapers/thumbs/5cfc5e738cda.webp",
-   "w": 1500,
-   "h": 2031,
-   "ratio": "0.74:1",
-   "bytes": 326990,
-   "palette": [
-    "#081517",
-    "#c8f0ef",
-    "#67bdd9",
-    "#c3d7d5",
-    "#212c2f"
-   ],
-   "source": "danbooru",
-   "added": "2026-08-20",
-   "title": "bloody wolf ranni the witch tarnished",
-   "sub": "danbooru",
-   "author": "ssambatea",
-   "permalink": "https://danbooru.donmai.us/posts/5187261",
-   "sha256": "5cfc5e738cdaf55cc1fa3e06efb9af59cd6f2ce2035b6169cbdc678649ff3dd6",
-   "dhash": "1b3b233313272b33",
-   "tags": [
-    "1girl",
-    "1other",
-    "ambiguous_gender",
-    "armor",
-    "blue_eyes",
-    "blue_hair",
-    "blue_skin",
-    "blush",
-    "capelet",
-    "cloak",
-    "colored_skin",
-    "crossed_swords",
-    "dress",
-    "dual_wielding",
-    "full_armor"
-   ],
-   "character": [
-    "bloody wolf",
-    "ranni the witch",
-    "tarnished"
-   ]
-  },
-  {
    "id": "57d8adae0f80",
    "file": "wallpapers/57d8adae0f80.webp",
    "thumb": "wallpapers/thumbs/57d8adae0f80.webp",
@@ -4776,51 +3783,6 @@
    ],
    "character": [
     "rin"
-   ]
-  },
-  {
-   "id": "54109edc4b2c",
-   "file": "wallpapers/54109edc4b2c.webp",
-   "thumb": "wallpapers/thumbs/54109edc4b2c.webp",
-   "w": 1506,
-   "h": 2048,
-   "ratio": "0.74:1",
-   "bytes": 1008062,
-   "palette": [
-    "#7b736b",
-    "#ded7d0",
-    "#c7c1bb",
-    "#615a53",
-    "#a19990"
-   ],
-   "source": "danbooru",
-   "added": "2026-08-20",
-   "title": "peni parker sp//dr",
-   "sub": "danbooru",
-   "author": "jake wyatt",
-   "permalink": "https://danbooru.donmai.us/posts/6622827",
-   "sha256": "54109edc4b2cfcf832b14f72724e10512de0846349a2717b0cf926db83128c8a",
-   "dhash": "93336fc39b4b0f49",
-   "tags": [
-    "2girls",
-    "artist_logo",
-    "city",
-    "cityscape",
-    "dual_persona",
-    "faceless",
-    "floating_clothes",
-    "greyscale",
-    "hair_ornament",
-    "hairclip",
-    "logo",
-    "mecha",
-    "monochrome",
-    "multiple_girls",
-    "pantyhose"
-   ],
-   "character": [
-    "peni parker",
-    "sp//dr"
    ]
   },
   {
@@ -4868,135 +3830,6 @@
     "karin",
     "neru",
     "rio"
-   ]
-  },
-  {
-   "id": "473448911faa",
-   "file": "wallpapers/473448911faa.webp",
-   "thumb": "wallpapers/thumbs/473448911faa.webp",
-   "w": 855,
-   "h": 1200,
-   "ratio": "0.71:1",
-   "bytes": 134708,
-   "palette": [
-    "#9abeca",
-    "#739fb1",
-    "#bfd5d9",
-    "#efe9d6",
-    "#5d696c"
-   ],
-   "source": "danbooru",
-   "added": "2026-08-20",
-   "title": "original",
-   "sub": "danbooru",
-   "author": "yoshida seiji",
-   "permalink": "https://danbooru.donmai.us/posts/2305467",
-   "sha256": "473448911faa05a5ab5c44023d4dd86dd7b015cdfb7112f1ba759ea53a009ad1",
-   "dhash": "e0cc8e0f17964d9f",
-   "tags": [
-    "1girl",
-    "air_conditioner",
-    "black_hair",
-    "black_pantyhose",
-    "blue_sky",
-    "blush",
-    "breasts",
-    "brown_eyes",
-    "brown_shoes",
-    "city",
-    "cityscape",
-    "cloud",
-    "day",
-    "dress",
-    "frilled_dress"
-   ],
-   "character": []
-  },
-  {
-   "id": "3d554ea507ea",
-   "file": "wallpapers/3d554ea507ea.webp",
-   "thumb": "wallpapers/thumbs/3d554ea507ea.webp",
-   "w": 1500,
-   "h": 1136,
-   "ratio": "1.32:1",
-   "bytes": 157830,
-   "palette": [
-    "#948f8b",
-    "#423d3a",
-    "#bcbab8",
-    "#e2e2e2",
-    "#666565"
-   ],
-   "source": "danbooru",
-   "added": "2026-08-20",
-   "title": "helldiver seaf soldier",
-   "sub": "danbooru",
-   "author": "xanran",
-   "permalink": "https://danbooru.donmai.us/posts/9403233",
-   "sha256": "3d554ea507eae7a3b54440ab1ca88bbaa696dec5ed2e75afa2b47c41310bf282",
-   "dhash": "23300c4d294f8f4d",
-   "tags": [
-    "4others",
-    "after_battle",
-    "aircraft",
-    "airplane",
-    "ambiguous_gender",
-    "armor",
-    "artist_name",
-    "battle_standard",
-    "battlefield",
-    "bulletproof_vest",
-    "cape",
-    "cityscape",
-    "cloud",
-    "cloudy_sky",
-    "contrail"
-   ],
-   "character": [
-    "helldiver",
-    "seaf soldier"
-   ]
-  },
-  {
-   "id": "3c353abc75c8",
-   "file": "wallpapers/3c353abc75c8.webp",
-   "thumb": "wallpapers/thumbs/3c353abc75c8.webp",
-   "w": 3508,
-   "h": 2016,
-   "ratio": "1.74:1",
-   "bytes": 345904,
-   "palette": [
-    "#180926",
-    "#f9f5e2",
-    "#418faf",
-    "#1d2957",
-    "#c6e2e5"
-   ],
-   "source": "danbooru",
-   "added": "2026-08-20",
-   "title": "lucy",
-   "sub": "danbooru",
-   "author": "tobarana",
-   "permalink": "https://danbooru.donmai.us/posts/5717723",
-   "sha256": "3c353abc75c830cf923119cb04cf2e0eb41196b945216b2a3b0664570f9d13cc",
-   "dhash": "f8a8a0f2723238b1",
-   "tags": [
-    "1girl",
-    "bob_cut",
-    "cityscape",
-    "close-up",
-    "cyberpunk",
-    "english_text",
-    "grey_hair",
-    "looking_at_viewer",
-    "short_hair",
-    "sleeveless",
-    "solo",
-    "song_name",
-    "white_hair"
-   ],
-   "character": [
-    "lucy"
    ]
   },
   {
@@ -5089,97 +3922,6 @@
     "kirisame marisa",
     "patchouli knowledge",
     "reiuji utsuho"
-   ]
-  },
-  {
-   "id": "1b764e0c1398",
-   "file": "wallpapers/1b764e0c1398.webp",
-   "thumb": "wallpapers/thumbs/1b764e0c1398.webp",
-   "w": 1066,
-   "h": 1491,
-   "ratio": "0.71:1",
-   "bytes": 159982,
-   "palette": [
-    "#e8953e",
-    "#facdb8",
-    "#3d384c",
-    "#7a7c9d",
-    "#c49789"
-   ],
-   "source": "danbooru",
-   "added": "2026-08-20",
-   "title": "gwen stacy peni parker",
-   "sub": "danbooru",
-   "author": "meco",
-   "permalink": "https://danbooru.donmai.us/posts/6392171",
-   "sha256": "1b764e0c13988fccc66a3a523463c45959921f76efdd57797b91472d809f9501",
-   "dhash": "0c17b69696966327",
-   "tags": [
-    "2girls",
-    ":d",
-    "antenna_hair",
-    "artist_name",
-    "ballet_slippers",
-    "black_eyes",
-    "black_hair",
-    "black_necktie",
-    "black_pantyhose",
-    "black_skirt",
-    "black_socks",
-    "black_sweater",
-    "black_sweater_vest",
-    "blonde_hair",
-    "blue_eyes"
-   ],
-   "character": [
-    "gwen stacy",
-    "peni parker"
-   ]
-  },
-  {
-   "id": "19ed3b57640f",
-   "file": "wallpapers/19ed3b57640f.webp",
-   "thumb": "wallpapers/thumbs/19ed3b57640f.webp",
-   "w": 1600,
-   "h": 1600,
-   "ratio": "1:1",
-   "bytes": 296046,
-   "palette": [
-    "#2b3348",
-    "#562529",
-    "#813d40",
-    "#d2a394",
-    "#e6c2b3"
-   ],
-   "source": "danbooru",
-   "added": "2026-08-20",
-   "title": "amber baron bunny eula",
-   "sub": "danbooru",
-   "author": "kibashiba",
-   "permalink": "https://danbooru.donmai.us/posts/5009739",
-   "sha256": "19ed3b57640fa404f8936717001431599ce6e004fb23d73300cee47bad408fa4",
-   "dhash": "91d371dcddd7fe72",
-   "tags": [
-    "2girls",
-    "alternate_headwear",
-    "black_hairband",
-    "black_pantyhose",
-    "blue_hair",
-    "blurry",
-    "blurry_background",
-    "bra_strap",
-    "brown_eyes",
-    "brown_hair",
-    "christmas",
-    "christmas_sweater",
-    "closed_mouth",
-    "collarbone",
-    "eye_contact"
-   ],
-   "character": [
-    "amber",
-    "baron bunny",
-    "eula"
    ]
   },
   {
@@ -5360,51 +4102,6 @@
    ]
   },
   {
-   "id": "02043f115c1e",
-   "file": "wallpapers/02043f115c1e.webp",
-   "thumb": "wallpapers/thumbs/02043f115c1e.webp",
-   "w": 1200,
-   "h": 800,
-   "ratio": "3:2",
-   "bytes": 138470,
-   "palette": [
-    "#5b6574",
-    "#c16a6e",
-    "#f2ebe0",
-    "#332741",
-    "#dcccc6"
-   ],
-   "source": "danbooru",
-   "added": "2026-08-20",
-   "title": "eri erika",
-   "sub": "danbooru",
-   "author": "nako775",
-   "permalink": "https://danbooru.donmai.us/posts/9813418",
-   "sha256": "02043f115c1e2b7ca571d497036ccb3bb071d110538f90a077b3f3817fe1bf03",
-   "dhash": "9b593982897dc883",
-   "tags": [
-    "2girls",
-    "character_name",
-    "chibi",
-    "cityscape",
-    "cosplay",
-    "eri_(blue_archive)_(cosplay)",
-    "grey_eyes",
-    "grey_hair",
-    "halo",
-    "hat",
-    "looking_at_viewer",
-    "multiple_girls",
-    "name_connection",
-    "npc_jail",
-    "official_art_inset"
-   ],
-   "character": [
-    "eri",
-    "erika"
-   ]
-  },
-  {
    "id": "ff194faeb08c",
    "file": "wallpapers/ff194faeb08c.webp",
    "thumb": "wallpapers/thumbs/ff194faeb08c.webp",
@@ -5494,52 +4191,6 @@
    ]
   },
   {
-   "id": "efa35c7e6089",
-   "file": "wallpapers/efa35c7e6089.webp",
-   "thumb": "wallpapers/thumbs/efa35c7e6089.webp",
-   "w": 2000,
-   "h": 1000,
-   "ratio": "2:1",
-   "bytes": 529030,
-   "palette": [
-    "#527767",
-    "#cdc098",
-    "#e1dcb5",
-    "#b99977",
-    "#4f372f"
-   ],
-   "source": "danbooru",
-   "added": "2026-08-19",
-   "title": "kalina lenna lenna ump9",
-   "sub": "danbooru",
-   "author": "",
-   "permalink": "https://danbooru.donmai.us/posts/7273076",
-   "sha256": "efa35c7e60890b7afcca11d4459ba5eb1dc80293b3fba59070843b3ff96c01ea",
-   "dhash": "c8d193d777b72667",
-   "tags": [
-    "2girls",
-    "arm_support",
-    "black_gloves",
-    "black_jacket",
-    "black_pantyhose",
-    "black_ribbon",
-    "black_skirt",
-    "breasts",
-    "brown_hair",
-    "cityscape",
-    "copyright_name",
-    "gloves",
-    "gun",
-    "h&k_ump",
-    "hair_ribbon"
-   ],
-   "character": [
-    "kalina",
-    "lenna",
-    "ump9"
-   ]
-  },
-  {
    "id": "e9074154053f",
    "file": "wallpapers/e9074154053f.webp",
    "thumb": "wallpapers/thumbs/e9074154053f.webp",
@@ -5585,50 +4236,6 @@
    ]
   },
   {
-   "id": "e6832eed24c7",
-   "file": "wallpapers/e6832eed24c7.webp",
-   "thumb": "wallpapers/thumbs/e6832eed24c7.webp",
-   "w": 2890,
-   "h": 2866,
-   "ratio": "1.01:1",
-   "bytes": 751566,
-   "palette": [
-    "#f9dfe7",
-    "#f4d3ba",
-    "#c9b6b8",
-    "#948b8e",
-    "#6f6c78"
-   ],
-   "source": "danbooru",
-   "added": "2026-08-19",
-   "title": "gotoh hitori",
-   "sub": "danbooru",
-   "author": "t1kosewad",
-   "permalink": "https://danbooru.donmai.us/posts/5808186",
-   "sha256": "e6832eed24c7582cf1554ef18219a6ee57e692904b3b81d6d43a7b35f66f86bc",
-   "dhash": "9018192b4c1c3919",
-   "tags": [
-    "1girl",
-    "album_cover",
-    "black_socks",
-    "blue_eyes",
-    "brown_shoes",
-    "cable",
-    "cityscape",
-    "cover",
-    "cube_hair_ornament",
-    "electric_guitar",
-    "expressionless",
-    "full_body",
-    "gibson_les_paul",
-    "grey_skirt",
-    "guitar"
-   ],
-   "character": [
-    "gotoh hitori"
-   ]
-  },
-  {
    "id": "e126b3ff63d7",
    "file": "wallpapers/e126b3ff63d7.webp",
    "thumb": "wallpapers/thumbs/e126b3ff63d7.webp",
@@ -5670,50 +4277,6 @@
    ],
    "character": [
     "nilou"
-   ]
-  },
-  {
-   "id": "dd9f662425ab",
-   "file": "wallpapers/dd9f662425ab.webp",
-   "thumb": "wallpapers/thumbs/dd9f662425ab.webp",
-   "w": 887,
-   "h": 1200,
-   "ratio": "0.74:1",
-   "bytes": 174944,
-   "palette": [
-    "#71072a",
-    "#1a5471",
-    "#0b223c",
-    "#317795",
-    "#3d97b4"
-   ],
-   "source": "danbooru",
-   "added": "2026-08-19",
-   "title": "tohsaka rin",
-   "sub": "danbooru",
-   "author": "zarory",
-   "permalink": "https://danbooru.donmai.us/posts/5846654",
-   "sha256": "dd9f662425ab665de9484c5c752d8ba7cb085f3be474712e563f4ea41beb08c0",
-   "dhash": "cde08b0c9e9a96c6",
-   "tags": [
-    "1girl",
-    "arched_back",
-    "artist_name",
-    "black_hair",
-    "black_thighhighs",
-    "blue_eyes",
-    "blurry",
-    "blurry_background",
-    "book",
-    "breasts",
-    "building",
-    "cityscape",
-    "cowboy_shot",
-    "earrings",
-    "expressionless"
-   ],
-   "character": [
-    "tohsaka rin"
    ]
   },
   {
@@ -5805,95 +4368,6 @@
    "character": []
   },
   {
-   "id": "b5346cb1fd41",
-   "file": "wallpapers/b5346cb1fd41.webp",
-   "thumb": "wallpapers/thumbs/b5346cb1fd41.webp",
-   "w": 944,
-   "h": 1181,
-   "ratio": "0.80:1",
-   "bytes": 109652,
-   "palette": [
-    "#d3e2f4",
-    "#054398",
-    "#e42845",
-    "#131926",
-    "#09316b"
-   ],
-   "source": "danbooru",
-   "added": "2026-08-19",
-   "title": "supergirl videl",
-   "sub": "danbooru",
-   "author": "salvamakoto",
-   "permalink": "https://danbooru.donmai.us/posts/6419821",
-   "sha256": "b5346cb1fd41f3e6a94cbebe9f4cfd5adb2cd69fadcd21a50741a1ff244f5bac",
-   "dhash": "183b9b5b183824b6",
-   "tags": [
-    "1girl",
-    "alternate_costume",
-    "artist_name",
-    "black_hair",
-    "blue_eyes",
-    "bodysuit",
-    "breasts",
-    "building",
-    "cityscape",
-    "closed_mouth",
-    "collarbone",
-    "cosplay",
-    "covered_navel",
-    "cowboy_shot",
-    "crossover"
-   ],
-   "character": [
-    "supergirl",
-    "videl"
-   ]
-  },
-  {
-   "id": "b0858b95f744",
-   "file": "wallpapers/b0858b95f744.webp",
-   "thumb": "wallpapers/thumbs/b0858b95f744.webp",
-   "w": 781,
-   "h": 1200,
-   "ratio": "0.65:1",
-   "bytes": 212966,
-   "palette": [
-    "#774b65",
-    "#f2e3db",
-    "#e4c4c4",
-    "#c17c8b",
-    "#42253c"
-   ],
-   "source": "danbooru",
-   "added": "2026-08-19",
-   "title": "furina",
-   "sub": "danbooru",
-   "author": "datsha",
-   "permalink": "https://danbooru.donmai.us/posts/6892149",
-   "sha256": "b0858b95f74461ee78e81ea2e399ea010e862d857f71de120e5a1a798653683e",
-   "dhash": "f9b4b3d9f4bc9cca",
-   "tags": [
-    "1girl",
-    "ahoge",
-    "alternate_costume",
-    "artist_name",
-    "blue_eyes",
-    "blue_hair",
-    "blush",
-    "cityscape",
-    "clenched_teeth",
-    "eyelash_ornament",
-    "flower",
-    "grey_hair",
-    "hair_between_eyes",
-    "hair_flower",
-    "hair_ornament"
-   ],
-   "character": [
-    "furina"
-   ]
-  },
-  {
    "id": "afa7d6ab0ec6",
    "file": "wallpapers/afa7d6ab0ec6.webp",
    "thumb": "wallpapers/thumbs/afa7d6ab0ec6.webp",
@@ -5979,50 +4453,6 @@
    ],
    "character": [
     "himari"
-   ]
-  },
-  {
-   "id": "ac735640507a",
-   "file": "wallpapers/ac735640507a.webp",
-   "thumb": "wallpapers/thumbs/ac735640507a.webp",
-   "w": 2250,
-   "h": 3840,
-   "ratio": "0.59:1",
-   "bytes": 833842,
-   "palette": [
-    "#5cb6d3",
-    "#72dbe8",
-    "#294c5f",
-    "#1b2739",
-    "#488197"
-   ],
-   "source": "danbooru",
-   "added": "2026-08-19",
-   "title": "hatsune miku",
-   "sub": "danbooru",
-   "author": "kirisaki shuusei",
-   "permalink": "https://danbooru.donmai.us/posts/7934063",
-   "sha256": "ac735640507acd0dc736b15f20b279d1934fd578b904b80a8f675c7cf3c293e2",
-   "dhash": "e462258f8b2dcf97",
-   "tags": [
-    "1girl",
-    "aircraft",
-    "airplane",
-    "alternate_breast_size_(larger)",
-    "aqua_eyes",
-    "aqua_hair",
-    "aqua_necktie",
-    "aqua_trim",
-    "arm_behind_back",
-    "arm_tattoo",
-    "bare_shoulders",
-    "black_boots",
-    "black_skirt",
-    "bloom",
-    "blush"
-   ],
-   "character": [
-    "hatsune miku"
    ]
   },
   {
@@ -6205,50 +4635,6 @@
    ]
   },
   {
-   "id": "88c6420e8083",
-   "file": "wallpapers/88c6420e8083.webp",
-   "thumb": "wallpapers/thumbs/88c6420e8083.webp",
-   "w": 2456,
-   "h": 3840,
-   "ratio": "0.64:1",
-   "bytes": 1276270,
-   "palette": [
-    "#735c48",
-    "#a18465",
-    "#472e29",
-    "#251e1a",
-    "#a69f89"
-   ],
-   "source": "danbooru",
-   "added": "2026-08-19",
-   "title": "junker queen",
-   "sub": "danbooru",
-   "author": "monori rogue",
-   "permalink": "https://danbooru.donmai.us/posts/5435068",
-   "sha256": "88c6420e808357f44c39597b0e5707f76eed9e0599c4805ef7633ffe27a912f0",
-   "dhash": "ae174507254e9ee5",
-   "tags": [
-    "1girl",
-    "abs",
-    "armlet",
-    "armor",
-    "belt",
-    "biceps",
-    "black_nails",
-    "blue_hair",
-    "braid",
-    "brown_eyes",
-    "brown_hair",
-    "bullet",
-    "cape",
-    "chain",
-    "character_name"
-   ],
-   "character": [
-    "junker queen"
-   ]
-  },
-  {
    "id": "86767e0b277d",
    "file": "wallpapers/86767e0b277d.webp",
    "thumb": "wallpapers/thumbs/86767e0b277d.webp",
@@ -6291,48 +4677,6 @@
    "character": [
     "w"
    ]
-  },
-  {
-   "id": "80e788adbd04",
-   "file": "wallpapers/80e788adbd04.webp",
-   "thumb": "wallpapers/thumbs/80e788adbd04.webp",
-   "w": 1600,
-   "h": 900,
-   "ratio": "16:9",
-   "bytes": 274776,
-   "palette": [
-    "#142b3d",
-    "#041426",
-    "#324a54",
-    "#606464",
-    "#16394c"
-   ],
-   "source": "danbooru",
-   "added": "2026-08-19",
-   "title": "original",
-   "sub": "danbooru",
-   "author": "rella",
-   "permalink": "https://danbooru.donmai.us/posts/2825583",
-   "sha256": "80e788adbd04ad3d19d50b74ea6432722b7429d48278415d8cc239687d30564d",
-   "dhash": "e0f0e8e8e86c242d",
-   "tags": [
-    "1girl",
-    "backlighting",
-    "balcony",
-    "blurry",
-    "cityscape",
-    "cloud",
-    "curtains",
-    "dark",
-    "depth_of_field",
-    "dusk",
-    "fence",
-    "fine_fabric_emphasis",
-    "from_behind",
-    "looking_afar",
-    "short_hair"
-   ],
-   "character": []
   },
   {
    "id": "80adcb875cdb",
@@ -6696,98 +5040,6 @@
    ]
   },
   {
-   "id": "5043d5c3e3c8",
-   "file": "wallpapers/5043d5c3e3c8.webp",
-   "thumb": "wallpapers/thumbs/5043d5c3e3c8.webp",
-   "w": 1500,
-   "h": 2358,
-   "ratio": "0.64:1",
-   "bytes": 228608,
-   "palette": [
-    "#2e323b",
-    "#e1e8ee",
-    "#494f5d",
-    "#9398a4",
-    "#1b1c20"
-   ],
-   "source": "danbooru",
-   "added": "2026-08-19",
-   "title": "m16a1 m4 sopmod ii m4a1 st ar-15",
-   "sub": "danbooru",
-   "author": "hinoborukaku",
-   "permalink": "https://danbooru.donmai.us/posts/8544293",
-   "sha256": "5043d5c3e3c852030121895b52678cf649a81acb5222b2f7dd51d2adb670d454",
-   "dhash": "90b6c1c9c761e0b6",
-   "tags": [
-    "4girls",
-    "anti-rain_(girls'_frontline)",
-    "ar-15",
-    "assault_rifle",
-    "bandana",
-    "black_gloves",
-    "black_hair",
-    "blurry",
-    "blurry_background",
-    "boots",
-    "building",
-    "city",
-    "cityscape",
-    "clothes_around_waist",
-    "copyright_name"
-   ],
-   "character": [
-    "m16a1",
-    "m4 sopmod ii",
-    "m4a1",
-    "st ar-15"
-   ]
-  },
-  {
-   "id": "436ada756f70",
-   "file": "wallpapers/436ada756f70.webp",
-   "thumb": "wallpapers/thumbs/436ada756f70.webp",
-   "w": 1600,
-   "h": 1200,
-   "ratio": "4:3",
-   "bytes": 225788,
-   "palette": [
-    "#ecb88f",
-    "#ea4e56",
-    "#c45d50",
-    "#3d191f",
-    "#7c4e3f"
-   ],
-   "source": "danbooru",
-   "added": "2026-08-19",
-   "title": "chun-li ryu",
-   "sub": "danbooru",
-   "author": "tina fate",
-   "permalink": "https://danbooru.donmai.us/posts/5483716",
-   "sha256": "436ada756f7066c9173ef63519c8f3843e6a44695865dee3a727863272527705",
-   "dhash": "18b3f5a2ceeaeee0",
-   "tags": [
-    "1boy",
-    "1girl",
-    "beard",
-    "biceps",
-    "black_hair",
-    "blush",
-    "bowl",
-    "breasts",
-    "brown_hair",
-    "caught",
-    "chopsticks",
-    "cityscape",
-    "cleavage",
-    "cleavage_cutout",
-    "clothing_cutout"
-   ],
-   "character": [
-    "chun-li",
-    "ryu"
-   ]
-  },
-  {
    "id": "2d88d7ffa252",
    "file": "wallpapers/2d88d7ffa252.webp",
    "thumb": "wallpapers/thumbs/2d88d7ffa252.webp",
@@ -7014,94 +5266,6 @@
    ]
   },
   {
-   "id": "134c9d9abde2",
-   "file": "wallpapers/134c9d9abde2.webp",
-   "thumb": "wallpapers/thumbs/134c9d9abde2.webp",
-   "w": 2456,
-   "h": 1686,
-   "ratio": "1.46:1",
-   "bytes": 294066,
-   "palette": [
-    "#765d6e",
-    "#537ac9",
-    "#81a0d2",
-    "#3f57ac",
-    "#eae0ec"
-   ],
-   "source": "danbooru",
-   "added": "2026-08-19",
-   "title": "firefly",
-   "sub": "danbooru",
-   "author": "hetare mizu",
-   "permalink": "https://danbooru.donmai.us/posts/7187738",
-   "sha256": "134c9d9abde2dd55e03f511216d9643056fc5cb65414409bf775aa1d5baf70c3",
-   "dhash": "85cecf0c874b4e8e",
-   "tags": [
-    "1girl",
-    "blue_sky",
-    "bow",
-    "brown_shirt",
-    "cityscape",
-    "closed_mouth",
-    "cloud",
-    "collared_shirt",
-    "eyes_visible_through_hair",
-    "from_behind",
-    "grey_hair",
-    "hair_bow",
-    "hair_ornament",
-    "hairband",
-    "letterboxed"
-   ],
-   "character": [
-    "firefly"
-   ]
-  },
-  {
-   "id": "0cdf43632218",
-   "file": "wallpapers/0cdf43632218.webp",
-   "thumb": "wallpapers/thumbs/0cdf43632218.webp",
-   "w": 2792,
-   "h": 3336,
-   "ratio": "0.84:1",
-   "bytes": 1087214,
-   "palette": [
-    "#212342",
-    "#1b042b",
-    "#4a2653",
-    "#4e558a",
-    "#688aaa"
-   ],
-   "source": "danbooru",
-   "added": "2026-08-19",
-   "title": "dorothy haze",
-   "sub": "danbooru",
-   "author": "sorapoi",
-   "permalink": "https://danbooru.donmai.us/posts/3812869",
-   "sha256": "0cdf43632218e17652a1510c4c8382944c77b31b29851b79cc367479f4e2f7b0",
-   "dhash": "4205a0a3c68a93f3",
-   "tags": [
-    "1girl",
-    "android",
-    "blush",
-    "city",
-    "city_lights",
-    "cityscape",
-    "cocktail",
-    "cocktail_glass",
-    "cup",
-    "dark",
-    "doll_joints",
-    "drinking_glass",
-    "glowing",
-    "glowing_eyes",
-    "glowing_liquid"
-   ],
-   "character": [
-    "dorothy haze"
-   ]
-  },
-  {
    "id": "07c1edc5ff53",
    "file": "wallpapers/07c1edc5ff53.webp",
    "thumb": "wallpapers/thumbs/07c1edc5ff53.webp",
@@ -7325,48 +5489,6 @@
    ]
   },
   {
-   "id": "f996dd380cc9",
-   "file": "wallpapers/f996dd380cc9.webp",
-   "thumb": "wallpapers/thumbs/f996dd380cc9.webp",
-   "w": 960,
-   "h": 1620,
-   "ratio": "16:27",
-   "bytes": 344908,
-   "palette": [
-    "#2e393d",
-    "#698d8f",
-    "#5d7477",
-    "#435358",
-    "#d7e1e3"
-   ],
-   "source": "danbooru",
-   "added": "2026-08-18",
-   "title": "original",
-   "sub": "danbooru",
-   "author": "wakamatsu372",
-   "permalink": "https://danbooru.donmai.us/posts/5538084",
-   "sha256": "f996dd380cc938fb31c5a7e4ca5204fc791442cb0b253c77b1a7e4a6c8c6aa5e",
-   "dhash": "3bcb4b1b4b035a0b",
-   "tags": [
-    "1boy",
-    "1girl",
-    "3koma",
-    "bag",
-    "bench",
-    "black_pants",
-    "black_socks",
-    "blue_skirt",
-    "bookbag",
-    "bus_stop",
-    "bus_stop_shelter",
-    "cellphone",
-    "comic",
-    "corrugated_galvanized_iron_sheet",
-    "forest"
-   ],
-   "character": []
-  },
-  {
    "id": "f7d11b84bab8",
    "file": "wallpapers/f7d11b84bab8.webp",
    "thumb": "wallpapers/thumbs/f7d11b84bab8.webp",
@@ -7453,53 +5575,6 @@
     "hakos baelz",
     "irys",
     "nanashi mumei"
-   ]
-  },
-  {
-   "id": "f52e317cd299",
-   "file": "wallpapers/f52e317cd299.webp",
-   "thumb": "wallpapers/thumbs/f52e317cd299.webp",
-   "w": 2048,
-   "h": 1536,
-   "ratio": "4:3",
-   "bytes": 303648,
-   "palette": [
-    "#fffcd1",
-    "#a5b39c",
-    "#d9ddca",
-    "#3b3e41",
-    "#222324"
-   ],
-   "source": "danbooru",
-   "added": "2026-08-18",
-   "title": "aru haruka kayoko mutsuki",
-   "sub": "danbooru",
-   "author": "gesupi (provlemsolver57)",
-   "permalink": "https://danbooru.donmai.us/posts/8250086",
-   "sha256": "f52e317cd299ce0b3a1242c4de7f05546a64fea8e32ddaebb3ac83ac1a0246d9",
-   "dhash": "118acd236bcfc3d6",
-   "tags": [
-    "4girls",
-    "black_car",
-    "car",
-    "chevrolet",
-    "chevrolet_impala",
-    "cityscape",
-    "drive-by",
-    "driving",
-    "fabarm_fp6/sdass",
-    "firing",
-    "grey_halo",
-    "gun",
-    "h&k_mg5",
-    "hair_ornament",
-    "halo"
-   ],
-   "character": [
-    "aru",
-    "haruka",
-    "kayoko",
-    "mutsuki"
    ]
   },
   {
@@ -7766,51 +5841,6 @@
    ]
   },
   {
-   "id": "c9813e04197c",
-   "file": "wallpapers/c9813e04197c.webp",
-   "thumb": "wallpapers/thumbs/c9813e04197c.webp",
-   "w": 827,
-   "h": 1417,
-   "ratio": "0.58:1",
-   "bytes": 307164,
-   "palette": [
-    "#f0d4a1",
-    "#d0b98e",
-    "#f9ecd8",
-    "#b49a6a",
-    "#44422c"
-   ],
-   "source": "danbooru",
-   "added": "2026-08-18",
-   "title": "female knight white beast",
-   "sub": "danbooru",
-   "author": "cymlim",
-   "permalink": "https://danbooru.donmai.us/posts/5175408",
-   "sha256": "c9813e04197cc5a193fd6c7b95ab1bdbb69e3d86bdfe2552f9ff8662b2ff6de7",
-   "dhash": "c1515953593376d6",
-   "tags": [
-    "1girl",
-    "armor",
-    "armored_boots",
-    "bag",
-    "bindle",
-    "blonde_hair",
-    "boots",
-    "breastplate",
-    "card_(medium)",
-    "closed_eyes",
-    "creature",
-    "forest",
-    "full_armor",
-    "gauntlets",
-    "gloves"
-   ],
-   "character": [
-    "female knight",
-    "white beast"
-   ]
-  },
-  {
    "id": "c75b11ab0fad",
    "file": "wallpapers/c75b11ab0fad.webp",
    "thumb": "wallpapers/thumbs/c75b11ab0fad.webp",
@@ -7986,96 +6016,6 @@
    ]
   },
   {
-   "id": "be56642ad2c3",
-   "file": "wallpapers/be56642ad2c3.webp",
-   "thumb": "wallpapers/thumbs/be56642ad2c3.webp",
-   "w": 1080,
-   "h": 1350,
-   "ratio": "4:5",
-   "bytes": 168116,
-   "palette": [
-    "#fc93ef",
-    "#3a0c79",
-    "#de9089",
-    "#191334",
-    "#d54bb9"
-   ],
-   "source": "danbooru",
-   "added": "2026-08-18",
-   "title": "barbie julius robert oppenheimer stereotypical barbie",
-   "sub": "danbooru",
-   "author": "brenni murasaki",
-   "permalink": "https://danbooru.donmai.us/posts/6522217",
-   "sha256": "be56642ad2c30ddad05856627f3e2172dd9cb643b5d6951576a1b0465afe1603",
-   "dhash": "e8d091c230703031",
-   "tags": [
-    "1990s_(style)",
-    "1boy",
-    "1girl",
-    "animification",
-    "artist_name",
-    "barbenheimer_(meme)",
-    "blonde_hair",
-    "blue_eyes",
-    "brick_wall",
-    "brown_hat",
-    "cigarette",
-    "city_lights",
-    "cityscape",
-    "closed_mouth",
-    "faux_retro_artstyle"
-   ],
-   "character": [
-    "barbie",
-    "julius robert oppenheimer",
-    "stereotypical barbie"
-   ]
-  },
-  {
-   "id": "9ac0b53fcc0c",
-   "file": "wallpapers/9ac0b53fcc0c.webp",
-   "thumb": "wallpapers/thumbs/9ac0b53fcc0c.webp",
-   "w": 1167,
-   "h": 1364,
-   "ratio": "0.86:1",
-   "bytes": 571964,
-   "palette": [
-    "#787b7b",
-    "#4b3b3f",
-    "#a1a2a3",
-    "#c4c8c8",
-    "#b37d8a"
-   ],
-   "source": "danbooru",
-   "added": "2026-08-18",
-   "title": "ellen joe ellen joe",
-   "sub": "danbooru",
-   "author": "otimusyairoha",
-   "permalink": "https://danbooru.donmai.us/posts/10626756",
-   "sha256": "9ac0b53fcc0c52ad5ab839e4fcb9c3bc4be755ffe98e65ecdde9e57e1d6097dd",
-   "dhash": "9c9ce86831969f29",
-   "tags": [
-    "1girl",
-    "against_railing",
-    "arms_behind_back",
-    "belt",
-    "belt_buckle",
-    "ben-day_dots",
-    "buckle",
-    "building",
-    "choker",
-    "cityscape",
-    "collared_shirt",
-    "copyright_name",
-    "cowboy_shot",
-    "ear_piercing",
-    "fins"
-   ],
-   "character": [
-    "ellen joe"
-   ]
-  },
-  {
    "id": "94b9b8aff327",
    "file": "wallpapers/94b9b8aff327.webp",
    "thumb": "wallpapers/thumbs/94b9b8aff327.webp",
@@ -8166,53 +6106,6 @@
    ]
   },
   {
-   "id": "8c49a769ae93",
-   "file": "wallpapers/8c49a769ae93.webp",
-   "thumb": "wallpapers/thumbs/8c49a769ae93.webp",
-   "w": 1479,
-   "h": 1956,
-   "ratio": "0.76:1",
-   "bytes": 703938,
-   "palette": [
-    "#983c46",
-    "#f9c5d2",
-    "#fcdeac",
-    "#e7c291",
-    "#e68d8c"
-   ],
-   "source": "danbooru",
-   "added": "2026-08-18",
-   "title": "godzilla gotoh futari gotoh hitori gotoh michiyo gotoh naoki hiroi kik",
-   "sub": "danbooru",
-   "author": "take shinobu",
-   "permalink": "https://danbooru.donmai.us/posts/5960784",
-   "sha256": "8c49a769ae93f2990f1985d9221a30bc2a76d81be728608e9a8c586b11624387",
-   "dhash": "c8489af6e2f3953b",
-   "tags": [
-    "6+girls",
-    ":d",
-    "=_=",
-    ">_<",
-    "ahoge",
-    "animal",
-    "animal_costume",
-    "aqua_eyes",
-    "black_hair",
-    "blonde_hair",
-    "blue_hair",
-    "breath_weapon",
-    "breathing_lightning",
-    "building",
-    "butterfly_wings"
-   ],
-   "character": [
-    "godzilla",
-    "gotoh futari",
-    "gotoh hitori",
-    "gotoh michiyo"
-   ]
-  },
-  {
    "id": "88ac03642530",
    "file": "wallpapers/88ac03642530.webp",
    "thumb": "wallpapers/thumbs/88ac03642530.webp",
@@ -8254,142 +6147,6 @@
    ],
    "character": [
     "fern"
-   ]
-  },
-  {
-   "id": "850516d5c611",
-   "file": "wallpapers/850516d5c611.webp",
-   "thumb": "wallpapers/thumbs/850516d5c611.webp",
-   "w": 2048,
-   "h": 1535,
-   "ratio": "1.33:1",
-   "bytes": 530880,
-   "palette": [
-    "#3e4938",
-    "#5e0101",
-    "#930101",
-    "#be9689",
-    "#c4b1a2"
-   ],
-   "source": "danbooru",
-   "added": "2026-08-18",
-   "title": "ceres fauna ceres fauna smol ame watson amelia",
-   "sub": "danbooru",
-   "author": "zedd (zedgawr)",
-   "permalink": "https://danbooru.donmai.us/posts/5197376",
-   "sha256": "850516d5c611a738e80ddd7f04c54604d733ed6eea7bba52d1393855678465b1",
-   "dhash": "dbdbdace4c4c6464",
-   "tags": [
-    "2girls",
-    "4koma",
-    "bare_shoulders",
-    "barefoot",
-    "blonde_hair",
-    "blush",
-    "breasts",
-    "bug",
-    "butterfly",
-    "chicken_(food)",
-    "cleavage",
-    "comic",
-    "computer",
-    "cup",
-    "drinking_glass"
-   ],
-   "character": [
-    "ceres fauna",
-    "smol ame",
-    "watson amelia"
-   ]
-  },
-  {
-   "id": "80b0bf324ecd",
-   "file": "wallpapers/80b0bf324ecd.webp",
-   "thumb": "wallpapers/thumbs/80b0bf324ecd.webp",
-   "w": 991,
-   "h": 1500,
-   "ratio": "0.66:1",
-   "bytes": 247766,
-   "palette": [
-    "#537d6e",
-    "#8b3c3b",
-    "#62332d",
-    "#3a574f",
-    "#72a489"
-   ],
-   "source": "danbooru",
-   "added": "2026-08-18",
-   "title": "serena",
-   "sub": "danbooru",
-   "author": "tsukishiro saika",
-   "permalink": "https://danbooru.donmai.us/posts/6621338",
-   "sha256": "80b0bf324ecde46ae5bd6362e849b4022f57e8ff796f96d16e3fd7f6395c3a1b",
-   "dhash": "aeb69b9d994e92ad",
-   "tags": [
-    "1girl",
-    "bag",
-    "bare_arms",
-    "black_shirt",
-    "black_thighhighs",
-    "blue_eyes",
-    "bracelet",
-    "breasts",
-    "brown_hair",
-    "eyewear_on_headwear",
-    "forest",
-    "from_side",
-    "hand_on_own_hip",
-    "hat",
-    "holding"
-   ],
-   "character": [
-    "serena"
-   ]
-  },
-  {
-   "id": "7e9500b79451",
-   "file": "wallpapers/7e9500b79451.webp",
-   "thumb": "wallpapers/thumbs/7e9500b79451.webp",
-   "w": 1639,
-   "h": 1751,
-   "ratio": "0.94:1",
-   "bytes": 349778,
-   "palette": [
-    "#fef5c9",
-    "#4b3917",
-    "#635532",
-    "#c2beaa",
-    "#88763e"
-   ],
-   "source": "danbooru",
-   "added": "2026-08-18",
-   "title": "artoria pendragon king arthur saber",
-   "sub": "danbooru",
-   "author": "kkghost tv",
-   "permalink": "https://danbooru.donmai.us/posts/9150959",
-   "sha256": "7e9500b79451a82d61cf70eacdbf792ea96e0c54d8f5a597256200bd857bc76a",
-   "dhash": "45e96974b63b67f6",
-   "tags": [
-    "1boy",
-    "1girl",
-    "ahoge",
-    "armor",
-    "armored_dress",
-    "beard",
-    "blonde_hair",
-    "blue_dress",
-    "blue_ribbon",
-    "brown_facial_hair",
-    "chainmail",
-    "chausses",
-    "couter",
-    "crossover",
-    "crown"
-   ],
-   "character": [
-    "artoria pendragon",
-    "king arthur",
-    "saber"
    ]
   },
   {
@@ -8484,97 +6241,6 @@
    ]
   },
   {
-   "id": "588e2f79ff97",
-   "file": "wallpapers/588e2f79ff97.webp",
-   "thumb": "wallpapers/thumbs/588e2f79ff97.webp",
-   "w": 1051,
-   "h": 1096,
-   "ratio": "0.96:1",
-   "bytes": 174548,
-   "palette": [
-    "#264a59",
-    "#be676b",
-    "#fff3df",
-    "#4a9a80",
-    "#37626e"
-   ],
-   "source": "danbooru",
-   "added": "2026-08-18",
-   "title": "amano pikamee amano pikamee",
-   "sub": "danbooru",
-   "author": "drawfag",
-   "permalink": "https://danbooru.donmai.us/posts/4173101",
-   "sha256": "588e2f79ff971ec6b09e2de2d968a5f12584a76352a19d8875a7aaf789231349",
-   "dhash": "c7e1e161aae3e099",
-   "tags": [
-    "1girl",
-    "aqua_eyes",
-    "aqua_hair",
-    "aqua_nails",
-    "bare_shoulders",
-    "bench",
-    "bench_tails_(meme)",
-    "black_hairband",
-    "blonde_hair",
-    "blue_shorts",
-    "blue_sky",
-    "breasts",
-    "bright_pupils",
-    "closed_mouth",
-    "collarbone"
-   ],
-   "character": [
-    "amano pikamee"
-   ]
-  },
-  {
-   "id": "501235b10438",
-   "file": "wallpapers/501235b10438.webp",
-   "thumb": "wallpapers/thumbs/501235b10438.webp",
-   "w": 3256,
-   "h": 3840,
-   "ratio": "0.85:1",
-   "bytes": 1464620,
-   "palette": [
-    "#6e513b",
-    "#ce7c57",
-    "#db9270",
-    "#e8aa8e",
-    "#2f1f15"
-   ],
-   "source": "danbooru",
-   "added": "2026-08-18",
-   "title": "denji higashiyama kobeni meowy power",
-   "sub": "danbooru",
-   "author": "efairu 666",
-   "permalink": "https://danbooru.donmai.us/posts/6643241",
-   "sha256": "501235b104381ab796559fd65d65c69a2630b9f631a42f4ffd7cbcfcf541a232",
-   "dhash": "8fb7b3b293167373",
-   "tags": [
-    "1boy",
-    "2girls",
-    "brown_eyes",
-    "brown_hair",
-    "cat",
-    "collarbone",
-    "combat_helmet",
-    "dog_tags",
-    "east-west_crossover",
-    "fine_art_parody",
-    "forest",
-    "frown",
-    "hair_ornament",
-    "hairclip",
-    "helmet"
-   ],
-   "character": [
-    "denji",
-    "higashiyama kobeni",
-    "meowy",
-    "power"
-   ]
-  },
-  {
    "id": "4fbc8e61a954",
    "file": "wallpapers/4fbc8e61a954.webp",
    "thumb": "wallpapers/thumbs/4fbc8e61a954.webp",
@@ -8661,100 +6327,6 @@
    ],
    "character": [
     "rapi"
-   ]
-  },
-  {
-   "id": "321137217154",
-   "file": "wallpapers/321137217154.webp",
-   "thumb": "wallpapers/thumbs/321137217154.webp",
-   "w": 3840,
-   "h": 1316,
-   "ratio": "2.92:1",
-   "bytes": 881348,
-   "palette": [
-    "#6e9fb3",
-    "#eee8ab",
-    "#b58f76",
-    "#9e7a66",
-    "#594440"
-   ],
-   "source": "danbooru",
-   "added": "2026-08-18",
-   "title": "akaboshi koume aki akiyama yukari alisa anchovy assam caesar carpaccio",
-   "sub": "danbooru",
-   "author": "ladic",
-   "permalink": "https://danbooru.donmai.us/posts/2628172",
-   "sha256": "3211372171547d9fa282510ba3cf4176acadd4d41cd8133e8446ba4cad7c2811",
-   "dhash": "b1414546272a3810",
-   "tags": [
-    "6+girls",
-    "absolutely_everyone",
-    "all_fours",
-    "anglerfish",
-    "angry",
-    "ankle_boots",
-    "anzio_military_uniform",
-    "bare_legs",
-    "basket",
-    "belt",
-    "beret",
-    "bike_shorts",
-    "black_boots",
-    "black_bow",
-    "black_eyes"
-   ],
-   "character": [
-    "akaboshi koume",
-    "aki",
-    "akiyama yukari",
-    "alisa"
-   ]
-  },
-  {
-   "id": "241fea959506",
-   "file": "wallpapers/241fea959506.webp",
-   "thumb": "wallpapers/thumbs/241fea959506.webp",
-   "w": 1275,
-   "h": 1650,
-   "ratio": "17:22",
-   "bytes": 378656,
-   "palette": [
-    "#737c82",
-    "#e3dac7",
-    "#949695",
-    "#bdb5ab",
-    "#62666a"
-   ],
-   "source": "danbooru",
-   "added": "2026-08-18",
-   "title": "2b 9s agatsuma zenitsu ame-chan amiya angel devil anne yatco anya aoya",
-   "sub": "danbooru",
-   "author": "reshanims",
-   "permalink": "https://danbooru.donmai.us/posts/6492619",
-   "sha256": "241fea9595066f3b0e08f3f3d003a6d4974717aea61d142ba28841206abf4e43",
-   "dhash": "31331d3d7c757d3e",
-   "tags": [
-    "6+boys",
-    "6+girls",
-    "absolutely_everyone",
-    "aqua_hair",
-    "ball",
-    "bicycle",
-    "bicycle_lane",
-    "black_hair",
-    "blonde_hair",
-    "blue_hair",
-    "bmw",
-    "bmw_3_series",
-    "bmw_e30",
-    "brown_hair",
-    "building"
-   ],
-   "character": [
-    "2b",
-    "9s",
-    "agatsuma zenitsu",
-    "ame-chan"
    ]
   },
   {
@@ -8934,50 +6506,6 @@
    ],
    "character": [
     "shameimaru aya"
-   ]
-  },
-  {
-   "id": "00318cf26fad",
-   "file": "wallpapers/00318cf26fad.webp",
-   "thumb": "wallpapers/thumbs/00318cf26fad.webp",
-   "w": 1000,
-   "h": 1778,
-   "ratio": "0.56:1",
-   "bytes": 223316,
-   "palette": [
-    "#1c1b29",
-    "#29445c",
-    "#d9dfec",
-    "#bfc2d2",
-    "#595b72"
-   ],
-   "source": "danbooru",
-   "added": "2026-08-18",
-   "title": "lin",
-   "sub": "danbooru",
-   "author": "kaoming",
-   "permalink": "https://danbooru.donmai.us/posts/5770582",
-   "sha256": "00318cf26fad8663f1e7e08f92f59372f8acf4a7a36bec558172def15728b3a6",
-   "dhash": "f0f1bc9aa0b091bc",
-   "tags": [
-    "1girl",
-    "aiguillette",
-    "arm_support",
-    "black_hair",
-    "blue_eyes",
-    "bow",
-    "braid",
-    "breasts",
-    "chain",
-    "cityscape",
-    "earrings",
-    "gun",
-    "hair_bow",
-    "head_tilt",
-    "jewelry"
-   ],
-   "character": [
-    "lin"
    ]
   },
   {
@@ -9248,51 +6776,6 @@
    ]
   },
   {
-   "id": "df37449070e7",
-   "file": "wallpapers/df37449070e7.webp",
-   "thumb": "wallpapers/thumbs/df37449070e7.webp",
-   "w": 1605,
-   "h": 2048,
-   "ratio": "0.78:1",
-   "bytes": 437346,
-   "palette": [
-    "#47554b",
-    "#c390a7",
-    "#1f272d",
-    "#86647a",
-    "#f5eae7"
-   ],
-   "source": "danbooru",
-   "added": "2026-08-17",
-   "title": "kirisame marisa mitsugashira enoko mitsugashira enoko",
-   "sub": "danbooru",
-   "author": "jill 07km",
-   "permalink": "https://danbooru.donmai.us/posts/6607232",
-   "sha256": "df37449070e7a2a65edb7ba3f0d6d046f48877e3bb2aded9bfa2c9ce26acfdf1",
-   "dhash": "254bc6286969e524",
-   "tags": [
-    "!",
-    "2girls",
-    "aged_down",
-    "animal_ears",
-    "animalization",
-    "ankle_garter",
-    "barefoot",
-    "bear_trap",
-    "dog_ears",
-    "dog_girl",
-    "dog_tail",
-    "fang",
-    "forest",
-    "frills",
-    "grey_hair"
-   ],
-   "character": [
-    "kirisame marisa",
-    "mitsugashira enoko"
-   ]
-  },
-  {
    "id": "d3b178ba628a",
    "file": "wallpapers/d3b178ba628a.webp",
    "thumb": "wallpapers/thumbs/d3b178ba628a.webp",
@@ -9377,97 +6860,6 @@
     "brown_eyes"
    ],
    "character": []
-  },
-  {
-   "id": "c63fade42e47",
-   "file": "wallpapers/c63fade42e47.webp",
-   "thumb": "wallpapers/thumbs/c63fade42e47.webp",
-   "w": 1920,
-   "h": 1080,
-   "ratio": "16:9",
-   "bytes": 911646,
-   "palette": [
-    "#262b36",
-    "#364f5b",
-    "#969075",
-    "#747962",
-    "#613a42"
-   ],
-   "source": "danbooru",
-   "added": "2026-08-17",
-   "title": "artoria pendragon mordred mordred mordred saber saber saber alter sabe",
-   "sub": "danbooru",
-   "author": "cyp tw",
-   "permalink": "https://danbooru.donmai.us/posts/3081513",
-   "sha256": "c63fade42e4700c7d8e99a476d0b8a8a10ae04809201c2faa0b1eb75fa29aac1",
-   "dhash": "642420a0b0206070",
-   "tags": [
-    "3girls",
-    "ahoge",
-    "armor",
-    "armored_dress",
-    "blonde_hair",
-    "bow",
-    "braid",
-    "coconut",
-    "dress",
-    "dual_persona",
-    "east-west_crossover",
-    "excalibur_morgan_(fate)",
-    "forest",
-    "hair_bow",
-    "hair_bun"
-   ],
-   "character": [
-    "artoria pendragon",
-    "mordred",
-    "saber",
-    "saber alter"
-   ]
-  },
-  {
-   "id": "bd6ca3b3d660",
-   "file": "wallpapers/bd6ca3b3d660.webp",
-   "thumb": "wallpapers/thumbs/bd6ca3b3d660.webp",
-   "w": 2217,
-   "h": 2966,
-   "ratio": "0.75:1",
-   "bytes": 1092680,
-   "palette": [
-    "#51543c",
-    "#686f48",
-    "#8f9265",
-    "#c4c289",
-    "#1c1e19"
-   ],
-   "source": "danbooru",
-   "added": "2026-08-17",
-   "title": "frieren",
-   "sub": "danbooru",
-   "author": "tiewan",
-   "permalink": "https://danbooru.donmai.us/posts/7013214",
-   "sha256": "bd6ca3b3d6602551cec3e7eb549da6f6e64fbd9e26a6b98dac10e60022ca677f",
-   "dhash": "ecd0f4a49d8c94b6",
-   "tags": [
-    "1girl",
-    "ammunition_pouch",
-    "belt",
-    "black_pantyhose",
-    "blue_eyes",
-    "blue_hair",
-    "closed_mouth",
-    "elf",
-    "english_text",
-    "forest",
-    "ghillie_suit",
-    "gloves",
-    "gun",
-    "handgun",
-    "holding"
-   ],
-   "character": [
-    "frieren"
-   ]
   },
   {
    "id": "bcc406b7425d",
@@ -9693,48 +7085,6 @@
    ]
   },
   {
-   "id": "96dcac08bdce",
-   "file": "wallpapers/96dcac08bdce.webp",
-   "thumb": "wallpapers/thumbs/96dcac08bdce.webp",
-   "w": 2380,
-   "h": 1305,
-   "ratio": "1.82:1",
-   "bytes": 520488,
-   "palette": [
-    "#3f3a39",
-    "#dee4e6",
-    "#b7b9b9",
-    "#5c5655",
-    "#201d1d"
-   ],
-   "source": "danbooru",
-   "added": "2026-08-17",
-   "title": "original",
-   "sub": "danbooru",
-   "author": "gogalking",
-   "permalink": "https://danbooru.donmai.us/posts/6747930",
-   "sha256": "96dcac08bdce68ec2c3377ea19f0c98acec08fd9c6dfdd630e87b6eb200d0801",
-   "dhash": "1a2e3eba7f665f46",
-   "tags": [
-    "1boy",
-    "1girl",
-    "2others",
-    "backpack",
-    "bag",
-    "battle",
-    "black_gloves",
-    "blush",
-    "breath",
-    "coat",
-    "cold",
-    "forest",
-    "fur-trimmed_coat",
-    "fur_trim",
-    "gloves"
-   ],
-   "character": []
-  },
-  {
    "id": "90ceae7e7179",
    "file": "wallpapers/90ceae7e7179.webp",
    "thumb": "wallpapers/thumbs/90ceae7e7179.webp",
@@ -9779,53 +7129,6 @@
     "kishin sagume",
     "watatsuki no toyohime",
     "watatsuki no yorihime"
-   ]
-  },
-  {
-   "id": "843a8acf5094",
-   "file": "wallpapers/843a8acf5094.webp",
-   "thumb": "wallpapers/thumbs/843a8acf5094.webp",
-   "w": 1280,
-   "h": 960,
-   "ratio": "4:3",
-   "bytes": 281424,
-   "palette": [
-    "#d19017",
-    "#156782",
-    "#e7b37d",
-    "#941c40",
-    "#5d1429"
-   ],
-   "source": "danbooru",
-   "added": "2026-08-17",
-   "title": "daphne blake raven starfire velma dinkley",
-   "sub": "danbooru",
-   "author": "brenni murasaki",
-   "permalink": "https://danbooru.donmai.us/posts/6061028",
-   "sha256": "843a8acf50941c85f717653155f7ccb2bd06ddfdf30216989db2ea7e8415c621",
-   "dhash": "b21464eccc4caca1",
-   "tags": [
-    "1990s_(style)",
-    "2girls",
-    "closed_mouth",
-    "colored_sclera",
-    "cosplay",
-    "covering_another's_mouth",
-    "daphne_blake_(cosplay)",
-    "faux_retro_artstyle",
-    "forehead_jewel",
-    "forest",
-    "glasses",
-    "green_eyes",
-    "green_scarf",
-    "green_sclera",
-    "hairband"
-   ],
-   "character": [
-    "daphne blake",
-    "raven",
-    "starfire",
-    "velma dinkley"
    ]
   },
   {
@@ -9959,139 +7262,6 @@
    "character": [
     "mishaguji",
     "moriya suwako"
-   ]
-  },
-  {
-   "id": "7692ac37a7f6",
-   "file": "wallpapers/7692ac37a7f6.webp",
-   "thumb": "wallpapers/thumbs/7692ac37a7f6.webp",
-   "w": 1605,
-   "h": 2382,
-   "ratio": "0.67:1",
-   "bytes": 428552,
-   "palette": [
-    "#94b77b",
-    "#7de4f8",
-    "#6dc2ea",
-    "#d4b96d",
-    "#eef6e2"
-   ],
-   "source": "danbooru",
-   "added": "2026-08-17",
-   "title": "jimmy olsen supergirl supergirl",
-   "sub": "danbooru",
-   "author": "jourd4n",
-   "permalink": "https://danbooru.donmai.us/posts/7780192",
-   "sha256": "7692ac37a7f67a90280410b992245d5da8f70a0dcd81877e9af0b838d3c17ebf",
-   "dhash": "233c327717354a63",
-   "tags": [
-    "1boy",
-    "1girl",
-    "2koma",
-    "aircraft",
-    "black_bodysuit",
-    "blonde_hair",
-    "blue_eyes",
-    "blush",
-    "bodysuit",
-    "breasts",
-    "cape",
-    "carrying",
-    "cloud",
-    "comic",
-    "dark-skinned_male"
-   ],
-   "character": [
-    "jimmy olsen",
-    "supergirl"
-   ]
-  },
-  {
-   "id": "6f5001c8effa",
-   "file": "wallpapers/6f5001c8effa.webp",
-   "thumb": "wallpapers/thumbs/6f5001c8effa.webp",
-   "w": 2000,
-   "h": 1408,
-   "ratio": "1.42:1",
-   "bytes": 262684,
-   "palette": [
-    "#72684b",
-    "#514836",
-    "#322f25",
-    "#948457",
-    "#3e382c"
-   ],
-   "source": "danbooru",
-   "added": "2026-08-17",
-   "title": "knights who say ni",
-   "sub": "danbooru",
-   "author": "lizzi rust",
-   "permalink": "https://danbooru.donmai.us/posts/5245866",
-   "sha256": "6f5001c8effa2d4b9aae005f82cdd301db3945618bbfcd1d8cc965235ea97c76",
-   "dhash": "f06848cccce8c8d4",
-   "tags": [
-    "6+others",
-    "antlers",
-    "backlighting",
-    "boss_fight",
-    "bush",
-    "crossover",
-    "english_text",
-    "facing_away",
-    "fog",
-    "forest",
-    "from_behind",
-    "giant",
-    "heads-up_display",
-    "health_bar",
-    "helmet"
-   ],
-   "character": [
-    "knights who say ni"
-   ]
-  },
-  {
-   "id": "64be6be9a391",
-   "file": "wallpapers/64be6be9a391.webp",
-   "thumb": "wallpapers/thumbs/64be6be9a391.webp",
-   "w": 806,
-   "h": 1167,
-   "ratio": "0.69:1",
-   "bytes": 121658,
-   "palette": [
-    "#c8976f",
-    "#f2e1c2",
-    "#511e1f",
-    "#d9b790",
-    "#723131"
-   ],
-   "source": "danbooru",
-   "added": "2026-08-17",
-   "title": "takeba yukari",
-   "sub": "danbooru",
-   "author": "fagi (kakikaki)",
-   "permalink": "https://danbooru.donmai.us/posts/5793813",
-   "sha256": "64be6be9a391f5c96f0ff84ced5fdac365137adcb2d0fb1d0740581a07b26b5c",
-   "dhash": "f09296c6eef332f6",
-   "tags": [
-    "1girl",
-    "bare_shoulders",
-    "blurry",
-    "blurry_background",
-    "breasts",
-    "brown_eyes",
-    "brown_hair",
-    "choker",
-    "collarbone",
-    "dress",
-    "earrings",
-    "forest",
-    "from_below",
-    "fur-trimmed_dress",
-    "fur_trim"
-   ],
-   "character": [
-    "takeba yukari"
    ]
   },
   {
@@ -10362,51 +7532,6 @@
    ]
   },
   {
-   "id": "27b537a2a3bb",
-   "file": "wallpapers/27b537a2a3bb.webp",
-   "thumb": "wallpapers/thumbs/27b537a2a3bb.webp",
-   "w": 1000,
-   "h": 1121,
-   "ratio": "0.89:1",
-   "bytes": 146212,
-   "palette": [
-    "#04012e",
-    "#022bc4",
-    "#061f42",
-    "#171f74",
-    "#acb5ea"
-   ],
-   "source": "danbooru",
-   "added": "2026-08-17",
-   "title": "sage sonic the hedgehog",
-   "sub": "danbooru",
-   "author": "tasikyu",
-   "permalink": "https://danbooru.donmai.us/posts/5467750",
-   "sha256": "27b537a2a3bb0226b674713665dae16206c49c2e1a40e2f5a959dcff64ade93c",
-   "dhash": "b8b4fde194d48430",
-   "tags": [
-    "1boy",
-    "1girl",
-    "binary",
-    "english_text",
-    "floating",
-    "forest",
-    "furry",
-    "furry_male",
-    "gloves",
-    "green_eyes",
-    "hair_over_one_eye",
-    "half-closed_eye",
-    "meme",
-    "nature",
-    "night"
-   ],
-   "character": [
-    "sage",
-    "sonic the hedgehog"
-   ]
-  },
-  {
    "id": "261a49f24613",
    "file": "wallpapers/261a49f24613.webp",
    "thumb": "wallpapers/thumbs/261a49f24613.webp",
@@ -10498,50 +7623,6 @@
    ]
   },
   {
-   "id": "1eee1d2cd458",
-   "file": "wallpapers/1eee1d2cd458.webp",
-   "thumb": "wallpapers/thumbs/1eee1d2cd458.webp",
-   "w": 1100,
-   "h": 1600,
-   "ratio": "11:16",
-   "bytes": 188510,
-   "palette": [
-    "#b4cbc2",
-    "#e5f4ea",
-    "#bda4a6",
-    "#292331",
-    "#e0d8d9"
-   ],
-   "source": "danbooru",
-   "added": "2026-08-17",
-   "title": "sister claire sister claire",
-   "sub": "danbooru",
-   "author": "daishippai",
-   "permalink": "https://danbooru.donmai.us/posts/5768729",
-   "sha256": "1eee1d2cd45828ef22f88d353ea0967b8eb4ebc0f3cf0cb4f2dfe463d67642a7",
-   "dhash": "d49696aaa20f1717",
-   "tags": [
-    "1girl",
-    ":d",
-    "black_dress",
-    "black_veil",
-    "blonde_hair",
-    "blush",
-    "breasts",
-    "capelet",
-    "dress",
-    "forest",
-    "full-length_zipper",
-    "gloves",
-    "guimpe",
-    "long_hair",
-    "long_sleeves"
-   ],
-   "character": [
-    "sister claire"
-   ]
-  },
-  {
    "id": "1e2004202742",
    "file": "wallpapers/1e2004202742.webp",
    "thumb": "wallpapers/thumbs/1e2004202742.webp",
@@ -10583,100 +7664,6 @@
    ],
    "character": [
     "yu xuan"
-   ]
-  },
-  {
-   "id": "0e70b3280cf8",
-   "file": "wallpapers/0e70b3280cf8.webp",
-   "thumb": "wallpapers/thumbs/0e70b3280cf8.webp",
-   "w": 165,
-   "h": 3840,
-   "ratio": "0.04:1",
-   "bytes": 240922,
-   "palette": [
-    "#2e3c8b",
-    "#101c66",
-    "#4359b2",
-    "#5470c4",
-    "#544691"
-   ],
-   "source": "danbooru",
-   "added": "2026-08-17",
-   "title": "arona atsuko hinata hiyori hoshino mari mika mine misaki nonomi phrena",
-   "sub": "danbooru",
-   "author": "k.n.q",
-   "permalink": "https://danbooru.donmai.us/posts/10475125",
-   "sha256": "0e70b3280cf8fe626b16fd0d5ed8ec5427f04e6c4cab28621df22c365c482a82",
-   "dhash": "f0f078f0d4f0f0a4",
-   "tags": [
-    "1boy",
-    "6+girls",
-    "ahoge",
-    "angel_wings",
-    "animal_ear_fluff",
-    "animal_ears",
-    "aqua_hair",
-    "arius_squad_(blue_archive)",
-    "arm_up",
-    "armband",
-    "armor",
-    "assault_rifle",
-    "bandaged_neck",
-    "bandages",
-    "baseball_cap"
-   ],
-   "character": [
-    "arona",
-    "atsuko",
-    "hinata",
-    "hiyori"
-   ]
-  },
-  {
-   "id": "098fbcd66a8c",
-   "file": "wallpapers/098fbcd66a8c.webp",
-   "thumb": "wallpapers/thumbs/098fbcd66a8c.webp",
-   "w": 2899,
-   "h": 2174,
-   "ratio": "1.33:1",
-   "bytes": 1678830,
-   "palette": [
-    "#d0b3b2",
-    "#7a3157",
-    "#eed8cf",
-    "#bcd6d7",
-    "#cb9094"
-   ],
-   "source": "danbooru",
-   "added": "2026-08-17",
-   "title": "aki minoriko aki shizuha alice margatroid alice margatroid asakura rik",
-   "sub": "danbooru",
-   "author": "kanisawa yuuki",
-   "permalink": "https://danbooru.donmai.us/posts/903324",
-   "sha256": "098fbcd66a8c65a233ebc26248bfca7234631c764c823295f910254e86b48b28",
-   "dhash": "b59cb3b2d0e4cd85",
-   "tags": [
-    "6+girls",
-    ":d",
-    ":p",
-    ";p",
-    ">:)",
-    ">_<",
-    "@_@",
-    "absolutely_everyone",
-    "absurdly_detailed_composition",
-    "aki_minoriko_(cosplay)",
-    "aki_shizuha_(cosplay)",
-    "alice_margatroid_(cosplay)",
-    "anchor",
-    "anchor_symbol",
-    "angry"
-   ],
-   "character": [
-    "aki minoriko",
-    "aki shizuha",
-    "alice margatroid",
-    "asakura rikako"
    ]
   },
   {
@@ -10901,52 +7888,6 @@
    ]
   },
   {
-   "id": "e5d37ba7d939",
-   "file": "wallpapers/e5d37ba7d939.webp",
-   "thumb": "wallpapers/thumbs/e5d37ba7d939.webp",
-   "w": 2428,
-   "h": 3439,
-   "ratio": "0.71:1",
-   "bytes": 730318,
-   "palette": [
-    "#eed6ca",
-    "#df9b94",
-    "#e7bcb4",
-    "#3b3d51",
-    "#232134"
-   ],
-   "source": "danbooru",
-   "added": "2026-08-16",
-   "title": "aris doodle sensei sensei",
-   "sub": "danbooru",
-   "author": "shiyoo",
-   "permalink": "https://danbooru.donmai.us/posts/6067049",
-   "sha256": "e5d37ba7d939c4d55dffcc1d2014058b6806666419c8d934a1f6b867142f3fd5",
-   "dhash": "696161e9cc698486",
-   "tags": [
-    "!",
-    "0_0",
-    "1boy",
-    "1girl",
-    "3koma",
-    ":d",
-    ":o",
-    ">_<",
-    "^_^",
-    "black_hair",
-    "blush",
-    "building",
-    "close-up",
-    "closed_eyes",
-    "comic"
-   ],
-   "character": [
-    "aris",
-    "doodle sensei",
-    "sensei"
-   ]
-  },
-  {
    "id": "e196aadebd49",
    "file": "wallpapers/e196aadebd49.webp",
    "thumb": "wallpapers/thumbs/e196aadebd49.webp",
@@ -11038,52 +7979,6 @@
    ]
   },
   {
-   "id": "d8001990a29e",
-   "file": "wallpapers/d8001990a29e.webp",
-   "thumb": "wallpapers/thumbs/d8001990a29e.webp",
-   "w": 1020,
-   "h": 1200,
-   "ratio": "17:20",
-   "bytes": 188468,
-   "palette": [
-    "#641a1d",
-    "#fcebbc",
-    "#ee8a4f",
-    "#e2c5a8",
-    "#c87851"
-   ],
-   "source": "danbooru",
-   "added": "2026-08-16",
-   "title": "anya becky blackbell yor briar",
-   "sub": "danbooru",
-   "author": "khyle.",
-   "permalink": "https://danbooru.donmai.us/posts/6019755",
-   "sha256": "d8001990a29eef428e013da6a6502358c19c3d17f2128e83b74930af3d224ca0",
-   "dhash": "a030113bac161684",
-   "tags": [
-    "1boy",
-    "3girls",
-    "adoptive_parent_and_adoptive_child",
-    "anachronism",
-    "auschwitz",
-    "backpack",
-    "bag",
-    "black_dress",
-    "black_hair",
-    "black_hat",
-    "blush",
-    "book",
-    "boom_barrier",
-    "brown_bag",
-    "building"
-   ],
-   "character": [
-    "anya",
-    "becky blackbell",
-    "yor briar"
-   ]
-  },
-  {
    "id": "d440a72ac592",
    "file": "wallpapers/d440a72ac592.webp",
    "thumb": "wallpapers/thumbs/d440a72ac592.webp",
@@ -11126,53 +8021,6 @@
    "character": [
     "ninomae ina'nis",
     "takodachi"
-   ]
-  },
-  {
-   "id": "c7fcafa7ab00",
-   "file": "wallpapers/c7fcafa7ab00.webp",
-   "thumb": "wallpapers/thumbs/c7fcafa7ab00.webp",
-   "w": 1600,
-   "h": 1200,
-   "ratio": "4:3",
-   "bytes": 146478,
-   "palette": [
-    "#2d2125",
-    "#e3ebf8",
-    "#7c9d6b",
-    "#836557",
-    "#97bd86"
-   ],
-   "source": "danbooru",
-   "added": "2026-08-16",
-   "title": "kitagawa marin komi shouko nagatoro hayase uzaki hana",
-   "sub": "danbooru",
-   "author": "tina fate",
-   "permalink": "https://danbooru.donmai.us/posts/5348883",
-   "sha256": "c7fcafa7ab006cff7c61e89a37f8b7225332cf1e7855410abe9a13afc0e04dc9",
-   "dhash": "1b1e9516351d1b17",
-   "tags": [
-    "4girls",
-    "arm_support",
-    "black_hair",
-    "black_pantyhose",
-    "black_shoes",
-    "black_socks",
-    "blazer",
-    "block_(minecraft)",
-    "block_(object)",
-    "blonde_hair",
-    "blue_jacket",
-    "blue_skirt",
-    "bow",
-    "bowtie",
-    "box"
-   ],
-   "character": [
-    "kitagawa marin",
-    "komi shouko",
-    "nagatoro hayase",
-    "uzaki hana"
    ]
   },
   {
@@ -11627,53 +8475,6 @@
    ]
   },
   {
-   "id": "98e59c53b785",
-   "file": "wallpapers/98e59c53b785.webp",
-   "thumb": "wallpapers/thumbs/98e59c53b785.webp",
-   "w": 1200,
-   "h": 856,
-   "ratio": "1.40:1",
-   "bytes": 151506,
-   "palette": [
-    "#414369",
-    "#621f2d",
-    "#a55448",
-    "#281e31",
-    "#6d6189"
-   ],
-   "source": "danbooru",
-   "added": "2026-08-16",
-   "title": "asahina mikuru daphne blake fred jones koizumi itsuki kyon nagato yuki",
-   "sub": "danbooru",
-   "author": "tim larade",
-   "permalink": "https://danbooru.donmai.us/posts/3339784",
-   "sha256": "98e59c53b7850e3f16a9db469193f5dfe81ccf8910fc0b1baee3e1d5293bd886",
-   "dhash": "73334ddc8d243610",
-   "tags": [
-    "2boys",
-    "3girls",
-    "^_^",
-    "alternate_costume",
-    "angry",
-    "animal_ears",
-    "animal_print",
-    "armband",
-    "arms_at_sides",
-    "backlighting",
-    "black-framed_eyewear",
-    "breasts",
-    "brown_eyes",
-    "brown_hairband",
-    "brown_pants"
-   ],
-   "character": [
-    "asahina mikuru",
-    "daphne blake",
-    "fred jones",
-    "koizumi itsuki"
-   ]
-  },
-  {
    "id": "98c0b5ab9455",
    "file": "wallpapers/98c0b5ab9455.webp",
    "thumb": "wallpapers/thumbs/98c0b5ab9455.webp",
@@ -11762,50 +8563,6 @@
     "baron bunny",
     "eula",
     "kamisato ayaka"
-   ]
-  },
-  {
-   "id": "932f92002f71",
-   "file": "wallpapers/932f92002f71.webp",
-   "thumb": "wallpapers/thumbs/932f92002f71.webp",
-   "w": 1500,
-   "h": 1500,
-   "ratio": "1:1",
-   "bytes": 36394,
-   "palette": [
-    "#000001",
-    "#182331",
-    "#87b3d6",
-    "#c1d6e5",
-    "#4875a0"
-   ],
-   "source": "danbooru",
-   "added": "2026-08-16",
-   "title": "ranni the witch",
-   "sub": "danbooru",
-   "author": "goldendogaki",
-   "permalink": "https://danbooru.donmai.us/posts/5460021",
-   "sha256": "932f92002f7105ff37b54cce4fe0c9926744e38a3c27e77fc2696c15457bd01c",
-   "dhash": "0000000010303030",
-   "tags": [
-    "1girl",
-    "black_background",
-    "blue_eyes",
-    "blue_hair",
-    "cloak",
-    "closed_eyes",
-    "dress",
-    "extra_arms",
-    "floating",
-    "floating_object",
-    "from_side",
-    "full_body",
-    "full_moon",
-    "fur_cloak",
-    "glowing"
-   ],
-   "character": [
-    "ranni the witch"
    ]
   },
   {
@@ -12213,53 +8970,6 @@
    ]
   },
   {
-   "id": "40c1363e9387",
-   "file": "wallpapers/40c1363e9387.webp",
-   "thumb": "wallpapers/thumbs/40c1363e9387.webp",
-   "w": 2742,
-   "h": 3840,
-   "ratio": "0.71:1",
-   "bytes": 1950040,
-   "palette": [
-    "#5d94c5",
-    "#a5bed4",
-    "#cec2b9",
-    "#c9d7e4",
-    "#8a6762"
-   ],
-   "source": "danbooru",
-   "added": "2026-08-16",
-   "title": "alcides alexandre dumas amakusa shirou amakusa shirou angra mainyu aoz",
-   "sub": "danbooru",
-   "author": "siya ho",
-   "permalink": "https://danbooru.donmai.us/posts/4883850",
-   "sha256": "40c1363e9387f93f100736d85cb6d26c54a196bd46db5350358c5a559a4b6767",
-   "dhash": "da66d6351658ccd0",
-   "tags": [
-    "6+boys",
-    "6+girls",
-    "absolutely_everyone",
-    "aged_down",
-    "aircraft",
-    "airplane",
-    "balloon",
-    "black_hair",
-    "blonde_hair",
-    "blue_sky",
-    "breasts",
-    "contemporary",
-    "dual_persona",
-    "earrings",
-    "everyone"
-   ],
-   "character": [
-    "alcides",
-    "alexandre dumas",
-    "amakusa shirou",
-    "angra mainyu"
-   ]
-  },
-  {
    "id": "39257ed92151",
    "file": "wallpapers/39257ed92151.webp",
    "thumb": "wallpapers/thumbs/39257ed92151.webp",
@@ -12349,142 +9059,6 @@
     "ganyu",
     "shenhe",
     "xianyun"
-   ]
-  },
-  {
-   "id": "2bcd63a33b16",
-   "file": "wallpapers/2bcd63a33b16.webp",
-   "thumb": "wallpapers/thumbs/2bcd63a33b16.webp",
-   "w": 1440,
-   "h": 1801,
-   "ratio": "0.80:1",
-   "bytes": 215870,
-   "palette": [
-    "#3f4548",
-    "#1c2023",
-    "#a68f89",
-    "#746d6d",
-    "#565c5e"
-   ],
-   "source": "danbooru",
-   "added": "2026-08-16",
-   "title": "bloody wolf chosen undead hunter nightfall tarnished",
-   "sub": "danbooru",
-   "author": "shimhaq",
-   "permalink": "https://danbooru.donmai.us/posts/6335661",
-   "sha256": "2bcd63a33b16da8827899d2d8c75907d72025e8107e009ce709d7c23770fafe3",
-   "dhash": "ec1628289468691b",
-   "tags": [
-    "3others",
-    "ambiguous_gender",
-    "armor",
-    "artist_name",
-    "cloud",
-    "cloudy_sky",
-    "company_connection",
-    "crossover",
-    "embers",
-    "explosion",
-    "full_armor",
-    "grey_sky",
-    "greyscale",
-    "gun",
-    "hat"
-   ],
-   "character": [
-    "bloody wolf",
-    "chosen undead",
-    "hunter",
-    "nightfall"
-   ]
-  },
-  {
-   "id": "2723e8796ab6",
-   "file": "wallpapers/2723e8796ab6.webp",
-   "thumb": "wallpapers/thumbs/2723e8796ab6.webp",
-   "w": 1357,
-   "h": 1920,
-   "ratio": "0.71:1",
-   "bytes": 356880,
-   "palette": [
-    "#1c8bc2",
-    "#1fa9db",
-    "#83303f",
-    "#20699d",
-    "#b04152"
-   ],
-   "source": "danbooru",
-   "added": "2026-08-16",
-   "title": "aisaka taiga",
-   "sub": "danbooru",
-   "author": "sydus",
-   "permalink": "https://danbooru.donmai.us/posts/3961294",
-   "sha256": "2723e8796ab69dfca63255325cbbc386ee45a20742573d728ee77427c7a7118e",
-   "dhash": "fcf2f071948e9636",
-   "tags": [
-    "1girl",
-    "arms_up",
-    "artist_name",
-    "black_ribbon",
-    "black_thighhighs",
-    "blue_skirt",
-    "blue_sky",
-    "brown_eyes",
-    "brown_hair",
-    "building",
-    "cloud",
-    "cloudy_sky",
-    "collared_shirt",
-    "cowboy_shot",
-    "day"
-   ],
-   "character": [
-    "aisaka taiga"
-   ]
-  },
-  {
-   "id": "23bac29b061a",
-   "file": "wallpapers/23bac29b061a.webp",
-   "thumb": "wallpapers/thumbs/23bac29b061a.webp",
-   "w": 2715,
-   "h": 3840,
-   "ratio": "0.71:1",
-   "bytes": 552070,
-   "palette": [
-    "#333231",
-    "#c1d6ee",
-    "#dde9f6",
-    "#94a6d0",
-    "#555453"
-   ],
-   "source": "danbooru",
-   "added": "2026-08-16",
-   "title": "gold ship mejiro mcqueen",
-   "sub": "danbooru",
-   "author": "raikkonen",
-   "permalink": "https://danbooru.donmai.us/posts/9637218",
-   "sha256": "23bac29b061a3cd2face81c32c80798c434185eab29a053bf0b6efeedd86d344",
-   "dhash": "1e7698988880a098",
-   "tags": [
-    "2girls",
-    "animal_ears",
-    "blue_sky",
-    "bow",
-    "bowtie",
-    "brown_hat",
-    "brown_shoes",
-    "cloud",
-    "day",
-    "ear_bow",
-    "full_body",
-    "green_bow",
-    "grey_hair",
-    "grin",
-    "gun"
-   ],
-   "character": [
-    "gold ship",
-    "mejiro mcqueen"
    ]
   },
   {
@@ -12754,46 +9328,6 @@
    ]
   },
   {
-   "id": "f07d345496b5",
-   "file": "wallpapers/f07d345496b5.webp",
-   "thumb": "wallpapers/thumbs/f07d345496b5.webp",
-   "w": 1538,
-   "h": 2000,
-   "ratio": "0.77:1",
-   "bytes": 836176,
-   "palette": [
-    "#57cdef",
-    "#050f28",
-    "#133b77",
-    "#8ee0f3",
-    "#185da5"
-   ],
-   "source": "danbooru",
-   "added": "2026-08-15",
-   "title": "original",
-   "sub": "danbooru",
-   "author": "mugon",
-   "permalink": "https://danbooru.donmai.us/posts/553765",
-   "sha256": "f07d345496b53df55e10f60ae44ea9ff20c29d36b0d4ed87ecb216e2df0eeba0",
-   "dhash": "b4f0f0f0692e8c0e",
-   "tags": [
-    "bird",
-    "building",
-    "cloud",
-    "floating_island",
-    "grand_scale",
-    "landscape",
-    "lightning",
-    "no_humans",
-    "scenery",
-    "sky",
-    "water",
-    "waterfall",
-    "watermark"
-   ],
-   "character": []
-  },
-  {
    "id": "edbc82a001be",
    "file": "wallpapers/edbc82a001be.webp",
    "thumb": "wallpapers/thumbs/edbc82a001be.webp",
@@ -12926,50 +9460,6 @@
    ]
   },
   {
-   "id": "d457e9c59c16",
-   "file": "wallpapers/d457e9c59c16.webp",
-   "thumb": "wallpapers/thumbs/d457e9c59c16.webp",
-   "w": 1103,
-   "h": 1240,
-   "ratio": "0.89:1",
-   "bytes": 145052,
-   "palette": [
-    "#7b7f6f",
-    "#2c1f1a",
-    "#493628",
-    "#b3b097",
-    "#5c5a50"
-   ],
-   "source": "danbooru",
-   "added": "2026-08-15",
-   "title": "kazami yuuka",
-   "sub": "danbooru",
-   "author": "tzafra",
-   "permalink": "https://danbooru.donmai.us/posts/5943298",
-   "sha256": "d457e9c59c16fc690e21348ac6f8c8e201cba3c84e16b49c6e5e27e38e024018",
-   "dhash": "278780a2a8264244",
-   "tags": [
-    "1girl",
-    "artist_painter",
-    "ascot",
-    "birch_tree",
-    "closed_eyes",
-    "collared_shirt",
-    "flower",
-    "flower_pot",
-    "forest",
-    "frilled_skirt",
-    "frills",
-    "front_slit",
-    "green_hair",
-    "hanging_plant",
-    "holding"
-   ],
-   "character": [
-    "kazami yuuka"
-   ]
-  },
-  {
    "id": "c3581ed9aa0d",
    "file": "wallpapers/c3581ed9aa0d.webp",
    "thumb": "wallpapers/thumbs/c3581ed9aa0d.webp",
@@ -13013,48 +9503,6 @@
     "kawashiro nitori",
     "kirisame marisa"
    ]
-  },
-  {
-   "id": "c12fd294f70a",
-   "file": "wallpapers/c12fd294f70a.webp",
-   "thumb": "wallpapers/thumbs/c12fd294f70a.webp",
-   "w": 1000,
-   "h": 3750,
-   "ratio": "4:15",
-   "bytes": 423832,
-   "palette": [
-    "#366d8c",
-    "#d5f3fa",
-    "#b4dee7",
-    "#6dafc1",
-    "#5293a7"
-   ],
-   "source": "danbooru",
-   "added": "2026-08-15",
-   "title": "original",
-   "sub": "danbooru",
-   "author": "aquamary",
-   "permalink": "https://danbooru.donmai.us/posts/185969",
-   "sha256": "c12fd294f70ac96f1c230b49cec27089d3c0947bc51f31c4034f17e2ba06ecfe",
-   "dhash": "a6ac0c0723e36374",
-   "tags": [
-    "3boys",
-    "bridge",
-    "cloud",
-    "dragon",
-    "fantasy",
-    "grand_scale",
-    "landscape",
-    "lens_flare",
-    "megastructure",
-    "monster",
-    "multiple_boys",
-    "orbital_ring",
-    "outdoors",
-    "scenery",
-    "sky"
-   ],
-   "character": []
   },
   {
    "id": "be214b97f93c",
@@ -13403,51 +9851,6 @@
    "character": []
   },
   {
-   "id": "7c511dd25098",
-   "file": "wallpapers/7c511dd25098.webp",
-   "thumb": "wallpapers/thumbs/7c511dd25098.webp",
-   "w": 1500,
-   "h": 1500,
-   "ratio": "1:1",
-   "bytes": 126796,
-   "palette": [
-    "#2cb8fe",
-    "#2787f6",
-    "#6fdbd7",
-    "#46b9d7",
-    "#a9e3e8"
-   ],
-   "source": "danbooru",
-   "added": "2026-08-15",
-   "title": "hakurei reimu ibuki suika",
-   "sub": "danbooru",
-   "author": "amazon (taitaitaira)",
-   "permalink": "https://danbooru.donmai.us/posts/1857794",
-   "sha256": "7c511dd25098b3364ff2558db11e8a52879b44b2dc264c09889cfa938b0f11ec",
-   "dhash": "6d59b939783cd35a",
-   "tags": [
-    "2girls",
-    "=_=",
-    "black_hair",
-    "blonde_hair",
-    "blue_sky",
-    "bow",
-    "brown_horns",
-    "closed_eyes",
-    "cloud",
-    "cumulonimbus_cloud",
-    "day",
-    "detached_sleeves",
-    "facing_away",
-    "giant",
-    "giantess"
-   ],
-   "character": [
-    "hakurei reimu",
-    "ibuki suika"
-   ]
-  },
-  {
    "id": "7641dc22ec3f",
    "file": "wallpapers/7641dc22ec3f.webp",
    "thumb": "wallpapers/thumbs/7641dc22ec3f.webp",
@@ -13532,50 +9935,6 @@
    "character": [
     "inoue takina",
     "nishikigi chisato"
-   ]
-  },
-  {
-   "id": "641ab2598e0b",
-   "file": "wallpapers/641ab2598e0b.webp",
-   "thumb": "wallpapers/thumbs/641ab2598e0b.webp",
-   "w": 3840,
-   "h": 1920,
-   "ratio": "2:1",
-   "bytes": 1146354,
-   "palette": [
-    "#4c574e",
-    "#112c16",
-    "#d4e6de",
-    "#334739",
-    "#8fa297"
-   ],
-   "source": "danbooru",
-   "added": "2026-08-15",
-   "title": "agnes tachyon",
-   "sub": "danbooru",
-   "author": "ashenmash",
-   "permalink": "https://danbooru.donmai.us/posts/10144578",
-   "sha256": "641ab2598e0baa1183b37ad9f420c6edee6030026d2c91663756e34fdadb57d3",
-   "dhash": "317535634b4eb5b3",
-   "tags": [
-    "1girl",
-    "animal_ears",
-    "blush",
-    "brown_eyes",
-    "brown_hair",
-    "forest",
-    "gameplay_mechanics",
-    "heads-up_display",
-    "holding",
-    "holding_umbrella",
-    "horse_ears",
-    "horse_girl",
-    "jewelry",
-    "landscape",
-    "looking_at_viewer"
-   ],
-   "character": [
-    "agnes tachyon"
    ]
   },
   {
@@ -13758,50 +10117,6 @@
    ]
   },
   {
-   "id": "4adf11fc55c9",
-   "file": "wallpapers/4adf11fc55c9.webp",
-   "thumb": "wallpapers/thumbs/4adf11fc55c9.webp",
-   "w": 1675,
-   "h": 1200,
-   "ratio": "1.40:1",
-   "bytes": 166272,
-   "palette": [
-    "#a3bfdd",
-    "#182144",
-    "#3b4c7b",
-    "#7591c6",
-    "#c1d2e2"
-   ],
-   "source": "danbooru",
-   "added": "2026-08-15",
-   "title": "shameimaru aya",
-   "sub": "danbooru",
-   "author": "ke-ta",
-   "permalink": "https://danbooru.donmai.us/posts/2145561",
-   "sha256": "4adf11fc55c97c3314aa038df1cf643ce7aed539adb7ac3c9f90f53ef9eb5ac2",
-   "dhash": "f0e3f3e0f0e0c8ec",
-   "tags": [
-    "1girl",
-    "after_rain",
-    "belt",
-    "black_belt",
-    "black_hair",
-    "black_skirt",
-    "black_umbrella",
-    "bloomers",
-    "blue_sky",
-    "border",
-    "bra",
-    "bra_visible_through_clothes",
-    "bubble_skirt",
-    "cloud",
-    "cloudy_sky"
-   ],
-   "character": [
-    "shameimaru aya"
-   ]
-  },
-  {
    "id": "3731d7766641",
    "file": "wallpapers/3731d7766641.webp",
    "thumb": "wallpapers/thumbs/3731d7766641.webp",
@@ -13928,51 +10243,6 @@
     "leaf"
    ],
    "character": []
-  },
-  {
-   "id": "23f3714530e4",
-   "file": "wallpapers/23f3714530e4.webp",
-   "thumb": "wallpapers/thumbs/23f3714530e4.webp",
-   "w": 1600,
-   "h": 900,
-   "ratio": "16:9",
-   "bytes": 128024,
-   "palette": [
-    "#87af8d",
-    "#3893a8",
-    "#ded0b0",
-    "#67adb1",
-    "#5d8783"
-   ],
-   "source": "danbooru",
-   "added": "2026-08-15",
-   "title": "gawr gura gawr gura irys irys",
-   "sub": "danbooru",
-   "author": "paintrfiend",
-   "permalink": "https://danbooru.donmai.us/posts/5145357",
-   "sha256": "23f3714530e441e20a7c941814ccdb54cbe6463cfc9e24a7bea30dc07aa67f75",
-   "dhash": "cbcfb3c2b7b6bfc7",
-   "tags": [
-    "2girls",
-    "beach",
-    "bite_mark",
-    "blue_eyes",
-    "blue_hair",
-    "blue_hoodie",
-    "blunt_bangs",
-    "chibi",
-    "cliff",
-    "cloud",
-    "fins",
-    "fish_tail",
-    "grass",
-    "grey_hair",
-    "hair_ornament"
-   ],
-   "character": [
-    "gawr gura",
-    "irys"
-   ]
   },
   {
    "id": "1ee8af65c437",
@@ -14287,53 +10557,6 @@
     "fukumaru koito",
     "higuchi madoka",
     "ichikawa hinana"
-   ]
-  },
-  {
-   "id": "006c07d4ec9d",
-   "file": "wallpapers/006c07d4ec9d.webp",
-   "thumb": "wallpapers/thumbs/006c07d4ec9d.webp",
-   "w": 2132,
-   "h": 3016,
-   "ratio": "0.71:1",
-   "bytes": 1367844,
-   "palette": [
-    "#b09b78",
-    "#dbb37a",
-    "#7eaeba",
-    "#f0d9af",
-    "#dbedea"
-   ],
-   "source": "danbooru",
-   "added": "2026-08-15",
-   "title": "amane sachika gochizo hopper 1 ichinose houtarou inoue shouma kudo rin",
-   "sub": "danbooru",
-   "author": "yakimi 27",
-   "permalink": "https://danbooru.donmai.us/posts/8476902",
-   "sha256": "006c07d4ec9d1304c7963c980f2a994de84fd7033db6a00f7ed7c21a58626276",
-   "dhash": "0373650f63656737",
-   "tags": [
-    "2boys",
-    "2girls",
-    "animal_print",
-    "bag",
-    "black_hair",
-    "blonde_hair",
-    "blue_sky",
-    "bridge",
-    "brown_eyes",
-    "day",
-    "earrings",
-    "gyaru",
-    "hood",
-    "in-franchise_crossover",
-    "jewelry"
-   ],
-   "character": [
-    "amane sachika",
-    "gochizo",
-    "hopper 1",
-    "ichinose houtarou"
    ]
   },
   {
@@ -15042,50 +11265,6 @@
    "character": []
   },
   {
-   "id": "898232bdf81d",
-   "file": "wallpapers/898232bdf81d.webp",
-   "thumb": "wallpapers/thumbs/898232bdf81d.webp",
-   "w": 1920,
-   "h": 1080,
-   "ratio": "16:9",
-   "bytes": 80012,
-   "palette": [
-    "#78b3da",
-    "#bee0fd",
-    "#2e4b23",
-    "#a0c4e2",
-    "#2d4d5e"
-   ],
-   "source": "danbooru",
-   "added": "2026-08-14",
-   "title": "kasodani kyouko",
-   "sub": "danbooru",
-   "author": "speckticuls",
-   "permalink": "https://danbooru.donmai.us/posts/3530766",
-   "sha256": "898232bdf81d60c50d6c30f6ae337eb081615da13815b55caead52732bcd5b9a",
-   "dhash": "c6ec323c3890c8a8",
-   "tags": [
-    "1girl",
-    "animal_ears",
-    "big_enough_(meme)",
-    "blue_sky",
-    "closed_eyes",
-    "green_hair",
-    "hand_up",
-    "landscape",
-    "letterboxed",
-    "medium_hair",
-    "meme",
-    "open_mouth",
-    "outdoors",
-    "parody",
-    "projected_inset"
-   ],
-   "character": [
-    "kasodani kyouko"
-   ]
-  },
-  {
    "id": "7f0eaebaafb5",
    "file": "wallpapers/7f0eaebaafb5.webp",
    "thumb": "wallpapers/thumbs/7f0eaebaafb5.webp",
@@ -15489,52 +11668,6 @@
    ]
   },
   {
-   "id": "46b2a9f37bc5",
-   "file": "wallpapers/46b2a9f37bc5.webp",
-   "thumb": "wallpapers/thumbs/46b2a9f37bc5.webp",
-   "w": 3840,
-   "h": 2160,
-   "ratio": "16:9",
-   "bytes": 1018032,
-   "palette": [
-    "#091027",
-    "#77c8e3",
-    "#1b528c",
-    "#143974",
-    "#579fc7"
-   ],
-   "source": "danbooru",
-   "added": "2026-08-14",
-   "title": "diluc lumine mona",
-   "sub": "danbooru",
-   "author": "zi13591",
-   "permalink": "https://danbooru.donmai.us/posts/5364746",
-   "sha256": "46b2a9f37bc592a05c7687de5b8b51d18d3aa6483eca397df7b844c6408d8e80",
-   "dhash": "8e9cb6e6d6cececc",
-   "tags": [
-    "1boy",
-    "2girls",
-    "bird",
-    "black_hair",
-    "blonde_hair",
-    "blue_hat",
-    "blurry",
-    "blurry_foreground",
-    "chinese_text",
-    "cloud",
-    "cloudy_sky",
-    "dandelion_seed",
-    "day",
-    "depth_of_field",
-    "dress"
-   ],
-   "character": [
-    "diluc",
-    "lumine",
-    "mona"
-   ]
-  },
-  {
    "id": "3f4d8591c8ba",
    "file": "wallpapers/3f4d8591c8ba.webp",
    "thumb": "wallpapers/thumbs/3f4d8591c8ba.webp",
@@ -15888,50 +12021,6 @@
    ]
   },
   {
-   "id": "10f691411128",
-   "file": "wallpapers/10f691411128.webp",
-   "thumb": "wallpapers/thumbs/10f691411128.webp",
-   "w": 960,
-   "h": 3840,
-   "ratio": "1:4",
-   "bytes": 540526,
-   "palette": [
-    "#7885ea",
-    "#b93087",
-    "#211034",
-    "#4c8a72",
-    "#683c70"
-   ],
-   "source": "danbooru",
-   "added": "2026-08-14",
-   "title": "saigyou ayakashi",
-   "sub": "danbooru",
-   "author": "void0mega",
-   "permalink": "https://danbooru.donmai.us/posts/6205395",
-   "sha256": "10f691411128dae13c3cd8fd8a3fa1aff87eceef25c98456e80ca77025e7125d",
-   "dhash": "09b31c0fcd88218e",
-   "tags": [
-    "architecture",
-    "aurora",
-    "bamboo",
-    "bamboo_forest",
-    "barrier_of_life_and_death_(touhou)",
-    "cable_car",
-    "castle",
-    "cave",
-    "cherry_blossoms",
-    "city",
-    "cityscape",
-    "clear_sky",
-    "cloud",
-    "divine_spirit_mausoleum",
-    "dream_world_(touhou)"
-   ],
-   "character": [
-    "saigyou ayakashi"
-   ]
-  },
-  {
    "id": "0f7ecbf158ba",
    "file": "wallpapers/0f7ecbf158ba.webp",
    "thumb": "wallpapers/thumbs/0f7ecbf158ba.webp",
@@ -16014,53 +12103,6 @@
     "water"
    ],
    "character": []
-  },
-  {
-   "id": "0d129cebe043",
-   "file": "wallpapers/0d129cebe043.webp",
-   "thumb": "wallpapers/thumbs/0d129cebe043.webp",
-   "w": 2304,
-   "h": 2048,
-   "ratio": "9:8",
-   "bytes": 1845992,
-   "palette": [
-    "#277555",
-    "#70d0c6",
-    "#75333c",
-    "#5c9f63",
-    "#2f9d8a"
-   ],
-   "source": "danbooru",
-   "added": "2026-08-14",
-   "title": "aki minoriko aki shizuha alice margatroid alice margatroid asakura rik",
-   "sub": "danbooru",
-   "author": "kisasage kouta",
-   "permalink": "https://danbooru.donmai.us/posts/1523237",
-   "sha256": "0d129cebe043f409c12a559239ebddb08e82f2d9e95ba99622321aa1e360ce41",
-   "dhash": "a0ba9a88946ce88e",
-   "tags": [
-    "2others",
-    "6+girls",
-    "absolutely_everyone",
-    "bald_eagle",
-    "bamboo",
-    "bamboo_forest",
-    "barrier_of_life_and_death_(touhou)",
-    "bird",
-    "bishamonten's_pagoda",
-    "blonde_hair",
-    "disembodied_head",
-    "eagle",
-    "english_text",
-    "engrish_text",
-    "everyone"
-   ],
-   "character": [
-    "aki minoriko",
-    "aki shizuha",
-    "alice margatroid",
-    "asakura rikako"
-   ]
   },
   {
    "id": "0cb07a3f718c",
@@ -16503,50 +12545,6 @@
    ]
   },
   {
-   "id": "b73650d41129",
-   "file": "wallpapers/b73650d41129.webp",
-   "thumb": "wallpapers/thumbs/b73650d41129.webp",
-   "w": 2724,
-   "h": 3840,
-   "ratio": "0.71:1",
-   "bytes": 1955540,
-   "palette": [
-    "#989f8c",
-    "#131d1a",
-    "#d0ccb3",
-    "#28342c",
-    "#49584a"
-   ],
-   "source": "danbooru",
-   "added": "2026-08-13",
-   "title": "2b",
-   "sub": "danbooru",
-   "author": "",
-   "permalink": "https://danbooru.donmai.us/posts/2597767",
-   "sha256": "b73650d411292f10522d9e75d16541c7ebc9b6b4994ee705f1f1bfb19a4128d6",
-   "dhash": "643138b0d198b8b8",
-   "tags": [
-    "1girl",
-    "black_boots",
-    "black_dress",
-    "black_gloves",
-    "black_hairband",
-    "black_thighhighs",
-    "blindfold",
-    "boots",
-    "breasts",
-    "chromatic_aberration",
-    "cleavage",
-    "cleavage_cutout",
-    "closed_mouth",
-    "clothing_cutout",
-    "cover"
-   ],
-   "character": [
-    "2b"
-   ]
-  },
-  {
    "id": "aa73311d7e1f",
    "file": "wallpapers/aa73311d7e1f.webp",
    "thumb": "wallpapers/thumbs/aa73311d7e1f.webp",
@@ -16589,91 +12587,6 @@
    "character": [
     "iwato suzume"
    ]
-  },
-  {
-   "id": "a4c95bdc478a",
-   "file": "wallpapers/a4c95bdc478a.webp",
-   "thumb": "wallpapers/thumbs/a4c95bdc478a.webp",
-   "w": 2084,
-   "h": 3840,
-   "ratio": "0.54:1",
-   "bytes": 945986,
-   "palette": [
-    "#5b6163",
-    "#e8c19d",
-    "#7aaab5",
-    "#a8c5c7",
-    "#a17d78"
-   ],
-   "source": "danbooru",
-   "added": "2026-08-13",
-   "title": "gotoh hitori",
-   "sub": "danbooru",
-   "author": "pinecylinder",
-   "permalink": "https://danbooru.donmai.us/posts/6120843",
-   "sha256": "a4c95bdc478abb17daf779339468b8d4cb4ef89b7b8d56aabc9381455267baad",
-   "dhash": "aeeaf9cc70d81e7d",
-   "tags": [
-    "1girl",
-    "backlighting",
-    "black_eyes",
-    "character_name",
-    "copyright_name",
-    "cowlick",
-    "cube_hair_ornament",
-    "east-west_crossover",
-    "english_text",
-    "googly_eyes",
-    "hair_between_eyes",
-    "hair_ornament",
-    "head_only",
-    "landscape",
-    "long_hair"
-   ],
-   "character": [
-    "gotoh hitori"
-   ]
-  },
-  {
-   "id": "a1e6c7f40a6c",
-   "file": "wallpapers/a1e6c7f40a6c.webp",
-   "thumb": "wallpapers/thumbs/a1e6c7f40a6c.webp",
-   "w": 1250,
-   "h": 798,
-   "ratio": "1.57:1",
-   "bytes": 230252,
-   "palette": [
-    "#287e8a",
-    "#122333",
-    "#275166",
-    "#c9dae0",
-    "#8297a6"
-   ],
-   "source": "danbooru",
-   "added": "2026-08-13",
-   "title": "original",
-   "sub": "danbooru",
-   "author": "park jae-cheol",
-   "permalink": "https://danbooru.donmai.us/posts/635001",
-   "sha256": "a1e6c7f40a6caca1237589e2fbd51e4384d02bcc3a48695e038a103c2586ad12",
-   "dhash": "0803030b81f06822",
-   "tags": [
-    "bridge",
-    "building",
-    "city",
-    "cityscape",
-    "grand_scale",
-    "harbor",
-    "megastructure",
-    "no_humans",
-    "scenery",
-    "ship",
-    "skyscraper",
-    "water",
-    "watercraft",
-    "window"
-   ],
-   "character": []
   },
   {
    "id": "a0e59d0b0c5e",
@@ -16859,50 +12772,6 @@
    ]
   },
   {
-   "id": "8c9d7f3363ea",
-   "file": "wallpapers/8c9d7f3363ea.webp",
-   "thumb": "wallpapers/thumbs/8c9d7f3363ea.webp",
-   "w": 2047,
-   "h": 2048,
-   "ratio": "1.00:1",
-   "bytes": 389558,
-   "palette": [
-    "#000000",
-    "#1f0e13",
-    "#4a2029",
-    "#7d6063",
-    "#f5f4f5"
-   ],
-   "source": "danbooru",
-   "added": "2026-08-13",
-   "title": "galactus",
-   "sub": "danbooru",
-   "author": "thoskisson",
-   "permalink": "https://danbooru.donmai.us/posts/8681748",
-   "sha256": "8c9d7f3363eacb0b42e0f910b654baa8125633b66b0fe8abdbc4756abe52e868",
-   "dhash": "6576714909654745",
-   "tags": [
-    "1boy",
-    "alien",
-    "black_border",
-    "border",
-    "earth_(planet)",
-    "eating",
-    "eldritch_abomination",
-    "fake_horns",
-    "galaxy",
-    "giant",
-    "grand_scale",
-    "helmet",
-    "horned_helmet",
-    "horns",
-    "horror_(theme)"
-   ],
-   "character": [
-    "galactus"
-   ]
-  },
-  {
    "id": "7bc8b6594485",
    "file": "wallpapers/7bc8b6594485.webp",
    "thumb": "wallpapers/thumbs/7bc8b6594485.webp",
@@ -17035,50 +12904,6 @@
    ]
   },
   {
-   "id": "6b0bf44ef90e",
-   "file": "wallpapers/6b0bf44ef90e.webp",
-   "thumb": "wallpapers/thumbs/6b0bf44ef90e.webp",
-   "w": 1200,
-   "h": 782,
-   "ratio": "1.53:1",
-   "bytes": 78986,
-   "palette": [
-    "#fd9960",
-    "#feb965",
-    "#e8bb93",
-    "#fddf7d",
-    "#fef6a4"
-   ],
-   "source": "danbooru",
-   "added": "2026-08-13",
-   "title": "keqing",
-   "sub": "danbooru",
-   "author": "maiqo",
-   "permalink": "https://danbooru.donmai.us/posts/4354533",
-   "sha256": "6b0bf44ef90e83358a7655431610f9444f80412046194f3a59ce3fe6d6c1c27c",
-   "dhash": "c0909c1110900420",
-   "tags": [
-    "1girl",
-    "blue_eyes",
-    "climbing",
-    "cloud",
-    "cone_hair_bun",
-    "flower",
-    "gameplay_mechanics",
-    "gloves",
-    "hair_bun",
-    "landscape",
-    "long_hair",
-    "long_sleeves",
-    "mountain",
-    "mouth_hold",
-    "nature"
-   ],
-   "character": [
-    "keqing"
-   ]
-  },
-  {
    "id": "657685192968",
    "file": "wallpapers/657685192968.webp",
    "thumb": "wallpapers/thumbs/657685192968.webp",
@@ -17123,48 +12948,6 @@
    ]
   },
   {
-   "id": "5d8d8685c5ea",
-   "file": "wallpapers/5d8d8685c5ea.webp",
-   "thumb": "wallpapers/thumbs/5d8d8685c5ea.webp",
-   "w": 827,
-   "h": 1169,
-   "ratio": "0.71:1",
-   "bytes": 178202,
-   "palette": [
-    "#192332",
-    "#f5cc93",
-    "#feecb0",
-    "#d8af8f",
-    "#0b1019"
-   ],
-   "source": "danbooru",
-   "added": "2026-08-13",
-   "title": "original",
-   "sub": "danbooru",
-   "author": "tokyogenso",
-   "permalink": "https://danbooru.donmai.us/posts/875817",
-   "sha256": "5d8d8685c5eaf1f2be9a5d98057688516037850d5204b8d25975bd41ef2b1789",
-   "dhash": "1188ced632f0b259",
-   "tags": [
-    "2011_tohoku_earthquake_and_tsunami",
-    "bad_end",
-    "banknote",
-    "bottle",
-    "broken_window",
-    "camcorder",
-    "camera",
-    "cellphone",
-    "cloud",
-    "computer",
-    "flag",
-    "flip_phone",
-    "hair_dryer",
-    "japan",
-    "japanese_flag"
-   ],
-   "character": []
-  },
-  {
    "id": "5cb49b0719d5",
    "file": "wallpapers/5cb49b0719d5.webp",
    "thumb": "wallpapers/thumbs/5cb49b0719d5.webp",
@@ -17205,50 +12988,6 @@
     "east_asian_architecture"
    ],
    "character": []
-  },
-  {
-   "id": "58e2bca6ae87",
-   "file": "wallpapers/58e2bca6ae87.webp",
-   "thumb": "wallpapers/thumbs/58e2bca6ae87.webp",
-   "w": 1127,
-   "h": 877,
-   "ratio": "1.29:1",
-   "bytes": 74226,
-   "palette": [
-    "#918a87",
-    "#534134",
-    "#2c221e",
-    "#6e6669",
-    "#44372f"
-   ],
-   "source": "danbooru",
-   "added": "2026-08-13",
-   "title": "candace dehya",
-   "sub": "danbooru",
-   "author": "amibazh",
-   "permalink": "https://danbooru.donmai.us/posts/6213005",
-   "sha256": "58e2bca6ae87454f6e12d3caa10d9602c8e97a0ae4b00bd576ad2d655e4244d7",
-   "dhash": "83c6c6b6b6b9f30e",
-   "tags": [
-    "2girls",
-    "building",
-    "cloud",
-    "cloudy_sky",
-    "day",
-    "from_behind",
-    "grass",
-    "landscape",
-    "mountain",
-    "multiple_girls",
-    "outdoors",
-    "scenery",
-    "sky",
-    "standing"
-   ],
-   "character": [
-    "candace",
-    "dehya"
-   ]
   },
   {
    "id": "586a7dc168ac",
@@ -17735,53 +13474,6 @@
    ]
   },
   {
-   "id": "095fe0b06a9e",
-   "file": "wallpapers/095fe0b06a9e.webp",
-   "thumb": "wallpapers/thumbs/095fe0b06a9e.webp",
-   "w": 1920,
-   "h": 1080,
-   "ratio": "16:9",
-   "bytes": 250678,
-   "palette": [
-    "#876042",
-    "#c39a67",
-    "#4b291a",
-    "#6e452c",
-    "#241610"
-   ],
-   "source": "danbooru",
-   "added": "2026-08-13",
-   "title": "emperor exusiai sora texas yith",
-   "sub": "danbooru",
-   "author": "huanxiang heitu",
-   "permalink": "https://danbooru.donmai.us/posts/2887280",
-   "sha256": "095fe0b06a9ee78305c11eab2f5ebd74bb52b5855741f2b66052a1e14e8fd3c9",
-   "dhash": "b6d6e6e4c8d87612",
-   "tags": [
-    "1boy",
-    "3girls",
-    "animal_ear_fluff",
-    "animal_ears",
-    "bird",
-    "black_dress",
-    "black_gloves",
-    "black_hair",
-    "blonde_hair",
-    "box",
-    "brown_eyes",
-    "capelet",
-    "carrying",
-    "cellphone",
-    "chair"
-   ],
-   "character": [
-    "emperor",
-    "exusiai",
-    "sora",
-    "texas"
-   ]
-  },
-  {
    "id": "0777048d39a3",
    "file": "wallpapers/0777048d39a3.webp",
    "thumb": "wallpapers/thumbs/0777048d39a3.webp",
@@ -17827,96 +13519,6 @@
     "nanashi mumei",
     "oozora subaru"
    ]
-  },
-  {
-   "id": "04ce067da56e",
-   "file": "wallpapers/04ce067da56e.webp",
-   "thumb": "wallpapers/thumbs/04ce067da56e.webp",
-   "w": 1731,
-   "h": 3840,
-   "ratio": "0.45:1",
-   "bytes": 858206,
-   "palette": [
-    "#49607f",
-    "#223051",
-    "#e0cbb7",
-    "#efe6d9",
-    "#baab97"
-   ],
-   "source": "danbooru",
-   "added": "2026-08-13",
-   "title": "noelle",
-   "sub": "danbooru",
-   "author": "swkl:d",
-   "permalink": "https://danbooru.donmai.us/posts/5864682",
-   "sha256": "04ce067da56e341fdd42e25f9df6597346698b6bcc8db4ab06ccad2c5870462e",
-   "dhash": "32da4bbfe6a3d2c5",
-   "tags": [
-    "1girl",
-    "alternate_costume",
-    "artist_name",
-    "bare_shoulders",
-    "black_shoes",
-    "blue_sky",
-    "braid",
-    "breasts",
-    "cityscape",
-    "cleavage",
-    "cloud",
-    "criss-cross_halter",
-    "crown_braid",
-    "dated",
-    "dress"
-   ],
-   "character": [
-    "noelle"
-   ]
-  },
-  {
-   "id": "f758bfaf4074",
-   "file": "wallpapers/f758bfaf4074.webp",
-   "thumb": "wallpapers/thumbs/f758bfaf4074.webp",
-   "w": 3636,
-   "h": 1440,
-   "ratio": "2.52:1",
-   "bytes": 557772,
-   "palette": [
-    "#80a0b2",
-    "#c4d2da",
-    "#a6b9c4",
-    "#607d90",
-    "#e7ecef"
-   ],
-   "source": "danbooru",
-   "added": "2026-08-12",
-   "title": "Asmoday, Lumine",
-   "sub": "danbooru",
-   "author": "void 0",
-   "permalink": "https://danbooru.donmai.us/posts/4832832",
-   "sha256": "f758bfaf4074aafc32e96b7968ed8542e8c262a971caba113368b548a25f7b5f",
-   "dhash": "26b44a59ccace84c",
-   "tags": [
-    "2girls",
-    "angel_wings",
-    "arm_strap",
-    "artist_name",
-    "backlighting",
-    "bare_shoulders",
-    "black_gloves",
-    "black_scarf",
-    "blonde_hair",
-    "breasts",
-    "bridge",
-    "cleavage",
-    "cloud",
-    "cloudy_sky",
-    "dated"
-   ],
-   "character": [
-    "asmoday",
-    "lumine"
-   ],
-   "q": 92
   },
   {
    "id": "f5fee9f5ea5c",
@@ -18238,54 +13840,6 @@
    "q": 92
   },
   {
-   "id": "d441171bf17b",
-   "file": "wallpapers/d441171bf17b.webp",
-   "thumb": "wallpapers/thumbs/d441171bf17b.webp",
-   "w": 1371,
-   "h": 2048,
-   "ratio": "0.67:1",
-   "bytes": 1407092,
-   "palette": [
-    "#5e4f34",
-    "#463523",
-    "#8c7046",
-    "#a58551",
-    "#cfbc90"
-   ],
-   "source": "danbooru",
-   "added": "2026-08-12",
-   "title": "Albinauric, Ancestor Spirit, Ancient Dragon Lansseax",
-   "sub": "danbooru",
-   "author": "iseananphada",
-   "permalink": "https://danbooru.donmai.us/posts/7747784",
-   "sha256": "d441171bf17b86d36030151a9dea8933c0a11bf11dad2b1a3147456bb989e58b",
-   "dhash": "c8cc6ee969dc929a",
-   "tags": [
-    "6+boys",
-    "6+girls",
-    "absurdly_detailed_composition",
-    "ancient_dragon_(elden_ring)",
-    "armor",
-    "armored_boots",
-    "asymmetrical_horns",
-    "beard",
-    "black_armor",
-    "black_hair",
-    "blindfold",
-    "blonde_hair",
-    "blue_hair",
-    "bonfire",
-    "boots"
-   ],
-   "character": [
-    "albinauric",
-    "ancestor spirit",
-    "ancient dragon lansseax",
-    "blaidd the half-wolf"
-   ],
-   "q": 92
-  },
-  {
    "id": "d271649ca0de",
    "file": "wallpapers/d271649ca0de.webp",
    "thumb": "wallpapers/thumbs/d271649ca0de.webp",
@@ -18424,142 +13978,6 @@
    "q": 92
   },
   {
-   "id": "bca33b4d3b6b",
-   "file": "wallpapers/bca33b4d3b6b.webp",
-   "thumb": "wallpapers/thumbs/bca33b4d3b6b.webp",
-   "w": 609,
-   "h": 3840,
-   "ratio": "0.16:1",
-   "bytes": 798984,
-   "palette": [
-    "#eae1d0",
-    "#906e2f",
-    "#2b3467",
-    "#5e362a",
-    "#bfa065"
-   ],
-   "source": "danbooru",
-   "added": "2026-08-12",
-   "title": "Hisou Tensoku, Oogama, Saigyou Ayakashi",
-   "sub": "danbooru",
-   "author": "huang gua",
-   "permalink": "https://danbooru.donmai.us/posts/5038215",
-   "sha256": "bca33b4d3b6bbc8a2764bb1696fa822db29d4c710c40b305625db3e3736d5b27",
-   "dhash": "4d4d19717575070f",
-   "tags": [
-    "aerial_tram",
-    "aircraft",
-    "airplane",
-    "animal_realm_(touhou)",
-    "architecture",
-    "barrier_of_life_and_death_(touhou)",
-    "boat",
-    "bridge",
-    "building",
-    "cable_car",
-    "caustics",
-    "chireiden",
-    "clock",
-    "clock_tower",
-    "cloud"
-   ],
-   "character": [
-    "hisou tensoku",
-    "oogama",
-    "saigyou ayakashi"
-   ],
-   "q": 92
-  },
-  {
-   "id": "bb90b4911a26",
-   "file": "wallpapers/bb90b4911a26.webp",
-   "thumb": "wallpapers/thumbs/bb90b4911a26.webp",
-   "w": 1200,
-   "h": 1067,
-   "ratio": "1.12:1",
-   "bytes": 372726,
-   "palette": [
-    "#433d31",
-    "#bd9e8d",
-    "#d3b998",
-    "#a7837a",
-    "#8a9c70"
-   ],
-   "source": "danbooru",
-   "added": "2026-08-12",
-   "title": "Izayoi Sakuya, Remilia Scarlet",
-   "sub": "danbooru",
-   "author": "shiratama (hockey)",
-   "permalink": "https://danbooru.donmai.us/posts/6321704",
-   "sha256": "bb90b4911a262c94c89bd5271245347bc03175ce54e9f494246a1c5933bf00ad",
-   "dhash": "f2f371f9e7f9f9e5",
-   "tags": [
-    "2girls",
-    "apron",
-    "back_bow",
-    "basket",
-    "bat_wings",
-    "blue_dress",
-    "bow",
-    "dappled_sunlight",
-    "day",
-    "dress",
-    "elbow_carry",
-    "flat_chest",
-    "forest",
-    "full_body",
-    "grey_hair"
-   ],
-   "character": [
-    "izayoi sakuya",
-    "remilia scarlet"
-   ],
-   "q": 92
-  },
-  {
-   "id": "b4b1f2c307fd",
-   "file": "wallpapers/b4b1f2c307fd.webp",
-   "thumb": "wallpapers/thumbs/b4b1f2c307fd.webp",
-   "w": 2697,
-   "h": 1050,
-   "ratio": "2.57:1",
-   "bytes": 688776,
-   "palette": [
-    "#1b2338",
-    "#243c6d",
-    "#435d8a",
-    "#6984ad",
-    "#485166"
-   ],
-   "source": "danbooru",
-   "added": "2026-08-12",
-   "title": "",
-   "sub": "danbooru",
-   "author": "cola (gotouryouta)",
-   "permalink": "https://danbooru.donmai.us/posts/759790",
-   "sha256": "b4b1f2c307fde4c24997e1fd9013ddaa856a41acc55be302e211b405ce648bb3",
-   "dhash": "df5f2b7527c4c44c",
-   "tags": [
-    "1girl",
-    "blonde_hair",
-    "borrowed_character",
-    "braid",
-    "cape",
-    "city",
-    "city_lights",
-    "cityscape",
-    "cloud",
-    "from_behind",
-    "grand_scale",
-    "grass",
-    "horizon",
-    "lamp",
-    "lantern"
-   ],
-   "character": [],
-   "q": 92
-  },
-  {
    "id": "aacba916a32b",
    "file": "wallpapers/aacba916a32b.webp",
    "thumb": "wallpapers/thumbs/aacba916a32b.webp",
@@ -18604,53 +14022,6 @@
     "frieren",
     "himmel",
     "macht"
-   ],
-   "q": 92
-  },
-  {
-   "id": "a7ba0ecd33bf",
-   "file": "wallpapers/a7ba0ecd33bf.webp",
-   "thumb": "wallpapers/thumbs/a7ba0ecd33bf.webp",
-   "w": 1200,
-   "h": 1067,
-   "ratio": "1.12:1",
-   "bytes": 383442,
-   "palette": [
-    "#433b32",
-    "#ceac7a",
-    "#b59670",
-    "#99c3d8",
-    "#95795f"
-   ],
-   "source": "danbooru",
-   "added": "2026-08-12",
-   "title": "Hijiri Byakuren, Kirisame Marisa, Yorigami Jo'On",
-   "sub": "danbooru",
-   "author": "shiratama (hockey)",
-   "permalink": "https://danbooru.donmai.us/posts/7134475",
-   "sha256": "a7ba0ecd33bfc61eb9ac438ef858087814e4d915cd27a1668c71e3efc0cf6afb",
-   "dhash": "812c669487cfc3da",
-   "tags": [
-    "3girls",
-    "animal",
-    "black_boots",
-    "black_hat",
-    "black_shoes",
-    "black_skirt",
-    "black_vest",
-    "blonde_hair",
-    "boots",
-    "bow",
-    "brown_eyes",
-    "cape",
-    "coat",
-    "day",
-    "dress"
-   ],
-   "character": [
-    "hijiri byakuren",
-    "kirisame marisa",
-    "yorigami jo'on"
    ],
    "q": 92
   },
@@ -18746,51 +14117,6 @@
    "q": 92
   },
   {
-   "id": "9caa24b1c29c",
-   "file": "wallpapers/9caa24b1c29c.webp",
-   "thumb": "wallpapers/thumbs/9caa24b1c29c.webp",
-   "w": 1912,
-   "h": 1433,
-   "ratio": "1.33:1",
-   "bytes": 160028,
-   "palette": [
-    "#365281",
-    "#071c3d",
-    "#a4c8e2",
-    "#88a8ce",
-    "#283f67"
-   ],
-   "source": "danbooru",
-   "added": "2026-08-12",
-   "title": "Shameimaru Aya",
-   "sub": "danbooru",
-   "author": "ke-ta",
-   "permalink": "https://danbooru.donmai.us/posts/2359240",
-   "sha256": "9caa24b1c29c2d31248a607d2340082ff0aa5dd0574eac6c9f343bb51d8a7d35",
-   "dhash": "fcf0d7f2f0e0c8ec",
-   "tags": [
-    "1girl",
-    "after_rain",
-    "belt",
-    "black_belt",
-    "black_hair",
-    "black_skirt",
-    "black_umbrella",
-    "bloomers",
-    "blue_sky",
-    "bra",
-    "bra_visible_through_clothes",
-    "bubble_skirt",
-    "cloud",
-    "cloudy_sky",
-    "contrast"
-   ],
-   "character": [
-    "shameimaru aya"
-   ],
-   "q": 92
-  },
-  {
    "id": "9b44b23c0874",
    "file": "wallpapers/9b44b23c0874.webp",
    "thumb": "wallpapers/thumbs/9b44b23c0874.webp",
@@ -18836,52 +14162,6 @@
    "q": 92
   },
   {
-   "id": "9aa2b2376b22",
-   "file": "wallpapers/9aa2b2376b22.webp",
-   "thumb": "wallpapers/thumbs/9aa2b2376b22.webp",
-   "w": 3840,
-   "h": 2638,
-   "ratio": "1.46:1",
-   "bytes": 3497104,
-   "palette": [
-    "#344d50",
-    "#b4dcf0",
-    "#d7eff7",
-    "#9dc2d9",
-    "#416761"
-   ],
-   "source": "danbooru",
-   "added": "2026-08-12",
-   "title": "Ganyu, Xianyun",
-   "sub": "danbooru",
-   "author": "anna (drw01)",
-   "permalink": "https://danbooru.donmai.us/posts/6022033",
-   "sha256": "9aa2b2376b227f5608353ae35bf41eaae51b8c16ac63e22425af5b9827d32efc",
-   "dhash": "7171dab82932ddea",
-   "tags": [
-    "2girls",
-    "ahoge",
-    "artist_name",
-    "black_bow",
-    "black_hair",
-    "black_pantyhose",
-    "blue_hair",
-    "bow",
-    "bush",
-    "cape",
-    "detached_sleeves",
-    "facing_away",
-    "falling_leaves",
-    "floating_hair",
-    "full_body"
-   ],
-   "character": [
-    "ganyu",
-    "xianyun"
-   ],
-   "q": 92
-  },
-  {
    "id": "9855b1104bf4",
    "file": "wallpapers/9855b1104bf4.webp",
    "thumb": "wallpapers/thumbs/9855b1104bf4.webp",
@@ -18922,51 +14202,6 @@
     "gloves"
    ],
    "character": [],
-   "q": 92
-  },
-  {
-   "id": "8b3db4a295f3",
-   "file": "wallpapers/8b3db4a295f3.webp",
-   "thumb": "wallpapers/thumbs/8b3db4a295f3.webp",
-   "w": 3840,
-   "h": 2160,
-   "ratio": "16:9",
-   "bytes": 1046134,
-   "palette": [
-    "#020425",
-    "#0c0f58",
-    "#4085d4",
-    "#142b7e",
-    "#59b4eb"
-   ],
-   "source": "danbooru",
-   "added": "2026-08-12",
-   "title": "Mona",
-   "sub": "danbooru",
-   "author": "zi13591",
-   "permalink": "https://danbooru.donmai.us/posts/5363060",
-   "sha256": "8b3db4a295f373092ff68506fa34214e34c95ade5abc9972d4adda0a1e07bccd",
-   "dhash": "a15a74e01357cee8",
-   "tags": [
-    "1girl",
-    "black_hair",
-    "blue_hat",
-    "blurry",
-    "blurry_foreground",
-    "bug",
-    "comet",
-    "depth_of_field",
-    "fireflies",
-    "firefly",
-    "from_behind",
-    "galaxy",
-    "grass",
-    "hat",
-    "long_hair"
-   ],
-   "character": [
-    "mona"
-   ],
    "q": 92
   },
   {
@@ -19152,52 +14387,6 @@
    "q": 92
   },
   {
-   "id": "790c7c264a61",
-   "file": "wallpapers/790c7c264a61.webp",
-   "thumb": "wallpapers/thumbs/790c7c264a61.webp",
-   "w": 2000,
-   "h": 1012,
-   "ratio": "1.98:1",
-   "bytes": 275536,
-   "palette": [
-    "#86518e",
-    "#d9c8eb",
-    "#b5c0e3",
-    "#be94d0",
-    "#7c2c68"
-   ],
-   "source": "danbooru",
-   "added": "2026-08-12",
-   "title": "Ouro Kronii, Watson Amelia",
-   "sub": "danbooru",
-   "author": "dino (dinoartforame)",
-   "permalink": "https://danbooru.donmai.us/posts/4712187",
-   "sha256": "790c7c264a6113e5501f0a86eb651e7ee622db0bdcd443cd82d2e3999a1abcfd",
-   "dhash": "822220610093a588",
-   "tags": [
-    "2girls",
-    "bridge",
-    "chain",
-    "chain_hairband",
-    "chain_headband",
-    "detective",
-    "from_side",
-    "giant",
-    "giantess",
-    "goslingposting_(meme)",
-    "hair_intakes",
-    "looking_at_another",
-    "looking_down",
-    "looking_up",
-    "meme"
-   ],
-   "character": [
-    "ouro kronii",
-    "watson amelia"
-   ],
-   "q": 92
-  },
-  {
    "id": "777c5b1f42eb",
    "file": "wallpapers/777c5b1f42eb.webp",
    "thumb": "wallpapers/thumbs/777c5b1f42eb.webp",
@@ -19239,51 +14428,6 @@
    ],
    "character": [
     "amber"
-   ],
-   "q": 92
-  },
-  {
-   "id": "7449ddfb3aea",
-   "file": "wallpapers/7449ddfb3aea.webp",
-   "thumb": "wallpapers/thumbs/7449ddfb3aea.webp",
-   "w": 3840,
-   "h": 2261,
-   "ratio": "1.70:1",
-   "bytes": 1440676,
-   "palette": [
-    "#314051",
-    "#121e2d",
-    "#cddee4",
-    "#648aa7",
-    "#81a2b8"
-   ],
-   "source": "danbooru",
-   "added": "2026-08-12",
-   "title": "Kirara",
-   "sub": "danbooru",
-   "author": "qi==qi",
-   "permalink": "https://danbooru.donmai.us/posts/6522659",
-   "sha256": "7449ddfb3aea7f5cc43dd89b7dc393035bb687f6db141e92da9fa0185310a80a",
-   "dhash": "6c61709894d489a4",
-   "tags": [
-    "1girl",
-    "animal_ears",
-    "black_shirt",
-    "blue_jacket",
-    "blue_skirt",
-    "blue_socks",
-    "blush",
-    "box",
-    "brown_hair",
-    "cardboard_box",
-    "cat_ears",
-    "cat_girl",
-    "cat_tail",
-    "closed_mouth",
-    "cloud"
-   ],
-   "character": [
-    "kirara"
    ],
    "q": 92
   },
@@ -19749,152 +14893,6 @@
    "q": 92
   },
   {
-   "id": "fd94a41c6e08",
-   "file": "wallpapers/fd94a41c6e08.webp",
-   "thumb": "wallpapers/thumbs/fd94a41c6e08.webp",
-   "w": 3840,
-   "h": 1510,
-   "ratio": "2.54:1",
-   "bytes": 814058,
-   "palette": [
-    "#966c6d",
-    "#dfac9a",
-    "#f0ccb4",
-    "#bb8478",
-    "#724e53"
-   ],
-   "source": "danbooru",
-   "added": "2026-08-11",
-   "title": "Black Serpent Knight, Ruin Defender, Ruin Drake",
-   "sub": "danbooru",
-   "author": "chigalidepoi",
-   "permalink": "https://danbooru.donmai.us/posts/5734448",
-   "sha256": "fd94a41c6e0816ab3fb4755f499bdf0a311dccc1c69b54b73387c0b93361db27",
-   "dhash": "f8f8a5246eece4ce",
-   "tags": [
-    "armor",
-    "banner",
-    "fire",
-    "full_armor",
-    "glowing",
-    "glowing_eye",
-    "mecha",
-    "no_humans",
-    "robot",
-    "ruins",
-    "scenery",
-    "steam",
-    "sword",
-    "watermark",
-    "weapon"
-   ],
-   "character": [
-    "black serpent knight",
-    "ruin defender",
-    "ruin drake",
-    "ruin golem"
-   ],
-   "q": 92
-  },
-  {
-   "id": "f215b8f52f44",
-   "file": "wallpapers/f215b8f52f44.webp",
-   "thumb": "wallpapers/thumbs/f215b8f52f44.webp",
-   "w": 2048,
-   "h": 1810,
-   "ratio": "1.13:1",
-   "bytes": 739454,
-   "palette": [
-    "#444140",
-    "#312223",
-    "#7f7673",
-    "#a09a97",
-    "#5e5d5b"
-   ],
-   "source": "danbooru",
-   "added": "2026-08-11",
-   "title": "Aisaka Taiga, Akashiya Moka, Akaza Akari",
-   "sub": "danbooru",
-   "author": "shinanashina",
-   "permalink": "https://danbooru.donmai.us/posts/8158469",
-   "sha256": "f215b8f52f44757fa4102bd32a5b3aabad72b8f589facc271b886cb4c415344a",
-   "dhash": "c2e46c62e471a19d",
-   "tags": [
-    "1girl",
-    "absurdly_detailed_composition",
-    "asahiyama_high_school_uniform",
-    "asymmetrical_footwear",
-    "boots",
-    "brown_sweater_vest",
-    "cameo",
-    "crossed_legs",
-    "crying",
-    "electric_guitar",
-    "fender_mustang",
-    "figure",
-    "foreshortening",
-    "full_body",
-    "gibson_sg"
-   ],
-   "character": [
-    "aisaka taiga",
-    "akashiya moka",
-    "akaza akari",
-    "akemi homura"
-   ],
-   "q": 92
-  },
-  {
-   "id": "f1b036be02f4",
-   "file": "wallpapers/f1b036be02f4.webp",
-   "thumb": "wallpapers/thumbs/f1b036be02f4.webp",
-   "w": 3840,
-   "h": 3840,
-   "ratio": "1:1",
-   "bytes": 157916,
-   "palette": [
-    "#2c4159",
-    "#220d10",
-    "#363031",
-    "#515b6b",
-    "#411421"
-   ],
-   "source": "local",
-   "added": "2026-08-11",
-   "title": "IMG 20260810 WA0012",
-   "sub": "",
-   "author": "Tee-hobb",
-   "permalink": "https://t.me/THOBBSUPDATES",
-   "sha256": "f1b036be02f4454ff8af92f3fb134274af5c14fb13da537fe44a18907e22493f",
-   "dhash": "3f3f6b256d7367e3",
-   "tags": []
-  },
-  {
-   "id": "f0add6eee9c0",
-   "file": "wallpapers/f0add6eee9c0.webp",
-   "thumb": "wallpapers/thumbs/f0add6eee9c0.webp",
-   "w": 3072,
-   "h": 3840,
-   "ratio": "4:5",
-   "bytes": 197868,
-   "palette": [
-    "#677589",
-    "#3b1922",
-    "#43586f",
-    "#7e99ba",
-    "#0f151d"
-   ],
-   "source": "local",
-   "added": "2026-08-11",
-   "title": "IMG 20260810 WA0020",
-   "sub": "",
-   "author": "Tee-hobb",
-   "permalink": "https://t.me/THOBBSUPDATES",
-   "sha256": "f0add6eee9c0fb8b45f65e18fa5f8cf283bc8f4b7894fe2cfc22bf883513d8b7",
-   "dhash": "f4d4d4e5a6a49c90",
-   "tags": []
-  },
-  {
    "id": "e9f07d88b71a",
    "file": "wallpapers/e9f07d88b71a.webp",
    "thumb": "wallpapers/thumbs/e9f07d88b71a.webp",
@@ -19943,34 +14941,6 @@
    "q": 92
   },
   {
-   "id": "e7e1a7353ab8",
-   "file": "wallpapers/e7e1a7353ab8.webp",
-   "thumb": "wallpapers/thumbs/e7e1a7353ab8.webp",
-   "w": 1920,
-   "h": 1080,
-   "ratio": "16:9",
-   "bytes": 346074,
-   "palette": [
-    "#d44f10",
-    "#ca2f0a",
-    "#e8e4bd",
-    "#2f9f5f",
-    "#49ae7b"
-   ],
-   "source": "local",
-   "added": "2026-08-11",
-   "title": "Naruto",
-   "sub": "",
-   "author": "",
-   "permalink": "",
-   "sha256": "e7e1a7353ab859c888492696281c18ee8dc2a3134fda91f5a87361766ce79e9d",
-   "dhash": "5b4f47d766445313",
-   "tags": [],
-   "character": [
-    "naruto"
-   ]
-  },
-  {
    "id": "e65430c09536",
    "file": "wallpapers/e65430c09536.webp",
    "thumb": "wallpapers/thumbs/e65430c09536.webp",
@@ -19993,299 +14963,6 @@
    "permalink": "https://t.me/THOBBSUPDATES",
    "sha256": "e65430c095367ecbbd36c4541adf874e66d926ca4bc76e4fcc326192ef0d3af7",
    "dhash": "597d7d7e64313178",
-   "tags": []
-  },
-  {
-   "id": "e59afb8ca7fa",
-   "file": "wallpapers/e59afb8ca7fa.webp",
-   "thumb": "wallpapers/thumbs/e59afb8ca7fa.webp",
-   "w": 1920,
-   "h": 1080,
-   "ratio": "16:9",
-   "bytes": 90314,
-   "palette": [
-    "#186dbe",
-    "#5fcaf9",
-    "#a6def9",
-    "#36a0e1",
-    "#a1866f"
-   ],
-   "source": "local",
-   "added": "2026-08-11",
-   "title": "Naruto",
-   "sub": "",
-   "author": "",
-   "permalink": "",
-   "sha256": "e59afb8ca7fa3126d752d841728d5271e52bc93a3386e0d0b1eae6a822c06e46",
-   "dhash": "80800008b8911b5c",
-   "tags": [],
-   "character": [
-    "naruto"
-   ]
-  },
-  {
-   "id": "e3a8b6ccee33",
-   "file": "wallpapers/e3a8b6ccee33.webp",
-   "thumb": "wallpapers/thumbs/e3a8b6ccee33.webp",
-   "w": 1920,
-   "h": 1080,
-   "ratio": "16:9",
-   "bytes": 19432,
-   "palette": [
-    "#000000",
-    "#c8c7c6",
-    "#aca9a9",
-    "#4d4c4c",
-    "#171414"
-   ],
-   "source": "local",
-   "added": "2026-08-11",
-   "title": "Naruto",
-   "sub": "",
-   "author": "",
-   "permalink": "",
-   "sha256": "e3a8b6ccee33907e147966bc6514f903368a805fdd6a9bfcb5e2bad9b97f1e02",
-   "dhash": "00e8e999b9b0d200",
-   "tags": [],
-   "character": [
-    "naruto"
-   ]
-  },
-  {
-   "id": "e14a7f66a5f2",
-   "file": "wallpapers/e14a7f66a5f2.webp",
-   "thumb": "wallpapers/thumbs/e14a7f66a5f2.webp",
-   "w": 3840,
-   "h": 2583,
-   "ratio": "1.49:1",
-   "bytes": 784254,
-   "palette": [
-    "#372c2d",
-    "#be886b",
-    "#edd6c2",
-    "#cda98a",
-    "#5c4a4d"
-   ],
-   "source": "local",
-   "added": "2026-08-11",
-   "title": "Naruto",
-   "sub": "",
-   "author": "",
-   "permalink": "",
-   "sha256": "e14a7f66a5f2f6b05ac8c4596a24d9e21d45262238347bd53ff4f4b16826cb09",
-   "dhash": "6447435353392927",
-   "tags": [],
-   "character": [
-    "naruto"
-   ]
-  },
-  {
-   "id": "e0e05bc74cc9",
-   "file": "wallpapers/e0e05bc74cc9.webp",
-   "thumb": "wallpapers/thumbs/e0e05bc74cc9.webp",
-   "w": 3073,
-   "h": 3840,
-   "ratio": "0.80:1",
-   "bytes": 674930,
-   "palette": [
-    "#5b361a",
-    "#2c0f0b",
-    "#8d512d",
-    "#c6c7b4",
-    "#a4896b"
-   ],
-   "source": "local",
-   "added": "2026-08-11",
-   "title": "IMG 20260810 WA0005",
-   "sub": "",
-   "author": "Tee-hobb",
-   "permalink": "https://t.me/THOBBSUPDATES",
-   "sha256": "e0e05bc74cc91b5b3e8cf6e281a9e4516d4a11dd1de44a29664b0b57e9ab8fdc",
-   "dhash": "1939395f3b3130bc",
-   "tags": []
-  },
-  {
-   "id": "def09f236136",
-   "file": "wallpapers/def09f236136.webp",
-   "thumb": "wallpapers/thumbs/def09f236136.webp",
-   "w": 3840,
-   "h": 3840,
-   "ratio": "1:1",
-   "bytes": 162048,
-   "palette": [
-    "#4d1c2c",
-    "#25221e",
-    "#45433c",
-    "#6b7169",
-    "#0e0b0c"
-   ],
-   "source": "local",
-   "added": "2026-08-11",
-   "title": "IMG 20260810 WA0011",
-   "sub": "",
-   "author": "Tee-hobb",
-   "permalink": "https://t.me/THOBBSUPDATES",
-   "sha256": "def09f236136a1db72a4d805ed080de938feb5cf96263701ea0091cbb1bd4b0f",
-   "dhash": "91094d60c8606061",
-   "tags": []
-  },
-  {
-   "id": "d655b722ee92",
-   "file": "wallpapers/d655b722ee92.webp",
-   "thumb": "wallpapers/thumbs/d655b722ee92.webp",
-   "w": 1920,
-   "h": 1080,
-   "ratio": "16:9",
-   "bytes": 533316,
-   "palette": [
-    "#5c2c3a",
-    "#f5d0b0",
-    "#ce5850",
-    "#a7343c",
-    "#cba29f"
-   ],
-   "source": "local",
-   "added": "2026-08-11",
-   "title": "Naruto",
-   "sub": "",
-   "author": "",
-   "permalink": "",
-   "sha256": "d655b722ee92d84eae659b98bfb92e8c6c3b5db3adf380b9f62d95d50a4b7571",
-   "dhash": "3ab31b3a365642e2",
-   "tags": [],
-   "character": [
-    "naruto"
-   ]
-  },
-  {
-   "id": "d202e71513c2",
-   "file": "wallpapers/d202e71513c2.webp",
-   "thumb": "wallpapers/thumbs/d202e71513c2.webp",
-   "w": 1920,
-   "h": 1080,
-   "ratio": "16:9",
-   "bytes": 319602,
-   "palette": [
-    "#7e944d",
-    "#b62421",
-    "#f9deae",
-    "#946b37",
-    "#6f7845"
-   ],
-   "source": "local",
-   "added": "2026-08-11",
-   "title": "Naruto",
-   "sub": "",
-   "author": "",
-   "permalink": "",
-   "sha256": "d202e71513c233fe1cfddb40bb2bff335594d78a7cdd572b1a53ce66a45896eb",
-   "dhash": "ced28c8c9d49cdd5",
-   "tags": [],
-   "character": [
-    "naruto"
-   ]
-  },
-  {
-   "id": "d1a83d1262d5",
-   "file": "wallpapers/d1a83d1262d5.webp",
-   "thumb": "wallpapers/thumbs/d1a83d1262d5.webp",
-   "w": 3840,
-   "h": 2160,
-   "ratio": "16:9",
-   "bytes": 644498,
-   "palette": [
-    "#5fa4d8",
-    "#6c331c",
-    "#985733",
-    "#b47f4a",
-    "#2d1a1c"
-   ],
-   "source": "local",
-   "added": "2026-08-11",
-   "title": "Naruto",
-   "sub": "",
-   "author": "",
-   "permalink": "",
-   "sha256": "d1a83d1262d51a9903e30c797dbf60435943fd575cb86696792ddfe592189547",
-   "dhash": "2410905858dada5a",
-   "tags": [],
-   "character": [
-    "naruto"
-   ]
-  },
-  {
-   "id": "cd1853b91747",
-   "file": "wallpapers/cd1853b91747.webp",
-   "thumb": "wallpapers/thumbs/cd1853b91747.webp",
-   "w": 3840,
-   "h": 2562,
-   "ratio": "1.50:1",
-   "bytes": 211504,
-   "palette": [
-    "#6c272b",
-    "#456090",
-    "#bc887a",
-    "#972c3b",
-    "#311b1a"
-   ],
-   "source": "local",
-   "added": "2026-08-11",
-   "title": "IMG 20260810 WA0017",
-   "sub": "",
-   "author": "Tee-hobb",
-   "permalink": "https://t.me/THOBBSUPDATES",
-   "sha256": "cd1853b91747e95347863318690e33f70af1cb567478feb3ec663af66eb2d28e",
-   "dhash": "666a4d71632b33b6",
-   "tags": []
-  },
-  {
-   "id": "cb2223ff467e",
-   "file": "wallpapers/cb2223ff467e.webp",
-   "thumb": "wallpapers/thumbs/cb2223ff467e.webp",
-   "w": 3072,
-   "h": 3840,
-   "ratio": "4:5",
-   "bytes": 320634,
-   "palette": [
-    "#1c0715",
-    "#fc9b71",
-    "#fdc89d",
-    "#fde5b7",
-    "#5a101b"
-   ],
-   "source": "local",
-   "added": "2026-08-11",
-   "title": "IMG 20260810 WA0003",
-   "sub": "",
-   "author": "Tee-hobb",
-   "permalink": "https://t.me/THOBBSUPDATES",
-   "sha256": "cb2223ff467ef62832e1f0bf95ac190768bb8c61a5d2ddc1f7bb7c5bed08f6a9",
-   "dhash": "2f5f5f34e1e1f0d2",
-   "tags": []
-  },
-  {
-   "id": "c80942c8713b",
-   "file": "wallpapers/c80942c8713b.webp",
-   "thumb": "wallpapers/thumbs/c80942c8713b.webp",
-   "w": 3840,
-   "h": 3840,
-   "ratio": "1:1",
-   "bytes": 132468,
-   "palette": [
-    "#180b0c",
-    "#240d12",
-    "#35383d",
-    "#010101",
-    "#38141c"
-   ],
-   "source": "local",
-   "added": "2026-08-11",
-   "title": "IMG 20260810 WA0015",
-   "sub": "",
-   "author": "Tee-hobb",
-   "permalink": "https://t.me/THOBBSUPDATES",
-   "sha256": "c80942c8713bd6c36831a2a31804b05c35a81cec3e35ac31299c2c09c3895ed2",
-   "dhash": "c4d0fcfc6ce4f0c8",
    "tags": []
   },
   {
@@ -20406,51 +15083,6 @@
    "q": 92
   },
   {
-   "id": "c2c8400767d4",
-   "file": "wallpapers/c2c8400767d4.webp",
-   "thumb": "wallpapers/thumbs/c2c8400767d4.webp",
-   "w": 848,
-   "h": 1200,
-   "ratio": "0.71:1",
-   "bytes": 436134,
-   "palette": [
-    "#382f3d",
-    "#201a2a",
-    "#bda9af",
-    "#f0e4e9",
-    "#9c9195"
-   ],
-   "source": "danbooru",
-   "added": "2026-08-11",
-   "title": "Konpaku Youmu",
-   "sub": "danbooru",
-   "author": "miyuki ruria",
-   "permalink": "https://danbooru.donmai.us/posts/950541",
-   "sha256": "c2c8400767d4ce3708da91d72d483fce802536a560e7f2a4cb34e33da4240faf",
-   "dhash": "ececf0ecedb0d2cc",
-   "tags": [
-    "1girl",
-    "architecture",
-    "bare_tree",
-    "black_hairband",
-    "bobby_socks",
-    "bow",
-    "bowtie",
-    "brown_shoes",
-    "cherry_blossoms",
-    "closed_mouth",
-    "colored_eyelashes",
-    "dress_shirt",
-    "dual_wielding",
-    "east_asian_architecture",
-    "expressionless"
-   ],
-   "character": [
-    "konpaku youmu"
-   ],
-   "q": 92
-  },
-  {
    "id": "c02659279bcd",
    "file": "wallpapers/c02659279bcd.webp",
    "thumb": "wallpapers/thumbs/c02659279bcd.webp",
@@ -20489,122 +15121,6 @@
     "reflection",
     "scenery",
     "sitting"
-   ],
-   "character": [],
-   "q": 92
-  },
-  {
-   "id": "be8a3d4a7301",
-   "file": "wallpapers/be8a3d4a7301.webp",
-   "thumb": "wallpapers/thumbs/be8a3d4a7301.webp",
-   "w": 1920,
-   "h": 1080,
-   "ratio": "16:9",
-   "bytes": 434210,
-   "palette": [
-    "#252f3a",
-    "#344453",
-    "#181c21",
-    "#97a9b6",
-    "#627789"
-   ],
-   "source": "danbooru",
-   "added": "2026-08-11",
-   "title": "Ninomae Ina'Nis",
-   "sub": "danbooru",
-   "author": "ninomae ina'nis (artist)",
-   "permalink": "https://danbooru.donmai.us/posts/4099094",
-   "sha256": "be8a3d4a7301aaf00ae3da4aa11288b3f1554e60c172fe382b218a0b51ca59b7",
-   "dhash": "f0c6d4f2f0e47034",
-   "tags": [
-    "1girl",
-    "3d",
-    "3d_background",
-    "animal_ears",
-    "black_hair",
-    "blunt_bangs",
-    "choker",
-    "detached_sleeves",
-    "full_body",
-    "gradient_hair",
-    "hair_between_eyes",
-    "long_hair",
-    "multicolored_hair",
-    "oil-paper_umbrella",
-    "orange_hair"
-   ],
-   "character": [
-    "ninomae ina'nis"
-   ],
-   "q": 92
-  },
-  {
-   "id": "bd1c467ceed5",
-   "file": "wallpapers/bd1c467ceed5.webp",
-   "thumb": "wallpapers/thumbs/bd1c467ceed5.webp",
-   "w": 1920,
-   "h": 1080,
-   "ratio": "16:9",
-   "bytes": 21396,
-   "palette": [
-    "#6b6571",
-    "#6c1723",
-    "#2a2129",
-    "#4c454d",
-    "#86797c"
-   ],
-   "source": "local",
-   "added": "2026-08-11",
-   "title": "Naruto",
-   "sub": "",
-   "author": "",
-   "permalink": "",
-   "sha256": "bd1c467ceed591f9a0e10a8159a8da4f5f686e4c7193c8d68b0cd5550c0e7a05",
-   "dhash": "0000100c2c4d4d4d",
-   "tags": [],
-   "character": [
-    "naruto"
-   ]
-  },
-  {
-   "id": "b631d3dd9e40",
-   "file": "wallpapers/b631d3dd9e40.webp",
-   "thumb": "wallpapers/thumbs/b631d3dd9e40.webp",
-   "w": 2000,
-   "h": 1091,
-   "ratio": "1.83:1",
-   "bytes": 346948,
-   "palette": [
-    "#11343f",
-    "#051a20",
-    "#215361",
-    "#72c0c7",
-    "#486c73"
-   ],
-   "source": "danbooru",
-   "added": "2026-08-11",
-   "title": "",
-   "sub": "danbooru",
-   "author": "catzz",
-   "permalink": "https://danbooru.donmai.us/posts/3385531",
-   "sha256": "b631d3dd9e400368fb4d3a8879071b5daec06e0349fccd644b9a161c3c2ff36c",
-   "dhash": "f0e0f968e8957060",
-   "tags": [
-    "1girl",
-    "alcohol",
-    "blurry",
-    "blurry_background",
-    "brown_eyes",
-    "brown_hair",
-    "car",
-    "chair",
-    "closed_mouth",
-    "coat",
-    "cup",
-    "dark",
-    "drinking_glass",
-    "english_text",
-    "holding"
    ],
    "character": [],
    "q": 92
@@ -20696,102 +15212,6 @@
    "q": 92
   },
   {
-   "id": "b55fb741a52b",
-   "file": "wallpapers/b55fb741a52b.webp",
-   "thumb": "wallpapers/thumbs/b55fb741a52b.webp",
-   "w": 3840,
-   "h": 2160,
-   "ratio": "16:9",
-   "bytes": 280844,
-   "palette": [
-    "#71508c",
-    "#a693cb",
-    "#341d3b",
-    "#823749",
-    "#47356d"
-   ],
-   "source": "local",
-   "added": "2026-08-11",
-   "title": "Naruto",
-   "sub": "",
-   "author": "",
-   "permalink": "",
-   "sha256": "b55fb741a52bb9be65e3edf36cb98096377e3c9fe74d508245b24e8b90d67ae9",
-   "dhash": "9793b35159f37272",
-   "tags": [],
-   "character": [
-    "naruto"
-   ]
-  },
-  {
-   "id": "a982c52461e6",
-   "file": "wallpapers/a982c52461e6.webp",
-   "thumb": "wallpapers/thumbs/a982c52461e6.webp",
-   "w": 3072,
-   "h": 3840,
-   "ratio": "4:5",
-   "bytes": 270100,
-   "palette": [
-    "#543919",
-    "#380702",
-    "#760a09",
-    "#a61019",
-    "#c41c2f"
-   ],
-   "source": "local",
-   "added": "2026-08-11",
-   "title": "IMG 20260810 WA0007",
-   "sub": "",
-   "author": "Tee-hobb",
-   "permalink": "https://t.me/THOBBSUPDATES",
-   "sha256": "a982c52461e6d32e7e4a38e474c6158d3f7ee5c4aa0895d4a99a8aa067125924",
-   "dhash": "0f1b3a1bc11236b2",
-   "tags": []
-  },
-  {
-   "id": "a7df2d36053f",
-   "file": "wallpapers/a7df2d36053f.webp",
-   "thumb": "wallpapers/thumbs/a7df2d36053f.webp",
-   "w": 848,
-   "h": 1200,
-   "ratio": "0.71:1",
-   "bytes": 137638,
-   "palette": [
-    "#4ca2d1",
-    "#1b263c",
-    "#c4ded4",
-    "#30485e",
-    "#8ec5d2"
-   ],
-   "source": "danbooru",
-   "added": "2026-08-11",
-   "title": "",
-   "sub": "danbooru",
-   "author": "yoshida seiji",
-   "permalink": "https://danbooru.donmai.us/posts/2339544",
-   "sha256": "a7df2d36053fda0c8f172102e0ab8559442d55d9cb9a3a7d3bb47d655f71a8ba",
-   "dhash": "8c503432301ae69c",
-   "tags": [
-    "1girl",
-    "against_wall",
-    "blue_hair",
-    "blue_pants",
-    "blue_sky",
-    "building",
-    "city",
-    "cityscape",
-    "cloud",
-    "day",
-    "dress",
-    "from_side",
-    "hat",
-    "hat_ribbon",
-    "high_up"
-   ],
-   "character": [],
-   "q": 92
-  },
-  {
    "id": "a0a46b7816ad",
    "file": "wallpapers/a0a46b7816ad.webp",
    "thumb": "wallpapers/thumbs/a0a46b7816ad.webp",
@@ -20878,34 +15298,6 @@
    "q": 92
   },
   {
-   "id": "99b99de03726",
-   "file": "wallpapers/99b99de03726.webp",
-   "thumb": "wallpapers/thumbs/99b99de03726.webp",
-   "w": 2048,
-   "h": 1434,
-   "ratio": "1.43:1",
-   "bytes": 147742,
-   "palette": [
-    "#8c8c8c",
-    "#bfbfbf",
-    "#d8d8d8",
-    "#6b6b6b",
-    "#a9a9a9"
-   ],
-   "source": "local",
-   "added": "2026-08-11",
-   "title": "Naruto",
-   "sub": "",
-   "author": "",
-   "permalink": "",
-   "sha256": "99b99de037263662c1bc8eaa0d90199dd8a9c2c792aae9f7a42fdec538722c09",
-   "dhash": "35554d5b5355535b",
-   "tags": [],
-   "character": [
-    "naruto"
-   ]
-  },
-  {
    "id": "996469b74aee",
    "file": "wallpapers/996469b74aee.webp",
    "thumb": "wallpapers/thumbs/996469b74aee.webp",
@@ -20954,201 +15346,6 @@
    "sha256": "974fbb1faf12a20bf243146aa0494445108f71d6226a6ca0389e34eac8510fa9",
    "dhash": "3279ecb4b6d33333",
    "tags": []
-  },
-  {
-   "id": "910ef7c20959",
-   "file": "wallpapers/910ef7c20959.webp",
-   "thumb": "wallpapers/thumbs/910ef7c20959.webp",
-   "w": 3840,
-   "h": 3840,
-   "ratio": "1:1",
-   "bytes": 133212,
-   "palette": [
-    "#6d7b89",
-    "#1e1116",
-    "#521734",
-    "#5e626b",
-    "#424247"
-   ],
-   "source": "local",
-   "added": "2026-08-11",
-   "title": "IMG 20260810 WA0010",
-   "sub": "",
-   "author": "Tee-hobb",
-   "permalink": "https://t.me/THOBBSUPDATES",
-   "sha256": "910ef7c20959fa1a59c800b29f0c6f3ae71ef9da8a79db724ac9a18e09063de7",
-   "dhash": "4682c0c8c8c0c0e2",
-   "tags": []
-  },
-  {
-   "id": "90385a0ec9c9",
-   "file": "wallpapers/90385a0ec9c9.webp",
-   "thumb": "wallpapers/thumbs/90385a0ec9c9.webp",
-   "w": 1550,
-   "h": 1450,
-   "ratio": "31:29",
-   "bytes": 201054,
-   "palette": [
-    "#0c1b22",
-    "#28444a",
-    "#c5d9e7",
-    "#4a656f",
-    "#7f99a4"
-   ],
-   "source": "danbooru",
-   "added": "2026-08-11",
-   "title": "Kochiya Sanae, Moriya Suwako, Yasaka Kanako",
-   "sub": "danbooru",
-   "author": "takuzui",
-   "permalink": "https://danbooru.donmai.us/posts/465416",
-   "sha256": "90385a0ec9c95f66ff4f03e7a25c9bac73b58d3832ba155ae3abdba6d3a8afda",
-   "dhash": "93cfcfcfc7cfefef",
-   "tags": [
-    "3girls",
-    "4koma",
-    "anime_coloring",
-    "comic",
-    "dark",
-    "fisheye",
-    "forest",
-    "looking_at_viewer",
-    "moriya_family_(touhou)",
-    "multiple_girls",
-    "nature",
-    "outdoors",
-    "puddle",
-    "road",
-    "scenery"
-   ],
-   "character": [
-    "kochiya sanae",
-    "moriya suwako",
-    "yasaka kanako"
-   ],
-   "q": 92
-  },
-  {
-   "id": "8daacfa0e982",
-   "file": "wallpapers/8daacfa0e982.webp",
-   "thumb": "wallpapers/thumbs/8daacfa0e982.webp",
-   "w": 3840,
-   "h": 3840,
-   "ratio": "1:1",
-   "bytes": 110944,
-   "palette": [
-    "#1e1b19",
-    "#200a10",
-    "#404951",
-    "#323031",
-    "#2c121a"
-   ],
-   "source": "local",
-   "added": "2026-08-11",
-   "title": "IMG 20260810 WA0019",
-   "sub": "",
-   "author": "Tee-hobb",
-   "permalink": "https://t.me/THOBBSUPDATES",
-   "sha256": "8daacfa0e982509e01af85ffecac82776a1751d06fa37a266093093d4dad2166",
-   "dhash": "ecd2f4fcec68706d",
-   "tags": []
-  },
-  {
-   "id": "88ef5acb0967",
-   "file": "wallpapers/88ef5acb0967.webp",
-   "thumb": "wallpapers/thumbs/88ef5acb0967.webp",
-   "w": 2048,
-   "h": 1434,
-   "ratio": "1.43:1",
-   "bytes": 133014,
-   "palette": [
-    "#ffffff",
-    "#e8e8e8",
-    "#b5b5b5",
-    "#5c5c5c",
-    "#848484"
-   ],
-   "source": "local",
-   "added": "2026-08-11",
-   "title": "Naruto",
-   "sub": "",
-   "author": "",
-   "permalink": "",
-   "sha256": "88ef5acb0967d5713aefe977df260b5a0fb72840dc9724a6e1076635baef7ca3",
-   "dhash": "35575755495b5355",
-   "tags": [],
-   "character": [
-    "naruto"
-   ]
-  },
-  {
-   "id": "7eb269564b5e",
-   "file": "wallpapers/7eb269564b5e.webp",
-   "thumb": "wallpapers/thumbs/7eb269564b5e.webp",
-   "w": 3840,
-   "h": 3840,
-   "ratio": "1:1",
-   "bytes": 140402,
-   "palette": [
-    "#738582",
-    "#1f3338",
-    "#28181a",
-    "#5a6866",
-    "#08080a"
-   ],
-   "source": "local",
-   "added": "2026-08-11",
-   "title": "IMG 20260810 WA0018",
-   "sub": "",
-   "author": "Tee-hobb",
-   "permalink": "https://t.me/THOBBSUPDATES",
-   "sha256": "7eb269564b5e274012ffdfdc3fa7d3b5b2c087f4111952d64f8528382996ec4a",
-   "dhash": "0313230121291290",
-   "tags": []
-  },
-  {
-   "id": "799055ea484d",
-   "file": "wallpapers/799055ea484d.webp",
-   "thumb": "wallpapers/thumbs/799055ea484d.webp",
-   "w": 1200,
-   "h": 800,
-   "ratio": "3:2",
-   "bytes": 154326,
-   "palette": [
-    "#565f8a",
-    "#a4b8dd",
-    "#7592cb",
-    "#2a3e7d",
-    "#dadef1"
-   ],
-   "source": "danbooru",
-   "added": "2026-08-11",
-   "title": "Ookami Mio",
-   "sub": "danbooru",
-   "author": "izumi sai",
-   "permalink": "https://danbooru.donmai.us/posts/3753513",
-   "sha256": "799055ea484dc43fa21e379cac5c7ee1c51131078dc14030e2a0ae6aa00a9d1b",
-   "dhash": "280a27cec6e6b795",
-   "tags": [
-    "1girl",
-    ":o",
-    "adjusting_eyewear",
-    "animal_ears",
-    "animal_print",
-    "black_hair",
-    "blue_sky",
-    "braid",
-    "braided_ponytail",
-    "breath",
-    "cat_print",
-    "copyright_name",
-    "gloves",
-    "goggles",
-    "hair_between_eyes"
-   ],
-   "character": [
-    "ookami mio"
-   ],
-   "q": 92
   },
   {
    "id": "723d26963658",
@@ -21239,34 +15436,6 @@
     "vhs"
    ],
    "q": 92
-  },
-  {
-   "id": "71336af336ec",
-   "file": "wallpapers/71336af336ec.webp",
-   "thumb": "wallpapers/thumbs/71336af336ec.webp",
-   "w": 1403,
-   "h": 3840,
-   "ratio": "0.37:1",
-   "bytes": 655734,
-   "palette": [
-    "#e3bc72",
-    "#e1d2b1",
-    "#f6eada",
-    "#3e211c",
-    "#c0a070"
-   ],
-   "source": "local",
-   "added": "2026-08-11",
-   "title": "Naruto",
-   "sub": "",
-   "author": "",
-   "permalink": "",
-   "sha256": "71336af336ecb77c223585efd1e705598f3ab5731480079bf9acb1fbce822ad8",
-   "dhash": "980e268890d08087",
-   "tags": [],
-   "character": [
-    "naruto"
-   ]
   },
   {
    "id": "6948f7d85102",
@@ -21482,34 +15651,6 @@
    "q": 92
   },
   {
-   "id": "6369f0341ed6",
-   "file": "wallpapers/6369f0341ed6.webp",
-   "thumb": "wallpapers/thumbs/6369f0341ed6.webp",
-   "w": 1920,
-   "h": 1080,
-   "ratio": "16:9",
-   "bytes": 382572,
-   "palette": [
-    "#868686",
-    "#717171",
-    "#9b9b9b",
-    "#5c5c5c",
-    "#e7e7e7"
-   ],
-   "source": "local",
-   "added": "2026-08-11",
-   "title": "Naruto",
-   "sub": "",
-   "author": "",
-   "permalink": "",
-   "sha256": "6369f0341ed6cd89106e2cddb7a01a944e1086681ad8ceda9e57905127bf1459",
-   "dhash": "707071615951c4c5",
-   "tags": [],
-   "character": [
-    "naruto"
-   ]
-  },
-  {
    "id": "5f133d333dde",
    "file": "wallpapers/5f133d333dde.webp",
    "thumb": "wallpapers/thumbs/5f133d333dde.webp",
@@ -21582,82 +15723,6 @@
     "gawr gura",
     "hakos baelz",
     "irys"
-   ],
-   "q": 92
-  },
-  {
-   "id": "57c42b4736b3",
-   "file": "wallpapers/57c42b4736b3.webp",
-   "thumb": "wallpapers/thumbs/57c42b4736b3.webp",
-   "w": 1920,
-   "h": 1080,
-   "ratio": "16:9",
-   "bytes": 331480,
-   "palette": [
-    "#bebebe",
-    "#808080",
-    "#a9a9a9",
-    "#110f10",
-    "#303030"
-   ],
-   "source": "local",
-   "added": "2026-08-11",
-   "title": "Naruto",
-   "sub": "",
-   "author": "",
-   "permalink": "",
-   "sha256": "57c42b4736b3732259ab9687bf9c7f7e35575321c662375c867a3eeb7952859d",
-   "dhash": "615a59958cb099b8",
-   "tags": [],
-   "character": [
-    "naruto"
-   ]
-  },
-  {
-   "id": "4a81a8eaffc2",
-   "file": "wallpapers/4a81a8eaffc2.webp",
-   "thumb": "wallpapers/thumbs/4a81a8eaffc2.webp",
-   "w": 3840,
-   "h": 2117,
-   "ratio": "1.81:1",
-   "bytes": 700754,
-   "palette": [
-    "#435060",
-    "#dbe2e7",
-    "#b0bfca",
-    "#29303d",
-    "#596b81"
-   ],
-   "source": "danbooru",
-   "added": "2026-08-11",
-   "title": "Doctor, Kal'Tsit, Misery",
-   "sub": "danbooru",
-   "author": "jell (jell y fish)",
-   "permalink": "https://danbooru.donmai.us/posts/4895457",
-   "sha256": "4a81a8eaffc2a729aa348aeaa8b53b2755b62d37c2195052bc818d301f655edb",
-   "dhash": "d696f4e0ece0f676",
-   "tags": [
-    "1other",
-    "5girls",
-    "6+boys",
-    "ambiguous_gender",
-    "animal_ears",
-    "ankleband",
-    "arm_around_shoulder",
-    "armband",
-    "bag",
-    "bird_ears",
-    "black_bag",
-    "black_boots",
-    "black_coat",
-    "black_gloves",
-    "black_hairband"
-   ],
-   "character": [
-    "doctor",
-    "kal'tsit",
-    "misery",
-    "pith"
    ],
    "q": 92
   },
@@ -21783,52 +15848,6 @@
    ]
   },
   {
-   "id": "3ec20f4ec221",
-   "file": "wallpapers/3ec20f4ec221.webp",
-   "thumb": "wallpapers/thumbs/3ec20f4ec221.webp",
-   "w": 857,
-   "h": 1202,
-   "ratio": "0.71:1",
-   "bytes": 251088,
-   "palette": [
-    "#61412a",
-    "#2a140c",
-    "#f5e3b5",
-    "#b47e5a",
-    "#945537"
-   ],
-   "source": "danbooru",
-   "added": "2026-08-11",
-   "title": "Koakuma, Patchouli Knowledge",
-   "sub": "danbooru",
-   "author": "berabou",
-   "permalink": "https://danbooru.donmai.us/posts/1994383",
-   "sha256": "3ec20f4ec2219c2d07be319bcfb3f5574b705472de364659b2a3bff07f391cdb",
-   "dhash": "1b82028268040c27",
-   "tags": [
-    "2girls",
-    "absurdly_detailed_composition",
-    "book",
-    "book_stack",
-    "bookshelf",
-    "carrying",
-    "clock",
-    "coat",
-    "demon_girl",
-    "demon_wings",
-    "door",
-    "from_above",
-    "gears",
-    "grate",
-    "hat"
-   ],
-   "character": [
-    "koakuma",
-    "patchouli knowledge"
-   ],
-   "q": 92
-  },
-  {
    "id": "3b2bf0c9029e",
    "file": "wallpapers/3b2bf0c9029e.webp",
    "thumb": "wallpapers/thumbs/3b2bf0c9029e.webp",
@@ -21873,77 +15892,6 @@
     "asuna",
     "hakurei reimu",
     "kaname madoka"
-   ],
-   "q": 92
-  },
-  {
-   "id": "3a91a9a16ff1",
-   "file": "wallpapers/3a91a9a16ff1.webp",
-   "thumb": "wallpapers/thumbs/3a91a9a16ff1.webp",
-   "w": 3840,
-   "h": 3840,
-   "ratio": "1:1",
-   "bytes": 104866,
-   "palette": [
-    "#230f10",
-    "#353628",
-    "#2a1013",
-    "#1c0c0c",
-    "#2d1517"
-   ],
-   "source": "local",
-   "added": "2026-08-11",
-   "title": "IMG 20260810 WA0014",
-   "sub": "",
-   "author": "Tee-hobb",
-   "permalink": "https://t.me/THOBBSUPDATES",
-   "sha256": "3a91a9a16ff1fcc58b602d929df7dd8d669462b96759626a82ba2683a323a039",
-   "dhash": "0950744064213030",
-   "tags": []
-  },
-  {
-   "id": "3a2e5a273246",
-   "file": "wallpapers/3a2e5a273246.webp",
-   "thumb": "wallpapers/thumbs/3a2e5a273246.webp",
-   "w": 3840,
-   "h": 2145,
-   "ratio": "1.79:1",
-   "bytes": 2495752,
-   "palette": [
-    "#072a4b",
-    "#0e5481",
-    "#06111f",
-    "#369aca",
-    "#3c7cad"
-   ],
-   "source": "danbooru",
-   "added": "2026-08-11",
-   "title": "Helldiver, Hulk",
-   "sub": "danbooru",
-   "author": "lionel schramm",
-   "permalink": "https://danbooru.donmai.us/posts/7243972",
-   "sha256": "3a2e5a27324689075ed4e36a0d6e3e6007ffcac88cc8d00a2b842f7b7cd865bc",
-   "dhash": "4252e9dcccf4f494",
-   "tags": [
-    "4others",
-    "automaton_(helldivers)",
-    "bullet_hole",
-    "campfire",
-    "cape",
-    "flag",
-    "flagpole",
-    "flare",
-    "glowing",
-    "helmet",
-    "holding",
-    "holding_flag",
-    "letterboxed",
-    "malevelon_creek_(helldivers)",
-    "mecha"
-   ],
-   "character": [
-    "helldiver",
-    "hulk"
    ],
    "q": 92
   },
@@ -22179,54 +16127,6 @@
    ]
   },
   {
-   "id": "223e48dfcccd",
-   "file": "wallpapers/223e48dfcccd.webp",
-   "thumb": "wallpapers/thumbs/223e48dfcccd.webp",
-   "w": 1556,
-   "h": 1101,
-   "ratio": "1.41:1",
-   "bytes": 411588,
-   "palette": [
-    "#e9d3c7",
-    "#96150f",
-    "#993f2e",
-    "#c18c68",
-    "#2b1523"
-   ],
-   "source": "danbooru",
-   "added": "2026-08-11",
-   "title": "Akemi Homura, Kaname Madoka, Kero",
-   "sub": "danbooru",
-   "author": "lim",
-   "permalink": "https://danbooru.donmai.us/posts/890963",
-   "sha256": "223e48dfcccd9d28aff49d442dfe88692b1687369f297ff2480bd3e71eb5e8df",
-   "dhash": "f074109b12b0e703",
-   "tags": [
-    "6+girls",
-    ":3",
-    "antenna_hair",
-    "aqua_eyes",
-    "black_hair",
-    "blonde_hair",
-    "blue_eyes",
-    "blue_hair",
-    "bow",
-    "bow_(weapon)",
-    "brand_name_imitation",
-    "brown_hair",
-    "bubble_skirt",
-    "building",
-    "cape"
-   ],
-   "character": [
-    "akemi homura",
-    "kaname madoka",
-    "kero",
-    "kinomoto sakura"
-   ],
-   "q": 92
-  },
-  {
    "id": "2023b90e5687",
    "file": "wallpapers/2023b90e5687.webp",
    "thumb": "wallpapers/thumbs/2023b90e5687.webp",
@@ -22318,59 +16218,6 @@
    "q": 92
   },
   {
-   "id": "1faa4b038bdc",
-   "file": "wallpapers/1faa4b038bdc.webp",
-   "thumb": "wallpapers/thumbs/1faa4b038bdc.webp",
-   "w": 1920,
-   "h": 1080,
-   "ratio": "16:9",
-   "bytes": 124840,
-   "palette": [
-    "#272729",
-    "#4c708a",
-    "#769ca7",
-    "#39576b",
-    "#ae9b99"
-   ],
-   "source": "local",
-   "added": "2026-08-11",
-   "title": "Naruto",
-   "sub": "",
-   "author": "",
-   "permalink": "",
-   "sha256": "1faa4b038bdc7751b12fbb785b45b0ebdf481f7917a7eca09945dd44947a0ed2",
-   "dhash": "b691131198d20404",
-   "tags": [],
-   "character": [
-    "naruto"
-   ]
-  },
-  {
-   "id": "18ca8b743b97",
-   "file": "wallpapers/18ca8b743b97.webp",
-   "thumb": "wallpapers/thumbs/18ca8b743b97.webp",
-   "w": 3072,
-   "h": 3840,
-   "ratio": "4:5",
-   "bytes": 131680,
-   "palette": [
-    "#42121b",
-    "#701364",
-    "#550744",
-    "#a7128d",
-    "#ec23b8"
-   ],
-   "source": "local",
-   "added": "2026-08-11",
-   "title": "IMG 20260810 WA0008",
-   "sub": "",
-   "author": "Tee-hobb",
-   "permalink": "https://t.me/THOBBSUPDATES",
-   "sha256": "18ca8b743b970912fb73e96d6198c5088918c89761069b3d59cf6db818ea4a5a",
-   "dhash": "f8f87878e4e8b079",
-   "tags": []
-  },
-  {
    "id": "189003a07805",
    "file": "wallpapers/189003a07805.webp",
    "thumb": "wallpapers/thumbs/189003a07805.webp",
@@ -22414,62 +16261,6 @@
     "ganyu"
    ],
    "q": 92
-  },
-  {
-   "id": "186796f0d9e4",
-   "file": "wallpapers/186796f0d9e4.webp",
-   "thumb": "wallpapers/thumbs/186796f0d9e4.webp",
-   "w": 3840,
-   "h": 2160,
-   "ratio": "16:9",
-   "bytes": 1683974,
-   "palette": [
-    "#f0e7d4",
-    "#a51e29",
-    "#e5bb8f",
-    "#592426",
-    "#ce9472"
-   ],
-   "source": "local",
-   "added": "2026-08-11",
-   "title": "Naruto",
-   "sub": "",
-   "author": "",
-   "permalink": "",
-   "sha256": "186796f0d9e4033c2041ff919c6fb225025cf4f6298f92fd4b9666e50e96b00b",
-   "dhash": "4929361d1ba9a999",
-   "tags": [],
-   "character": [
-    "naruto"
-   ]
-  },
-  {
-   "id": "11112998e802",
-   "file": "wallpapers/11112998e802.webp",
-   "thumb": "wallpapers/thumbs/11112998e802.webp",
-   "w": 3840,
-   "h": 2160,
-   "ratio": "16:9",
-   "bytes": 160940,
-   "palette": [
-    "#fda66d",
-    "#fe722c",
-    "#fdd749",
-    "#fd8b4a",
-    "#d24931"
-   ],
-   "source": "local",
-   "added": "2026-08-11",
-   "title": "Naruto",
-   "sub": "",
-   "author": "",
-   "permalink": "",
-   "sha256": "11112998e80298c51e8833794b2b13b9f7f399f9fee0c54e114784a20939e4c9",
-   "dhash": "20b2b2b0b0b23000",
-   "tags": [],
-   "character": [
-    "naruto"
-   ]
   },
   {
    "id": "0eb31ae88d16",
@@ -22564,34 +16355,6 @@
    "q": 92
   },
   {
-   "id": "0d3131c5ed4c",
-   "file": "wallpapers/0d3131c5ed4c.webp",
-   "thumb": "wallpapers/thumbs/0d3131c5ed4c.webp",
-   "w": 3840,
-   "h": 2727,
-   "ratio": "1.41:1",
-   "bytes": 1168240,
-   "palette": [
-    "#f9f3c9",
-    "#c7a781",
-    "#f5d39a",
-    "#987760",
-    "#a09b7b"
-   ],
-   "source": "local",
-   "added": "2026-08-11",
-   "title": "Naruto",
-   "sub": "",
-   "author": "",
-   "permalink": "",
-   "sha256": "0d3131c5ed4c0cd075015893f288d25204926a00009c8d7c2cc973adfe083b2c",
-   "dhash": "d33337252b039796",
-   "tags": [],
-   "character": [
-    "naruto"
-   ]
-  },
-  {
    "id": "fc45d3c36134",
    "file": "wallpapers/fc45d3c36134.webp",
    "thumb": "wallpapers/thumbs/fc45d3c36134.webp",
@@ -22646,31 +16409,6 @@
    "character": [
     "naruto"
    ]
-  },
-  {
-   "id": "dda4e2db3e91",
-   "file": "wallpapers/dda4e2db3e91.webp",
-   "thumb": "wallpapers/thumbs/dda4e2db3e91.webp",
-   "w": 1920,
-   "h": 1080,
-   "ratio": "16:9",
-   "bytes": 5966,
-   "palette": [
-    "#1e3c1e",
-    "#5d5d26",
-    "#203d1e",
-    "#15371d",
-    "#314620"
-   ],
-   "source": "local",
-   "added": "2026-08-10",
-   "title": "friend gift",
-   "sub": "",
-   "author": "some_artist_handle",
-   "permalink": "https://www.pixiv.net/en/artworks/123456789",
-   "sha256": "dda4e2db3e91c67c7dd5f3db6cfa4b8d18a2ad3fb6b5de529a7336492a5ce080",
-   "dhash": "000090c0c0603030",
-   "tags": []
   },
   {
    "id": "dbfb212f0ac0",

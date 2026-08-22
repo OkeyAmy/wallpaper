@@ -21,7 +21,10 @@ from collections import Counter
 from datetime import datetime, timezone
 from pathlib import Path
 
-from pipeline import MANIFEST, ROOT, load_items
+# _rgb_to_hsl is pipeline's, not a copy: the colour pages must bucket a swatch
+# by exactly the same maths that produced it, or an item's page and its palette
+# would disagree about what colour it is.
+from pipeline import MANIFEST, ROOT, _rgb_to_hsl, load_items
 
 SITE = "https://wallpapers.okeyamy.xyz"
 INDEX = ROOT / "index.html"
@@ -36,7 +39,12 @@ LD_ITEMS = 100           # items described in JSON-LD
 # which is the failure mode that gets a gallery ignored wholesale rather than
 # ranked per character. Characters below the line still appear on the
 # homepage and in the image sitemap; they just don't get a page of their own.
-MIN_HUB_ITEMS = 2
+MIN_HUB_ITEMS = 4        # a 2-image character page is thin content: it competes
+                         # with nothing, and a sitemap full of them is the
+                         # scaled-content shape Google penalises. Sparse
+                         # characters stay reachable through the colour pages.
+MIN_FACET_ITEMS = 8      # colour/format pages are denser by nature; hold them
+                         # to a higher bar still
 HUB_GRID_CELLS = 60      # real <img> per hub page before falling back to links
 
 # Cells above the fold that should load eagerly. lazy-loading every cell
@@ -246,7 +254,8 @@ def collect_hubs(items: list[dict]) -> list[dict]:
             slug = hub_slug(name)
             if not slug:
                 continue
-            g = groups.setdefault(slug, {"slug": slug, "name": name, "items": []})
+            g = groups.setdefault(slug, {"slug": slug, "name": name,
+                                         "kind": "character", "items": []})
             if it not in g["items"]:
                 g["items"].append(it)
 
@@ -255,6 +264,102 @@ def collect_hubs(items: list[dict]) -> list[dict]:
         # widest first: the biggest wallpaper is the best thing to lead with
         g["items"].sort(key=lambda x: x["w"] * x["h"], reverse=True)
     hubs.sort(key=lambda g: (-len(g["items"]), g["slug"]))
+    return hubs
+
+
+# --- facet hubs ------------------------------------------------------------
+# Colour and size, the two things a person actually searches for when they
+# want a wallpaper rather than a picture of a character: "dark anime
+# wallpaper", "blue anime wallpaper", "4k anime wallpaper", "phone anime
+# wallpaper". Every wallpaper site competes on character names; almost none of
+# them can group by extracted palette, because almost none of them extract one.
+# This archive already does, for every item, at ingest — so these pages are
+# built from data nobody else has rather than from another template.
+#
+# They are also much denser than the character pages: a colour bucket holds
+# tens of items where a character holds two or three, and a dense page is the
+# one worth indexing.
+
+COLOUR_NAMES = [
+    (345, 15, "red"), (15, 45, "orange"), (45, 70, "yellow"),
+    (70, 165, "green"), (165, 200, "cyan"), (200, 255, "blue"),
+    (255, 290, "purple"), (290, 345, "pink"),
+]
+
+
+def colour_bucket(hex_colour: str) -> str | None:
+    """Name for a palette swatch, or None if it isn't a usable one.
+
+    Lightness and saturation are checked before hue because the hue of a
+    near-black or near-grey pixel is noise — "dark" and "monochrome" are the
+    honest labels for those, and they happen to be what people search for.
+    """
+    try:
+        r, g, b = (int(hex_colour[i:i + 2], 16) for i in (1, 3, 5))
+    except (ValueError, IndexError):
+        return None
+    _h, s, lightness = _rgb_to_hsl(r, g, b)
+    if lightness < 0.18:
+        return "dark"
+    if lightness > 0.88:
+        return "light"
+    if s < 0.12:
+        return "monochrome"
+    hue = _h % 360
+    for lo, hi, name in COLOUR_NAMES:
+        if lo > hi:                          # the red wedge wraps past 360
+            if hue >= lo or hue < hi:
+                return name
+        elif lo <= hue < hi:
+            return name
+    return None
+
+
+def orientation_bucket(it: dict) -> str | None:
+    w, h = it["w"], it["h"]
+    if h > w and h / w >= 1.5:
+        return "phone"
+    if w / h >= 2.2:
+        return "ultrawide"
+    if w >= 3840 or h >= 3840:
+        return "4k"
+    return None
+
+
+FACET_COPY = {
+    "dark": "dark", "light": "light", "monochrome": "black and white",
+    "phone": "phone", "ultrawide": "ultrawide", "4k": "4K",
+}
+
+
+def collect_facet_hubs(items: list[dict]) -> list[dict]:
+    """Colour and format pages, built from the palette extracted at ingest."""
+    groups: dict[str, dict] = {}
+
+    def add(key: str, label: str, kind: str, it: dict) -> None:
+        slug = f"{hub_slug(key)}-anime-wallpapers"
+        g = groups.setdefault(slug, {"slug": slug, "name": label,
+                                     "kind": kind, "facet": key, "items": []})
+        if it not in g["items"]:
+            g["items"].append(it)
+
+    for it in items:
+        palette = it.get("palette") or []
+        # Only the dominant swatch decides the colour page. Indexing an item
+        # under every colour in its palette would put the same wallpaper on
+        # five pages and make each of them a near-duplicate of the others.
+        if palette:
+            bucket = colour_bucket(palette[0])
+            if bucket:
+                add(bucket, FACET_COPY.get(bucket, bucket), "colour", it)
+        fmt = orientation_bucket(it)
+        if fmt:
+            add(fmt, FACET_COPY[fmt], "format", it)
+
+    hubs = [g for g in groups.values() if len(g["items"]) >= MIN_FACET_ITEMS]
+    for g in hubs:
+        g["items"].sort(key=lambda x: x["w"] * x["h"], reverse=True)
+    hubs.sort(key=lambda g: (g["kind"], -len(g["items"])))
     return hubs
 
 
@@ -298,13 +403,25 @@ def build_hub_nav(hubs: list[dict]) -> str:
     """
     if not hubs:
         return ""
-    links = "".join(
-        f'<li><a href="{hub_url(g["slug"])}">{html.escape(display_name(g["name"]))} '
-        f'wallpapers ({len(g["items"])})</a></li>'
-        for g in hubs
-    )
-    return ('<nav class="seolist"><h2 class="foot__h">[ BY CHARACTER ]</h2>'
-            f"<ul>{links}</ul></nav>")
+
+    def section(title: str, group: list[dict], suffix: str) -> str:
+        if not group:
+            return ""
+        links = "".join(
+            f'<li><a href="{hub_url(g["slug"])}">'
+            f'{html.escape(display_name(g["name"]))} {suffix} ({len(g["items"])})</a></li>'
+            for g in group
+        )
+        return (f'<nav class="seolist"><h2 class="foot__h">[ {title} ]</h2>'
+                f"<ul>{links}</ul></nav>")
+
+    by_kind: dict[str, list[dict]] = {}
+    for g in hubs:
+        by_kind.setdefault(g.get("kind", "character"), []).append(g)
+
+    return (section("BY COLOUR", by_kind.get("colour", []), "anime wallpapers")
+            + section("BY SIZE", by_kind.get("format", []), "anime wallpapers")
+            + section("BY CHARACTER", by_kind.get("character", []), "wallpapers"))
 
 
 def build_static_grid(items: list[dict], hubs: list[dict]) -> str:
@@ -341,20 +458,45 @@ def build_static_grid(items: list[dict], hubs: list[dict]) -> str:
     return "\n".join(cells)
 
 
-def hub_summary(name: str, items: list[dict]) -> str:
+def hub_summary(name: str, items: list[dict], kind: str = "character") -> str:
     """A sentence about what is actually on this page.
 
-    Written from the items rather than from a template so two character pages
-    never read identically — a page whose only unique word is the character's
-    name is a page Google has grounds to treat as a duplicate of the others.
+    Written from the items rather than from a template so two pages never read
+    identically — a page whose only unique word is the character's name is a
+    page Google has grounds to treat as a duplicate of the others. The colour
+    and format pages get their own phrasing for the same reason: they would
+    otherwise be the character template with a different noun in it.
     """
     n = len(items)
     counts = Counter(orientation(it) for it in items)
-    parts = [f"{c} {kind}" for kind, c in counts.most_common()]
+    parts = [f"{c} {shape}" for shape, c in counts.most_common()]
     shapes = ", ".join(parts[:-1]) + (" and " + parts[-1] if len(parts) > 1 else parts[0])
     biggest = max(items, key=lambda x: x["w"] * x["h"])
+    label = display_name(name) if kind == "character" else name
+
+    if kind == "colour":
+        subjects = Counter()
+        for it in items:
+            for c in (it.get("character") or [])[:1]:
+                subjects[display_name(c)] += 1
+        featured = ", ".join(s for s, _ in subjects.most_common(3))
+        tail = f" Featuring {featured}." if featured else ""
+        return (
+            f"{n} anime wallpapers whose dominant colour is {label}, measured "
+            f"from the image itself rather than tagged by hand — {shapes}, up to "
+            f"{biggest['w']}×{biggest['h']}.{tail} Free, no account needed."
+        )
+
+    if kind == "format":
+        return (
+            f"{n} anime wallpapers sized for {label} — up to "
+            f"{biggest['w']}×{biggest['h']}, free to download, no account and no "
+            "sign-up. Every one lists its extracted colour palette so you can "
+            "match it to a theme."
+        )
+
     return (
-        f"{n} {display_name(name)} wallpapers — {shapes} — "
+        f"{n} {label} wallpapers — {shapes} — "
         f"up to {biggest['w']}×{biggest['h']}, free to download. "
         "Each one lists its dominant colour palette and links back to the "
         "original artist's post."
@@ -362,13 +504,20 @@ def hub_summary(name: str, items: list[dict]) -> str:
 
 
 def build_hub_page(hub: dict, generated: str, versions: dict[str, str]) -> str:
-    name = display_name(hub["name"])
+    kind = hub.get("kind", "character")
     items = hub["items"]
-    summary = hub_summary(hub["name"], items)
+    summary = hub_summary(hub["name"], items, kind)
     url = SITE + hub_url(hub["slug"])
 
-    # kept under ~60 chars so search results show the whole thing
-    title = f"{name} Wallpapers — 4K, Phone & Desktop"[:60]
+    if kind == "character":
+        name = display_name(hub["name"])
+        heading = f"{name} wallpapers"
+        # kept under ~60 chars so search results show the whole thing
+        title = f"{name} Wallpapers — 4K, Phone & Desktop"[:60]
+    else:
+        name = hub["name"]
+        heading = f"{display_name(name)} anime wallpapers"
+        title = f"{display_name(name)} Anime Wallpapers — 4K & Phone"[:60]
 
     cells = "\n".join(
         static_cell(it, asset_url(it["file"]), eager=i < EAGER_CELLS)
@@ -387,7 +536,7 @@ def build_hub_page(hub: dict, generated: str, versions: dict[str, str]) -> str:
     ld = {
         "@context": "https://schema.org",
         "@type": "ImageGallery",
-        "name": f"{name} wallpapers",
+        "name": heading,
         "description": summary,
         "url": url,
         "dateModified": generated,
@@ -400,7 +549,7 @@ def build_hub_page(hub: dict, generated: str, versions: dict[str, str]) -> str:
         "@type": "BreadcrumbList",
         "itemListElement": [
             {"@type": "ListItem", "position": 1, "name": "Anime Wallpaper Archive", "item": SITE + "/"},
-            {"@type": "ListItem", "position": 2, "name": f"{name} wallpapers", "item": url},
+            {"@type": "ListItem", "position": 2, "name": heading, "item": url},
         ],
     }
 
@@ -421,7 +570,7 @@ def build_hub_page(hub: dict, generated: str, versions: dict[str, str]) -> str:
 <meta name="color-scheme" content="dark">
 <meta name="theme-color" content="#0A0A0A">
 <link rel="canonical" href="{url}">
-<meta property="og:title" content="{html.escape(name)} wallpapers">
+<meta property="og:title" content="{html.escape(heading)}">
 <meta property="og:description" content="{html.escape(summary)}">
 <meta property="og:type" content="website">
 <meta property="og:url" content="{url}">
@@ -436,7 +585,7 @@ def build_hub_page(hub: dict, generated: str, versions: dict[str, str]) -> str:
   <a href="/" class="bar__logo">WALLPAPER ARCHIVE</a>
 </header>
 <main class="wrap">
-  <h1 class="hub__h">{html.escape(name)} wallpapers</h1>
+  <h1 class="hub__h">{html.escape(heading)}</h1>
   <p class="hub__lede">{html.escape(summary)}</p>
   <div class="grid" role="list">
 {cells}
@@ -453,7 +602,8 @@ def build_hub_page(hub: dict, generated: str, versions: dict[str, str]) -> str:
 """
 
 
-def build_character_index(hubs: list[dict], generated: str, versions: dict[str, str]) -> str:
+def build_character_index(hubs: list[dict], facets: list[dict],
+                          generated: str, versions: dict[str, str]) -> str:
     """The w/ landing page: one link per character, so a crawler that lands on
     /w/ (via the homepage footer) can reach every /w/<character> page.
 
@@ -465,6 +615,15 @@ def build_character_index(hubs: list[dict], generated: str, versions: dict[str, 
         f'<li><a href="{hub_url(g["slug"])}">{html.escape(display_name(g["name"]))} '
         f'wallpapers ({len(g["items"])})</a></li>'
         for g in hubs
+    )
+    facet_links = "".join(
+        f'<li><a href="{hub_url(g["slug"])}">{html.escape(display_name(g["name"]))} '
+        f'anime wallpapers ({len(g["items"])})</a></li>'
+        for g in facets
+    )
+    facet_block = (
+        '<div class="seolist"><h2 class="foot__h">[ BY COLOUR &amp; SIZE ]</h2>'
+        f"<ul>{facet_links}</ul></div>" if facet_links else ""
     )
     title = "All Characters — Anime Wallpaper Archive"
     description = f"{len(hubs)} characters indexed in the archive, each with their own wallpaper page."
@@ -511,6 +670,7 @@ def build_character_index(hubs: list[dict], generated: str, versions: dict[str, 
   <h1 class="hub__h">All characters</h1>
   <p class="hub__lede">{html.escape(description)}</p>
   <div class="seolist"><h2 class="foot__h">[ BY CHARACTER ]</h2><ul>{links}</ul></div>
+  {facet_block}
   <a class="hub__back" href="/">← Browse the full wallpaper archive</a>
 </main>
 <footer class="foot">
@@ -938,7 +1098,12 @@ def main() -> int:
     items.sort(key=lambda x: (x.get("added", ""), x.get("id", "")), reverse=True)
 
     generated, changed = stamp_manifest(items)
-    hubs = collect_hubs(items)
+    characters = collect_hubs(items)
+    facets = collect_facet_hubs(items)
+    # One list for everything that gets a page, because the sitemap, the stale
+    # page sweep and the hub writer should not each need to know how many kinds
+    # of hub exist.
+    hubs = characters + facets
     versions = asset_versions()
 
     doc = INDEX.read_text()
@@ -948,7 +1113,8 @@ def main() -> int:
     INDEX.write_text(doc)
 
     write_hub_pages(hubs, generated, versions)
-    (HUB_DIR / "index.html").write_text(build_character_index(hubs, generated, versions))
+    (HUB_DIR / "index.html").write_text(
+        build_character_index(characters, facets, generated, versions))
     (ROOT / "sitemap.xml").write_text(build_sitemap(generated, items, hubs))
     (ROOT / "robots.txt").write_text(build_robots())
     (ROOT / "_headers").write_text(build_headers())
@@ -963,7 +1129,7 @@ def main() -> int:
     state = "changed" if changed else "unchanged"
     untitled = sum(1 for it in items if not subject(it))
     print(f"built {len(items)} items / {total / 1e6:.1f} MB / {state} / generated {generated}")
-    print(f"      {len(hubs)} character pages in w/")
+    print(f"      {len(characters)} character + {len(facets)} colour/size pages in w/")
     if untitled:
         print(f"    ! {untitled} items have nothing to describe them — they index as "
               f"generic wallpapers. Give them a title or a --character at ingest.")

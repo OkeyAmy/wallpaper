@@ -27,7 +27,10 @@ env:
   R2_PUBLIC_BASE: ${{ secrets.R2_PUBLIC_BASE }}
 
 concurrency:
-  group: sync
+  # Shared with maintain.yml. Both mutate the manifest and delete from or write
+  # to R2; two of them interleaving would have one overwrite the other's
+  # manifest and leave orphaned or missing objects behind.
+  group: archive-write
   cancel-in-progress: false    # never interrupt a run mid-commit
 
 jobs:
@@ -138,3 +141,8 @@ jobs:
             git rebase "origin/${GITHUB_REF_NAME}"
             git push origin "HEAD:${GITHUB_REF_NAME}"
           fi
+
+      # Push notification rather than waiting to be recrawled. Only fires when
+      # the manifest actually moved, so a quiet day sends nothing.
+      - name: Tell search engines what changed
+        run: python scripts/indexnow.py

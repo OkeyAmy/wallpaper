@@ -13,6 +13,13 @@ old/
 # stays on this machine only.
 sample-submission/
 
+# Working artifacts from a cull or audit run. cull.py writes the .bak before
+# it mutates anything and audit.py writes the flagged-id list; both are for
+# the operator running the command, not for the repo.
+*.bak
+flagged.txt
+rejects.txt
+
 # Local session/tooling state
 .remember/
 .claude/

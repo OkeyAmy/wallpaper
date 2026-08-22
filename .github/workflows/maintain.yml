@@ -1,0 +1,114 @@
+name: weekly maintenance
+
+# Re-checks what is already published, rather than adding to it.
+#
+# Danbooru posts get re-rated, deleted and re-tagged after they were synced,
+# and the policy in scripts/quality.py gets tightened. Neither is visible
+# until something looks, so this looks — once a week, unattended.
+#
+# It is allowed to delete, which is why the safety is in the tools rather than
+# in a human reading the output:
+#
+#   * audit.py cannot delete at all. It writes a list; cull.py is the only
+#     thing in the repo that removes objects, and an upstream error can never
+#     become an entry on that list.
+#   * cull.py refuses any source that cannot be re-fetched from a permalink,
+#     so hand-added images are untouchable here regardless of what the audit
+#     says about them.
+#   * --max-remove caps the blast radius. A normal week removes a handful. A
+#     run that wants to remove more than the cap has almost certainly hit a
+#     changed threshold rather than a changed archive, so it stops and fails
+#     the job instead of acting on it.
+
+on:
+  schedule:
+    - cron: "0 4 * * 0"        # 04:00 UTC Sundays, ahead of the daily sync
+  workflow_dispatch:
+    inputs:
+      max_remove:
+        description: "Refuse to run if more than this many items would be removed"
+        default: "15"
+
+permissions:
+  contents: write
+
+env:
+  R2_ACCOUNT_ID: ${{ secrets.R2_ACCOUNT_ID }}
+  R2_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
+  R2_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
+  R2_BUCKET: ${{ secrets.R2_BUCKET }}
+  R2_PUBLIC_BASE: ${{ secrets.R2_PUBLIC_BASE }}
+
+concurrency:
+  group: archive-write          # shared with sync.yml: never mutate concurrently
+  cancel-in-progress: false
+
+jobs:
+  maintain:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - run: pip install -r scripts/requirements.txt
+
+      - name: R2 configured?
+        run: |
+          missing=""
+          for v in R2_ACCOUNT_ID R2_ACCESS_KEY_ID R2_SECRET_ACCESS_KEY R2_BUCKET R2_PUBLIC_BASE; do
+            [ -z "${!v}" ] && missing="$missing $v"
+          done
+          if [ -n "$missing" ]; then
+            echo "::error::Missing repo secrets:$missing"
+            exit 1
+          fi
+
+      - name: Audit against sources and current policy
+        run: python scripts/audit.py --out flagged.txt || true
+
+      - name: Cull what the audit flagged
+        env:
+          MAX_REMOVE: ${{ inputs.max_remove || '15' }}
+        run: |
+          # A dispatch input reaches a delete command here, so it is validated
+          # rather than trusted — a non-numeric value would make cull.py's cap
+          # argument meaningless.
+          case "$MAX_REMOVE" in
+            ''|*[!0-9]*) echo "::error::max_remove must be an integer" >&2; exit 1 ;;
+          esac
+          if [ ! -s flagged.txt ]; then
+            echo "nothing flagged — archive is clean"
+            exit 0
+          fi
+          echo "$(wc -l < flagged.txt) items flagged"
+          python scripts/cull.py --from-list flagged.txt --max-remove "$MAX_REMOVE"
+
+      - name: Rebuild
+        run: python scripts/build_site.py
+
+      - name: Commit
+        run: |
+          git config user.name  "wallpaper-bot"
+          git config user.email "actions@users.noreply.github.com"
+          rm -f flagged.txt
+          git add -A data assets index.html sitemap.xml robots.txt llms.txt _headers w
+          if git diff --staged --quiet; then
+            echo "nothing changed"
+            exit 0
+          fi
+          after=$(python3 -c "import json; print(len(json.load(open('data/wallpapers.json'))['items']))")
+          git commit -m "maintain: ${after} wallpapers after audit"
+          if ! git push origin "HEAD:${GITHUB_REF_NAME}"; then
+            git fetch --deepen=50 origin "${GITHUB_REF_NAME}"
+            git rebase "origin/${GITHUB_REF_NAME}"
+            git push origin "HEAD:${GITHUB_REF_NAME}"
+          fi
+
+      - name: Tell search engines what changed
+        run: python scripts/indexnow.py --all

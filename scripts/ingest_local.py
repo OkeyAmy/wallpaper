@@ -42,11 +42,15 @@ A per-image .source sidecar still wins over these if both are present.
 from __future__ import annotations
 
 import argparse
+import io
 import json
 from datetime import date
 from pathlib import Path
 
+from PIL import Image
+
 from pipeline import DATA_DIR, MANIFEST, ROOT, ingest_image, load_items
+from quality import reject_reasons
 
 INCOMING = ROOT / "incoming"
 SUFFIXES = {".jpg", ".jpeg", ".png", ".webp", ".bmp", ".tiff"}
@@ -74,6 +78,9 @@ def read_sidecar(image_path: Path) -> tuple[str, str, str]:
 def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--keep", action="store_true", help="don't delete source files after ingest")
+    ap.add_argument("--no-filter", action="store_true",
+                    help="skip the quality gate for these files. For images you have "
+                         "looked at and want regardless of what the heuristics say")
     ap.add_argument("--tag", action="append", default=[], help="tag to attach (repeatable)")
     ap.add_argument("--source", default="", help="fallback source link for images with no .source sidecar")
     ap.add_argument("--author", default="", help="fallback author/handle, used the same way")
@@ -109,12 +116,33 @@ def main() -> int:
         title = title or args.title
         sidecar = path.with_name(path.name + ".source")
 
+        raw = path.read_bytes()
+
+        # Screened here rather than left to ingest_image's backstop so the
+        # reason can be printed. Hand-dropped files carry no tags, so this is
+        # a pixel-only judgement — and it is the path that most needs one: a
+        # forwarded image is as likely to be a screenshot or a comic page as
+        # a wallpaper.
+        if not args.no_filter:
+            try:
+                probe = Image.open(io.BytesIO(raw))
+                probe.load()
+            except Exception:
+                probe = None
+            if probe is not None:
+                bad = reject_reasons(tags=args.tag, w=probe.width,
+                                     h=probe.height, img=probe)
+                if bad:
+                    print(f"  ! rejected {path.name}: {'; '.join(bad)}")
+                    print("      (keep it anyway with --no-filter)")
+                    continue
+
         # duplicate check happens inside ingest_image, before anything is
         # uploaded — a duplicate's content-addressed key would otherwise
         # collide with the original's, so rejecting after upload would
         # delete the live file instead of a copy of it
         item = ingest_image(
-            path.read_bytes(),
+            raw,
             source="local",
             added=today,
             title=title,
@@ -123,6 +151,7 @@ def main() -> int:
             tags=args.tag,
             character=args.character,
             existing=existing + [a.to_dict() for a in added],
+            enforce_policy=not args.no_filter,
         )
         if item is None:
             print(f"  ! skipped (too small, unreadable, or a duplicate already in the archive): {path.name}")
