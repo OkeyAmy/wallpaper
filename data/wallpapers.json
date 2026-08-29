@@ -1,7 +1,53 @@
 {
- "generated": "2026-08-27T17:33:27+00:00",
+ "generated": "2026-08-29T12:32:55+00:00",
  "cdn": "https://cdn.okeyamy.xyz",
  "items": [
+  {
+   "id": "58ea87c3e092",
+   "file": "wallpapers/58ea87c3e092.webp",
+   "thumb": "wallpapers/thumbs/58ea87c3e092.webp",
+   "w": 2304,
+   "h": 3840,
+   "ratio": "3:5",
+   "bytes": 2428554,
+   "palette": [
+    "#687a96",
+    "#2a5597",
+    "#8f4331",
+    "#674237",
+    "#d4d4b7"
+   ],
+   "source": "danbooru",
+   "added": "2026-08-29",
+   "title": "gold ship gold ship team spica's trainer trainer",
+   "sub": "danbooru",
+   "author": "blixadon",
+   "permalink": "https://danbooru.donmai.us/posts/9742775",
+   "sha256": "58ea87c3e092d1e6a09f114bffb19e45a087b912850d1c43245813d4ddbef408",
+   "dhash": "f0986892845811be",
+   "tags": [
+    "1boy",
+    "1girl",
+    "animal_ears",
+    "blue_sky",
+    "boots",
+    "breasts",
+    "brown_hair",
+    "closed_eyes",
+    "cloud",
+    "cowboy",
+    "cowboy_boots",
+    "cowboy_hat",
+    "grey_hair",
+    "hat",
+    "horse_ears"
+   ],
+   "character": [
+    "gold ship",
+    "team spica's trainer",
+    "trainer"
+   ]
+  },
   {
    "id": "ff91c6578508",
    "file": "wallpapers/ff91c6578508.webp",
