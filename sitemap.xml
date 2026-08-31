@@ -3,9 +3,11 @@
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://wallpapers.okeyamy.xyz/</loc>
-    <lastmod>2026-08-29</lastmod>
+    <lastmod>2026-08-31</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
+    <image:image><image:loc>https://cdn.okeyamy.xyz/wallpapers/da57a00ec9c4.webp</image:loc><image:title>Adepta Sororitas, Adeptus Astartes and Adeptus Mechanicus — 1187×1646 phone anime wallpaper</image:title></image:image>
+    <image:image><image:loc>https://cdn.okeyamy.xyz/wallpapers/87f75419a34a.webp</image:loc><image:title>Mika — 3444×2556 desktop anime wallpaper</image:title></image:image>
     <image:image><image:loc>https://cdn.okeyamy.xyz/wallpapers/58ea87c3e092.webp</image:loc><image:title>Gold Ship, Team Spica&#x27;s Trainer and Trainer — 2304×3840 phone anime wallpaper</image:title></image:image>
     <image:image><image:loc>https://cdn.okeyamy.xyz/wallpapers/ff91c6578508.webp</image:loc><image:title>Furina, Neuvillette and Sedene — 1600×2326 phone anime wallpaper</image:title></image:image>
     <image:image><image:loc>https://cdn.okeyamy.xyz/wallpapers/f589a90e2f99.webp</image:loc><image:title>Flandre Scarlet, Hong Meiling and Izayoi Sakuya — 1280×822 desktop anime wallpaper</image:title></image:image>
@@ -593,13 +595,13 @@
   </url>
   <url>
     <loc>https://wallpapers.okeyamy.xyz/w/</loc>
-    <lastmod>2026-08-29</lastmod>
+    <lastmod>2026-08-31</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://wallpapers.okeyamy.xyz/w/naruto</loc>
-    <lastmod>2026-08-29</lastmod>
+    <lastmod>2026-08-31</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <image:image><image:loc>https://cdn.okeyamy.xyz/wallpapers/eaddca76c077.webp</image:loc><image:title>Naruto — 3840×2160 desktop anime wallpaper</image:title></image:image>
@@ -625,7 +627,7 @@
   </url>
   <url>
     <loc>https://wallpapers.okeyamy.xyz/w/ganyu</loc>
-    <lastmod>2026-08-29</lastmod>
+    <lastmod>2026-08-31</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <image:image><image:loc>https://cdn.okeyamy.xyz/wallpapers/3917d1c1baf6.webp</image:loc><image:title>Cloud Retainer, Ganyu and Shenhe — 3840×3497 desktop anime wallpaper</image:title></image:image>
@@ -648,7 +650,7 @@
   </url>
   <url>
     <loc>https://wallpapers.okeyamy.xyz/w/yae-miko</loc>
-    <lastmod>2026-08-29</lastmod>
+    <lastmod>2026-08-31</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <image:image><image:loc>https://cdn.okeyamy.xyz/wallpapers/2cc5d00626e4.webp</image:loc><image:title>Raiden Shogun and Yae Miko — 3840×3840 desktop anime wallpaper</image:title></image:image>
@@ -671,7 +673,7 @@
   </url>
   <url>
     <loc>https://wallpapers.okeyamy.xyz/w/frieren</loc>
-    <lastmod>2026-08-29</lastmod>
+    <lastmod>2026-08-31</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <image:image><image:loc>https://cdn.okeyamy.xyz/wallpapers/aacba916a32b.webp</image:loc><image:title>Flamme, Frieren and Himmel — 2394×3734 phone anime wallpaper</image:title></image:image>
@@ -691,7 +693,7 @@
   </url>
   <url>
     <loc>https://wallpapers.okeyamy.xyz/w/hu-tao</loc>
-    <lastmod>2026-08-29</lastmod>
+    <lastmod>2026-08-31</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <image:image><image:loc>https://cdn.okeyamy.xyz/wallpapers/3c8bb073a2aa.webp</image:loc><image:title>Ganyu, Hu Tao and Keqing — 3840×2763 desktop anime wallpaper</image:title></image:image>
@@ -711,7 +713,7 @@
   </url>
   <url>
     <loc>https://wallpapers.okeyamy.xyz/w/raiden-shogun</loc>
-    <lastmod>2026-08-29</lastmod>
+    <lastmod>2026-08-31</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <image:image><image:loc>https://cdn.okeyamy.xyz/wallpapers/2cc5d00626e4.webp</image:loc><image:title>Raiden Shogun and Yae Miko — 3840×3840 desktop anime wallpaper</image:title></image:image>
@@ -730,7 +732,7 @@
   </url>
   <url>
     <loc>https://wallpapers.okeyamy.xyz/w/kamisato-ayaka</loc>
-    <lastmod>2026-08-29</lastmod>
+    <lastmod>2026-08-31</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <image:image><image:loc>https://cdn.okeyamy.xyz/wallpapers/955193bef220.webp</image:loc><image:title>Aether, Baron Bunny and Eula — 2740×3840 phone anime wallpaper</image:title></image:image>
@@ -748,7 +750,7 @@
   </url>
   <url>
     <loc>https://wallpapers.okeyamy.xyz/w/lumine</loc>
-    <lastmod>2026-08-29</lastmod>
+    <lastmod>2026-08-31</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <image:image><image:loc>https://cdn.okeyamy.xyz/wallpapers/c1ed7cd6bcf4.webp</image:loc><image:title>Lumine and Noelle — 3840×3840 desktop anime wallpaper</image:title></image:image>
@@ -763,7 +765,7 @@
   </url>
   <url>
     <loc>https://wallpapers.okeyamy.xyz/w/rio</loc>
-    <lastmod>2026-08-29</lastmod>
+    <lastmod>2026-08-31</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <image:image><image:loc>https://cdn.okeyamy.xyz/wallpapers/dd87114423dd.webp</image:loc><image:title>Rio — 2448×3840 phone anime wallpaper</image:title></image:image>
@@ -777,7 +779,7 @@
   </url>
   <url>
     <loc>https://wallpapers.okeyamy.xyz/w/shenhe</loc>
-    <lastmod>2026-08-29</lastmod>
+    <lastmod>2026-08-31</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <image:image><image:loc>https://cdn.okeyamy.xyz/wallpapers/3917d1c1baf6.webp</image:loc><image:title>Cloud Retainer, Ganyu and Shenhe — 3840×3497 desktop anime wallpaper</image:title></image:image>
@@ -791,7 +793,7 @@
   </url>
   <url>
     <loc>https://wallpapers.okeyamy.xyz/w/aether</loc>
-    <lastmod>2026-08-29</lastmod>
+    <lastmod>2026-08-31</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <image:image><image:loc>https://cdn.okeyamy.xyz/wallpapers/955193bef220.webp</image:loc><image:title>Aether, Baron Bunny and Eula — 2740×3840 phone anime wallpaper</image:title></image:image>
@@ -804,7 +806,7 @@
   </url>
   <url>
     <loc>https://wallpapers.okeyamy.xyz/w/fern</loc>
-    <lastmod>2026-08-29</lastmod>
+    <lastmod>2026-08-31</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <image:image><image:loc>https://cdn.okeyamy.xyz/wallpapers/88ac03642530.webp</image:loc><image:title>Fern — 2880×3840 phone anime wallpaper</image:title></image:image>
@@ -817,7 +819,7 @@
   </url>
   <url>
     <loc>https://wallpapers.okeyamy.xyz/w/flandre-scarlet</loc>
-    <lastmod>2026-08-29</lastmod>
+    <lastmod>2026-08-31</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <image:image><image:loc>https://cdn.okeyamy.xyz/wallpapers/4e69e7e9724e.webp</image:loc><image:title>Flandre Scarlet, Hong Meiling and Remilia Scarlet — 3840×2160 desktop anime wallpaper</image:title></image:image>
@@ -830,7 +832,7 @@
   </url>
   <url>
     <loc>https://wallpapers.okeyamy.xyz/w/hakurei-reimu</loc>
-    <lastmod>2026-08-29</lastmod>
+    <lastmod>2026-08-31</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <image:image><image:loc>https://cdn.okeyamy.xyz/wallpapers/0e9e266caa8b.webp</image:loc><image:title>Alice Margatroid, Cirno and Clownpiece — 3840×2731 desktop anime wallpaper</image:title></image:image>
@@ -843,7 +845,7 @@
   </url>
   <url>
     <loc>https://wallpapers.okeyamy.xyz/w/nahida</loc>
-    <lastmod>2026-08-29</lastmod>
+    <lastmod>2026-08-31</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <image:image><image:loc>https://cdn.okeyamy.xyz/wallpapers/0323496fbed3.webp</image:loc><image:title>Nahida — 2501×3840 phone anime wallpaper</image:title></image:image>
@@ -856,7 +858,7 @@
   </url>
   <url>
     <loc>https://wallpapers.okeyamy.xyz/w/firefly</loc>
-    <lastmod>2026-08-29</lastmod>
+    <lastmod>2026-08-31</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <image:image><image:loc>https://cdn.okeyamy.xyz/wallpapers/13bbc666c3d3.webp</image:loc><image:title>Firefly — 3840×2160 desktop anime wallpaper</image:title></image:image>
@@ -868,7 +870,7 @@
   </url>
   <url>
     <loc>https://wallpapers.okeyamy.xyz/w/furina</loc>
-    <lastmod>2026-08-29</lastmod>
+    <lastmod>2026-08-31</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <image:image><image:loc>https://cdn.okeyamy.xyz/wallpapers/da38f391279a.webp</image:loc><image:title>Furina — 2160×3840 phone anime wallpaper</image:title></image:image>
@@ -880,7 +882,7 @@
   </url>
   <url>
     <loc>https://wallpapers.okeyamy.xyz/w/gotoh-hitori</loc>
-    <lastmod>2026-08-29</lastmod>
+    <lastmod>2026-08-31</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <image:image><image:loc>https://cdn.okeyamy.xyz/wallpapers/50333ece8a73.webp</image:loc><image:title>Gotoh Hitori — 2730×3840 phone anime wallpaper</image:title></image:image>
@@ -892,7 +894,7 @@
   </url>
   <url>
     <loc>https://wallpapers.okeyamy.xyz/w/hatsune-miku</loc>
-    <lastmod>2026-08-29</lastmod>
+    <lastmod>2026-08-31</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <image:image><image:loc>https://cdn.okeyamy.xyz/wallpapers/de29294026fb.webp</image:loc><image:title>Hatsune Miku and Kasane Teto — 2500×2500 desktop anime wallpaper</image:title></image:image>
@@ -904,7 +906,7 @@
   </url>
   <url>
     <loc>https://wallpapers.okeyamy.xyz/w/izayoi-sakuya</loc>
-    <lastmod>2026-08-29</lastmod>
+    <lastmod>2026-08-31</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <image:image><image:loc>https://cdn.okeyamy.xyz/wallpapers/e09f32e31030.webp</image:loc><image:title>Izayoi Sakuya — 3296×2312 desktop anime wallpaper</image:title></image:image>
@@ -916,7 +918,7 @@
   </url>
   <url>
     <loc>https://wallpapers.okeyamy.xyz/w/kirisame-marisa</loc>
-    <lastmod>2026-08-29</lastmod>
+    <lastmod>2026-08-31</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <image:image><image:loc>https://cdn.okeyamy.xyz/wallpapers/db3c0351740e.webp</image:loc><image:title>Kirisame Marisa — 2780×3585 phone anime wallpaper</image:title></image:image>
@@ -928,7 +930,7 @@
   </url>
   <url>
     <loc>https://wallpapers.okeyamy.xyz/w/remilia-scarlet</loc>
-    <lastmod>2026-08-29</lastmod>
+    <lastmod>2026-08-31</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <image:image><image:loc>https://cdn.okeyamy.xyz/wallpapers/3fc325d95d98.webp</image:loc><image:title>Patchouli Knowledge and Remilia Scarlet — 2716×3840 phone anime wallpaper</image:title></image:image>
@@ -940,7 +942,7 @@
   </url>
   <url>
     <loc>https://wallpapers.okeyamy.xyz/w/cirno</loc>
-    <lastmod>2026-08-29</lastmod>
+    <lastmod>2026-08-31</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <image:image><image:loc>https://cdn.okeyamy.xyz/wallpapers/0e9e266caa8b.webp</image:loc><image:title>Alice Margatroid, Cirno and Clownpiece — 3840×2731 desktop anime wallpaper</image:title></image:image>
@@ -951,7 +953,7 @@
   </url>
   <url>
     <loc>https://wallpapers.okeyamy.xyz/w/keqing</loc>
-    <lastmod>2026-08-29</lastmod>
+    <lastmod>2026-08-31</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <image:image><image:loc>https://cdn.okeyamy.xyz/wallpapers/3c8bb073a2aa.webp</image:loc><image:title>Ganyu, Hu Tao and Keqing — 3840×2763 desktop anime wallpaper</image:title></image:image>
@@ -962,7 +964,7 @@
   </url>
   <url>
     <loc>https://wallpapers.okeyamy.xyz/w/shameimaru-aya</loc>
-    <lastmod>2026-08-29</lastmod>
+    <lastmod>2026-08-31</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <image:image><image:loc>https://cdn.okeyamy.xyz/wallpapers/edbc82a001be.webp</image:loc><image:title>Shameimaru Aya — 3840×2160 desktop anime wallpaper</image:title></image:image>
@@ -973,7 +975,7 @@
   </url>
   <url>
     <loc>https://wallpapers.okeyamy.xyz/w/stelle</loc>
-    <lastmod>2026-08-29</lastmod>
+    <lastmod>2026-08-31</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <image:image><image:loc>https://cdn.okeyamy.xyz/wallpapers/e96af0e28edf.webp</image:loc><image:title>Kafka, Stelle and Trailblazer — 2480×3674 phone anime wallpaper</image:title></image:image>
@@ -984,7 +986,7 @@
   </url>
   <url>
     <loc>https://wallpapers.okeyamy.xyz/w/yelan</loc>
-    <lastmod>2026-08-29</lastmod>
+    <lastmod>2026-08-31</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <image:image><image:loc>https://cdn.okeyamy.xyz/wallpapers/54a65a8dc032.webp</image:loc><image:title>Ningguang and Yelan — 2880×1440 desktop anime wallpaper</image:title></image:image>
@@ -995,7 +997,7 @@
   </url>
   <url>
     <loc>https://wallpapers.okeyamy.xyz/w/yoimiya</loc>
-    <lastmod>2026-08-29</lastmod>
+    <lastmod>2026-08-31</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <image:image><image:loc>https://cdn.okeyamy.xyz/wallpapers/45cd16b4b058.webp</image:loc><image:title>Yoimiya — 3840×2160 desktop anime wallpaper</image:title></image:image>
@@ -1006,7 +1008,7 @@
   </url>
   <url>
     <loc>https://wallpapers.okeyamy.xyz/w/alice-margatroid</loc>
-    <lastmod>2026-08-29</lastmod>
+    <lastmod>2026-08-31</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <image:image><image:loc>https://cdn.okeyamy.xyz/wallpapers/0e9e266caa8b.webp</image:loc><image:title>Alice Margatroid, Cirno and Clownpiece — 3840×2731 desktop anime wallpaper</image:title></image:image>
@@ -1016,7 +1018,7 @@
   </url>
   <url>
     <loc>https://wallpapers.okeyamy.xyz/w/alisa-mikhailovna-kujou</loc>
-    <lastmod>2026-08-29</lastmod>
+    <lastmod>2026-08-31</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <image:image><image:loc>https://cdn.okeyamy.xyz/wallpapers/dc137d39dc14.webp</image:loc><image:title>Alisa Mikhailovna Kujou — 2733×3840 phone anime wallpaper</image:title></image:image>
@@ -1026,7 +1028,7 @@
   </url>
   <url>
     <loc>https://wallpapers.okeyamy.xyz/w/amber</loc>
-    <lastmod>2026-08-29</lastmod>
+    <lastmod>2026-08-31</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <image:image><image:loc>https://cdn.okeyamy.xyz/wallpapers/777c5b1f42eb.webp</image:loc><image:title>Amber — 3606×2016 desktop anime wallpaper</image:title></image:image>
@@ -1036,7 +1038,7 @@
   </url>
   <url>
     <loc>https://wallpapers.okeyamy.xyz/w/artoria-pendragon</loc>
-    <lastmod>2026-08-29</lastmod>
+    <lastmod>2026-08-31</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <image:image><image:loc>https://cdn.okeyamy.xyz/wallpapers/678bc47e958d.webp</image:loc><image:title>Anna, Artoria Pendragon and Ash Ketchum — 2706×2667 desktop anime wallpaper</image:title></image:image>
@@ -1046,7 +1048,7 @@
   </url>
   <url>
     <loc>https://wallpapers.okeyamy.xyz/w/asuna</loc>
-    <lastmod>2026-08-29</lastmod>
+    <lastmod>2026-08-31</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <image:image><image:loc>https://cdn.okeyamy.xyz/wallpapers/4a2da30a6bf7.webp</image:loc><image:title>Asuna, Karin and Neru — 3840×2160 desktop anime wallpaper</image:title></image:image>
@@ -1056,7 +1058,7 @@
   </url>
   <url>
     <loc>https://wallpapers.okeyamy.xyz/w/atsuko</loc>
-    <lastmod>2026-08-29</lastmod>
+    <lastmod>2026-08-31</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <image:image><image:loc>https://cdn.okeyamy.xyz/wallpapers/6fb70f9d62b5.webp</image:loc><image:title>Atsuko — 2480×3508 phone anime wallpaper</image:title></image:image>
@@ -1066,7 +1068,7 @@
   </url>
   <url>
     <loc>https://wallpapers.okeyamy.xyz/w/chito</loc>
-    <lastmod>2026-08-29</lastmod>
+    <lastmod>2026-08-31</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <image:image><image:loc>https://cdn.okeyamy.xyz/wallpapers/a09e748cb870.webp</image:loc><image:title>Chito and Kowata Makoto — 3543×2352 desktop anime wallpaper</image:title></image:image>
@@ -1076,7 +1078,7 @@
   </url>
   <url>
     <loc>https://wallpapers.okeyamy.xyz/w/elaina</loc>
-    <lastmod>2026-08-29</lastmod>
+    <lastmod>2026-08-31</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <image:image><image:loc>https://cdn.okeyamy.xyz/wallpapers/1d352db085e9.webp</image:loc><image:title>Elaina — 2000×2461 phone anime wallpaper</image:title></image:image>
@@ -1086,7 +1088,7 @@
   </url>
   <url>
     <loc>https://wallpapers.okeyamy.xyz/w/eris-greyrat</loc>
-    <lastmod>2026-08-29</lastmod>
+    <lastmod>2026-08-31</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <image:image><image:loc>https://cdn.okeyamy.xyz/wallpapers/4a52a06d7b79.webp</image:loc><image:title>Eris Greyrat — 2458×3840 phone anime wallpaper</image:title></image:image>
@@ -1096,7 +1098,7 @@
   </url>
   <url>
     <loc>https://wallpapers.okeyamy.xyz/w/fujiwara-no-mokou</loc>
-    <lastmod>2026-08-29</lastmod>
+    <lastmod>2026-08-31</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <image:image><image:loc>https://cdn.okeyamy.xyz/wallpapers/92604145b569.webp</image:loc><image:title>Fujiwara No Mokou, Houraisan Kaguya and Inaba Mob — 3840×2486 desktop anime wallpaper</image:title></image:image>
@@ -1106,7 +1108,7 @@
   </url>
   <url>
     <loc>https://wallpapers.okeyamy.xyz/w/gawr-gura</loc>
-    <lastmod>2026-08-29</lastmod>
+    <lastmod>2026-08-31</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <image:image><image:loc>https://cdn.okeyamy.xyz/wallpapers/674973f10dd9.webp</image:loc><image:title>Gawr Gura, Smol Gura and Watson Amelia — 2688×2688 desktop anime wallpaper</image:title></image:image>
@@ -1116,7 +1118,7 @@
   </url>
   <url>
     <loc>https://wallpapers.okeyamy.xyz/w/hakos-baelz</loc>
-    <lastmod>2026-08-29</lastmod>
+    <lastmod>2026-08-31</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <image:image><image:loc>https://cdn.okeyamy.xyz/wallpapers/ec7e891ae0c9.webp</image:loc><image:title>Hakos Baelz — 2480×3508 phone anime wallpaper</image:title></image:image>
@@ -1126,7 +1128,7 @@
   </url>
   <url>
     <loc>https://wallpapers.okeyamy.xyz/w/helldiver</loc>
-    <lastmod>2026-08-29</lastmod>
+    <lastmod>2026-08-31</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <image:image><image:loc>https://cdn.okeyamy.xyz/wallpapers/7146d7b03ea2.webp</image:loc><image:title>Helldiver — 3476×3840 phone anime wallpaper</image:title></image:image>
@@ -1136,7 +1138,7 @@
   </url>
   <url>
     <loc>https://wallpapers.okeyamy.xyz/w/hong-meiling</loc>
-    <lastmod>2026-08-29</lastmod>
+    <lastmod>2026-08-31</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <image:image><image:loc>https://cdn.okeyamy.xyz/wallpapers/4e69e7e9724e.webp</image:loc><image:title>Flandre Scarlet, Hong Meiling and Remilia Scarlet — 3840×2160 desktop anime wallpaper</image:title></image:image>
@@ -1146,7 +1148,7 @@
   </url>
   <url>
     <loc>https://wallpapers.okeyamy.xyz/w/houraisan-kaguya</loc>
-    <lastmod>2026-08-29</lastmod>
+    <lastmod>2026-08-31</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <image:image><image:loc>https://cdn.okeyamy.xyz/wallpapers/92604145b569.webp</image:loc><image:title>Fujiwara No Mokou, Houraisan Kaguya and Inaba Mob — 3840×2486 desktop anime wallpaper</image:title></image:image>
@@ -1156,7 +1158,7 @@
   </url>
   <url>
     <loc>https://wallpapers.okeyamy.xyz/w/kafka</loc>
-    <lastmod>2026-08-29</lastmod>
+    <lastmod>2026-08-31</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <image:image><image:loc>https://cdn.okeyamy.xyz/wallpapers/6451646d814c.webp</image:loc><image:title>Kafka and Silver Wolf — 2831×3840 phone anime wallpaper</image:title></image:image>
@@ -1166,7 +1168,7 @@
   </url>
   <url>
     <loc>https://wallpapers.okeyamy.xyz/w/kagiyama-hina</loc>
-    <lastmod>2026-08-29</lastmod>
+    <lastmod>2026-08-31</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <image:image><image:loc>https://cdn.okeyamy.xyz/wallpapers/2f0b5cb9397f.webp</image:loc><image:title>Kagiyama Hina — 3840×2565 desktop anime wallpaper</image:title></image:image>
@@ -1176,7 +1178,7 @@
   </url>
   <url>
     <loc>https://wallpapers.okeyamy.xyz/w/mari</loc>
-    <lastmod>2026-08-29</lastmod>
+    <lastmod>2026-08-31</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <image:image><image:loc>https://cdn.okeyamy.xyz/wallpapers/5da28c36bbf9.webp</image:loc><image:title>Mari — 2648×3840 phone anime wallpaper</image:title></image:image>
@@ -1186,7 +1188,7 @@
   </url>
   <url>
     <loc>https://wallpapers.okeyamy.xyz/w/melina</loc>
-    <lastmod>2026-08-29</lastmod>
+    <lastmod>2026-08-31</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <image:image><image:loc>https://cdn.okeyamy.xyz/wallpapers/35f71250217f.webp</image:loc><image:title>Melina — 2392×3840 phone anime wallpaper</image:title></image:image>
@@ -1196,7 +1198,7 @@
   </url>
   <url>
     <loc>https://wallpapers.okeyamy.xyz/w/paimon</loc>
-    <lastmod>2026-08-29</lastmod>
+    <lastmod>2026-08-31</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <image:image><image:loc>https://cdn.okeyamy.xyz/wallpapers/3324f741b971.webp</image:loc><image:title>Aether, Blubberbeast and Furina — 1500×3375 phone anime wallpaper</image:title></image:image>
@@ -1206,7 +1208,7 @@
   </url>
   <url>
     <loc>https://wallpapers.okeyamy.xyz/w/trailblazer</loc>
-    <lastmod>2026-08-29</lastmod>
+    <lastmod>2026-08-31</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <image:image><image:loc>https://cdn.okeyamy.xyz/wallpapers/e96af0e28edf.webp</image:loc><image:title>Kafka, Stelle and Trailblazer — 2480×3674 phone anime wallpaper</image:title></image:image>
@@ -1216,7 +1218,7 @@
   </url>
   <url>
     <loc>https://wallpapers.okeyamy.xyz/w/xianyun</loc>
-    <lastmod>2026-08-29</lastmod>
+    <lastmod>2026-08-31</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <image:image><image:loc>https://cdn.okeyamy.xyz/wallpapers/3917d1c1baf6.webp</image:loc><image:title>Cloud Retainer, Ganyu and Shenhe — 3840×3497 desktop anime wallpaper</image:title></image:image>
@@ -1226,7 +1228,7 @@
   </url>
   <url>
     <loc>https://wallpapers.okeyamy.xyz/w/blue-anime-wallpapers</loc>
-    <lastmod>2026-08-29</lastmod>
+    <lastmod>2026-08-31</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <image:image><image:loc>https://cdn.okeyamy.xyz/wallpapers/3917d1c1baf6.webp</image:loc><image:title>Cloud Retainer, Ganyu and Shenhe — 3840×3497 desktop anime wallpaper</image:title></image:image>
@@ -1251,6 +1253,7 @@
     <image:image><image:loc>https://cdn.okeyamy.xyz/wallpapers/aacba916a32b.webp</image:loc><image:title>Flamme, Frieren and Himmel — 2394×3734 phone anime wallpaper</image:title></image:image>
     <image:image><image:loc>https://cdn.okeyamy.xyz/wallpapers/58ea87c3e092.webp</image:loc><image:title>Gold Ship, Team Spica&#x27;s Trainer and Trainer — 2304×3840 phone anime wallpaper</image:title></image:image>
     <image:image><image:loc>https://cdn.okeyamy.xyz/wallpapers/e8cef32881ed.webp</image:loc><image:title>2b, 9s and Emil — 2500×3535 phone anime wallpaper</image:title></image:image>
+    <image:image><image:loc>https://cdn.okeyamy.xyz/wallpapers/87f75419a34a.webp</image:loc><image:title>Mika — 3444×2556 desktop anime wallpaper</image:title></image:image>
     <image:image><image:loc>https://cdn.okeyamy.xyz/wallpapers/a0bd309cf39d.webp</image:loc><image:title>Fern, Frieren and Stark — 3840×2292 desktop anime wallpaper</image:title></image:image>
     <image:image><image:loc>https://cdn.okeyamy.xyz/wallpapers/6fb70f9d62b5.webp</image:loc><image:title>Atsuko — 2480×3508 phone anime wallpaper</image:title></image:image>
     <image:image><image:loc>https://cdn.okeyamy.xyz/wallpapers/a06e75171daa.webp</image:loc><image:title>Eisen, Fern and Frieren — 2480×3508 phone anime wallpaper</image:title></image:image>
@@ -1401,7 +1404,7 @@
   </url>
   <url>
     <loc>https://wallpapers.okeyamy.xyz/w/monochrome-anime-wallpapers</loc>
-    <lastmod>2026-08-29</lastmod>
+    <lastmod>2026-08-31</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <image:image><image:loc>https://cdn.okeyamy.xyz/wallpapers/2f46d19368c0.webp</image:loc><image:title>IMG 20260810 WA0016 — 3840×3840 desktop anime wallpaper</image:title></image:image>
@@ -1491,7 +1494,7 @@
   </url>
   <url>
     <loc>https://wallpapers.okeyamy.xyz/w/red-anime-wallpapers</loc>
-    <lastmod>2026-08-29</lastmod>
+    <lastmod>2026-08-31</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <image:image><image:loc>https://cdn.okeyamy.xyz/wallpapers/2cc5d00626e4.webp</image:loc><image:title>Raiden Shogun and Yae Miko — 3840×3840 desktop anime wallpaper</image:title></image:image>
@@ -1575,7 +1578,7 @@
   </url>
   <url>
     <loc>https://wallpapers.okeyamy.xyz/w/orange-anime-wallpapers</loc>
-    <lastmod>2026-08-29</lastmod>
+    <lastmod>2026-08-31</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <image:image><image:loc>https://cdn.okeyamy.xyz/wallpapers/fe231fd1e75c.webp</image:loc><image:title>Roon — 2880×3840 phone anime wallpaper</image:title></image:image>
@@ -1637,6 +1640,7 @@
     <image:image><image:loc>https://cdn.okeyamy.xyz/wallpapers/f8cbffdc424b.webp</image:loc><image:title>Sui — 986×2079 phone anime wallpaper</image:title></image:image>
     <image:image><image:loc>https://cdn.okeyamy.xyz/wallpapers/7da0e5d1a4bc.webp</image:loc><image:title>original — 1200×1697 phone anime wallpaper</image:title></image:image>
     <image:image><image:loc>https://cdn.okeyamy.xyz/wallpapers/b0db42682e52.webp</image:loc><image:title>Frieren — 1163×1744 phone anime wallpaper</image:title></image:image>
+    <image:image><image:loc>https://cdn.okeyamy.xyz/wallpapers/da57a00ec9c4.webp</image:loc><image:title>Adepta Sororitas, Adeptus Astartes and Adeptus Mechanicus — 1187×1646 phone anime wallpaper</image:title></image:image>
     <image:image><image:loc>https://cdn.okeyamy.xyz/wallpapers/4d5273f89eae.webp</image:loc><image:title>Yamato and Yamato Kai Ni — 1040×1760 phone anime wallpaper</image:title></image:image>
     <image:image><image:loc>https://cdn.okeyamy.xyz/wallpapers/601fca2885fc.webp</image:loc><image:title>Cirno, Flandre Scarlet and Houraisan Kaguya — 1000×1827 phone anime wallpaper</image:title></image:image>
     <image:image><image:loc>https://cdn.okeyamy.xyz/wallpapers/5ebecf44d147.webp</image:loc><image:title>original — 978×1700 phone anime wallpaper</image:title></image:image>
@@ -1651,7 +1655,7 @@
   </url>
   <url>
     <loc>https://wallpapers.okeyamy.xyz/w/dark-anime-wallpapers</loc>
-    <lastmod>2026-08-29</lastmod>
+    <lastmod>2026-08-31</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <image:image><image:loc>https://cdn.okeyamy.xyz/wallpapers/7146d7b03ea2.webp</image:loc><image:title>Helldiver — 3476×3840 phone anime wallpaper</image:title></image:image>
@@ -1724,7 +1728,7 @@
   </url>
   <url>
     <loc>https://wallpapers.okeyamy.xyz/w/green-anime-wallpapers</loc>
-    <lastmod>2026-08-29</lastmod>
+    <lastmod>2026-08-31</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <image:image><image:loc>https://cdn.okeyamy.xyz/wallpapers/e65430c09536.webp</image:loc><image:title>IMG 20260810 WA0006 — 3072×3840 phone anime wallpaper</image:title></image:image>
@@ -1757,7 +1761,7 @@
   </url>
   <url>
     <loc>https://wallpapers.okeyamy.xyz/w/cyan-anime-wallpapers</loc>
-    <lastmod>2026-08-29</lastmod>
+    <lastmod>2026-08-31</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <image:image><image:loc>https://cdn.okeyamy.xyz/wallpapers/2d88d7ffa252.webp</image:loc><image:title>Binah, Magnemite and Reiuji Utsuho — 2715×3840 phone anime wallpaper</image:title></image:image>
@@ -1789,7 +1793,7 @@
   </url>
   <url>
     <loc>https://wallpapers.okeyamy.xyz/w/light-anime-wallpapers</loc>
-    <lastmod>2026-08-29</lastmod>
+    <lastmod>2026-08-31</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <image:image><image:loc>https://cdn.okeyamy.xyz/wallpapers/955193bef220.webp</image:loc><image:title>Aether, Baron Bunny and Eula — 2740×3840 phone anime wallpaper</image:title></image:image>
@@ -1815,7 +1819,7 @@
   </url>
   <url>
     <loc>https://wallpapers.okeyamy.xyz/w/purple-anime-wallpapers</loc>
-    <lastmod>2026-08-29</lastmod>
+    <lastmod>2026-08-31</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <image:image><image:loc>https://cdn.okeyamy.xyz/wallpapers/c1ae60af8805.webp</image:loc><image:title>Momosuzu Nene and Tokoyami Towa — 2897×3840 phone anime wallpaper</image:title></image:image>
@@ -1839,7 +1843,7 @@
   </url>
   <url>
     <loc>https://wallpapers.okeyamy.xyz/w/pink-anime-wallpapers</loc>
-    <lastmod>2026-08-29</lastmod>
+    <lastmod>2026-08-31</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <image:image><image:loc>https://cdn.okeyamy.xyz/wallpapers/fe059a2f9b14.webp</image:loc><image:title>Haru Urara, King Halo and Rice Shower — 2590×3840 phone anime wallpaper</image:title></image:image>
@@ -1860,7 +1864,7 @@
   </url>
   <url>
     <loc>https://wallpapers.okeyamy.xyz/w/yellow-anime-wallpapers</loc>
-    <lastmod>2026-08-29</lastmod>
+    <lastmod>2026-08-31</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <image:image><image:loc>https://cdn.okeyamy.xyz/wallpapers/88ac03642530.webp</image:loc><image:title>Fern — 2880×3840 phone anime wallpaper</image:title></image:image>
@@ -1876,7 +1880,7 @@
   </url>
   <url>
     <loc>https://wallpapers.okeyamy.xyz/w/phone-anime-wallpapers</loc>
-    <lastmod>2026-08-29</lastmod>
+    <lastmod>2026-08-31</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <image:image><image:loc>https://cdn.okeyamy.xyz/wallpapers/c75b11ab0fad.webp</image:loc><image:title>original — 2560×3840 phone anime wallpaper</image:title></image:image>
@@ -2006,7 +2010,7 @@
   </url>
   <url>
     <loc>https://wallpapers.okeyamy.xyz/w/4k-anime-wallpapers</loc>
-    <lastmod>2026-08-29</lastmod>
+    <lastmod>2026-08-31</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <image:image><image:loc>https://cdn.okeyamy.xyz/wallpapers/2cc5d00626e4.webp</image:loc><image:title>Raiden Shogun and Yae Miko — 3840×3840 desktop anime wallpaper</image:title></image:image>
@@ -2126,7 +2130,7 @@
   </url>
   <url>
     <loc>https://wallpapers.okeyamy.xyz/w/ultrawide-anime-wallpapers</loc>
-    <lastmod>2026-08-29</lastmod>
+    <lastmod>2026-08-31</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <image:image><image:loc>https://cdn.okeyamy.xyz/wallpapers/7700a5cad24a.webp</image:loc><image:title>Changli, Jinhsi and Sanhua — 3840×1718 ultrawide anime wallpaper</image:title></image:image>
