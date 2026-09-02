@@ -1,7 +1,49 @@
 {
- "generated": "2026-08-31T13:14:33+00:00",
+ "generated": "2026-09-02T10:58:48+00:00",
  "cdn": "https://cdn.okeyamy.xyz",
  "items": [
+  {
+   "id": "fd2ef87531c7",
+   "file": "wallpapers/fd2ef87531c7.webp",
+   "thumb": "wallpapers/thumbs/fd2ef87531c7.webp",
+   "w": 2279,
+   "h": 3840,
+   "ratio": "0.59:1",
+   "bytes": 432240,
+   "palette": [
+    "#c0a277",
+    "#6f2416",
+    "#a7623a",
+    "#3d2417",
+    "#c7bc9b"
+   ],
+   "source": "danbooru",
+   "added": "2026-09-02",
+   "title": "original",
+   "sub": "danbooru",
+   "author": "sawkm",
+   "permalink": "https://danbooru.donmai.us/posts/5571764",
+   "sha256": "fd2ef87531c74fb48d1cf356e68f2395c231d5fb24b03a047a34a1642d9fc3ea",
+   "dhash": "6d9b9991399bfae0",
+   "tags": [
+    "1girl",
+    "arm_up",
+    "baseball_cap",
+    "brown_eyes",
+    "brown_hair",
+    "car",
+    "eneos",
+    "food",
+    "from_side",
+    "gas_pump",
+    "gas_pump_nozzle",
+    "gas_station",
+    "hat",
+    "holding",
+    "holding_food"
+   ],
+   "character": []
+  },
   {
    "id": "da57a00ec9c4",
    "file": "wallpapers/da57a00ec9c4.webp",
