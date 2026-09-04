@@ -3,7 +3,7 @@
 > A curated, automatically synced archive of 587 anime wallpapers,
 > published as a static site at https://wallpapers.okeyamy.xyz and indexed by extracted colour palette.
 
-Last synced: 2026-09-02T10:58:48+00:00
+Last synced: 2026-09-03T22:08:48+00:00
 
 ## What it is
 

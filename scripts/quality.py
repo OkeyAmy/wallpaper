@@ -57,6 +57,11 @@ TAG_BLOCKLIST = (
     # not a finished picture
     "sketch", "lineart", "monochrome", "greyscale", "screencap",
     "photo_(medium)", "letterboxed", "pillarboxed", "transparent_background",
+    # photographed merchandise. Added 2026-09-03 after post 8158469 (score 352,
+    # tagged `scenery`) turned out to be a photo of a shop shelf of figurines
+    # and passed every gate. Both tags are nouns for a physical object, so
+    # neither fires on a drawing of one.
+    "nendoroid", "merchandise",
 )
 
 # Suggestive tags. Deliberately narrow: on Danbooru a fully-clothed character
@@ -70,6 +75,144 @@ SUGGESTIVE_TAGS = (
     "wet_clothes", "see-through", "spread_legs", "ass_focus", "breast_focus",
     "swimsuit", "bikini",
 )
+
+# --- composition policy ----------------------------------------------------
+# The archive drifted to 523-of-587 items carrying a character tag, and the
+# reflex reading of that was "characters are the problem". Twelve top-scoring
+# posts per query, rendered as contact sheets and actually looked at on
+# 2026-09-03, said otherwise:
+#
+#   rating:general scenery    order:score -> 10/12 usable
+#   rating:general no_humans  order:score ->  4/12 usable
+#   rating:general sky|building|night|nature order:score -> ~1/4 usable
+#
+# The best results in the `scenery` set were *not* empty landscapes — they were
+# a lone figure small inside a large atmospheric scene. So the thing to select
+# against is not the presence of a person, it is the **portrait**: subject
+# centred, filling the frame, background absent or flat. These lists encode
+# that distinction, and nothing else here uses them as a hard reject.
+#
+# Matched as substrings, so "cloud" covers "clouds" and "tree" covers "trees".
+# The vocabulary is deliberately union-of-sources rather than Danbooru's alone:
+# Konachan says `scenic` and `nobody` where Danbooru says `scenery` and
+# `no_humans`, and Wallhaven says `trees`/`water`/`sky`. A tag that is scenic on
+# one board is scenic on all of them, and a scorer that only spoke Danbooru
+# would rank every other source near zero for no reason but dialect.
+SCENIC_TAGS = (
+    "scenery", "scenic", "landscape", "cityscape", "no_humans", "nobody",
+    "outdoors", "horizon", "skyline", "field", "forest", "mountain", "ocean",
+    "sea", "river", "lake", "ruins", "starry_sky", "night_sky", "sunset",
+    "sunrise", "snow", "rain", "cloud", "fog", "mist", "desert", "waterfall",
+    "island", "valley", "shrine", "torii", "temple", "castle", "bridge",
+    "railroad", "train", "street", "alley", "rooftop", "skyscraper", "neon",
+    "cyberpunk", "fantasy", "floating_island", "planet", "space", "nebula",
+    "aurora", "sky", "tree", "water", "grass", "flower", "star", "city",
+    "moon", "petal", "cherry_blossom", "nature",
+)
+
+# How the frame is built, independent of what is in it. These are the tags a
+# photographer would call "the shot" rather than "the subject".
+COMPOSITION_TAGS = (
+    "wide_shot", "very_wide_shot", "from_above", "from_below", "from_behind",
+    "from_side", "dutch_angle", "perspective", "foreshortening",
+    "atmospheric_perspective", "depth_of_field", "blurry_foreground",
+    "backlighting", "sunlight", "god_rays", "lens_flare", "light_particles",
+    "silhouette", "reflection", "chromatic_aberration", "vignetting",
+    "scenery_focus", "absurdly_detailed_composition", "detailed_background",
+)
+
+# Spectacle: effects, action and craft that make a picture worth a screen when
+# it is *not* a landscape. Added 2026-09-04 after measuring the series feed —
+# `naruto_(series)`, `one_piece`, `bleach` and `kimetsu_no_yaiba` all scored a
+# median of 0.00, because the original scorer only knew how to recognise
+# scenery. A Naruto wallpaper is rarely a landscape and never tagged one; it is
+# a character mid-technique with fire and motion in the frame, and that is a
+# composed picture by any reading. Without this the archive would have gone on
+# ranking every franchise piece at zero and calling it a measurement.
+SPECTACLE_TAGS = (
+    "glowing", "glow", "fire", "flame", "lightning", "electricity", "explosion",
+    "smoke", "sparks", "energy", "aura", "magic", "spell", "light_rays",
+    "sparkle", "particles", "wind", "splash", "shockwave", "motion_blur",
+    "speed_lines", "action", "fighting", "battle", "combat", "attack",
+    "sword", "katana", "weapon", "armor", "cape", "wings", "dragon",
+    "mecha", "robot", "monster", "crystal", "ice", "blood_splatter",
+    "dynamic_pose", "midair", "jumping", "running", "flying", "floating",
+)
+
+# Subject centred and filling the frame. Each is individually innocent, which
+# is why they only ever subtract from a score and never reject on their own.
+# `solo` is deliberately absent: it says how many people are in the picture,
+# not how the picture is framed, and the strongest results measured on
+# 2026-09-03 were single figures inside large scenes — exactly the posts a
+# `solo` penalty would have demoted.
+PORTRAIT_TAGS = (
+    "portrait", "upper_body", "close-up", "bust", "head_only", "face_focus",
+    "looking_at_viewer", "cowboy_shot", "profile", "expressionless",
+)
+
+# No background at all. This is the one composition signal strong enough to
+# stand nearly alone: a subject floated on a flat field is a sticker, not a
+# wallpaper, whatever else is true of it.
+FLAT_BG_TAGS = (
+    "simple_background", "white_background", "grey_background",
+    "gradient_background", "black_background", "blue_background",
+    "pink_background", "yellow_background", "two-tone_background",
+)
+
+# Where the community score saturates. Measured against `order:score` depth on
+# 2026-09-03: page 1 median 118, page 3 median 74, page 5 median 61. A score of
+# 300 is comfortably inside the top page of any query here, so past that the
+# extra votes say more about how long a post has existed than how good it is.
+SCORE_SATURATION = 300
+
+
+def creative_score(tags, *, w: int = 0, h: int = 0,
+                   score: int = 0, fav_count: int = 0) -> float:
+    """How much this looks like a composed scene rather than a centred subject.
+
+    Returns 0.0–1.0. **This is a stored rank, not a gate.** Nothing in the
+    ingest path rejects on it, deliberately: quality.py's whole position is
+    that taste is not measurable, and an unvalidated tag-weight threshold
+    would either starve the feed or admit everything with no way to tell
+    which from the logs. It is recorded on every item so a threshold can be
+    calibrated later against a hand-reviewed set — the same way the tag
+    blocklist above was calibrated against 502 items.
+
+    Callers must pass the *full* tag string. Danbooru returns tags
+    alphabetically, so a truncated list silently loses `scenery`, `solo`,
+    `sky` and every `*_background` tag — see `select_tags` in pipeline.py.
+    """
+    scenic = len(_match(tags, SCENIC_TAGS))
+    comp = len(_match(tags, COMPOSITION_TAGS))
+    spectacle = len(_match(tags, SPECTACLE_TAGS))
+    portrait = len(_match(tags, PORTRAIT_TAGS))
+    flat = len(_match(tags, FLAT_BG_TAGS))
+
+    # Caps stop a heavily-tagged post from outscoring a better one purely by
+    # being tagged more thoroughly.
+    s = 0.0
+    s += min(scenic * 0.10, 0.30)
+    s += min(comp * 0.10, 0.25)
+    s += min(spectacle * 0.10, 0.25)
+    s -= min(portrait * 0.12, 0.30)
+    s -= 0.35 if flat else 0.0
+
+    # Community vote, saturating. Votes are the only signal here produced by
+    # humans looking at the picture, so they carry real weight — but they
+    # measure popularity, which is why they cannot carry all of it. This is
+    # also the only term that says anything at all about a franchise piece
+    # tagged purely with character names, so it is weighted to matter.
+    s += min(max(score, fav_count) / SCORE_SATURATION, 1.0) * 0.35
+
+    # A wallpaper has to fit a screen. Square-ish art is usually an
+    # illustration plate rather than something built to sit behind icons.
+    if w and h:
+        ar = max(w, h) / min(w, h)
+        if ar < 1.15:
+            s -= 0.10
+
+    return round(min(max(s, 0.0), 1.0), 3)
+
 
 # --- geometry policy -------------------------------------------------------
 MIN_LONG_EDGE = 1280         # below this there is no screen it fills

@@ -68,6 +68,14 @@ class Item:
     # wallpapers into one page per character — a free-text title can't be
     # grouped on, but this can.
     character: list[str] = field(default_factory=list)
+    # Upstream community vote and this archive's own composition rank. Recorded
+    # rather than acted on: `creative` is a stored score with no threshold
+    # attached, so a cutoff can be calibrated later against items that have
+    # actually been looked at. Default 0.0 on hand-dropped items, which have no
+    # tags to score and no upstream votes.
+    score: int = 0
+    fav_count: int = 0
+    creative: float = 0.0
 
     def to_dict(self) -> dict:
         return asdict(self)
@@ -226,6 +234,60 @@ def clean_character_tags(tag_string: str, limit: int = 4) -> list[str]:
     return seen[:limit]
 
 
+TAG_LIMIT = 24
+
+def select_tags(all_tags: list[str], limit: int = TAG_LIMIT) -> list[str]:
+    """The `limit` most useful tags for a post, chosen by relevance not alphabet.
+
+    This replaces a plain `tag_string_general.split()[:15]`, which looked like
+    an arbitrary cap and was in fact a systematic bias: **Danbooru returns tags
+    in alphabetical order**. Slicing the front kept `1girl`, `animal_ears`,
+    `blonde_hair`, `blush` and `breasts`, and dropped everything from roughly
+    "s" onward — including `scenery`, `sky`, `solo`, `signature`, `screencap`,
+    `sketch`, `speech_bubble`, `watermark`, `text_focus`, `subtitled`,
+    `transparent_background` and every `*_background` tag.
+
+    Two things broke as a result. `audit.py` and `cull.py` re-check the archive
+    against TAG_BLOCKLIST using stored tags, so they were blind to over half of
+    their own blocklist and could never flag a screencap or a sketch after
+    ingest. And `build_site.py` builds its tag hubs from these, which is why the
+    facets read as hair colours and body parts — the metadata made the site look
+    like a character-portrait gallery independently of the pictures in it.
+
+    Policy-relevant tags therefore come first and are never dropped: an item
+    must carry the evidence for its own later re-audit. Scene and composition
+    tags come next, because those are what the site actually groups on. Only
+    then is the remainder filled alphabetically, which is where descriptive
+    detail like hair colour ends up.
+    """
+    from quality import (
+        COMPOSITION_TAGS, FLAT_BG_TAGS, PORTRAIT_TAGS, SCENIC_TAGS,
+        SUGGESTIVE_TAGS, TAG_BLOCKLIST,
+    )
+
+    policy = TAG_BLOCKLIST + SUGGESTIVE_TAGS + FLAT_BG_TAGS + PORTRAIT_TAGS
+    describe = SCENIC_TAGS + COMPOSITION_TAGS
+
+    tiers: list[list[str]] = [[], [], []]
+    for tag in all_tags:
+        low = tag.lower()
+        if any(n in low for n in policy):
+            tiers[0].append(tag)
+        elif any(n in low for n in describe):
+            tiers[1].append(tag)
+        else:
+            tiers[2].append(tag)
+
+    picked: list[str] = []
+    for tier in tiers:
+        for tag in tier:
+            if tag not in picked:
+                picked.append(tag)
+            if len(picked) >= limit:
+                return picked
+    return picked
+
+
 def slugify(text: str, limit: int = 70) -> str:
     s = re.sub(r"\[[^\]]*\]|\([^)]*\)", " ", text or "")     # drop [4K] / (1920x1080)
     s = re.sub(r"\s+", " ", s).strip(" -–—|")
@@ -257,6 +319,9 @@ def ingest_image(
     existing: list[dict] | None = None,
     storage=None,
     enforce_policy: bool = True,
+    score: int = 0,
+    fav_count: int = 0,
+    creative: float = 0.0,
 ) -> Item | None:
     """Decode, validate, re-encode and describe one image.
 
@@ -345,6 +410,9 @@ def ingest_image(
         dhash=fingerprint,
         tags=tags or [],
         character=character or [],
+        score=score,
+        fav_count=fav_count,
+        creative=creative,
     )
 
 
