@@ -1,9 +1,9 @@
 # Anime Wallpaper Archive
 
-> A curated, automatically synced archive of 610 anime wallpapers,
+> A curated, automatically synced archive of 650 anime wallpapers,
 > published as a static site at https://wallpapers.okeyamy.xyz and indexed by extracted colour palette.
 
-Last synced: 2026-09-05T10:20:55+00:00
+Last synced: 2026-09-06T10:41:23+00:00
 
 ## What it is
 
@@ -14,13 +14,13 @@ No accounts, no tracking, no ads, no paywall.
 
 ## Collection
 
-- Total wallpapers: 610
-- Desktop / ultrawide (landscape): 239
-- Phone (portrait): 371
+- Total wallpapers: 650
+- Desktop / ultrawide (landscape): 244
+- Phone (portrait): 406
 - Maximum resolution: up to 3840x2160 (4K)
 - Format: WebP, quality 82, with a 640px thumbnail per item
 - Source feeds: Danbooru, manual ingest
-- Character pages: 57 at https://wallpapers.okeyamy.xyz/w/<character> — Naruto, Yae Miko, Ganyu, Raiden Shogun, Frieren, Hu Tao, Kamisato Ayaka, Rio, Shenhe, Fern, Furina, Hatsune Miku
+- Character pages: 61 at https://wallpapers.okeyamy.xyz/w/<character> — Naruto, Yae Miko, Raiden Shogun, Ganyu, Frieren, Hu Tao, Kamisato Ayaka, Rio, Furina, Shenhe, Fern, Hatsune Miku
 
 ## Distinctive feature
 
