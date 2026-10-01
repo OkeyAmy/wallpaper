@@ -25,7 +25,7 @@ from pipeline import (
     DATA_DIR, MANIFEST, Item, clean_character_tags, ingest_image, load_items,
     select_tags,
 )
-from quality import creative_score, reject_reasons
+from quality import creative_score, merit_reasons, reject_reasons
 
 UA = "web:okeyamy-wallpaper-archive:1.0 (by anonymous)"
 API = "https://danbooru.donmai.us/posts.json"
@@ -331,7 +331,16 @@ def main() -> int:
         for page in range(1, axis["pages"] + 1):
             if full():
                 break
-            for post in fetch(tags, page, limit=40):
+            # Best-first within the page, so a tight --max-new budget goes to
+            # the most composed pictures rather than whatever sorts first.
+            posts = fetch(tags, page, limit=40)
+            posts.sort(key=lambda p: creative_score(
+                (p.get("tag_string_general", "") + " "
+                 + p.get("tag_string_meta", "")).split(),
+                w=p.get("image_width", 0), h=p.get("image_height", 0),
+                score=p.get("score", 0), fav_count=p.get("fav_count", 0)),
+                reverse=True)
+            for post in posts:
                 if full():
                     break
                 if post.get("score", 0) < floor:
@@ -350,6 +359,12 @@ def main() -> int:
                     tags=full_tags,
                     w=post.get("image_width", 0),
                     h=post.get("image_height", 0),
+                ) or merit_reasons(
+                    full_tags,
+                    w=post.get("image_width", 0),
+                    h=post.get("image_height", 0),
+                    score=post.get("score", 0),
+                    fav_count=post.get("fav_count", 0),
                 )
                 if bad:
                     rejects[pid] = bad[0]

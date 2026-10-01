@@ -44,7 +44,7 @@ import requests
 from pipeline import (
     DATA_DIR, MANIFEST, Item, ingest_image, load_items, select_tags,
 )
-from quality import creative_score, reject_reasons
+from quality import creative_score, merit_reasons, reject_reasons
 
 UA = "okeyamy-wallpaper-archive/1.0 (+https://okeyamy.xyz)"
 SEARCH = "https://wallhaven.cc/api/v1/search"
@@ -190,7 +190,9 @@ def main() -> int:
                     rejected += 1
                     continue
 
-                bad = reject_reasons(tags=tags, w=w, h=h)
+                pseudo = (detail.get("views") or post.get("views") or 0) // 500
+                bad = (reject_reasons(tags=tags, w=w, h=h)
+                       or merit_reasons(tags, w=w, h=h, score=pseudo, fav_count=pseudo))
                 if bad:
                     rejects[wid] = bad[0]
                     rejected += 1

@@ -214,6 +214,42 @@ def creative_score(tags, *, w: int = 0, h: int = 0,
     return round(min(max(s, 0.0), 1.0), 3)
 
 
+# --- ingest merit gate -----------------------------------------------------
+# `creative_score` used to be record-only, and the archive paid for it: of the
+# 1,628 items published, 46% scored under 0.10, 21% sat on a flat/white
+# background and 21% were under 1920px — all of it passing every gate because
+# nothing consulted the rank. Calibrated on 2026-10-01 against the stored
+# items: 0.25 keeps ~1/3 of the existing catalogue, and a hand sample of items
+# at 0.30-0.45 was scenic/atmospheric pieces (shrines, cityscapes, snow, sunset
+# skies) while a sample under 0.20 was white-background character sheets and
+# crowded fan-art plates.
+#
+# This applies to *new* ingest only. It is deliberately not part of
+# `reject_reasons`, which audit.py feeds to the unattended weekly cull: a
+# threshold change there would flag hundreds of published items at once, trip
+# --max-remove and fail the job. Use rescore.py --out to review the back
+# catalogue against it.
+MIN_CREATIVE = 0.25
+INGEST_MIN_LONG_EDGE = 1920   # 1080p-class; the 1280 floor admits upscaled thumbnails
+INGEST_MIN_SHORT_EDGE = 1000
+
+
+def merit_reasons(tags, *, w: int = 0, h: int = 0,
+                  score: int = 0, fav_count: int = 0) -> list[str]:
+    """Why a policy-clean post is still not worth a slot. Empty means keep."""
+    reasons = []
+    if w and h:
+        if max(w, h) < INGEST_MIN_LONG_EDGE or min(w, h) < INGEST_MIN_SHORT_EDGE:
+            reasons.append(f"low resolution {w}x{h}")
+    flat = _match(tags, FLAT_BG_TAGS)
+    if flat:
+        reasons.append(f"flat background ({flat[0]})")
+    rank = creative_score(tags, w=w, h=h, score=score, fav_count=fav_count)
+    if rank < MIN_CREATIVE:
+        reasons.append(f"creative {rank:.2f} < {MIN_CREATIVE}")
+    return reasons
+
+
 # --- geometry policy -------------------------------------------------------
 MIN_LONG_EDGE = 1280         # below this there is no screen it fills
 MAX_W_OVER_H = 4.00          # past a dual-monitor panorama; a strip, not a picture
