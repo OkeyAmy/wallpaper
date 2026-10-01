@@ -50,7 +50,7 @@ from pathlib import Path
 from PIL import Image
 
 from pipeline import DATA_DIR, MANIFEST, ROOT, ingest_image, load_items
-from quality import reject_reasons
+from quality import reject_reasons, sharpness_reasons
 
 INCOMING = ROOT / "incoming"
 SUFFIXES = {".jpg", ".jpeg", ".png", ".webp", ".bmp", ".tiff"}
@@ -131,7 +131,8 @@ def main() -> int:
                 probe = None
             if probe is not None:
                 bad = reject_reasons(tags=args.tag, w=probe.width,
-                                     h=probe.height, img=probe)
+                                     h=probe.height, img=probe) \
+                    + sharpness_reasons(probe)
                 if bad:
                     print(f"  ! rejected {path.name}: {'; '.join(bad)}")
                     print("      (keep it anyway with --no-filter)")

@@ -34,7 +34,7 @@ and free of taste-level junk only as often as somebody looks.
 
 from __future__ import annotations
 
-from PIL import Image
+from PIL import Image, ImageChops, ImageStat
 
 # --- tag policy ------------------------------------------------------------
 # Matched as substrings of underscored Danbooru tags, so "comic" also catches
@@ -373,6 +373,97 @@ def pixel_reasons(img: Image.Image) -> list[str]:
     return reasons
 
 
+# --- pixel sharpness (ingest only) -----------------------------------------
+# Dimensions say how many pixels a file has, not how many it *earned*. A 960px
+# image upscaled to 2400 passes every size floor and still looks soft on a
+# screen, and a JPEG re-saved at low quality carries visible 8x8 blocks. Both
+# are measured here on the full-resolution original, which is why this is not
+# part of `pixel_reasons`: audit.py only has the 640px thumbnail, where every
+# image looks sharp and no JPEG grid survives.
+#
+# Calibrated 2026-10-01 on synthetic cel-shaded art (crisp 1-3px outlines on
+# flat fills), since neither Danbooru nor the CDN was reachable from the
+# calibration machine:
+#
+#   original 0.46-0.51   1.5x upscale ~0.30   2x/3x upscale 0.13-0.14
+#   gaussian blur r1.5 0.09
+#   blockiness: original/q90 ~1.0, q20 ~1.5, q8 ~2.1
+#
+# Thresholds sit well clear of the originals on purpose. Painterly art and
+# heavy depth of field are legitimately soft, and a false reject costs a good
+# wallpaper permanently (it goes in the reject ledger). Re-check with
+# `python scripts/quality.py <files>` against real downloads and tighten.
+MIN_DETAIL_RATIO = 0.20
+MAX_BLOCKINESS = 1.35
+_SHARP_CROP = 768
+
+
+def detail_ratio(img: Image.Image) -> float:
+    """Finest-scale detail relative to coarse structure, best of five crops.
+
+    Each crop is shrunk 2x and blown back up; a picture that was upscaled or
+    blurred loses almost nothing in that round trip, while genuinely sharp art
+    loses its line edges. Dividing by the 8x round-trip loss normalises out how
+    busy the region is. The best crop is used so a sharp subject in front of an
+    intentionally blurred background still passes.
+    """
+    g = img.convert("L")
+    cw, ch = min(_SHARP_CROP, g.width // 2), min(_SHARP_CROP, g.height // 2)
+    if cw < 64 or ch < 64:
+        return 1.0
+    best = 0.0
+    for fx, fy in ((.5, .5), (.25, .25), (.75, .25), (.25, .75), (.75, .75)):
+        x, y = int(g.width * fx - cw / 2), int(g.height * fy - ch / 2)
+        crop = g.crop((x, y, x + cw, y + ch))
+
+        def loss(f: int) -> float:
+            back = crop.resize((cw // f, ch // f), Image.Resampling.BOX) \
+                       .resize((cw, ch), Image.Resampling.BICUBIC)
+            return ImageStat.Stat(ImageChops.difference(crop, back)).mean[0]
+
+        coarse = loss(8)
+        if coarse < 1.5:            # flat sky or fill — says nothing either way
+            continue
+        best = max(best, loss(2) / coarse)
+    return best if best else 1.0
+
+
+def blockiness(img: Image.Image) -> float:
+    """Step size across JPEG 8x8 block boundaries vs. inside blocks. ~1 is clean."""
+    g = img.convert("L")
+    w, h = min(g.width, 1024) // 8 * 8, min(g.height, 1024) // 8 * 8
+    if w < 16 or h < 16:
+        return 1.0
+    g = g.crop((0, 0, w, h))
+    # |p[x+1] - p[x]| for every x at once, then split boundary columns out.
+    diff = ImageChops.difference(g.crop((1, 0, w, h)), g.crop((0, 0, w - 1, h)))
+    px = diff.load()
+    edge = inner = 0
+    edge_n = inner_n = 0
+    for y in range(0, h, 2):
+        for x in range(w - 1):
+            if x % 8 == 7:
+                edge += px[x, y]
+                edge_n += 1
+            else:
+                inner += px[x, y]
+                inner_n += 1
+    return (edge / edge_n) / max(inner / inner_n, 0.5)
+
+
+def sharpness_reasons(img: Image.Image) -> list[str]:
+    """Pixel-quality failures on the full-size original. Empty means keep."""
+    reasons = []
+    ratio = detail_ratio(img)
+    if ratio < MIN_DETAIL_RATIO:
+        reasons.append(f"soft or upscaled (detail {ratio:.2f} < {MIN_DETAIL_RATIO})")
+    if (img.format or "").upper() == "JPEG":
+        blk = blockiness(img)
+        if blk > MAX_BLOCKINESS:
+            reasons.append(f"JPEG compression blocks ({blk:.2f} > {MAX_BLOCKINESS})")
+    return reasons
+
+
 def reject_reasons(*, tags=(), w: int = 0, h: int = 0,
                    img: Image.Image | None = None,
                    include_suggestive: bool = True) -> list[str]:
@@ -388,3 +479,14 @@ def reject_reasons(*, tags=(), w: int = 0, h: int = 0,
     if img is not None:
         reasons += pixel_reasons(img)
     return reasons
+
+
+if __name__ == "__main__":
+    # Calibration aid: print the pixel measures for real files.
+    #   python scripts/quality.py a.jpg b.png ...
+    import sys
+    for path in sys.argv[1:]:
+        with Image.open(path) as im:
+            im.load()
+            print(f"{path}: {im.width}x{im.height}  detail={detail_ratio(im):.2f}"
+                  f"  blockiness={blockiness(im):.2f}  {sharpness_reasons(im) or 'ok'}")

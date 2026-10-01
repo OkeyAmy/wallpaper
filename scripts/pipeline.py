@@ -14,7 +14,7 @@ from pathlib import Path
 
 from PIL import Image
 
-from quality import reject_reasons
+from quality import reject_reasons, sharpness_reasons
 from storage import get_storage
 
 # Pillow refuses very large images by default (decompression-bomb guard).
@@ -353,6 +353,13 @@ def ingest_image(
         return None
 
     if img.width * img.height < MIN_PIXELS:
+        return None
+
+    # Measured on the original before any conversion (convert() also drops
+    # `.format`, which the JPEG check keys on): the JPEG check needs the
+    # decoded file's own pixel grid, and every resize afterwards hides
+    # both blockiness and upscaling.
+    if enforce_policy and sharpness_reasons(img):
         return None
 
     if img.mode not in ("RGB", "L"):
