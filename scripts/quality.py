@@ -240,6 +240,23 @@ NOT_ANIME_STYLE_TAGS = (
     "realistic", "photorealistic", "3d", "photo_background", "photograph",
     "real_life",
 )
+
+# Tags uploaders and moderators use to say "this file or drawing is poor".
+# Most are Danbooru *meta* tags, which the sync reads (tag_string_meta) but the
+# manifest never stores, so this can only ever run at ingest. Memes are here
+# because a joke image is content, not a wallpaper: 41 items in the archive
+# carried a bare `meme` tag on 2026-10-02. AI-generated work is refused too;
+# delete those entries to allow it.
+LOW_QUALITY_TAGS = (
+    "lowres", "low_resolution", "jpeg_artifacts", "upscaled", "image_sample",
+    "scan_artifacts", "bad_anatomy", "bad_hands", "bad_feet", "bad_proportions",
+    "anatomical_nonsense", "poorly_drawn", "oekaki", "ms_paint",
+    "(meme)", "shitpost",
+    "ai-generated", "ai_generated", "ai-assisted", "ai_assisted", "ai_art",
+)
+# Matched whole rather than as substrings: "meme" as a substring would also
+# catch `memento_mori`.
+LOW_QUALITY_EXACT = {"meme", "joke", "parody"}
 INGEST_MIN_LONG_EDGE = 1920   # 1080p-class; the 1280 floor admits upscaled thumbnails
 INGEST_MIN_SHORT_EDGE = 1000
 
@@ -251,6 +268,10 @@ def merit_reasons(tags, *, w: int = 0, h: int = 0,
     if w and h:
         if max(w, h) < INGEST_MIN_LONG_EDGE or min(w, h) < INGEST_MIN_SHORT_EDGE:
             reasons.append(f"low resolution {w}x{h}")
+    low = _match(tags, LOW_QUALITY_TAGS) + sorted(
+        {str(t).lower() for t in tags or ()} & LOW_QUALITY_EXACT)
+    if low:
+        reasons.append(f"low-quality content ({low[0]})")
     style = _match(tags, NOT_ANIME_STYLE_TAGS)
     if style:
         reasons.append(f"not anime style ({style[0]})")

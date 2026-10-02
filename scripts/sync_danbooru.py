@@ -96,10 +96,10 @@ QUERIES = [
     # plenty of depth while keeping the bar far above the per-series feeds.
     {"tags": "rating:general order:score", "pages": 10, "min_score": 150},
     # What is being voted on *now* rather than all-time. Scores here are tiny
-    # (5..36 measured) because the posts are days old, so the floor is nominal
-    # and the quality gate carries it. Without this the archive only ever sees
+    # (5..36 measured) because the posts are days old. The floor was 4 and let
+    # in posts nobody had vetted; 10 keeps the upper part of that range. Without this the archive only ever sees
     # art that has already had years to accumulate votes.
-    {"tags": "rating:general order:rank", "pages": 3, "min_score": 4},
+    {"tags": "rating:general order:rank", "pages": 3, "min_score": 10},
     # Proven spine for landscapes. Eight pages of 40 is the usable depth.
     {"tags": "rating:general scenery order:score", "pages": 8, "min_score": 60},
     # `order:score` is deterministic: run it daily and it returns the same top
@@ -110,10 +110,11 @@ QUERIES = [
     # 500s on randomising a set that large for an anonymous client.)
     {"tags": "rating:general scenery order:random", "pages": 4, "min_score": 40},
     # Two real tags, which costs the `order:` slot and leaves the default sort
-    # (newest first). Nothing here has had time to accumulate votes, so the
-    # floor is nominal and the quality gate does the work — this is the only
-    # axis that can ever surface art posted this week.
-    {"tags": "rating:general no_humans scenery", "pages": 3, "min_score": 3},
+    # (newest first). Nothing here has had time to accumulate votes; the floor
+    # was 3, which is effectively unvetted, so it now asks for at least 10
+    # people to have liked it. This is still the only axis that can surface
+    # art posted this week, just less of it.
+    {"tags": "rating:general no_humans scenery", "pages": 3, "min_score": 10},
 ]
 
 MIN_SCORE = 60         # default floor; each axis above may override it
