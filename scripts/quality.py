@@ -230,6 +230,16 @@ def creative_score(tags, *, w: int = 0, h: int = 0,
 # --max-remove and fail the job. Use rescore.py --out to review the back
 # catalogue against it.
 MIN_CREATIVE = 0.25
+
+# Both feeds are anime by construction (Danbooru is an anime board; Wallhaven
+# is queried with its anime category only), but each admits a little that is
+# not anime *style*: 3D renders, photorealistic paintings, and characters
+# pasted onto photographs. `cosplay` is deliberately absent — on Danbooru it
+# means a drawn character wearing another's outfit (36 items here, all drawn).
+NOT_ANIME_STYLE_TAGS = (
+    "realistic", "photorealistic", "3d", "photo_background", "photograph",
+    "real_life",
+)
 INGEST_MIN_LONG_EDGE = 1920   # 1080p-class; the 1280 floor admits upscaled thumbnails
 INGEST_MIN_SHORT_EDGE = 1000
 
@@ -241,6 +251,9 @@ def merit_reasons(tags, *, w: int = 0, h: int = 0,
     if w and h:
         if max(w, h) < INGEST_MIN_LONG_EDGE or min(w, h) < INGEST_MIN_SHORT_EDGE:
             reasons.append(f"low resolution {w}x{h}")
+    style = _match(tags, NOT_ANIME_STYLE_TAGS)
+    if style:
+        reasons.append(f"not anime style ({style[0]})")
     flat = _match(tags, FLAT_BG_TAGS)
     if flat:
         reasons.append(f"flat background ({flat[0]})")
