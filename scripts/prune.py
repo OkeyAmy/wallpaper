@@ -21,7 +21,9 @@ from __future__ import annotations
 import argparse
 import json
 
-from pipeline import MANIFEST, load_items
+from datetime import date
+
+from pipeline import MANIFEST, load_items, record_removed
 from storage import get_storage
 
 DEFAULT_MAX_BYTES = 8 * 1024**3      # 8 GiB, under R2's 10 GB free tier
@@ -60,6 +62,10 @@ def main() -> int:
         return 0
 
     store = get_storage()
+    if not args.dry_run:
+        # Pruned for space, not for quality — but still never re-fetched, or the
+        # archive would churn: drop the oldest, re-download the same top posts.
+        record_removed(drop, "pruned", date.today().isoformat())
     freed = 0
     for it in drop:
         freed += int(it.get("bytes", 0) * 1.1)

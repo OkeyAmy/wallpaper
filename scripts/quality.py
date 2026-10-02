@@ -34,7 +34,7 @@ and free of taste-level junk only as often as somebody looks.
 
 from __future__ import annotations
 
-from PIL import Image
+from PIL import Image, ImageChops, ImageStat
 
 # --- tag policy ------------------------------------------------------------
 # Matched as substrings of underscored Danbooru tags, so "comic" also catches
@@ -45,7 +45,10 @@ from PIL import Image
 # too, but they sit on plenty of good wallpapers, so they are deliberately out.
 TAG_BLOCKLIST = (
     # printed page / sequential art
-    "comic", "4koma", "manga", "speech_bubble", "spoken_", "translated",
+    # `manga` is deliberately absent: Wallhaven tags every wallpaper from a
+    # manga-origin series with it, and manga-style art is wanted. Actual pages
+    # are still caught by `comic`, `4koma`, speech bubbles and `multiple_views`.
+    "comic", "4koma", "speech_bubble", "spoken_", "translated",
     # burned-in lettering. `artist_name`, `copyright_name` and `dated` are
     # deliberately absent: a signature or a date in the corner is normal on
     # good art and they were the single largest source of wrong rejects when
@@ -55,7 +58,9 @@ TAG_BLOCKLIST = (
     "multiple_views", "character_sheet", "reference_sheet", "chart",
     "absolutely_everyone", "album_cover", "cover_page",
     # not a finished picture
-    "sketch", "lineart", "monochrome", "greyscale", "screencap",
+    # `monochrome`/`greyscale` were here and are not: ink-style manga art is
+    # monochrome by design. See INTENTIONAL_MONO for the matching pixel rule.
+    "sketch", "lineart", "screencap",
     "photo_(medium)", "letterboxed", "pillarboxed", "transparent_background",
     # photographed merchandise. Added 2026-09-03 after post 8158469 (score 352,
     # tagged `scenery`) turned out to be a photo of a shop shelf of figurines
@@ -214,6 +219,76 @@ def creative_score(tags, *, w: int = 0, h: int = 0,
     return round(min(max(s, 0.0), 1.0), 3)
 
 
+# --- ingest merit gate -----------------------------------------------------
+# `creative_score` used to be record-only, and the archive paid for it: of the
+# 1,628 items published, 46% scored under 0.10, 21% sat on a flat/white
+# background and 21% were under 1920px — all of it passing every gate because
+# nothing consulted the rank. Calibrated on 2026-10-01 against the stored
+# items: 0.25 keeps ~1/3 of the existing catalogue, and a hand sample of items
+# at 0.30-0.45 was scenic/atmospheric pieces (shrines, cityscapes, snow, sunset
+# skies) while a sample under 0.20 was white-background character sheets and
+# crowded fan-art plates.
+#
+# This applies to *new* ingest only. It is deliberately not part of
+# `reject_reasons`, which audit.py feeds to the unattended weekly cull: a
+# threshold change there would flag hundreds of published items at once, trip
+# --max-remove and fail the job. Use rescore.py --out to review the back
+# catalogue against it.
+MIN_CREATIVE = 0.25
+
+# Both feeds are anime by construction (Danbooru is an anime board; Wallhaven
+# is queried with its anime category only), but each admits a little that is
+# not anime *style*: 3D renders, photorealistic paintings, and characters
+# pasted onto photographs. `cosplay` is deliberately absent — on Danbooru it
+# means a drawn character wearing another's outfit (36 items here, all drawn).
+NOT_ANIME_STYLE_TAGS = (
+    "realistic", "photorealistic", "3d", "photo_background", "photograph",
+    "real_life",
+)
+
+# Tags uploaders and moderators use to say "this file or drawing is poor".
+# Most are Danbooru *meta* tags, which the sync reads (tag_string_meta) but the
+# manifest never stores, so this can only ever run at ingest. Memes are here
+# because a joke image is content, not a wallpaper: 41 items in the archive
+# carried a bare `meme` tag on 2026-10-02. AI-generated work is refused too;
+# delete those entries to allow it.
+LOW_QUALITY_TAGS = (
+    "lowres", "low_resolution", "jpeg_artifacts", "upscaled", "image_sample",
+    "scan_artifacts", "bad_anatomy", "bad_hands", "bad_feet", "bad_proportions",
+    "anatomical_nonsense", "poorly_drawn", "oekaki", "ms_paint",
+    "(meme)", "shitpost",
+    "ai-generated", "ai_generated", "ai-assisted", "ai_assisted", "ai_art",
+)
+# Matched whole rather than as substrings: "meme" as a substring would also
+# catch `memento_mori`.
+LOW_QUALITY_EXACT = {"meme", "joke", "parody"}
+INGEST_MIN_LONG_EDGE = 1920   # 1080p-class; the 1280 floor admits upscaled thumbnails
+INGEST_MIN_SHORT_EDGE = 1000
+
+
+def merit_reasons(tags, *, w: int = 0, h: int = 0,
+                  score: int = 0, fav_count: int = 0) -> list[str]:
+    """Why a policy-clean post is still not worth a slot. Empty means keep."""
+    reasons = []
+    if w and h:
+        if max(w, h) < INGEST_MIN_LONG_EDGE or min(w, h) < INGEST_MIN_SHORT_EDGE:
+            reasons.append(f"low resolution {w}x{h}")
+    low = _match(tags, LOW_QUALITY_TAGS) + sorted(
+        {str(t).lower() for t in tags or ()} & LOW_QUALITY_EXACT)
+    if low:
+        reasons.append(f"low-quality content ({low[0]})")
+    style = _match(tags, NOT_ANIME_STYLE_TAGS)
+    if style:
+        reasons.append(f"not anime style ({style[0]})")
+    flat = _match(tags, FLAT_BG_TAGS)
+    if flat:
+        reasons.append(f"flat background ({flat[0]})")
+    rank = creative_score(tags, w=w, h=h, score=score, fav_count=fav_count)
+    if rank < MIN_CREATIVE:
+        reasons.append(f"creative {rank:.2f} < {MIN_CREATIVE}")
+    return reasons
+
+
 # --- geometry policy -------------------------------------------------------
 MIN_LONG_EDGE = 1280         # below this there is no screen it fills
 MAX_W_OVER_H = 4.00          # past a dual-monitor panorama; a strip, not a picture
@@ -337,6 +412,104 @@ def pixel_reasons(img: Image.Image) -> list[str]:
     return reasons
 
 
+# --- pixel sharpness (ingest only) -----------------------------------------
+# Dimensions say how many pixels a file has, not how many it *earned*. A 960px
+# image upscaled to 2400 passes every size floor and still looks soft on a
+# screen, and a JPEG re-saved at low quality carries visible 8x8 blocks. Both
+# are measured here on the full-resolution original, which is why this is not
+# part of `pixel_reasons`: audit.py only has the 640px thumbnail, where every
+# image looks sharp and no JPEG grid survives.
+#
+# Calibrated 2026-10-01 on synthetic cel-shaded art (crisp 1-3px outlines on
+# flat fills), since neither Danbooru nor the CDN was reachable from the
+# calibration machine:
+#
+#   original 0.46-0.51   1.5x upscale ~0.30   2x/3x upscale 0.13-0.14
+#   gaussian blur r1.5 0.09
+#   blockiness: original/q90 ~1.0, q20 ~1.5, q8 ~2.1
+#
+# Thresholds sit well clear of the originals on purpose. Painterly art and
+# heavy depth of field are legitimately soft, and a false reject costs a good
+# wallpaper permanently (it goes in the reject ledger). Re-check with
+# `python scripts/quality.py <files>` against real downloads and tighten.
+MIN_DETAIL_RATIO = 0.20
+MAX_BLOCKINESS = 1.35
+_SHARP_CROP = 768
+
+
+def detail_ratio(img: Image.Image) -> float:
+    """Finest-scale detail relative to coarse structure, best of five crops.
+
+    Each crop is shrunk 2x and blown back up; a picture that was upscaled or
+    blurred loses almost nothing in that round trip, while genuinely sharp art
+    loses its line edges. Dividing by the 8x round-trip loss normalises out how
+    busy the region is. The best crop is used so a sharp subject in front of an
+    intentionally blurred background still passes.
+    """
+    g = img.convert("L")
+    cw, ch = min(_SHARP_CROP, g.width // 2), min(_SHARP_CROP, g.height // 2)
+    if cw < 64 or ch < 64:
+        return 1.0
+    best = 0.0
+    for fx, fy in ((.5, .5), (.25, .25), (.75, .25), (.25, .75), (.75, .75)):
+        x, y = int(g.width * fx - cw / 2), int(g.height * fy - ch / 2)
+        crop = g.crop((x, y, x + cw, y + ch))
+
+        def loss(f: int) -> float:
+            back = crop.resize((cw // f, ch // f), Image.Resampling.BOX) \
+                       .resize((cw, ch), Image.Resampling.BICUBIC)
+            return ImageStat.Stat(ImageChops.difference(crop, back)).mean[0]
+
+        coarse = loss(8)
+        if coarse < 1.5:            # flat sky or fill — says nothing either way
+            continue
+        best = max(best, loss(2) / coarse)
+    return best if best else 1.0
+
+
+def blockiness(img: Image.Image) -> float:
+    """Step size across JPEG 8x8 block boundaries vs. inside blocks. ~1 is clean."""
+    g = img.convert("L")
+    w, h = min(g.width, 1024) // 8 * 8, min(g.height, 1024) // 8 * 8
+    if w < 16 or h < 16:
+        return 1.0
+    g = g.crop((0, 0, w, h))
+    # |p[x+1] - p[x]| for every x at once, then split boundary columns out.
+    diff = ImageChops.difference(g.crop((1, 0, w, h)), g.crop((0, 0, w - 1, h)))
+    px = diff.load()
+    edge = inner = 0
+    edge_n = inner_n = 0
+    for y in range(0, h, 2):
+        for x in range(w - 1):
+            if x % 8 == 7:
+                edge += px[x, y]
+                edge_n += 1
+            else:
+                inner += px[x, y]
+                inner_n += 1
+    return (edge / max(edge_n, 1)) / max(inner / max(inner_n, 1), 0.5)
+
+
+def sharpness_reasons(img: Image.Image) -> list[str]:
+    """Pixel-quality failures on the full-size original. Empty means keep."""
+    reasons = []
+    ratio = detail_ratio(img)
+    if ratio < MIN_DETAIL_RATIO:
+        reasons.append(f"soft or upscaled (detail {ratio:.2f} < {MIN_DETAIL_RATIO})")
+    if (img.format or "").upper() == "JPEG":
+        blk = blockiness(img)
+        if blk > MAX_BLOCKINESS:
+            reasons.append(f"JPEG compression blocks ({blk:.2f} > {MAX_BLOCKINESS})")
+    return reasons
+
+
+# Tags that say a lack of colour is the style, not a defect. With one of these
+# the near-zero-saturation pixel check is waived; untagged images (hand drops)
+# still get it, since for them a colourless frame is usually a blank card.
+INTENTIONAL_MONO = ("monochrome", "greyscale", "grayscale", "manga", "ink_(medium)",
+                    "black_and_white")
+
+
 def reject_reasons(*, tags=(), w: int = 0, h: int = 0,
                    img: Image.Image | None = None,
                    include_suggestive: bool = True) -> list[str]:
@@ -350,5 +523,19 @@ def reject_reasons(*, tags=(), w: int = 0, h: int = 0,
     if w and h:
         reasons += shape_reasons(w, h)
     if img is not None:
-        reasons += pixel_reasons(img)
+        px = pixel_reasons(img)
+        if _match(tags, INTENTIONAL_MONO):
+            px = [r for r in px if not r.startswith("near-zero colour")]
+        reasons += px
     return reasons
+
+
+if __name__ == "__main__":
+    # Calibration aid: print the pixel measures for real files.
+    #   python scripts/quality.py a.jpg b.png ...
+    import sys
+    for path in sys.argv[1:]:
+        with Image.open(path) as im:
+            im.load()
+            print(f"{path}: {im.width}x{im.height}  detail={detail_ratio(im):.2f}"
+                  f"  blockiness={blockiness(im):.2f}  {sharpness_reasons(im) or 'ok'}")

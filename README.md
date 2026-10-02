@@ -69,6 +69,12 @@ Set in `scripts/pipeline.py`:
 - Rejected as a duplicate before anything is uploaded, not after — a
   content-addressed key means a duplicate would otherwise collide with the
   original's storage location
+- Crops and zooms of a picture already here are caught too
+  (`scripts/cropmatch.py`: ORB feature matching with a geometric check). The
+  fingerprint index is one file in R2 (`index/features.npz`), not in git;
+  `scripts/crop_index.py` fills it from thumbnails before every sync
+- Anything removed by `cull.py` or `prune.py` is recorded in
+  `data/removed.json` and never re-fetched, from any source
 - Danbooru queries are `rating:general` only
 
 ## Adding your own wallpapers

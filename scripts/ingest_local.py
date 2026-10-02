@@ -49,8 +49,10 @@ from pathlib import Path
 
 from PIL import Image
 
-from pipeline import DATA_DIR, MANIFEST, ROOT, ingest_image, load_items
-from quality import reject_reasons
+from pipeline import (
+    DATA_DIR, MANIFEST, ROOT, ingest_image, load_items, save_crop_index,
+)
+from quality import reject_reasons, sharpness_reasons
 
 INCOMING = ROOT / "incoming"
 SUFFIXES = {".jpg", ".jpeg", ".png", ".webp", ".bmp", ".tiff"}
@@ -131,7 +133,8 @@ def main() -> int:
                 probe = None
             if probe is not None:
                 bad = reject_reasons(tags=args.tag, w=probe.width,
-                                     h=probe.height, img=probe)
+                                     h=probe.height, img=probe) \
+                    + sharpness_reasons(probe)
                 if bad:
                     print(f"  ! rejected {path.name}: {'; '.join(bad)}")
                     print("      (keep it anyway with --no-filter)")
@@ -183,6 +186,7 @@ def main() -> int:
     DATA_DIR.mkdir(parents=True, exist_ok=True)
     payload = {"items": existing + [a.to_dict() for a in added]}
     MANIFEST.write_text(json.dumps(payload, indent=1))
+    save_crop_index()
     print(f"\n{len(added)} added / {len(payload['items'])} total")
     return 0
 

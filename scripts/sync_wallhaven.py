@@ -42,9 +42,10 @@ from datetime import date
 import requests
 
 from pipeline import (
-    DATA_DIR, MANIFEST, Item, ingest_image, load_items, select_tags,
+    DATA_DIR, MANIFEST, Item, ingest_image, load_items, removed_permalinks,
+    save_crop_index, select_tags,
 )
-from quality import creative_score, reject_reasons
+from quality import creative_score, merit_reasons, reject_reasons
 
 UA = "okeyamy-wallpaper-archive/1.0 (+https://okeyamy.xyz)"
 SEARCH = "https://wallhaven.cc/api/v1/search"
@@ -143,6 +144,7 @@ def main() -> int:
 
     existing = load_items()
     rejects = load_rejects()
+    removed = removed_permalinks()
     accepted: list[Item] = []
     previewed: list[dict] = []
     rejected = 0
@@ -164,6 +166,8 @@ def main() -> int:
                     break
                 wid = str(post.get("id") or "")
                 if not wid or wid in rejects:
+                    continue
+                if post.get("url", f"https://wallhaven.cc/w/{wid}") in removed:
                     continue
                 if (post.get("views") or 0) < args.min_views:
                     continue
@@ -190,7 +194,9 @@ def main() -> int:
                     rejected += 1
                     continue
 
-                bad = reject_reasons(tags=tags, w=w, h=h)
+                pseudo = (detail.get("views") or post.get("views") or 0) // 500
+                bad = (reject_reasons(tags=tags, w=w, h=h)
+                       or merit_reasons(tags, w=w, h=h, score=pseudo, fav_count=pseudo))
                 if bad:
                     rejects[wid] = bad[0]
                     rejected += 1
@@ -235,7 +241,9 @@ def main() -> int:
                     added=today,
                     title=title,
                     sub="wallhaven",
-                    author="",
+                    # The uploader, not necessarily the artist — Wallhaven
+                    # carries no artist field — but it is who to credit there.
+                    author=(detail.get("uploader") or {}).get("username", ""),
                     permalink=post.get("url", f"https://wallhaven.cc/w/{wid}"),
                     tags=select_tags(tags),
                     character=[],
@@ -276,6 +284,7 @@ def main() -> int:
     DATA_DIR.mkdir(parents=True, exist_ok=True)
     payload = {"items": existing + [a.to_dict() for a in accepted]}
     MANIFEST.write_text(json.dumps(payload, indent=1))
+    save_crop_index()
     print(f"\n{len(accepted)} added / {rejected} rejected on policy / "
           f"{len(payload['items'])} total")
     return 0

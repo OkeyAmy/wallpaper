@@ -222,6 +222,9 @@ def credit_label(it: dict) -> str:
     if source == "danbooru":
         return f"{author} (Danbooru)" if author else "Danbooru"
 
+    if source == "wallhaven":
+        return f"{author} (Wallhaven)" if author else "Wallhaven"
+
     return author or "direct upload"
 
 
@@ -949,6 +952,8 @@ def source_feeds(items: list[dict]) -> str:
             names.extend("r/" + s for s in subs)
         elif src == "danbooru":
             names.append("Danbooru")
+        elif src == "wallhaven":
+            names.append("Wallhaven")
         elif src:
             names.append("manual ingest")
     return ", ".join(names) or "manual ingest"

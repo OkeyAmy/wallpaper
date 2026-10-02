@@ -23,9 +23,9 @@ import requests
 
 from pipeline import (
     DATA_DIR, MANIFEST, Item, clean_character_tags, ingest_image, load_items,
-    select_tags,
+    removed_permalinks, save_crop_index, select_tags,
 )
-from quality import creative_score, reject_reasons
+from quality import creative_score, merit_reasons, reject_reasons
 
 UA = "web:okeyamy-wallpaper-archive:1.0 (by anonymous)"
 API = "https://danbooru.donmai.us/posts.json"
@@ -96,10 +96,10 @@ QUERIES = [
     # plenty of depth while keeping the bar far above the per-series feeds.
     {"tags": "rating:general order:score", "pages": 10, "min_score": 150},
     # What is being voted on *now* rather than all-time. Scores here are tiny
-    # (5..36 measured) because the posts are days old, so the floor is nominal
-    # and the quality gate carries it. Without this the archive only ever sees
+    # (5..36 measured) because the posts are days old. The floor was 4 and let
+    # in posts nobody had vetted; 10 keeps the upper part of that range. Without this the archive only ever sees
     # art that has already had years to accumulate votes.
-    {"tags": "rating:general order:rank", "pages": 3, "min_score": 4},
+    {"tags": "rating:general order:rank", "pages": 3, "min_score": 10},
     # Proven spine for landscapes. Eight pages of 40 is the usable depth.
     {"tags": "rating:general scenery order:score", "pages": 8, "min_score": 60},
     # `order:score` is deterministic: run it daily and it returns the same top
@@ -110,10 +110,11 @@ QUERIES = [
     # 500s on randomising a set that large for an anonymous client.)
     {"tags": "rating:general scenery order:random", "pages": 4, "min_score": 40},
     # Two real tags, which costs the `order:` slot and leaves the default sort
-    # (newest first). Nothing here has had time to accumulate votes, so the
-    # floor is nominal and the quality gate does the work — this is the only
-    # axis that can ever surface art posted this week.
-    {"tags": "rating:general no_humans scenery", "pages": 3, "min_score": 3},
+    # (newest first). Nothing here has had time to accumulate votes; the floor
+    # was 3, which is effectively unvetted, so it now asks for at least 10
+    # people to have liked it. This is still the only axis that can surface
+    # art posted this week, just less of it.
+    {"tags": "rating:general no_humans scenery", "pages": 3, "min_score": 10},
 ]
 
 MIN_SCORE = 60         # default floor; each axis above may override it
@@ -285,6 +286,7 @@ def main() -> int:
 
     existing = load_items()
     rejects = load_rejects()
+    removed = removed_permalinks()
     accepted: list[Item] = []
     previewed: list[dict] = []
     rejected = 0
@@ -331,13 +333,24 @@ def main() -> int:
         for page in range(1, axis["pages"] + 1):
             if full():
                 break
-            for post in fetch(tags, page, limit=40):
+            # Best-first within the page, so a tight --max-new budget goes to
+            # the most composed pictures rather than whatever sorts first.
+            posts = fetch(tags, page, limit=40)
+            posts.sort(key=lambda p: creative_score(
+                (p.get("tag_string_general", "") + " "
+                 + p.get("tag_string_meta", "")).split(),
+                w=p.get("image_width", 0), h=p.get("image_height", 0),
+                score=p.get("score", 0), fav_count=p.get("fav_count", 0)),
+                reverse=True)
+            for post in posts:
                 if full():
                     break
                 if post.get("score", 0) < floor:
                     continue
                 pid = str(post["id"])
                 if pid in rejects:
+                    continue
+                if f"https://danbooru.donmai.us/posts/{pid}" in removed:
                     continue
                 url = image_url(post)
                 if not url:
@@ -350,6 +363,12 @@ def main() -> int:
                     tags=full_tags,
                     w=post.get("image_width", 0),
                     h=post.get("image_height", 0),
+                ) or merit_reasons(
+                    full_tags,
+                    w=post.get("image_width", 0),
+                    h=post.get("image_height", 0),
+                    score=post.get("score", 0),
+                    fav_count=post.get("fav_count", 0),
                 )
                 if bad:
                     rejects[pid] = bad[0]
@@ -458,6 +477,7 @@ def main() -> int:
     DATA_DIR.mkdir(parents=True, exist_ok=True)
     payload = {"items": existing + [a.to_dict() for a in accepted]}
     MANIFEST.write_text(json.dumps(payload, indent=1))
+    save_crop_index()
     print(f"\n{len(accepted)} added / {rejected} rejected on policy / "
           f"{len(payload['items'])} total")
     return 0

@@ -8,6 +8,9 @@ on:
       max_new:
         description: "Max wallpapers to add this run"
         default: "40"
+      max_new_wallhaven:
+        description: "Max Wallhaven wallpapers to add this run"
+        default: "20"
       max_items:
         description: "Archive size cap (older entries are pruned)"
         default: "4000"
@@ -36,7 +39,7 @@ concurrency:
 jobs:
   sync:
     runs-on: ubuntu-latest
-    timeout-minutes: 25
+    timeout-minutes: 40         # Wallhaven paces at ~45 req/min, so its step is slow
 
     steps:
       - uses: actions/checkout@v4
@@ -64,6 +67,12 @@ jobs:
             exit 1
           fi
 
+      # Fingerprints for crop-duplicate detection (scripts/cropmatch.py). The
+      # first run indexes the whole archive from thumbnails; after that it only
+      # fills gaps, so both syncs compare candidates against everything.
+      - name: Update crop-duplicate index
+        run: python scripts/crop_index.py
+
       - name: Pull new wallpapers (Danbooru)
         env:
           MAX_NEW: ${{ inputs.max_new || '40' }}
@@ -72,6 +81,19 @@ jobs:
             ''|*[!0-9]*) echo "max_new must be an integer" >&2; exit 1 ;;
           esac
           python scripts/sync_danbooru.py --max-new "$MAX_NEW"
+
+      # A wallpaper community rather than an art archive, so it carries the
+      # designed edits Danbooru never has. No key: SFW search is open, and the
+      # images are re-hosted on R2 like every other source, so the site and
+      # its CSP are unchanged.
+      - name: Pull new wallpapers (Wallhaven)
+        env:
+          MAX_NEW: ${{ inputs.max_new_wallhaven || '20' }}
+        run: |
+          case "$MAX_NEW" in
+            ''|*[!0-9]*) echo "max_new_wallhaven must be an integer" >&2; exit 1 ;;
+          esac
+          python scripts/sync_wallhaven.py --max-new "$MAX_NEW"
 
       - name: Prune to the free-tier ceiling
         env:

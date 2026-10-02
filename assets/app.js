@@ -115,6 +115,7 @@ function creditLabel(it) {
   const author = (it.author || '').trim();
   if (it.source === 'reddit') return author ? `u/${author}` : (it.sub ? `r/${it.sub}` : 'reddit');
   if (it.source === 'danbooru') return author ? `${author} (Danbooru)` : 'Danbooru';
+  if (it.source === 'wallhaven') return author ? `${author} (Wallhaven)` : 'Wallhaven';
   return author || 'direct upload';
 }
 

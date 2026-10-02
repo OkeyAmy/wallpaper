@@ -20,7 +20,9 @@ import json
 import shutil
 import sys
 
-from pipeline import MANIFEST, load_items
+from datetime import date
+
+from pipeline import MANIFEST, load_items, record_removed
 from storage import get_storage
 
 # An allowlist, not a blocklist, and deliberately so: the safe default for an
@@ -30,7 +32,7 @@ from storage import get_storage
 # cannot — once its R2 object is gone the bytes are gone, no cache, no history.
 # This rule exists because 32 hand-added images were destroyed by a cull that
 # did not have it.
-CULLABLE_SOURCES = {"danbooru", "reddit"}
+CULLABLE_SOURCES = {"danbooru", "reddit", "wallhaven"}
 
 
 def bucket_objects(store):
@@ -113,7 +115,10 @@ def main() -> int:
             for it in items:
                 referenced.update((it["file"], it["thumb"]))
             referenced.discard("")
-            orphan_keys = sorted(bucket_objects(store) - referenced)
+            # The crop index is referenced by no item but is not an orphan:
+            # deleting it would silently turn crop-duplicate detection off.
+            orphan_keys = sorted(k for k in bucket_objects(store) - referenced
+                                 if not k.startswith("index/"))
 
     if not doomed and not orphan_keys:
         print("nothing to remove")
@@ -144,6 +149,9 @@ def main() -> int:
 
     # backup the manifest once, before any mutation
     shutil.copy(MANIFEST, str(MANIFEST) + ".bak")
+
+    # Remembered before deleting, so the sync never fetches these back.
+    record_removed(doomed, "culled", date.today().isoformat())
 
     for it in doomed:
         for key in (it.get("file"), it.get("thumb")):
