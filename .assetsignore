@@ -17,3 +17,5 @@ package-lock.json
 .assetsignore
 .gitignore
 README.md
+index
+data/removed.json

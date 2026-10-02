@@ -49,7 +49,9 @@ from pathlib import Path
 
 from PIL import Image
 
-from pipeline import DATA_DIR, MANIFEST, ROOT, ingest_image, load_items
+from pipeline import (
+    DATA_DIR, MANIFEST, ROOT, ingest_image, load_items, save_crop_index,
+)
 from quality import reject_reasons, sharpness_reasons
 
 INCOMING = ROOT / "incoming"
@@ -184,6 +186,7 @@ def main() -> int:
     DATA_DIR.mkdir(parents=True, exist_ok=True)
     payload = {"items": existing + [a.to_dict() for a in added]}
     MANIFEST.write_text(json.dumps(payload, indent=1))
+    save_crop_index()
     print(f"\n{len(added)} added / {len(payload['items'])} total")
     return 0
 

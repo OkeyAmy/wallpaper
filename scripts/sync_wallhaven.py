@@ -42,7 +42,8 @@ from datetime import date
 import requests
 
 from pipeline import (
-    DATA_DIR, MANIFEST, Item, ingest_image, load_items, select_tags,
+    DATA_DIR, MANIFEST, Item, ingest_image, load_items, removed_permalinks,
+    save_crop_index, select_tags,
 )
 from quality import creative_score, merit_reasons, reject_reasons
 
@@ -143,6 +144,7 @@ def main() -> int:
 
     existing = load_items()
     rejects = load_rejects()
+    removed = removed_permalinks()
     accepted: list[Item] = []
     previewed: list[dict] = []
     rejected = 0
@@ -164,6 +166,8 @@ def main() -> int:
                     break
                 wid = str(post.get("id") or "")
                 if not wid or wid in rejects:
+                    continue
+                if post.get("url", f"https://wallhaven.cc/w/{wid}") in removed:
                     continue
                 if (post.get("views") or 0) < args.min_views:
                     continue
@@ -280,6 +284,7 @@ def main() -> int:
     DATA_DIR.mkdir(parents=True, exist_ok=True)
     payload = {"items": existing + [a.to_dict() for a in accepted]}
     MANIFEST.write_text(json.dumps(payload, indent=1))
+    save_crop_index()
     print(f"\n{len(accepted)} added / {rejected} rejected on policy / "
           f"{len(payload['items'])} total")
     return 0

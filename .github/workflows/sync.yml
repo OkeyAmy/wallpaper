@@ -67,6 +67,12 @@ jobs:
             exit 1
           fi
 
+      # Fingerprints for crop-duplicate detection (scripts/cropmatch.py). The
+      # first run indexes the whole archive from thumbnails; after that it only
+      # fills gaps, so both syncs compare candidates against everything.
+      - name: Update crop-duplicate index
+        run: python scripts/crop_index.py
+
       - name: Pull new wallpapers (Danbooru)
         env:
           MAX_NEW: ${{ inputs.max_new || '40' }}

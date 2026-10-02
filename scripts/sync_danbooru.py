@@ -23,7 +23,7 @@ import requests
 
 from pipeline import (
     DATA_DIR, MANIFEST, Item, clean_character_tags, ingest_image, load_items,
-    select_tags,
+    removed_permalinks, save_crop_index, select_tags,
 )
 from quality import creative_score, merit_reasons, reject_reasons
 
@@ -286,6 +286,7 @@ def main() -> int:
 
     existing = load_items()
     rejects = load_rejects()
+    removed = removed_permalinks()
     accepted: list[Item] = []
     previewed: list[dict] = []
     rejected = 0
@@ -348,6 +349,8 @@ def main() -> int:
                     continue
                 pid = str(post["id"])
                 if pid in rejects:
+                    continue
+                if f"https://danbooru.donmai.us/posts/{pid}" in removed:
                     continue
                 url = image_url(post)
                 if not url:
@@ -474,6 +477,7 @@ def main() -> int:
     DATA_DIR.mkdir(parents=True, exist_ok=True)
     payload = {"items": existing + [a.to_dict() for a in accepted]}
     MANIFEST.write_text(json.dumps(payload, indent=1))
+    save_crop_index()
     print(f"\n{len(accepted)} added / {rejected} rejected on policy / "
           f"{len(payload['items'])} total")
     return 0

@@ -376,8 +376,26 @@ def ingest_image(
     ident = digest[:12]
     fingerprint = dhash(img)
 
-    if existing is not None and is_duplicate_hash(digest, fingerprint, existing):
+    # Removed items count as existing: a picture taken out on purpose must not
+    # come back under a new id. Waived with the rest of policy, so a hand-drop
+    # with --no-filter can deliberately restore one.
+    compare = list(existing or [])
+    if enforce_policy:
+        compare += load_removed()
+    if compare and is_duplicate_hash(digest, fingerprint, compare):
         return None
+
+    # The hashes above only see whole frames. This catches a crop or zoom of a
+    # picture already here (or removed), from any source — see cropmatch.py.
+    # Imported lazily so scripts that never ingest don't need OpenCV.
+    import cropmatch
+    store = storage or get_storage()
+    crops = cropmatch.index(store)
+    if enforce_policy:
+        hit = crops.match(img)
+        if hit:
+            print(f"  = crop/resize of {hit[0]} ({hit[1]} matching points) — skipped")
+            return None
 
     palette = extract_palette(img)
 
@@ -394,9 +412,9 @@ def ingest_image(
     thumb.thumbnail((THUMB_WIDTH, THUMB_WIDTH * 3), Image.Resampling.LANCZOS)
     thumb_bytes = _encode(thumb, THUMB_QUALITY)
 
-    store = storage or get_storage()
     store.put(full_key, full_bytes)
     store.put(thumb_key, thumb_bytes)
+    crops.add(ident, img)
 
     return Item(
         id=ident,
@@ -423,7 +441,56 @@ def ingest_image(
     )
 
 
+def save_crop_index(storage=None) -> None:
+    """Persist fingerprints added this run. Callers run it after writing the
+    manifest; if it never runs, scripts/crop_index.py rebuilds the missing
+    entries from thumbnails on the next sync."""
+    import cropmatch
+    if cropmatch._INDEX is not None:
+        cropmatch._INDEX.save(storage or get_storage())
+
+
 # --- manifest --------------------------------------------------------------
+
+# Every item ever taken *out* of the archive, by cull or prune. Without this a
+# removed picture is only gone until the next sync finds it again — and
+# Danbooru's `order:score` returns the same top posts day after day, so a
+# culled reject or a pruned old item would simply be downloaded back. Entries
+# keep the hashes, so the same picture is refused from any source, not just
+# from the post it was originally taken from. Not deployed (.assetsignore).
+REMOVED = DATA_DIR / "removed.json"
+
+
+def load_removed() -> list[dict]:
+    if not REMOVED.exists():
+        return []
+    try:
+        return json.loads(REMOVED.read_text()).get("items", [])
+    except json.JSONDecodeError:
+        return []
+
+
+def record_removed(items: list[dict], why: str, when: str) -> None:
+    """Append removed items to the ledger. Call before deleting anything, so
+    a crash mid-delete leaves a ledger that is ahead of storage, never behind."""
+    if not items:
+        return
+    ledger = load_removed()
+    seen = {e.get("id") for e in ledger}
+    for it in items:
+        if it.get("id") in seen:
+            continue
+        ledger.append({k: it.get(k, "") for k in
+                       ("id", "source", "permalink", "sha256", "dhash")}
+                      | {"why": why, "removed": when})
+    DATA_DIR.mkdir(parents=True, exist_ok=True)
+    REMOVED.write_text(json.dumps({"items": ledger}, indent=1))
+
+
+def removed_permalinks() -> set[str]:
+    """For the syncs' cheap pre-download skip."""
+    return {e["permalink"] for e in load_removed() if e.get("permalink")}
+
 
 def load_items() -> list[dict]:
     if not MANIFEST.exists():
