@@ -487,7 +487,7 @@ def blockiness(img: Image.Image) -> float:
             else:
                 inner += px[x, y]
                 inner_n += 1
-    return (edge / edge_n) / max(inner / inner_n, 0.5)
+    return (edge / max(edge_n, 1)) / max(inner / max(inner_n, 1), 0.5)
 
 
 def sharpness_reasons(img: Image.Image) -> list[str]:
