@@ -237,7 +237,9 @@ def main() -> int:
                     added=today,
                     title=title,
                     sub="wallhaven",
-                    author="",
+                    # The uploader, not necessarily the artist — Wallhaven
+                    # carries no artist field — but it is who to credit there.
+                    author=(detail.get("uploader") or {}).get("username", ""),
                     permalink=post.get("url", f"https://wallhaven.cc/w/{wid}"),
                     tags=select_tags(tags),
                     character=[],

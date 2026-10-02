@@ -30,7 +30,7 @@ from storage import get_storage
 # cannot — once its R2 object is gone the bytes are gone, no cache, no history.
 # This rule exists because 32 hand-added images were destroyed by a cull that
 # did not have it.
-CULLABLE_SOURCES = {"danbooru", "reddit"}
+CULLABLE_SOURCES = {"danbooru", "reddit", "wallhaven"}
 
 
 def bucket_objects(store):
