@@ -45,7 +45,10 @@ from PIL import Image, ImageChops, ImageStat
 # too, but they sit on plenty of good wallpapers, so they are deliberately out.
 TAG_BLOCKLIST = (
     # printed page / sequential art
-    "comic", "4koma", "manga", "speech_bubble", "spoken_", "translated",
+    # `manga` is deliberately absent: Wallhaven tags every wallpaper from a
+    # manga-origin series with it, and manga-style art is wanted. Actual pages
+    # are still caught by `comic`, `4koma`, speech bubbles and `multiple_views`.
+    "comic", "4koma", "speech_bubble", "spoken_", "translated",
     # burned-in lettering. `artist_name`, `copyright_name` and `dated` are
     # deliberately absent: a signature or a date in the corner is normal on
     # good art and they were the single largest source of wrong rejects when
@@ -55,7 +58,9 @@ TAG_BLOCKLIST = (
     "multiple_views", "character_sheet", "reference_sheet", "chart",
     "absolutely_everyone", "album_cover", "cover_page",
     # not a finished picture
-    "sketch", "lineart", "monochrome", "greyscale", "screencap",
+    # `monochrome`/`greyscale` were here and are not: ink-style manga art is
+    # monochrome by design. See INTENTIONAL_MONO for the matching pixel rule.
+    "sketch", "lineart", "screencap",
     "photo_(medium)", "letterboxed", "pillarboxed", "transparent_background",
     # photographed merchandise. Added 2026-09-03 after post 8158469 (score 352,
     # tagged `scenery`) turned out to be a photo of a shop shelf of figurines
@@ -498,6 +503,13 @@ def sharpness_reasons(img: Image.Image) -> list[str]:
     return reasons
 
 
+# Tags that say a lack of colour is the style, not a defect. With one of these
+# the near-zero-saturation pixel check is waived; untagged images (hand drops)
+# still get it, since for them a colourless frame is usually a blank card.
+INTENTIONAL_MONO = ("monochrome", "greyscale", "grayscale", "manga", "ink_(medium)",
+                    "black_and_white")
+
+
 def reject_reasons(*, tags=(), w: int = 0, h: int = 0,
                    img: Image.Image | None = None,
                    include_suggestive: bool = True) -> list[str]:
@@ -511,7 +523,10 @@ def reject_reasons(*, tags=(), w: int = 0, h: int = 0,
     if w and h:
         reasons += shape_reasons(w, h)
     if img is not None:
-        reasons += pixel_reasons(img)
+        px = pixel_reasons(img)
+        if _match(tags, INTENTIONAL_MONO):
+            px = [r for r in px if not r.startswith("near-zero colour")]
+        reasons += px
     return reasons
 
 
