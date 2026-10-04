@@ -1,0 +1,85 @@
+{
+ "items": [
+  {
+   "id": "4a63e8a60c82",
+   "source": "danbooru",
+   "permalink": "https://danbooru.donmai.us/posts/5332215",
+   "sha256": "4a63e8a60c82338870d41b09239981eeca40de559396811ea167485992f27244",
+   "dhash": "4b53c4a9192dcbd9",
+   "why": "culled",
+   "removed": "2026-10-04"
+  },
+  {
+   "id": "1348527aaaef",
+   "source": "danbooru",
+   "permalink": "https://danbooru.donmai.us/posts/4991764",
+   "sha256": "1348527aaaefcb17a1a31aef80b3b9fa6108e783787eba83679cacd8ecac11aa",
+   "dhash": "f0dacbdb93d2c6c4",
+   "why": "culled",
+   "removed": "2026-10-04"
+  },
+  {
+   "id": "afbcbd738878",
+   "source": "danbooru",
+   "permalink": "https://danbooru.donmai.us/posts/5486291",
+   "sha256": "afbcbd738878ec5a50176b59d35c477fe00ee5f75eeb9251cf6f5cdd567dd5f5",
+   "dhash": "ab2333387c7e3a23",
+   "why": "culled",
+   "removed": "2026-10-04"
+  },
+  {
+   "id": "c1936948b7cb",
+   "source": "danbooru",
+   "permalink": "https://danbooru.donmai.us/posts/12292793",
+   "sha256": "c1936948b7cb11e8f064c3302616839422466daa67d3746d1ad80409f813ed54",
+   "dhash": "61c1c9a92c723131",
+   "why": "culled",
+   "removed": "2026-10-04"
+  },
+  {
+   "id": "258f297c6f89",
+   "source": "danbooru",
+   "permalink": "https://danbooru.donmai.us/posts/12293681",
+   "sha256": "258f297c6f89a1b71da9d21dd299f8e579fafb3861a71346dc5c7c4c943ddb6c",
+   "dhash": "6274e5e7e9713367",
+   "why": "culled",
+   "removed": "2026-10-04"
+  },
+  {
+   "id": "63d06689f625",
+   "source": "danbooru",
+   "permalink": "https://danbooru.donmai.us/posts/12287180",
+   "sha256": "63d06689f62517b5c9793cbf19e5f80823ff4e2a9dacfde3edc95f2f85017598",
+   "dhash": "c8993b3d3d2327b5",
+   "why": "culled",
+   "removed": "2026-10-04"
+  },
+  {
+   "id": "bbfebd5025c3",
+   "source": "danbooru",
+   "permalink": "https://danbooru.donmai.us/posts/12279367",
+   "sha256": "bbfebd5025c3ac0ba1c7c6a5f09bb0e216fe2c43f7c95431a19b74dd9562d5cc",
+   "dhash": "5ccc0e162b6c8ea6",
+   "why": "culled",
+   "removed": "2026-10-04"
+  },
+  {
+   "id": "0dde9eb49d2d",
+   "source": "danbooru",
+   "permalink": "https://danbooru.donmai.us/posts/12278520",
+   "sha256": "0dde9eb49d2d4f08b05202b517a770a6099e8f1c5230e126417c68a711649f96",
+   "dhash": "3373717371692d6d",
+   "why": "culled",
+   "removed": "2026-10-04"
+  },
+  {
+   "id": "27b0760d16f9",
+   "source": "danbooru",
+   "permalink": "https://danbooru.donmai.us/posts/12273975",
+   "sha256": "27b0760d16f9550df5e8e9564a97a629b13c686c076d3ff9fbbe9ff94eda3759",
+   "dhash": "6d9f93612591266d",
+   "why": "culled",
+   "removed": "2026-10-04"
+  }
+ ]
+}
