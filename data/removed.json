@@ -80,6 +80,69 @@
    "dhash": "6d9f93612591266d",
    "why": "culled",
    "removed": "2026-10-04"
+  },
+  {
+   "id": "b82c4fb88672",
+   "source": "danbooru",
+   "permalink": "https://danbooru.donmai.us/posts/6000447",
+   "sha256": "b82c4fb886723fac0f14261f9917db345a282f4c89930a3e2f440250e50cf778",
+   "dhash": "d366899808060c08",
+   "why": "culled",
+   "removed": "2026-10-11"
+  },
+  {
+   "id": "d1ee91a7b96a",
+   "source": "danbooru",
+   "permalink": "https://danbooru.donmai.us/posts/12300134",
+   "sha256": "d1ee91a7b96af16752d1262f0710d0dd5eda78fc7688dce19ba09777f407c6ad",
+   "dhash": "4f4e933369c9c149",
+   "why": "culled",
+   "removed": "2026-10-11"
+  },
+  {
+   "id": "68af830f8cf0",
+   "source": "danbooru",
+   "permalink": "https://danbooru.donmai.us/posts/12300056",
+   "sha256": "68af830f8cf0086ebf536b8b187349a9e157c59174b37ce316aca80e087bb2db",
+   "dhash": "47077b65e5ec6561",
+   "why": "culled",
+   "removed": "2026-10-11"
+  },
+  {
+   "id": "1c6c26705094",
+   "source": "danbooru",
+   "permalink": "https://danbooru.donmai.us/posts/12300508",
+   "sha256": "1c6c26705094bc9e14bb8540927891fb449e5ac13ad7dddb0ee9ecc9227af836",
+   "dhash": "464029e418293913",
+   "why": "culled",
+   "removed": "2026-10-11"
+  },
+  {
+   "id": "95eb88a591d1",
+   "source": "danbooru",
+   "permalink": "https://danbooru.donmai.us/posts/12293783",
+   "sha256": "95eb88a591d1e3ba7fe048326b13cdc87272245ac23aaadcb8ce22ad993871c4",
+   "dhash": "7ae3c0f2a8c9ec66",
+   "why": "culled",
+   "removed": "2026-10-11"
+  },
+  {
+   "id": "d8eaadd29def",
+   "source": "danbooru",
+   "permalink": "https://danbooru.donmai.us/posts/12280286",
+   "sha256": "d8eaadd29def04ca06208dab645a642f70330eaa20ed3836bc3bbd4ba9ee8358",
+   "dhash": "062693978d261b49",
+   "why": "culled",
+   "removed": "2026-10-11"
+  },
+  {
+   "id": "de1084cb4a61",
+   "source": "danbooru",
+   "permalink": "https://danbooru.donmai.us/posts/12261163",
+   "sha256": "de1084cb4a611afd0f3bb38b97cd40820decb34dfed7ff283615597ed6b292b7",
+   "dhash": "21b35c4e07456dc9",
+   "why": "culled",
+   "removed": "2026-10-11"
   }
  ]
 }
