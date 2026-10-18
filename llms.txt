@@ -1,6 +1,6 @@
 # Anime Wallpaper Archive
 
-> A curated, automatically synced archive of 2003 anime wallpapers,
+> A curated, automatically synced archive of 1999 anime wallpapers,
 > published as a static site at https://wallpapers.okeyamy.xyz and indexed by extracted colour palette.
 
 Last synced: 2026-10-17T10:29:01+00:00
@@ -14,13 +14,13 @@ No accounts, no tracking, no ads, no paywall.
 
 ## Collection
 
-- Total wallpapers: 2003
-- Desktop / ultrawide (landscape): 607
-- Phone (portrait): 1396
+- Total wallpapers: 1999
+- Desktop / ultrawide (landscape): 606
+- Phone (portrait): 1393
 - Maximum resolution: up to 3840x2160 (4K)
 - Format: WebP, quality 82, with a 640px thumbnail per item
 - Source feeds: Danbooru, manual ingest, Wallhaven
-- Character pages: 218 at https://wallpapers.okeyamy.xyz/w/<character> — Draco Malfoy, Hatsune Miku, Frieren, Hakurei Reimu, Furina, Gotoh Hitori, Typhoeus, Yae Miko, Naruto, Raiden Shogun, Typhon, Rio
+- Character pages: 217 at https://wallpapers.okeyamy.xyz/w/<character> — Draco Malfoy, Hatsune Miku, Frieren, Hakurei Reimu, Furina, Gotoh Hitori, Typhoeus, Yae Miko, Naruto, Raiden Shogun, Typhon, Rio
 
 ## Distinctive feature
 
