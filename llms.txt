@@ -1,9 +1,9 @@
 # Anime Wallpaper Archive
 
-> A curated, automatically synced archive of 2013 anime wallpapers,
+> A curated, automatically synced archive of 2023 anime wallpapers,
 > published as a static site at https://wallpapers.okeyamy.xyz and indexed by extracted colour palette.
 
-Last synced: 2026-10-18T10:47:05+00:00
+Last synced: 2026-10-19T12:45:53+00:00
 
 ## What it is
 
@@ -14,9 +14,9 @@ No accounts, no tracking, no ads, no paywall.
 
 ## Collection
 
-- Total wallpapers: 2013
-- Desktop / ultrawide (landscape): 614
-- Phone (portrait): 1399
+- Total wallpapers: 2023
+- Desktop / ultrawide (landscape): 621
+- Phone (portrait): 1402
 - Maximum resolution: up to 3840x2160 (4K)
 - Format: WebP, quality 82, with a 640px thumbnail per item
 - Source feeds: Danbooru, manual ingest, Wallhaven
