@@ -179,6 +179,24 @@
    "dhash": "13031323a5091b92",
    "why": "culled",
    "removed": "2026-10-18"
+  },
+  {
+   "id": "aaf7469a72f5",
+   "source": "wallhaven",
+   "permalink": "https://wallhaven.cc/w/g7qw2q",
+   "sha256": "aaf7469a72f5920484c076fa541137bb84f651aa99ec5d26e09d60d475905856",
+   "dhash": "ba1e1fcfcf26337b",
+   "why": "culled",
+   "removed": "2026-10-25"
+  },
+  {
+   "id": "8c42749ef9ec",
+   "source": "danbooru",
+   "permalink": "https://danbooru.donmai.us/posts/12168346",
+   "sha256": "8c42749ef9ec95842dc77d8dbb119d8ec69ebd3c25007cf01710afb229aefa42",
+   "dhash": "1f03301232e3b697",
+   "why": "culled",
+   "removed": "2026-10-25"
   }
  ]
 }
