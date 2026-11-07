@@ -1,9 +1,9 @@
 # Anime Wallpaper Archive
 
-> A curated, automatically synced archive of 2231 anime wallpapers,
+> A curated, automatically synced archive of 2237 anime wallpapers,
 > published as a static site at https://wallpapers.okeyamy.xyz and indexed by extracted colour palette.
 
-Last synced: 2026-11-06T14:02:45+00:00
+Last synced: 2026-11-07T12:47:29+00:00
 
 ## What it is
 
@@ -15,9 +15,9 @@ cookies, no profiles, no cross-site tracking.
 
 ## Collection
 
-- Total wallpapers: 2231
-- Desktop / ultrawide (landscape): 754
-- Phone (portrait): 1477
+- Total wallpapers: 2237
+- Desktop / ultrawide (landscape): 758
+- Phone (portrait): 1479
 - Maximum resolution: up to 3840x2160 (4K)
 - Format: WebP, quality 82, with a 640px thumbnail per item
 - Source feeds: Danbooru, manual ingest, Wallhaven
