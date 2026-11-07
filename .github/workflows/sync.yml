@@ -52,6 +52,11 @@ jobs:
       - name: Install dependencies
         run: pip install -r scripts/requirements.txt
 
+      # Before anything is downloaded or deleted: if the guard itself is
+      # broken, fail now rather than after a destructive step.
+      - name: Test the publish gate
+        run: python scripts/test_publish_guard.py
+
       - name: R2 configured?
         run: |
           missing=""
@@ -74,26 +79,35 @@ jobs:
         run: python scripts/crop_index.py
 
       - name: Pull new wallpapers (Danbooru)
+        id: danbooru
+        # A dead source must not block the healthy one. The final step turns
+        # any failure here into a red run, after Wallhaven and the commit.
+        continue-on-error: true
         env:
           MAX_NEW: ${{ inputs.max_new || '40' }}
         run: |
           case "$MAX_NEW" in
             ''|*[!0-9]*) echo "max_new must be an integer" >&2; exit 1 ;;
           esac
-          python scripts/sync_danbooru.py --max-new "$MAX_NEW"
+          python scripts/sync_danbooru.py --max-new "$MAX_NEW" --fail-on-outage
 
       # A wallpaper community rather than an art archive, so it carries the
       # designed edits Danbooru never has. No key: SFW search is open, and the
       # images are re-hosted on R2 like every other source, so the site and
       # its CSP are unchanged.
       - name: Pull new wallpapers (Wallhaven)
+        id: wallhaven
+        # Same contract as the Danbooru step: a dead source leaves the
+        # manifest untouched, the healthy source still lands, and the final
+        # step turns the failure into a red run after the commit.
+        continue-on-error: true
         env:
           MAX_NEW: ${{ inputs.max_new_wallhaven || '20' }}
         run: |
           case "$MAX_NEW" in
             ''|*[!0-9]*) echo "max_new_wallhaven must be an integer" >&2; exit 1 ;;
           esac
-          python scripts/sync_wallhaven.py --max-new "$MAX_NEW"
+          python scripts/sync_wallhaven.py --max-new "$MAX_NEW" --fail-on-outage
 
       - name: Prune to the free-tier ceiling
         env:
@@ -103,7 +117,8 @@ jobs:
             ''|*[!0-9]*) echo "max_items must be an integer" >&2; exit 1 ;;
           esac
           # 8 GiB keeps storage under R2's 10 GB free tier with headroom
-          python scripts/prune.py --max-items "$MAX_ITEMS" --max-bytes 8589934592
+          python scripts/prune.py --max-items "$MAX_ITEMS" --max-bytes 8589934592 \
+            --report "$RUNNER_TEMP/prune.json"
 
       - name: Rebuild index, sitemap and structured data
         run: python scripts/build_site.py
@@ -134,6 +149,15 @@ jobs:
 
           print(f"ok: {len(items)} items, {files} files")
           PY
+
+      # The last known good set is the manifest in the last commit. This run
+      # may add freely, and prune may remove exactly what it reported. Anything
+      # else — a corrupt read, a partial write, a bug — stops here, before the
+      # commit, so Cloudflare keeps serving the previous deploy.
+      - name: Refuse to publish a degraded archive
+        run: |
+          python scripts/publish_guard.py --after data/wallpapers.json \
+            --deleted "$RUNNER_TEMP/prune.json"
 
       - name: Commit
         run: |
@@ -168,3 +192,18 @@ jobs:
       # the manifest actually moved, so a quiet day sends nothing.
       - name: Tell search engines what changed
         run: python scripts/indexnow.py
+
+      # A source outage must be visible without blocking the healthy source.
+      # The sync steps above are continue-on-error, so by the time we get here
+      # anything they added is already committed; this only colours the run red.
+      - name: Report source outages
+        if: always()
+        run: |
+          failed=""
+          [ "${{ steps.danbooru.outcome }}" = "failure" ] && failed="$failed danbooru"
+          [ "${{ steps.wallhaven.outcome }}" = "failure" ] && failed="$failed wallhaven"
+          if [ -n "$failed" ]; then
+            echo "::error::source unreachable:$failed — its manifest was left untouched"
+            exit 1
+          fi
+          echo "all sources reachable"

@@ -24,6 +24,7 @@ import json
 from datetime import date
 
 from pipeline import MANIFEST, load_items, record_removed
+from publish_guard import write_deletion_report
 from storage import get_storage
 
 DEFAULT_MAX_BYTES = 8 * 1024**3      # 8 GiB, under R2's 10 GB free tier
@@ -35,11 +36,15 @@ def main() -> int:
     ap.add_argument("--max-bytes", type=int, default=DEFAULT_MAX_BYTES)
     ap.add_argument("--max-items", type=int, default=DEFAULT_MAX_ITEMS)
     ap.add_argument("--dry-run", action="store_true")
+    ap.add_argument("--report", default="", metavar="FILE",
+                    help="write the deletion count for publish_guard.py")
     args = ap.parse_args()
 
     items = load_items()
     if not items:
         print("manifest empty")
+        if not args.dry_run:
+            write_deletion_report(args.report, 0, "prune", 0, 0)
         return 0
 
     # newest first, so the tail is always the oldest material
@@ -61,6 +66,8 @@ def main() -> int:
 
     if not drop:
         print(f"{len(items)} items / {running / 1e9:.2f} GB — within caps, nothing to prune")
+        if not args.dry_run:
+            write_deletion_report(args.report, 0, "prune", len(items), len(items))
         return 0
 
     store = get_storage()
@@ -84,6 +91,7 @@ def main() -> int:
     data = json.loads(MANIFEST.read_text()) if MANIFEST.exists() else {}
     data["items"] = keep
     MANIFEST.write_text(json.dumps(data, indent=1))
+    write_deletion_report(args.report, len(drop), "prune", len(items), len(keep))
     print(f"\npruned {len(drop)} items / ~{freed / 1e6:.1f} MB freed / "
           f"{len(keep)} kept / {running / 1e9:.2f} GB stored")
     return 0

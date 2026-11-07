@@ -252,7 +252,7 @@ def save_rejects(posts: dict) -> None:
 # against the manifest afterwards.
 
 
-def fetch(tags: str, page: int, limit: int) -> list[dict]:
+def fetch(tags: str, page: int, limit: int) -> list[dict] | None:
     r = requests.get(
         API,
         params={"tags": tags, "page": page, "limit": limit},
@@ -261,7 +261,7 @@ def fetch(tags: str, page: int, limit: int) -> list[dict]:
     )
     if r.status_code != 200:
         print(f"  ! {tags!r} page {page} -> HTTP {r.status_code}", file=sys.stderr)
-        return []
+        return None
     return r.json()
 
 
@@ -282,6 +282,10 @@ def main() -> int:
     ap.add_argument("--no-series", action="store_true",
                     help="skip the rotating per-series axes and run only the "
                          "fixed global/scenery queries")
+    ap.add_argument("--fail-on-outage", action="store_true",
+                    help="exit non-zero if every request to Danbooru failed, "
+                         "so a source outage is visible instead of a silent "
+                         "zero-item run")
     args = ap.parse_args()
 
     existing = load_items()
@@ -290,6 +294,8 @@ def main() -> int:
     accepted: list[Item] = []
     previewed: list[dict] = []
     rejected = 0
+    fetch_ok = 0
+    fetch_failed = 0
     today = date.today().isoformat()
 
     def taken() -> int:
@@ -336,6 +342,10 @@ def main() -> int:
             # Best-first within the page, so a tight --max-new budget goes to
             # the most composed pictures rather than whatever sorts first.
             posts = fetch(tags, page, limit=40)
+            if posts is None:
+                fetch_failed += 1
+                continue
+            fetch_ok += 1
             posts.sort(key=lambda p: creative_score(
                 (p.get("tag_string_general", "") + " "
                  + p.get("tag_string_meta", "")).split(),
@@ -449,6 +459,14 @@ def main() -> int:
 
         if axis.get("group") == "series":
             series_taken += taken() - before
+
+    if fetch_failed and not fetch_ok:
+        print(f"! every request to Danbooru failed ({fetch_failed}) — "
+              f"source unreachable", file=sys.stderr)
+        return 3 if args.fail_on_outage else 0
+    if fetch_failed:
+        print(f"! {fetch_failed} request(s) failed; {fetch_ok} succeeded",
+              file=sys.stderr)
 
     if args.dry_run:
         # Nothing is persisted, not even the reject ledger: a dry run that

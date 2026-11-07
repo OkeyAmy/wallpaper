@@ -2,6 +2,12 @@
 # be excluded here. node_modules is the blocking one: wrangler's own workerd
 # binary is 97 MiB and Workers rejects any asset over 25 MiB.
 node_modules
+# Never upload local credentials or notes, even on a manual `wrangler deploy`
+# (the git-based deploy would not have them, but this makes it unconditional).
+.env
+.env.*
+NOTES.local.md
+*.bak
 scripts
 old
 incoming

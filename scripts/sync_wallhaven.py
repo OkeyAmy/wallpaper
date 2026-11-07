@@ -124,13 +124,15 @@ def get(url: str, params: dict | None = None) -> dict | None:
         return None
 
 
-def search_page(axis: dict, page: int) -> list[dict]:
+def search_page(axis: dict, page: int) -> list[dict] | None:
     params = {"categories": CATEGORIES, "purity": PURITY,
               "sorting": axis["sorting"], "page": page}
     if axis.get("topRange"):
         params["topRange"] = axis["topRange"]
     body = get(SEARCH, params)
-    return (body or {}).get("data", []) or []
+    if body is None:
+        return None
+    return body.get("data", []) or []
 
 
 def main() -> int:
@@ -140,6 +142,10 @@ def main() -> int:
     ap.add_argument("--dry-run", action="store_true",
                     help="report what would be accepted without downloading, "
                          "encoding, uploading or writing the manifest")
+    ap.add_argument("--fail-on-outage", action="store_true",
+                    help="exit non-zero if every search request failed, so a "
+                         "source outage is visible instead of a silent "
+                         "zero-item run")
     args = ap.parse_args()
 
     existing = load_items()
@@ -148,6 +154,8 @@ def main() -> int:
     accepted: list[Item] = []
     previewed: list[dict] = []
     rejected = 0
+    pages_ok = 0
+    pages_failed = 0
     today = date.today().isoformat()
 
     def taken() -> int:
@@ -161,7 +169,12 @@ def main() -> int:
         for page in range(1, axis["pages"] + 1):
             if taken() >= args.max_new:
                 break
-            for post in search_page(axis, page):
+            posts = search_page(axis, page)
+            if posts is None:
+                pages_failed += 1
+                continue
+            pages_ok += 1
+            for post in posts:
                 if taken() >= args.max_new:
                     break
                 wid = str(post.get("id") or "")
@@ -261,6 +274,14 @@ def main() -> int:
                 print(f"  + {item.id}  {item.w}×{item.h}  creative={item.creative:.2f}"
                       f"  {item.title[:40]}")
                 time.sleep(REQUEST_PACING)
+
+    if pages_failed and not pages_ok:
+        print(f"! every search request to Wallhaven failed ({pages_failed}) — "
+              f"source unreachable", file=sys.stderr)
+        return 3 if args.fail_on_outage else 0
+    if pages_failed:
+        print(f"! {pages_failed} search page(s) failed; {pages_ok} succeeded",
+              file=sys.stderr)
 
     if args.dry_run:
         if not previewed:

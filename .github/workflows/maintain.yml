@@ -58,6 +58,10 @@ jobs:
 
       - run: pip install -r scripts/requirements.txt
 
+      # Before anything is deleted: if the guard itself is broken, fail now.
+      - name: Test the publish gate
+        run: python scripts/test_publish_guard.py
+
       - name: R2 configured?
         run: |
           missing=""
@@ -87,10 +91,20 @@ jobs:
             exit 0
           fi
           echo "$(wc -l < flagged.txt) items flagged"
-          python scripts/cull.py --from-list flagged.txt --max-remove "$MAX_REMOVE"
+          python scripts/cull.py --from-list flagged.txt --max-remove "$MAX_REMOVE" \
+            --report "$RUNNER_TEMP/cull.json"
 
       - name: Rebuild
         run: python scripts/build_site.py
+
+      # Same gate as the daily sync: the committed manifest is the last known
+      # good set, and this run may only shrink by what cull explicitly
+      # reported. If the manifest came back short for any other reason, stop
+      # before the commit and leave the previous deploy live.
+      - name: Refuse to publish a degraded archive
+        run: |
+          python scripts/publish_guard.py --after data/wallpapers.json \
+            --deleted "$RUNNER_TEMP/cull.json"
 
       - name: Commit
         run: |

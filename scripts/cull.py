@@ -23,6 +23,7 @@ import sys
 from datetime import date
 
 from pipeline import MANIFEST, load_items, record_removed
+from publish_guard import write_deletion_report
 from storage import get_storage
 
 # An allowlist, not a blocklist, and deliberately so: the safe default for an
@@ -65,6 +66,8 @@ def main() -> int:
                     help="refuse to run if more than this many items would go. "
                          "0 disables the cap; the scheduled job always sets it")
     ap.add_argument("--dry-run", action="store_true")
+    ap.add_argument("--report", default="", metavar="FILE",
+                    help="write the deletion count for publish_guard.py")
     args = ap.parse_args()
 
     bad_ids = {i.strip() for i in args.ids.split(",") if i.strip()}
@@ -122,6 +125,8 @@ def main() -> int:
 
     if not doomed and not orphan_keys:
         print("nothing to remove")
+        if not args.dry_run:
+            write_deletion_report(args.report, 0, "cull", len(items), len(items))
         return 0
 
     print(f"{len(doomed)} manifest items + {len(orphan_keys)} orphaned objects to remove:")
@@ -168,6 +173,7 @@ def main() -> int:
     doc = json.loads(MANIFEST.read_text())
     doc["items"] = keep
     MANIFEST.write_text(json.dumps(doc, indent=1))
+    write_deletion_report(args.report, len(doomed), "cull", len(items), len(keep))
     print(f"\ndone: {len(keep)} items kept — run scripts/build_site.py next "
           f"(manifest backup at data/wallpapers.json.bak)")
     return 0

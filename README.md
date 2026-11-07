@@ -152,6 +152,29 @@ only, so the actual defence is at the edge — in the Cloudflare dashboard:
 That breaks the sequential crawl pattern used to clone a whole gallery without
 affecting anyone browsing normally.
 
+## Publish safety
+
+The manifest in the last commit is the last known good set. The scheduled jobs
+treat it as a floor, not a suggestion:
+
+- A sync that accepts nothing returns before touching the manifest, so an
+  all-rejected day — or a source returning zero posts — leaves the live site
+  byte-identical.
+- `scripts/publish_guard.py` runs after the build and before `git commit`. It
+  compares the committed manifest with the one this run produced. Additions
+  always pass; a shrink passes only by the number `prune.py` or `cull.py`
+  explicitly reported as deleted; a non-empty archive can never be replaced by
+  an empty one. Anything else — a corrupt read, a partial write, a bug — stops
+  the job while the previous deploy keeps serving.
+- `git revert <sha>` is the rollback. There is no snapshot file, because git
+  already stores every published set.
+
+A total source outage is also made visible: each sync exits non-zero when
+every request to its source fails, but the steps are `continue-on-error`, so
+the healthy source still lands and the run only turns red at the end. The
+outage never blocks a good commit, and it never silently looks like a quiet
+day either.
+
 ## Usage analytics
 
 Two layers, both cookieless and free-tier:
@@ -174,6 +197,23 @@ automatically on the first write after deploy. What is recorded:
 
 No IPs, no user ids, no cross-site identifiers, and search records only *that*
 a search happened, never the query text.
+
+### Reading it
+
+The dashboard shows the raw positional columns (`blob1`, `blob2`, `double1`),
+which is hard to read. `scripts/usage_report.py` queries the SQL API and prints
+a plain-English summary: what people did, most-opened and most-downloaded
+wallpapers with their titles, filter usage, preview p50/p90/p95 speed and a
+per-day table.
+
+Add a token to `.env.local` (dash → My Profile → API Tokens → Create Custom
+Token → *Account | Account Analytics | Read*), then:
+
+```bash
+python scripts/usage_report.py --days 7
+```
+
+`CF_ACCOUNT_ID` falls back to the `R2_ACCOUNT_ID` already in `.env.local`.
 
 Query it with the [Analytics Engine SQL API](https://developers.cloudflare.com/analytics/analytics-engine/sql-api/)
 (an API token with *Account Analytics Read*), e.g. the most-opened wallpapers
