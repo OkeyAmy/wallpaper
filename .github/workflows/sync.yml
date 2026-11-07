@@ -193,17 +193,17 @@ jobs:
       - name: Tell search engines what changed
         run: python scripts/indexnow.py
 
-      # A source outage must be visible without blocking the healthy source.
+      # A failed source must be visible without blocking the healthy source.
       # The sync steps above are continue-on-error, so by the time we get here
       # anything they added is already committed; this only colours the run red.
-      - name: Report source outages
+      - name: Report failed sources
         if: always()
         run: |
           failed=""
           [ "${{ steps.danbooru.outcome }}" = "failure" ] && failed="$failed danbooru"
           [ "${{ steps.wallhaven.outcome }}" = "failure" ] && failed="$failed wallhaven"
           if [ -n "$failed" ]; then
-            echo "::error::source unreachable:$failed — its manifest was left untouched"
+            echo "::error::source failed:$failed — its manifest was left untouched"
             exit 1
           fi
           echo "all sources reachable"
