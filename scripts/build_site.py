@@ -29,6 +29,16 @@ from pipeline import MANIFEST, ROOT, _rgb_to_hsl, load_items
 SITE = "https://wallpapers.okeyamy.xyz"
 INDEX = ROOT / "index.html"
 HUB_DIR = ROOT / "w"
+CLIENT_MANIFEST = MANIFEST.with_name("wallpapers.client.json")
+
+# The browser reads the grid and the lightbox, nothing else. sha256/dhash are
+# for dedupe, crop matching and re-encoding checks in the pipeline — sending
+# them to every visitor is ~180 KB of JSON they can never use.
+CLIENT_FIELDS = (
+    "id", "file", "thumb", "preview", "w", "h", "ratio", "bytes",
+    "palette", "source", "sub", "author", "added", "title",
+    "character", "tags", "permalink",
+)
 
 STATIC_CELLS = 24        # items rendered as real <img> in the no-JS fallback
 STATIC_LINKS = 120       # additional text-only links for crawl depth
@@ -834,6 +844,8 @@ def build_headers() -> str:
 # The index changes on every sync; revalidate so new wallpapers show up.
 /data/wallpapers.json
   Cache-Control: public, max-age=0, must-revalidate
+/data/wallpapers.client.json
+  Cache-Control: public, max-age=0, must-revalidate
 
 # Enumerated rather than a /assets/* wildcard on principle, not preference:
 # confirmed live that Cloudflare merges every matching rule's headers instead
@@ -1097,6 +1109,22 @@ def build_og(items: list[dict]) -> None:
     card.save(ROOT / "assets" / "og.png", "PNG", optimize=True)
 
 
+def write_client_manifest(items: list[dict], generated: str) -> None:
+    """Minified, field-filtered copy of the index the browser actually loads.
+
+    The canonical manifest keeps sha256/dhash for dedupe and crop matching;
+    the grid and lightbox never read them, so shipping the full index wastes
+    bandwidth on every visit. Regenerated here so it can never drift.
+    """
+    doc = json.loads(MANIFEST.read_text())
+    slim = {
+        "generated": generated,
+        "cdn": doc.get("cdn", ""),
+        "items": [{k: it[k] for k in CLIENT_FIELDS if k in it} for it in items],
+    }
+    CLIENT_MANIFEST.write_text(json.dumps(slim, separators=(",", ":")))
+
+
 def main() -> int:
     items = load_items()
     if not items:
@@ -1127,6 +1155,7 @@ def main() -> int:
     (ROOT / "robots.txt").write_text(build_robots())
     (ROOT / "_headers").write_text(build_headers())
     (ROOT / "llms.txt").write_text(build_llms(items, generated, hubs))
+    write_client_manifest(items, generated)
 
     # the OG card is a pure function of the newest items, so only redraw it
     # when they changed — PNG output is not byte-stable enough to rely on

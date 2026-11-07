@@ -1,6 +1,6 @@
 /* ═══════════════════════════════════════════════════════════════════
    WALLPAPER ARCHIVE ── runtime
-   Zero dependencies. Reads /data/wallpapers.json, renders, filters,
+   Zero dependencies. Reads /data/wallpapers.client.json, renders, filters,
    and drives an origin-anchored lightbox.
    ═══════════════════════════════════════════════════════════════════ */
 
@@ -206,7 +206,7 @@ async function boot() {
 
   let data;
   try {
-    const res = await fetch('/data/wallpapers.json', { cache: 'no-cache' });
+    const res = await fetch('/data/wallpapers.client.json', { cache: 'no-cache' });
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
     data = await res.json();
   } catch (err) {

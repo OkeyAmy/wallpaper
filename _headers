@@ -22,6 +22,8 @@
 # The index changes on every sync; revalidate so new wallpapers show up.
 /data/wallpapers.json
   Cache-Control: public, max-age=0, must-revalidate
+/data/wallpapers.client.json
+  Cache-Control: public, max-age=0, must-revalidate
 
 # Enumerated rather than a /assets/* wildcard on principle, not preference:
 # confirmed live that Cloudflare merges every matching rule's headers instead
