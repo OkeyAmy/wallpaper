@@ -14,3 +14,10 @@ binding = "ASSETS"
 
 [vars]
 R2_PUBLIC_BASE = "https://cdn.okeyamy.xyz"
+
+# Anonymous usage counters (see worker.js). The dataset is created
+# automatically on the first write after this binding deploys — until then,
+# record() is a no-op and the site works exactly as before.
+[[analytics_engine_datasets]]
+binding = "USAGE"
+dataset = "wallpapers_usage"

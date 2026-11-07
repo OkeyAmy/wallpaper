@@ -155,6 +155,21 @@ const debounce = (fn, ms) => {
   return (...a) => { clearTimeout(t); t = setTimeout(() => fn(...a), ms); };
 };
 
+/* Anonymous usage counters — worker.js /event writes them to Analytics
+   Engine. A call carries only an event name, a subject (wallpaper id or
+   filter name) and optionally milliseconds: no cookies, no user id, no
+   fingerprint, nothing per-person. sendBeacon keeps it off the render path
+   and lets it survive the lightbox closing. Downloads are counted at /dl/
+   on the server instead, so they are not tracked from here. */
+function track(e, id = '', ms = 0) {
+  try {
+    if (!navigator.sendBeacon) return;
+    navigator.sendBeacon('/event', new Blob(
+      [JSON.stringify({ e, id, ms: Math.round(ms) })],
+      { type: 'application/json' }));
+  } catch { /* analytics is never allowed to break browsing */ }
+}
+
 /* ── speculative preview loading ─────────────────────────────── */
 // The lightbox paints a 2560px preview (~80-160 KB) rather than the full
 // 1-5 MB file, so warming one is cheap. Hover/focus on a tile is the strongest
@@ -509,6 +524,9 @@ function paintLb(it, i) {
   const full = safePath(it.file);
   const preview = safePath(it.preview || it.file);
   const token = ++state.lbToken;
+  track('open', it.id);
+  const openedAt = performance.now();
+  let timed = false;
 
   if (it.w && it.h) frame.style.setProperty('--ar', String(it.w / it.h));
   sizeLbFrame(it);
@@ -565,7 +583,13 @@ function paintLb(it, i) {
   // image's load event reveal the current one.
   const reveal = () => {
     if (token !== state.lbToken) return;
-    const show = () => { if (token === state.lbToken) img.classList.add('is-loaded'); };
+    const show = () => {
+      if (token !== state.lbToken) return;
+      img.classList.add('is-loaded');
+      // real-world preview latency, including cache hits (they read as ~0 ms
+      // and are exactly what the median should reflect)
+      if (!timed) { timed = true; track('preview', it.id, performance.now() - openedAt); }
+    };
     if (img.decode) img.decode().then(show, show);
     else show();
   };
@@ -697,6 +721,7 @@ function wire() {
   $$('.wsp__i').forEach(b => b.addEventListener('click', () => {
     $$('.wsp__i').forEach(x => x.classList.toggle('is-on', x === b));
     state.ratio = b.dataset.ratio;
+    track('filter', `ratio:${state.ratio}`);
     apply();
   }));
 
@@ -707,18 +732,23 @@ function wire() {
     state.hues.has(id) ? state.hues.delete(id) : state.hues.add(id);
     b.classList.toggle('is-on', state.hues.has(id));
     b.setAttribute('aria-pressed', String(state.hues.has(id)));
+    track('filter', `hue:${id}`);
     apply();
   });
 
   $('#q').addEventListener('input', debounce(e => {
     state.q = e.target.value;
     apply();
+    // only that a search happened, never what was typed
+    if (state.q.trim().length >= 2) trackSearch();
   }, 120));
+  const trackSearch = debounce(() => track('filter', 'search'), 1500);
 
   $$('.sortbtn').forEach(b => b.addEventListener('click', () => {
     $$('.sortbtn').forEach(x => x.classList.toggle('is-on', x === b));
     state.sort = b.dataset.sort;
     if (state.sort === 'rand') state.seed = Date.now();
+    track('filter', `sort:${state.sort}`);
     apply();
   }));
 

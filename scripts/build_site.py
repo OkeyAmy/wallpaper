@@ -761,8 +761,10 @@ def build_jsonld(items: list[dict], generated: str) -> str:
                 "name": "Are the wallpapers free to download?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Yes. Browsing and downloading are free, with no account and no "
-                            "tracking. Copyright remains with the original artists and each "
+                    "text": "Yes. Browsing and downloading are free, with no account. "
+                            "Anonymous, aggregate usage counts (no cookies, no profiles) "
+                            "show which wallpapers are popular and how fast they load. "
+                            "Copyright remains with the original artists and each "
                             "item links back to the post it came from.",
                 },
             },
@@ -976,7 +978,8 @@ Last synced: {generated}
 An open archive of anime wallpapers. A scheduled job reads curated community
 feeds daily, rejects anything below 1280x720, converts each image to WebP,
 extracts a five-colour dominant palette, and appends it to a static JSON index.
-No accounts, no tracking, no ads, no paywall.
+No accounts, no ads, no paywall. Anonymous aggregate usage counts only — no
+cookies, no profiles, no cross-site tracking.
 
 ## Collection
 

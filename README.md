@@ -151,6 +151,49 @@ only, so the actual defence is at the edge — in the Cloudflare dashboard:
 That breaks the sequential crawl pattern used to clone a whole gallery without
 affecting anyone browsing normally.
 
+## Usage analytics
+
+Two layers, both cookieless and free-tier:
+
+**Traffic and Web Vitals — Cloudflare Web Analytics.** Dashboard → Web
+Analytics → add `wallpapers.okeyamy.xyz` → automatic setup injects the beacon
+at the edge, so there is no code to change. This gives page views, top pages,
+referrers, countries, devices and real-user Core Web Vitals (LCP and friends).
+
+**Internal usage — the `USAGE` Analytics Engine dataset** in `wrangler.toml`.
+`worker.js` writes one anonymous data point per event; the dataset is created
+automatically on the first write after deploy. What is recorded:
+
+| Event | Subject | Number | Where |
+| --- | --- | --- | --- |
+| `open` | wallpaper id | — | lightbox opened |
+| `download` | wallpaper id | — | counted at `/dl/` itself, so hotlinks count too |
+| `filter` | `ratio:tall`, `hue:red`, `sort:rand`, `search` | — | filter/sort/search used |
+| `preview` | wallpaper id | load time in ms | real lightbox speed |
+
+No IPs, no user ids, no cross-site identifiers, and search records only *that*
+a search happened, never the query text.
+
+Query it with the [Analytics Engine SQL API](https://developers.cloudflare.com/analytics/analytics-engine/sql-api/)
+(an API token with *Account Analytics Read*), e.g. the most-opened wallpapers
+this week:
+
+```bash
+curl "https://api.cloudflare.com/client/v4/accounts/$CF_ACCOUNT_ID/analytics_engine/sql" \
+  --header "Authorization: Bearer $CF_API_TOKEN" \
+  --data "SELECT blob2 AS id, SUM(_sample_interval) AS opens
+          FROM wallpapers_usage
+          WHERE blob1 = 'open' AND timestamp >= NOW() - INTERVAL '7' DAY
+          GROUP BY id ORDER BY opens DESC LIMIT 20"
+```
+
+Other useful queries: swap the `WHERE` clause to `blob1 = 'download'` for
+popularity by downloads, or use
+`SELECT blob2 AS id, SUM(_sample_interval * double1) / SUM(_sample_interval) AS avg_ms
+FROM wallpapers_usage WHERE blob1 = 'preview' GROUP BY id ORDER BY avg_ms DESC`
+to find the slowest-loading previews. These events also plug into Grafana if
+you want charts rather than SQL output.
+
 ## Licence
 
 Site code: MIT. The wallpapers are not covered — copyright remains with the

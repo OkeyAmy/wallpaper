@@ -10,7 +10,8 @@ Last synced: 2026-11-06T14:02:45+00:00
 An open archive of anime wallpapers. A scheduled job reads curated community
 feeds daily, rejects anything below 1280x720, converts each image to WebP,
 extracts a five-colour dominant palette, and appends it to a static JSON index.
-No accounts, no tracking, no ads, no paywall.
+No accounts, no ads, no paywall. Anonymous aggregate usage counts only — no
+cookies, no profiles, no cross-site tracking.
 
 ## Collection
 
