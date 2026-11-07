@@ -1,6 +1,6 @@
 {
  "source": "anilist",
- "fetched": "2026-11-07",
+ "fetched": "2026-11-08",
  "series": [
   {
    "id": 16498,
@@ -11,7 +11,8 @@
     "snk"
    ],
    "popularity": 1076213,
-   "trending": true
+   "trending": true,
+   "trending_rank": 33
   },
   {
    "id": 101922,
@@ -22,7 +23,8 @@
     "kimetsu no yaiba"
    ],
    "popularity": 1012667,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 113415,
@@ -33,7 +35,8 @@
     "sorcery fight"
    ],
    "popularity": 993915,
-   "trending": false
+   "trending": true,
+   "trending_rank": 41
   },
   {
    "id": 1535,
@@ -43,7 +46,8 @@
     "carnet de la mort"
    ],
    "popularity": 980752,
-   "trending": true
+   "trending": true,
+   "trending_rank": 40
   },
   {
    "id": 21459,
@@ -54,7 +58,8 @@
     "bnha"
    ],
    "popularity": 888851,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 11061,
@@ -65,7 +70,8 @@
     "hxh"
    ],
    "popularity": 856106,
-   "trending": true
+   "trending": true,
+   "trending_rank": 22
   },
   {
    "id": 21087,
@@ -76,7 +82,8 @@
     "wanpanman"
    ],
    "popularity": 779319,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 21,
@@ -87,7 +94,8 @@
     "tutti allarrembaggio"
    ],
    "popularity": 767285,
-   "trending": true
+   "trending": true,
+   "trending_rank": 4
   },
   {
    "id": 20605,
@@ -97,7 +105,8 @@
     "tokyo kushu"
    ],
    "popularity": 753211,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 5114,
@@ -108,7 +117,8 @@
     "hagane no renkinjutsushi"
    ],
    "popularity": 742690,
-   "trending": true
+   "trending": true,
+   "trending_rank": 46
   },
   {
    "id": 20,
@@ -119,7 +129,8 @@
     "naruto shippuuden"
    ],
    "popularity": 739925,
-   "trending": true
+   "trending": true,
+   "trending_rank": 29
   },
   {
    "id": 11757,
@@ -130,7 +141,8 @@
     "sao"
    ],
    "popularity": 731468,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 20954,
@@ -141,7 +153,8 @@
     "the shape of voice"
    ],
    "popularity": 731361,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 21519,
@@ -153,7 +166,9 @@
    ],
    "popularity": 727497,
    "trending": false,
-   "seed": true
+   "trending_rank": null,
+   "seed": true,
+   "seed_rank": 27
   },
   {
    "id": 127230,
@@ -163,7 +178,8 @@
     "csm"
    ],
    "popularity": 650697,
-   "trending": true
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 101759,
@@ -174,7 +190,8 @@
     "yakuneba"
    ],
    "popularity": 642376,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 20755,
@@ -184,7 +201,8 @@
     "ansatsu kyoushitsu"
    ],
    "popularity": 638377,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 21507,
@@ -193,7 +211,8 @@
     "mob psycho 100"
    ],
    "popularity": 638057,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 21355,
@@ -204,7 +223,8 @@
     "re zero kara hajimeru isekai seikatsu"
    ],
    "popularity": 636835,
-   "trending": true
+   "trending": true,
+   "trending_rank": null
   },
   {
    "id": 20665,
@@ -215,7 +235,8 @@
     "kimiuso"
    ],
    "popularity": 624056,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 21234,
@@ -226,7 +247,8 @@
     "bokumachi"
    ],
    "popularity": 615424,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 9253,
@@ -237,7 +259,8 @@
     "steins gate egoistic poriomania"
    ],
    "popularity": 605873,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 97940,
@@ -248,7 +271,8 @@
     "black clover mahou tei no ken"
    ],
    "popularity": 602802,
-   "trending": true
+   "trending": true,
+   "trending_rank": 12
   },
   {
    "id": 20464,
@@ -259,7 +283,8 @@
     "high kyuu"
    ],
    "popularity": 592590,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 101291,
@@ -270,7 +295,8 @@
     "aobuta"
    ],
    "popularity": 591099,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 140960,
@@ -281,7 +307,8 @@
     "sxf"
    ],
    "popularity": 582248,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 101921,
@@ -292,7 +319,8 @@
     "kaguya sama wa kokurasetai"
    ],
    "popularity": 569277,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 105333,
@@ -303,7 +331,8 @@
     "dr stone stone wars"
    ],
    "popularity": 564807,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 101348,
@@ -312,7 +341,8 @@
     "vinland saga"
    ],
    "popularity": 558908,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 21827,
@@ -323,7 +353,8 @@
     "violet evergarden le film"
    ],
    "popularity": 556867,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 124080,
@@ -334,7 +365,8 @@
     "horimiya piece"
    ],
    "popularity": 554516,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 4224,
@@ -344,7 +376,8 @@
     "tiger x dragon"
    ],
    "popularity": 550948,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 19815,
@@ -355,7 +388,8 @@
     "nogenora"
    ],
    "popularity": 548616,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 20613,
@@ -366,7 +400,8 @@
     "red eyes sword"
    ],
    "popularity": 548437,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 20447,
@@ -376,7 +411,8 @@
     "stray god"
    ],
    "popularity": 546444,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 20789,
@@ -387,7 +423,8 @@
     "7ds"
    ],
    "popularity": 537717,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 269,
@@ -398,7 +435,8 @@
     "bleach sennen kessen hen"
    ],
    "popularity": 535793,
-   "trending": true
+   "trending": true,
+   "trending_rank": 15
   },
   {
    "id": 21202,
@@ -409,7 +447,8 @@
     "kono subarashii sekai ni shukufuku wo"
    ],
    "popularity": 527864,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 1575,
@@ -420,7 +459,8 @@
     "code geass hangyaku no lelouch"
    ],
    "popularity": 512354,
-   "trending": true
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 99423,
@@ -431,7 +471,8 @@
     "darlifra"
    ],
    "popularity": 509225,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 20623,
@@ -442,7 +483,8 @@
     "kiseijuu"
    ],
    "popularity": 508586,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 30,
@@ -453,7 +495,8 @@
     "nge"
    ],
    "popularity": 504928,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 154587,
@@ -464,7 +507,8 @@
     "sousou no frieren"
    ],
    "popularity": 497143,
-   "trending": true
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 105310,
@@ -475,7 +519,8 @@
     "enen no shouboutai ni no shou"
    ],
    "popularity": 492911,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 199,
@@ -486,7 +531,8 @@
     "le voyage de chihiro"
    ],
    "popularity": 488910,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 14719,
@@ -497,7 +543,8 @@
     "jojo no kimyou na bouken"
    ],
    "popularity": 488425,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 1,
@@ -508,7 +555,8 @@
     "cowboy bebop the knockin on heavens door"
    ],
    "popularity": 475672,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 101280,
@@ -519,7 +567,8 @@
     "tensura"
    ],
    "popularity": 474361,
-   "trending": true
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 20931,
@@ -528,7 +577,8 @@
     "death parade"
    ],
    "popularity": 473762,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 108465,
@@ -539,7 +589,8 @@
     "mushoku tensei isekai ittara honki dasu"
    ],
    "popularity": 471074,
-   "trending": true
+   "trending": true,
+   "trending_rank": null
   },
   {
    "id": 99263,
@@ -549,7 +600,8 @@
     "tate no yuusha no nariagari"
    ],
    "popularity": 469256,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 9919,
@@ -560,7 +612,8 @@
     "ao no futsumashi"
    ],
    "popularity": 467362,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 98314,
@@ -571,7 +624,8 @@
     "kakegurui das leben ist ein spiel"
    ],
    "popularity": 462333,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 151807,
@@ -582,7 +636,8 @@
     "na honjaman level up"
    ],
    "popularity": 461209,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 20594,
@@ -593,7 +648,8 @@
     "ggo"
    ],
    "popularity": 458503,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 98659,
@@ -604,7 +660,8 @@
     "youjitsu"
    ],
    "popularity": 456833,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 101338,
@@ -614,7 +671,8 @@
     "mob psycho hyaku"
    ],
    "popularity": 456556,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 120120,
@@ -625,7 +683,8 @@
     "tokyo revengers christmas showdown"
    ],
    "popularity": 454083,
-   "trending": true
+   "trending": true,
+   "trending_rank": null
   },
   {
    "id": 6547,
@@ -634,7 +693,8 @@
     "angel beats"
    ],
    "popularity": 449497,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 131573,
@@ -645,7 +705,8 @@
     "jujutsu kaisen"
    ],
    "popularity": 447512,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 132405,
@@ -656,7 +717,8 @@
     "sono kisekae ningyou wa koi wo suru"
    ],
    "popularity": 441858,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 20997,
@@ -665,7 +727,8 @@
     "charlotte"
    ],
    "popularity": 441459,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 10620,
@@ -676,7 +739,8 @@
     "the future diary redial"
    ],
    "popularity": 437471,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 21311,
@@ -687,7 +751,8 @@
     "bsd"
    ],
    "popularity": 427448,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 18679,
@@ -698,7 +763,8 @@
     "klk"
    ],
    "popularity": 420840,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 20850,
@@ -709,7 +775,8 @@
     "tokyo ghoul root a"
    ],
    "popularity": 413295,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 20832,
@@ -719,7 +786,8 @@
     "over lord"
    ],
    "popularity": 412764,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 97986,
@@ -730,7 +798,8 @@
     "made in abyss fukaki tamashii no reimei"
    ],
    "popularity": 412703,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 120377,
@@ -741,7 +810,8 @@
     "cyberpunk edgerunners 2"
    ],
    "popularity": 408506,
-   "trending": true
+   "trending": true,
+   "trending_rank": 31
   },
   {
    "id": 20923,
@@ -752,7 +822,8 @@
     "food wars the first plate"
    ],
    "popularity": 408506,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 20920,
@@ -763,7 +834,8 @@
     "danmachi"
    ],
    "popularity": 403420,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 15809,
@@ -774,7 +846,8 @@
     "raja iblis nyambi"
    ],
    "popularity": 401453,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 3588,
@@ -783,7 +856,8 @@
     "soul eater"
    ],
    "popularity": 401266,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 9989,
@@ -794,7 +868,8 @@
     "ano hi mita hana no namae wo bokutachi wa mada shiranai"
    ],
    "popularity": 399368,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 171018,
@@ -805,7 +880,8 @@
     "dan da dan first encounter"
    ],
    "popularity": 397849,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 11111,
@@ -814,7 +890,8 @@
     "another"
    ],
    "popularity": 391320,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 14813,
@@ -825,7 +902,8 @@
     "oregairu"
    ],
    "popularity": 389498,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 2001,
@@ -836,7 +914,8 @@
     "heavenly breakthrough gurren lagann"
    ],
    "popularity": 388321,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 6702,
@@ -847,7 +926,8 @@
     "fairy tail series 3"
    ],
    "popularity": 386324,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 99750,
@@ -858,7 +938,8 @@
     "voglio mangiare il tuo pancreas"
    ],
    "popularity": 383123,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 101347,
@@ -867,7 +948,8 @@
     "dororo"
    ],
    "popularity": 381251,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 21170,
@@ -878,7 +960,8 @@
     "assassination classroom"
    ],
    "popularity": 375183,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 128893,
@@ -888,7 +971,8 @@
     "jigokuraku"
    ],
    "popularity": 372331,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 431,
@@ -899,7 +983,8 @@
     "hauru no ugoku shiro"
    ],
    "popularity": 369924,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 21804,
@@ -910,7 +995,8 @@
     "saiki kusuo no nan 2"
    ],
    "popularity": 366171,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 106286,
@@ -922,7 +1008,9 @@
    ],
    "popularity": 362567,
    "trending": false,
-   "seed": true
+   "trending_rank": null,
+   "seed": true,
+   "seed_rank": 28
   },
   {
    "id": 13601,
@@ -931,7 +1019,8 @@
     "psycho pass"
    ],
    "popularity": 361665,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 14741,
@@ -942,7 +1031,8 @@
     "chu 2 byo demo koi ga shitai"
    ],
    "popularity": 359731,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 98460,
@@ -951,7 +1041,8 @@
     "devilman crybaby"
    ],
    "popularity": 358496,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 12189,
@@ -961,7 +1052,8 @@
     "hyouka forbidden secrets"
    ],
    "popularity": 357397,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 10087,
@@ -971,7 +1063,8 @@
     "f z"
    ],
    "popularity": 352932,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 20474,
@@ -982,7 +1075,8 @@
     "jojo no kimyou na bouken"
    ],
    "popularity": 351622,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 19,
@@ -991,7 +1085,8 @@
     "monster"
    ],
    "popularity": 350694,
-   "trending": true
+   "trending": true,
+   "trending_rank": 39
   },
   {
    "id": 5081,
@@ -1002,7 +1097,8 @@
     "monogatari"
    ],
    "popularity": 347709,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 161645,
@@ -1013,7 +1109,8 @@
     "drugstore soliloquy"
    ],
    "popularity": 342892,
-   "trending": true
+   "trending": true,
+   "trending_rank": 26
   },
   {
    "id": 115230,
@@ -1024,7 +1121,8 @@
     "kami no tou tower of god"
    ],
    "popularity": 340897,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 150672,
@@ -1035,7 +1133,8 @@
     "my idols child"
    ],
    "popularity": 337278,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 20829,
@@ -1046,7 +1145,8 @@
     "owari no seraph"
    ],
    "popularity": 334484,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 21776,
@@ -1057,7 +1157,8 @@
     "kobayashi san chi no maid dragon"
    ],
    "popularity": 334256,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 137822,
@@ -1067,7 +1168,8 @@
     "blue lock vs u 20 japan"
    ],
    "popularity": 333856,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 99578,
@@ -1078,7 +1180,8 @@
     "wotaku ni koi wa muzukashii"
    ],
    "popularity": 333671,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 116589,
@@ -1087,7 +1190,8 @@
     "86 eighty six"
    ],
    "popularity": 333566,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 9756,
@@ -1098,7 +1202,8 @@
     "mahou shoujo madoka magika"
    ],
    "popularity": 333013,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 103572,
@@ -1109,7 +1214,8 @@
     "5 toubun no hanayome"
    ],
    "popularity": 330624,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 133965,
@@ -1120,7 +1226,8 @@
     "comi san ha comyusho desu"
    ],
    "popularity": 327232,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 130298,
@@ -1131,7 +1238,8 @@
     "to be a power in the shadows"
    ],
    "popularity": 324382,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 114535,
@@ -1142,7 +1250,8 @@
     "to you the immortal"
    ],
    "popularity": 322935,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 11617,
@@ -1152,7 +1261,8 @@
     "highschool dxd"
    ],
    "popularity": 320466,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 105334,
@@ -1163,7 +1273,8 @@
     "furuba"
    ],
    "popularity": 316449,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 21128,
@@ -1172,7 +1283,8 @@
     "noragami aragoto"
    ],
    "popularity": 314812,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 100388,
@@ -1181,7 +1293,8 @@
     "banana fish"
    ],
    "popularity": 313628,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 113813,
@@ -1192,7 +1305,8 @@
     "id like to borrow a girlfriend"
    ],
    "popularity": 313002,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 100240,
@@ -1201,7 +1315,8 @@
     "tokyo ghoul re"
    ],
    "popularity": 312929,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 101165,
@@ -1212,7 +1327,8 @@
     "goblin slayer korona"
    ],
    "popularity": 308398,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 164,
@@ -1223,7 +1339,8 @@
     "la princesa mononoke"
    ],
    "popularity": 307430,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 2167,
@@ -1233,7 +1350,8 @@
     "clannad after story"
    ],
    "popularity": 305788,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 116006,
@@ -1243,7 +1361,8 @@
     "goh"
    ],
    "popularity": 303628,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 918,
@@ -1254,7 +1373,8 @@
     "silver soul"
    ],
    "popularity": 301219,
-   "trending": true
+   "trending": true,
+   "trending_rank": 48
   },
   {
    "id": 106625,
@@ -1265,7 +1385,8 @@
     "haikyu"
    ],
    "popularity": 298228,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 6746,
@@ -1275,7 +1396,8 @@
     "drrr"
    ],
    "popularity": 297949,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 151801,
@@ -1286,7 +1408,8 @@
     "mashle kami shinkakusha kouho senbatsu shiken hen"
    ],
    "popularity": 297561,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 20661,
@@ -1297,7 +1420,8 @@
     "terror in tokyo"
    ],
    "popularity": 296205,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 7054,
@@ -1308,7 +1432,8 @@
     "kaicho wa maidsama"
    ],
    "popularity": 292738,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 11771,
@@ -1319,7 +1444,8 @@
     "kuroko no basuke"
    ],
    "popularity": 291533,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 8074,
@@ -1330,7 +1456,8 @@
     "gakuen mokushiroku highschool of the dead"
    ],
    "popularity": 291483,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 153288,
@@ -1341,7 +1468,8 @@
     "monster 8"
    ],
    "popularity": 291364,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 141391,
@@ -1352,7 +1480,8 @@
     "song of the night walkers"
    ],
    "popularity": 290238,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 124845,
@@ -1363,7 +1492,8 @@
     "wep"
    ],
    "popularity": 288450,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 21613,
@@ -1374,7 +1504,8 @@
     "saga of tanya the evil the"
    ],
    "popularity": 285688,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 523,
@@ -1385,7 +1516,8 @@
     "my neighbour totoro"
    ],
    "popularity": 285211,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 205,
@@ -1394,7 +1526,8 @@
     "samurai champloo"
    ],
    "popularity": 285198,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 5680,
@@ -1405,7 +1538,8 @@
     "keion 2"
    ],
    "popularity": 284316,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 18153,
@@ -1416,7 +1550,8 @@
     "beyond the horizon"
    ],
    "popularity": 283216,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 20698,
@@ -1427,7 +1562,8 @@
     "oregairu zoku"
    ],
    "popularity": 281627,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 13759,
@@ -1438,7 +1574,8 @@
     "sakura sou no pet na kanojo"
    ],
    "popularity": 281364,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 226,
@@ -1449,7 +1586,8 @@
     "elfic song"
    ],
    "popularity": 280790,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 130003,
@@ -1459,7 +1597,8 @@
     "btr"
    ],
    "popularity": 273110,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 112301,
@@ -1470,7 +1609,8 @@
     "maou gakuin no futekigousha"
    ],
    "popularity": 272550,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 18897,
@@ -1481,7 +1621,8 @@
     "nisekoi2 false love"
    ],
    "popularity": 272271,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 120697,
@@ -1492,7 +1633,8 @@
     "jangan main main denganku nona nagatoro serangan ke 2"
    ],
    "popularity": 272160,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 98437,
@@ -1502,7 +1644,8 @@
     "over lord 2"
    ],
    "popularity": 271375,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 17895,
@@ -1511,7 +1654,8 @@
     "golden time"
    ],
    "popularity": 270957,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 140439,
@@ -1520,7 +1664,8 @@
     "mob psycho 100 iii"
    ],
    "popularity": 270770,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 19603,
@@ -1531,7 +1676,8 @@
     "fate ubw"
    ],
    "popularity": 269532,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 178025,
@@ -1540,7 +1686,8 @@
     "gachiakuta"
    ],
    "popularity": 268211,
-   "trending": false
+   "trending": true,
+   "trending_rank": 42
   },
   {
    "id": 14227,
@@ -1551,7 +1698,8 @@
     "tonari no kaibutsukun"
    ],
    "popularity": 266126,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 104157,
@@ -1562,7 +1710,8 @@
     "ao buta"
    ],
    "popularity": 265813,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 4898,
@@ -1573,7 +1722,8 @@
     "kuro shitsuji"
    ],
    "popularity": 264772,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 21049,
@@ -1583,7 +1733,8 @@
     "relife kanketsu hen"
    ],
    "popularity": 264457,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 813,
@@ -1594,7 +1745,8 @@
     "dragonball z"
    ],
    "popularity": 264256,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 20458,
@@ -1605,7 +1757,8 @@
     "the irregular at magic high school visitor arc"
    ],
    "popularity": 263944,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 21518,
@@ -1616,7 +1769,8 @@
     "shokugeki no souma ni no sara"
    ],
    "popularity": 263465,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 20872,
@@ -1626,7 +1780,8 @@
     "plamemo"
    ],
    "popularity": 263329,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 853,
@@ -1637,7 +1792,8 @@
     "ohran koko host club"
    ],
    "popularity": 262459,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 107660,
@@ -1647,7 +1803,8 @@
     "beastars o lobo bom"
    ],
    "popularity": 261610,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 339,
@@ -1657,7 +1814,8 @@
     "wirtualna lain"
    ],
    "popularity": 258838,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 146984,
@@ -1668,7 +1826,8 @@
     "shingeki no kyojin the kanketsu hen zenpen"
    ],
    "popularity": 257273,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 889,
@@ -1679,7 +1838,8 @@
     "black lagoon second season"
    ],
    "popularity": 256925,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 6045,
@@ -1690,7 +1850,8 @@
     "reaching you"
    ],
    "popularity": 256286,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 1689,
@@ -1701,7 +1862,8 @@
     "five centimeters per second"
    ],
    "popularity": 253938,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 6880,
@@ -1710,7 +1872,8 @@
     "deadman wonderland"
    ],
    "popularity": 253379,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 20807,
@@ -1720,7 +1883,8 @@
     "kangoku gakuen"
    ],
    "popularity": 252909,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 171627,
@@ -1731,7 +1895,8 @@
     "chainsaw man"
    ],
    "popularity": 252139,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 15583,
@@ -1740,7 +1905,8 @@
     "date a live"
    ],
    "popularity": 251586,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 116267,
@@ -1751,7 +1917,8 @@
     "tonikaku kawaii"
    ],
    "popularity": 251391,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 16782,
@@ -1762,7 +1929,8 @@
     "koto no ha no niwa"
    ],
    "popularity": 251223,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 101474,
@@ -1772,7 +1940,8 @@
     "over lord 3"
    ],
    "popularity": 251209,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 21092,
@@ -1783,7 +1952,8 @@
     "rakudai kishi no eiyuutan"
    ],
    "popularity": 250426,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 437,
@@ -1792,7 +1962,8 @@
     "perfect blue"
    ],
    "popularity": 250268,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 98436,
@@ -1803,7 +1974,8 @@
     "mahou tsukai no yome"
    ],
    "popularity": 249540,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 20596,
@@ -1814,7 +1986,8 @@
     "aoharaido"
    ],
    "popularity": 248554,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 21857,
@@ -1824,7 +1997,8 @@
     "masamune kun no revenge"
    ],
    "popularity": 248459,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 101167,
@@ -1835,7 +2009,8 @@
     "danmachi ii"
    ],
    "popularity": 248131,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 159831,
@@ -1846,7 +2021,8 @@
     "zom 100 zombie ni naru made ni shitai 100 no koto"
    ],
    "popularity": 247163,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 10165,
@@ -1857,7 +2033,8 @@
     "everyday"
    ],
    "popularity": 244575,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 10793,
@@ -1866,7 +2043,8 @@
     "guilty crown"
    ],
    "popularity": 244455,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 108463,
@@ -1876,7 +2054,8 @@
     "jibaku shounen hanako kun"
    ],
    "popularity": 242008,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 21679,
@@ -1887,7 +2066,8 @@
     "bsd 2"
    ],
    "popularity": 241874,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 102351,
@@ -1896,7 +2076,8 @@
     "tokyo ghoul re 2"
    ],
    "popularity": 241554,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 17265,
@@ -1905,7 +2086,8 @@
     "log horizon"
    ],
    "popularity": 241400,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 100922,
@@ -1915,7 +2097,8 @@
     "grand blue"
    ],
    "popularity": 240493,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 100876,
@@ -1926,7 +2109,8 @@
     "kakegurui compulsive gambler 2"
    ],
    "popularity": 240099,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 21647,
@@ -1935,7 +2119,8 @@
     "orange"
    ],
    "popularity": 239545,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 223,
@@ -1946,7 +2131,8 @@
     "bola de drac"
    ],
    "popularity": 239236,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 109261,
@@ -1957,7 +2143,8 @@
     "the five wedded brides"
    ],
    "popularity": 238513,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 147105,
@@ -1968,7 +2155,8 @@
     "atelier of witch hat"
    ],
    "popularity": 238191,
-   "trending": true
+   "trending": true,
+   "trending_rank": 43
   },
   {
    "id": 124153,
@@ -1978,7 +2166,8 @@
     "sk eight"
    ],
    "popularity": 238094,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 16592,
@@ -1989,7 +2178,8 @@
     "danganronpa kibou no gakuen to zetsubou no koukousei the animation"
    ],
    "popularity": 236282,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 47,
@@ -1998,7 +2188,8 @@
     "akira"
    ],
    "popularity": 235910,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 14513,
@@ -2009,7 +2200,8 @@
     "magi the kingdom of magic"
    ],
    "popularity": 235809,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 100668,
@@ -2020,7 +2212,8 @@
     "arifureta shokugyou de sekai saikyou"
    ],
    "popularity": 235206,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 21709,
@@ -2030,7 +2223,8 @@
     "yuuri on ice"
    ],
    "popularity": 234451,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 110349,
@@ -2041,7 +2235,8 @@
     "el gran farsante"
    ],
    "popularity": 234374,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 20727,
@@ -2051,7 +2246,8 @@
     "kekkai sensen"
    ],
    "popularity": 233702,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 21875,
@@ -2062,7 +2258,8 @@
     "ngnl zero"
    ],
    "popularity": 233359,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 153518,
@@ -2073,7 +2270,8 @@
     "dungeon food"
    ],
    "popularity": 232592,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 129201,
@@ -2084,7 +2282,8 @@
     "summertime render"
    ],
    "popularity": 231273,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 99255,
@@ -2095,7 +2294,8 @@
     "shokugeki no souma san no sara"
    ],
    "popularity": 230540,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 108489,
@@ -2106,7 +2306,8 @@
     "oregairu 3"
    ],
    "popularity": 228823,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 97938,
@@ -2117,7 +2318,8 @@
     "boruto naruto the"
    ],
    "popularity": 228356,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 113717,
@@ -2128,7 +2330,8 @@
     "king ranking"
    ],
    "popularity": 228207,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 177709,
@@ -2137,7 +2340,8 @@
     "sakamoto days"
    ],
    "popularity": 228158,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 103139,
@@ -2148,7 +2352,8 @@
     "domekano"
    ],
    "popularity": 226710,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 21127,
@@ -2159,7 +2364,8 @@
     "steins gate 0 23 divide by zero"
    ],
    "popularity": 226412,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 20668,
@@ -2170,7 +2376,8 @@
     "revista mensual para chicas nozaki"
    ],
    "popularity": 225336,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 21175,
@@ -2181,7 +2388,8 @@
     "dragonball super"
    ],
    "popularity": 222919,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 99629,
@@ -2192,7 +2400,8 @@
     "angel of massacre"
    ],
    "popularity": 221392,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 127911,
@@ -2203,7 +2412,8 @@
     "shikimori nest pas juste mignonne"
    ],
    "popularity": 221353,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 20770,
@@ -2214,7 +2424,8 @@
     "akayona"
    ],
    "popularity": 221126,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 181444,
@@ -2225,7 +2436,8 @@
     "bloom"
    ],
    "popularity": 220050,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 155783,
@@ -2236,7 +2448,8 @@
     "heavenly delusion"
    ],
    "popularity": 217574,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 21366,
@@ -2247,7 +2460,8 @@
     "sangatsu no lion"
    ],
    "popularity": 217053,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 143270,
@@ -2257,7 +2471,8 @@
     "lycoreco"
    ],
    "popularity": 215194,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 131646,
@@ -2268,7 +2483,8 @@
     "vanitas no karte"
    ],
    "popularity": 214518,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 108430,
@@ -2277,7 +2493,8 @@
     "given"
    ],
    "popularity": 214016,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 162804,
@@ -2288,7 +2505,8 @@
     "roshidere"
    ],
    "popularity": 213509,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 154965,
@@ -2299,7 +2517,8 @@
     "loving yamada at lv999"
    ],
    "popularity": 212468,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 877,
@@ -2308,7 +2527,8 @@
     "nana"
    ],
    "popularity": 212331,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 20910,
@@ -2319,7 +2539,8 @@
     "shimoneta to iu gainen ga sonzai shinai taikutsu na sekai"
    ],
    "popularity": 210879,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 227,
@@ -2330,7 +2551,8 @@
     "furi kuri"
    ],
    "popularity": 210312,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 101004,
@@ -2341,7 +2563,8 @@
     "the king of darkness another world story"
    ],
    "popularity": 209995,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 129898,
@@ -2352,7 +2575,8 @@
     "ansatsu kizoku"
    ],
    "popularity": 209222,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 1210,
@@ -2363,7 +2587,8 @@
     "welcome to the nhk"
    ],
    "popularity": 207683,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 578,
@@ -2374,7 +2599,8 @@
     "tombstone for fireflies"
    ],
    "popularity": 206587,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 131518,
@@ -2384,7 +2610,8 @@
     "dr stone"
    ],
    "popularity": 206567,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 142770,
@@ -2395,7 +2622,9 @@
    ],
    "popularity": 206486,
    "trending": false,
-   "seed": true
+   "trending_rank": null,
+   "seed": true,
+   "seed_rank": 29
   },
   {
    "id": 21421,
@@ -2404,7 +2633,8 @@
     "kiznaiver"
    ],
    "popularity": 205401,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 21700,
@@ -2415,7 +2645,8 @@
     "rokuaka"
    ],
    "popularity": 204331,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 100977,
@@ -2426,7 +2657,8 @@
     "les brigades immunitaires"
    ],
    "popularity": 204248,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 105156,
@@ -2437,7 +2669,8 @@
     "shinchou yuusha"
    ],
    "popularity": 204245,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 849,
@@ -2448,7 +2681,8 @@
     "la malinconia di haruhi suzumiya"
    ],
    "popularity": 203956,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 112124,
@@ -2459,7 +2693,8 @@
     "dungeon ni deai o motomeru no wa machigatte iru darouka familia myth iii"
    ],
    "popularity": 203218,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 21711,
@@ -2469,7 +2704,8 @@
     "91days"
    ],
    "popularity": 201738,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 20994,
@@ -2479,7 +2715,8 @@
     "gate jieitai kanochi nite kaku tatakaeri"
    ],
    "popularity": 201297,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 20631,
@@ -2490,7 +2727,8 @@
     "trinity seven shichinin no mahoutsukai"
    ],
    "popularity": 201104,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 103223,
@@ -2501,7 +2739,8 @@
     "bsd 3"
    ],
    "popularity": 200703,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 21196,
@@ -2512,7 +2751,8 @@
     "kabaneri de la fortaleza de hierro"
    ],
    "popularity": 200515,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 15451,
@@ -2523,7 +2763,8 @@
     "highschool dxd 2"
    ],
    "popularity": 200466,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 98291,
@@ -2534,7 +2775,8 @@
     "tsure x dure children"
    ],
    "popularity": 199506,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 20457,
@@ -2543,7 +2785,8 @@
     "black bullet"
    ],
    "popularity": 198586,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 21403,
@@ -2554,7 +2797,8 @@
     "sword art online"
    ],
    "popularity": 198191,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 457,
@@ -2564,7 +2808,8 @@
     "mushishi"
    ],
    "popularity": 197459,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 10408,
@@ -2575,7 +2820,8 @@
     "to the forest of firefly lights"
    ],
    "popularity": 197444,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 163270,
@@ -2586,7 +2832,8 @@
     "wb 2"
    ],
    "popularity": 196668,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 151970,
@@ -2597,7 +2844,8 @@
     "shangri la frontier kusoge hunter kami ge ni idoman to su"
    ],
    "popularity": 196663,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 11843,
@@ -2608,7 +2856,8 @@
     "nichibros"
    ],
    "popularity": 196470,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 12355,
@@ -2619,7 +2868,8 @@
     "the wolf children ame and yuki"
    ],
    "popularity": 196466,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 114963,
@@ -2630,7 +2880,8 @@
     "nakineko"
    ],
    "popularity": 194551,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 105228,
@@ -2639,7 +2890,8 @@
     "dorohedoro"
    ],
    "popularity": 194441,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 4654,
@@ -2650,7 +2902,8 @@
     "toaru majutsu no kinsho mokuroku"
    ],
    "popularity": 194041,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 21595,
@@ -2661,7 +2914,8 @@
     "sakamoto pour vous servir"
    ],
    "popularity": 193758,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 11887,
@@ -2671,7 +2925,8 @@
     "kokoroco"
    ],
    "popularity": 193555,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 2251,
@@ -2680,7 +2935,8 @@
     "baccano"
    ],
    "popularity": 192381,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 20966,
@@ -2691,7 +2947,8 @@
     "yamadakun to nananin no majo"
    ],
    "popularity": 192186,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 2890,
@@ -2702,7 +2959,8 @@
     "ponyo on the cliff by the sea"
    ],
    "popularity": 191365,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 114232,
@@ -2713,7 +2971,8 @@
     "hige wo soru soshite joshikousei wo hirou"
    ],
    "popularity": 190542,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 113596,
@@ -2724,7 +2983,8 @@
     "josee to tora to sakana tachi"
    ],
    "popularity": 190493,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 512,
@@ -2735,7 +2995,8 @@
     "majotaku"
    ],
    "popularity": 189822,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 33,
@@ -2746,7 +3007,8 @@
     "kenfu denki berserk"
    ],
    "popularity": 189741,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 777,
@@ -2756,7 +3018,8 @@
     "hellsing"
    ],
    "popularity": 189593,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 21685,
@@ -2766,7 +3029,8 @@
     "ero manga sensei"
    ],
    "popularity": 188906,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 100112,
@@ -2777,7 +3041,8 @@
     "the wise grandson"
    ],
    "popularity": 188534,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 20626,
@@ -2788,7 +3053,8 @@
     "fairy tail 2"
    ],
    "popularity": 188364,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 11597,
@@ -2798,7 +3064,8 @@
     "fake tale"
    ],
    "popularity": 188343,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 21428,
@@ -2809,7 +3076,8 @@
     "grimgar"
    ],
    "popularity": 186635,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 106479,
@@ -2820,7 +3088,8 @@
     "itai no wa iya nano de bougyoryoku ni kyokufuri shitai to omoimasu"
    ],
    "popularity": 186062,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 16894,
@@ -2831,7 +3100,8 @@
     "kuroko no basuke 2"
    ],
    "popularity": 185830,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 18507,
@@ -2842,7 +3112,8 @@
     "free eternal summer"
    ],
    "popularity": 185108,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 21058,
@@ -2853,7 +3124,8 @@
     "shirayuki aux cheveux rouges"
    ],
    "popularity": 184704,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 21701,
@@ -2864,7 +3136,8 @@
     "desejos proibidos"
    ],
    "popularity": 184647,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 2966,
@@ -2875,7 +3148,8 @@
     "spice and wolf merchant meets the wise wolf"
    ],
    "popularity": 184480,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 128546,
@@ -2885,7 +3159,8 @@
     "vivy fluorite eyes song"
    ],
    "popularity": 183676,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 174576,
@@ -2896,7 +3171,8 @@
     "tsue to tsurugi no wistoria"
    ],
    "popularity": 183130,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 97994,
@@ -2905,7 +3181,8 @@
     "blend s"
    ],
    "popularity": 183027,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 133844,
@@ -2915,7 +3192,8 @@
     "overlord 4"
    ],
    "popularity": 182449,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 151806,
@@ -2926,7 +3204,8 @@
     "tomo chan wa onna no ko"
    ],
    "popularity": 181626,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 20657,
@@ -2937,7 +3216,8 @@
     "saenai heroine no sodatekata"
    ],
    "popularity": 181284,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 13125,
@@ -2948,7 +3228,8 @@
     "shin sekai yori"
    ],
    "popularity": 180869,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 126403,
@@ -2959,7 +3240,8 @@
     "time agent"
    ],
    "popularity": 180597,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 934,
@@ -2970,7 +3252,8 @@
     "when the cicadas cry"
    ],
    "popularity": 180493,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 43,
@@ -2981,7 +3264,8 @@
     "gits"
    ],
    "popularity": 180410,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 20745,
@@ -2992,7 +3276,8 @@
     "highschool dxd 3"
    ],
    "popularity": 180345,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 143338,
@@ -3003,7 +3288,8 @@
     "meu anjo de vizinha me mima demais"
    ],
    "popularity": 179970,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 2025,
@@ -3014,7 +3300,8 @@
     "darker than black black contractor"
    ],
    "popularity": 179779,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 124194,
@@ -3025,7 +3312,8 @@
     "fruits basket the final"
    ],
    "popularity": 179604,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 245,
@@ -3036,7 +3324,8 @@
     "gto the animation"
    ],
    "popularity": 179142,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 109963,
@@ -3047,7 +3336,8 @@
     "shokugeki no souma shin no sara"
    ],
    "popularity": 178683,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 125206,
@@ -3058,7 +3348,8 @@
     "tsuki ga michibiku isekai douchuu"
    ],
    "popularity": 178612,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 97766,
@@ -3069,7 +3360,8 @@
     "gamers keita amano and youth continue"
    ],
    "popularity": 177481,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 2236,
@@ -3080,7 +3372,8 @@
     "toki wo kakeru shojo"
    ],
    "popularity": 177001,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 97922,
@@ -3090,7 +3383,8 @@
     "inuyashiki"
    ],
    "popularity": 176823,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 105190,
@@ -3099,7 +3393,8 @@
     "darwins game"
    ],
    "popularity": 176347,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 249,
@@ -3109,7 +3404,8 @@
     "inu yasha"
    ],
    "popularity": 175841,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 14467,
@@ -3118,7 +3414,8 @@
     "k eine weitere geschichte"
    ],
    "popularity": 175632,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 20987,
@@ -3127,7 +3424,8 @@
     "himouto umaru chan"
    ],
    "popularity": 175283,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 14713,
@@ -3138,7 +3436,8 @@
     "kami sama hajimemashita"
    ],
    "popularity": 173875,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 17074,
@@ -3149,7 +3448,8 @@
     "nekomonogatari white"
    ],
    "popularity": 173798,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 21093,
@@ -3160,7 +3460,8 @@
     "monster musume no iru nichijou"
    ],
    "popularity": 173613,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 6,
@@ -3169,7 +3470,8 @@
     "trigun"
    ],
    "popularity": 173202,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 107693,
@@ -3180,7 +3482,8 @@
     "mairimashita iruma kun 2"
    ],
    "popularity": 172720,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 99468,
@@ -3191,7 +3494,8 @@
     "skilled teaser takagi san"
    ],
    "popularity": 172634,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 141949,
@@ -3202,7 +3506,8 @@
     "more than a couple less than lovers"
    ],
    "popularity": 172306,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 162314,
@@ -3213,7 +3518,8 @@
     "shingeki no kyojin the kanketsu hen kouhen"
    ],
    "popularity": 171949,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 131565,
@@ -3222,7 +3528,8 @@
     "takt op destiny"
    ],
    "popularity": 171390,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 141014,
@@ -3233,7 +3540,8 @@
     "tomodachi game los juegos de la amistad"
    ],
    "popularity": 170591,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 100183,
@@ -3244,7 +3552,8 @@
     "sao alternative gun gale online"
    ],
    "popularity": 169600,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 99426,
@@ -3255,7 +3564,8 @@
     "uchuu yorimo toui basho"
    ],
    "popularity": 169575,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 21858,
@@ -3266,7 +3576,8 @@
     "det lille hekseakademiet"
    ],
    "popularity": 169266,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 9260,
@@ -3277,7 +3588,8 @@
     "kizumonogatari i"
    ],
    "popularity": 169263,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 10719,
@@ -3288,7 +3600,8 @@
     "i dont have many friends"
    ],
    "popularity": 168486,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 98444,
@@ -3299,7 +3612,8 @@
     "yurucamp"
    ],
    "popularity": 168477,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 167152,
@@ -3310,7 +3624,8 @@
     "yuusha kei ni shosu choubatsu yuusha 9004 tai keimu kiroku"
    ],
    "popularity": 168474,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 107717,
@@ -3321,7 +3636,8 @@
     "kobayashi san chi no maid dragon"
    ],
    "popularity": 167995,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 20602,
@@ -3332,7 +3648,8 @@
     "cudowny park amagi"
    ],
    "popularity": 167324,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 116566,
@@ -3341,7 +3658,8 @@
     "akudama drive"
    ],
    "popularity": 166925,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 14345,
@@ -3350,7 +3668,8 @@
     "btooom"
    ],
    "popularity": 166612,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 153152,
@@ -3361,7 +3680,8 @@
     "bokuyaba"
    ],
    "popularity": 166092,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 114888,
@@ -3372,7 +3692,8 @@
     "fugou keiji"
    ],
    "popularity": 165314,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 20725,
@@ -3383,7 +3704,8 @@
     "kuroko no basuke 3"
    ],
    "popularity": 165310,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 131083,
@@ -3394,7 +3716,8 @@
     "girl that can see it"
    ],
    "popularity": 165151,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 20678,
@@ -3405,7 +3728,8 @@
     "shinmai maou no keiyakusha"
    ],
    "popularity": 164983,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 107201,
@@ -3415,7 +3739,8 @@
     "kyokou suiri"
    ],
    "popularity": 164797,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 98707,
@@ -3426,7 +3751,8 @@
     "das land der juwelen"
    ],
    "popularity": 163087,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 125426,
@@ -3437,7 +3763,8 @@
     "la via del grembiule"
    ],
    "popularity": 162047,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 392,
@@ -3448,7 +3775,8 @@
     "yuu yuu hakusho"
    ],
    "popularity": 161252,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 98202,
@@ -3459,7 +3787,8 @@
     "as the moon so beautiful"
    ],
    "popularity": 161248,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 790,
@@ -3468,7 +3797,8 @@
     "ergo proxy"
    ],
    "popularity": 160505,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 114124,
@@ -3478,7 +3808,8 @@
     "yuukoku no moriarty"
    ],
    "popularity": 159707,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 98491,
@@ -3489,7 +3820,8 @@
     "isesuma"
    ],
    "popularity": 159545,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 20946,
@@ -3500,7 +3832,8 @@
     "mon histoire"
    ],
    "popularity": 159498,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 1943,
@@ -3509,7 +3842,8 @@
     "paprika"
    ],
    "popularity": 159437,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 21131,
@@ -3520,7 +3854,8 @@
     "academy battle city asterisk"
    ],
    "popularity": 159222,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 1195,
@@ -3531,7 +3866,8 @@
     "zeros familiar"
    ],
    "popularity": 158999,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 128705,
@@ -3541,7 +3877,8 @@
     "periodo azul"
    ],
    "popularity": 157052,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 14289,
@@ -3552,7 +3889,8 @@
     "sukinayo"
    ],
    "popularity": 156936,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 103632,
@@ -3562,7 +3900,8 @@
     "kumo desu ga nani ka"
    ],
    "popularity": 156931,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 170942,
@@ -3573,7 +3912,8 @@
     "la caja azul"
    ],
    "popularity": 156896,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 6213,
@@ -3584,7 +3924,8 @@
     "toaru kagaku no choudenjihou"
    ],
    "popularity": 156857,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 16742,
@@ -3595,7 +3936,8 @@
     "watashi ga motenai no wa dou kangaetemo omaera ga warui"
    ],
    "popularity": 156582,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 103871,
@@ -3605,7 +3947,8 @@
     "zombieland saga"
    ],
    "popularity": 156532,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 112609,
@@ -3616,7 +3959,8 @@
     "majo no tabitabi"
    ],
    "popularity": 155910,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 20722,
@@ -3625,7 +3969,8 @@
     "barakamon"
    ],
    "popularity": 155147,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 153845,
@@ -3636,7 +3981,8 @@
     "isekai de cheat skill wo te ni shita ore wa genjitsu sekai wo mo musou suru level up wa jinsei wo kaeta"
    ],
    "popularity": 155016,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 108241,
@@ -3645,7 +3991,8 @@
     "gleipnir"
    ],
    "popularity": 154944,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 20912,
@@ -3655,7 +4002,8 @@
     "hibike euphonium"
    ],
    "popularity": 154094,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 115113,
@@ -3665,7 +4013,8 @@
     "uzaki chan wa asobitai"
    ],
    "popularity": 153510,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 128547,
@@ -3675,7 +4024,8 @@
     "odd taxi"
    ],
    "popularity": 153459,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 15689,
@@ -3685,7 +4035,8 @@
     "nekomonogatari kuro"
    ],
    "popularity": 152363,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 114043,
@@ -3696,7 +4047,8 @@
     "shokugeki no souma gou no sara"
    ],
    "popularity": 151350,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 100077,
@@ -3705,7 +4057,8 @@
     "hinamatsuri"
    ],
    "popularity": 151081,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 7785,
@@ -3716,7 +4069,8 @@
     "yojo han shinwa taikei"
    ],
    "popularity": 150935,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 97863,
@@ -3727,7 +4081,8 @@
     "hajimete no gyaru"
    ],
    "popularity": 150817,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 527,
@@ -3738,7 +4093,8 @@
     "pokemon"
    ],
    "popularity": 150758,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 19163,
@@ -3748,7 +4104,8 @@
     "date a live 2"
    ],
    "popularity": 150707,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 101001,
@@ -3758,7 +4115,8 @@
     "asobi asobase workshop of fun"
    ],
    "popularity": 150646,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 7311,
@@ -3769,7 +4127,8 @@
     "la disparition de haruhi suzumiya"
    ],
    "popularity": 150316,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 104647,
@@ -3780,7 +4139,8 @@
     "otome game no hametsu flag shika nai akuyaku reijou ni tensei shiteshimatta"
    ],
    "popularity": 150119,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 99457,
@@ -3791,7 +4151,8 @@
     "sayonara no asa ni yakusoku no hana wo kazarou"
    ],
    "popularity": 149375,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 185407,
@@ -3801,7 +4162,8 @@
     "takopii no genzai"
    ],
    "popularity": 148933,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 270,
@@ -3810,7 +4172,8 @@
     "hellsing"
    ],
    "popularity": 148508,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 263,
@@ -3821,7 +4184,8 @@
     "the first step"
    ],
    "popularity": 148484,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 8769,
@@ -3832,7 +4196,8 @@
     "my little sister cant be this cute"
    ],
    "popularity": 148401,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 177689,
@@ -3843,7 +4208,8 @@
     "der sommer in dem hikaru starb"
    ],
    "popularity": 148267,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 21290,
@@ -3854,7 +4220,8 @@
     "netoyome"
    ],
    "popularity": 148058,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 20791,
@@ -3864,7 +4231,8 @@
     "fate hf"
    ],
    "popularity": 147921,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 1887,
@@ -3873,7 +4241,8 @@
     "lucky star"
    ],
    "popularity": 147768,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 17729,
@@ -3884,7 +4253,8 @@
     "le fruit de la grisaia"
    ],
    "popularity": 147667,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 2759,
@@ -3895,7 +4265,8 @@
     "evangelion shin"
    ],
    "popularity": 147043,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 147103,
@@ -3906,7 +4277,8 @@
     "watakon"
    ],
    "popularity": 146868,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 97832,
@@ -3915,7 +4287,8 @@
     "citrus"
    ],
    "popularity": 146093,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 195600,
@@ -3926,7 +4299,8 @@
     "yomitsuga"
    ],
    "popularity": 145716,
-   "trending": false
+   "trending": true,
+   "trending_rank": 38
   },
   {
    "id": 16870,
@@ -3937,7 +4311,8 @@
     "naruto 10"
    ],
    "popularity": 145569,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 114121,
@@ -3948,7 +4323,8 @@
     "la vida diaria del rey inmortal"
    ],
    "popularity": 145261,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 112443,
@@ -3958,7 +4334,8 @@
     "jaku chara tomozaki kun"
    ],
    "popularity": 145071,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 166794,
@@ -3969,7 +4346,8 @@
     "ein zeichen der zuneigung"
    ],
    "popularity": 144338,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 101168,
@@ -3978,7 +4356,8 @@
     "plunderer"
    ],
    "popularity": 144298,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 3455,
@@ -3989,7 +4368,8 @@
     "toloveru"
    ],
    "popularity": 143683,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 126546,
@@ -3999,7 +4379,8 @@
     "seirei gensouki spirit chronicles"
    ],
    "popularity": 143649,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 117612,
@@ -4010,7 +4391,8 @@
     "genjitsushugisha no oukokukaizouki"
    ],
    "popularity": 143270,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 97888,
@@ -4019,7 +4401,8 @@
     "baki"
    ],
    "popularity": 142315,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 112608,
@@ -4030,7 +4413,8 @@
     "slime 300"
    ],
    "popularity": 142270,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 11577,
@@ -4041,7 +4425,8 @@
     "steins gate fuka ryouiki no d j vu"
    ],
    "popularity": 142256,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 104464,
@@ -4052,7 +4437,8 @@
     "ore wo suki nano wa omae dake ka yo"
    ],
    "popularity": 142140,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 11633,
@@ -4061,7 +4447,8 @@
     "blood lad"
    ],
    "popularity": 141989,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 99699,
@@ -4071,7 +4458,8 @@
     "golden kamui"
    ],
    "popularity": 141910,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 100298,
@@ -4081,7 +4469,8 @@
     "megalo box"
    ],
    "popularity": 140773,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 20513,
@@ -4090,7 +4479,8 @@
     "psycho pass 2"
    ],
    "popularity": 140556,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 2034,
@@ -4100,7 +4490,8 @@
     "love com"
    ],
    "popularity": 140343,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 99420,
@@ -4111,7 +4502,8 @@
     "glt"
    ],
    "popularity": 140328,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 97767,
@@ -4122,7 +4514,8 @@
     "highschool dxd 4"
    ],
    "popularity": 140183,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 21306,
@@ -4132,7 +4525,8 @@
     "musaigen no phantom world"
    ],
    "popularity": 140147,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 101573,
@@ -4143,7 +4537,8 @@
     "yagakimi"
    ],
    "popularity": 140070,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 16067,
@@ -4154,7 +4549,8 @@
     "nagiasu"
    ],
    "popularity": 139434,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 97907,
@@ -4165,7 +4561,8 @@
     "pawai maut berujung rapsodi dunia lain"
    ],
    "popularity": 139288,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 132126,
@@ -4174,7 +4571,8 @@
     "sonny boy"
    ],
    "popularity": 139046,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 125428,
@@ -4185,7 +4583,8 @@
     "sky high survival"
    ],
    "popularity": 138845,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 20773,
@@ -4194,7 +4593,8 @@
     "gangsta"
    ],
    "popularity": 138419,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 162694,
@@ -4205,7 +4605,8 @@
     "100 kanojo"
    ],
    "popularity": 138367,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 99726,
@@ -4216,7 +4617,8 @@
     "neto juu no susume"
    ],
    "popularity": 137869,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 97980,
@@ -4226,7 +4628,8 @@
     "re criadores"
    ],
    "popularity": 137589,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 196187,
@@ -4237,7 +4640,8 @@
     "behind the supermarket smoking with you"
    ],
    "popularity": 137496,
-   "trending": true
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 11499,
@@ -4247,7 +4651,8 @@
     "sankarea undying love"
    ],
    "popularity": 137248,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 8525,
@@ -4258,7 +4663,8 @@
     "kaminomi"
    ],
    "popularity": 136952,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 135806,
@@ -4269,7 +4675,8 @@
     "ojisan in another world"
    ],
    "popularity": 136540,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 141911,
@@ -4279,7 +4686,8 @@
     "skip to loafer"
    ],
    "popularity": 136185,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 21123,
@@ -4288,7 +4696,8 @@
     "drifters"
    ],
    "popularity": 136103,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 171457,
@@ -4299,7 +4708,8 @@
     "make heroine ga oosugiru"
    ],
    "popularity": 135957,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 6594,
@@ -4309,7 +4719,8 @@
     "sword story"
    ],
    "popularity": 135816,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 20955,
@@ -4320,7 +4731,8 @@
     "rokka no yuusha"
    ],
    "popularity": 135731,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 9041,
@@ -4330,7 +4742,8 @@
     "is infinite stratos"
    ],
    "popularity": 135392,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 513,
@@ -4341,7 +4754,8 @@
     "tenkuu no shiro rapyuta"
    ],
    "popularity": 135177,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 142074,
@@ -4352,7 +4766,8 @@
     "otomege sekai wa mob ni kibishii sekai desu"
    ],
    "popularity": 134862,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 154116,
@@ -4361,7 +4776,8 @@
     "undead unluck"
    ],
    "popularity": 134835,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 127399,
@@ -4372,7 +4788,8 @@
     "shuumatsu no walkure"
    ],
    "popularity": 134642,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 126192,
@@ -4383,7 +4800,8 @@
     "kanokano"
    ],
    "popularity": 134613,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 14749,
@@ -4394,7 +4812,8 @@
     "my girlfriend and childhood friend fight too much"
    ],
    "popularity": 134006,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 11759,
@@ -4404,7 +4823,8 @@
     "accelerated world"
    ],
    "popularity": 133990,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 323,
@@ -4414,7 +4834,8 @@
     "mousou dairinin"
    ],
    "popularity": 133990,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 184951,
@@ -4424,7 +4845,8 @@
     "seihantai na kimi to boku"
    ],
    "popularity": 133982,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 98035,
@@ -4433,7 +4855,8 @@
     "fate apocrypha"
    ],
    "popularity": 133956,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 128712,
@@ -4444,7 +4867,8 @@
     "la detective esta muerta"
    ],
    "popularity": 133818,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 137908,
@@ -4455,7 +4879,8 @@
     "penggunaan sihir penyembuh yang keliru"
    ],
    "popularity": 133302,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 103900,
@@ -4466,7 +4891,8 @@
     "bokutachi wa benkyou ga dekinai"
    ],
    "popularity": 133202,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 7724,
@@ -4476,7 +4902,8 @@
     "corpse demon"
    ],
    "popularity": 133161,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 21718,
@@ -4486,7 +4913,8 @@
     "fate hf ii"
    ],
    "popularity": 132546,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 20671,
@@ -4495,7 +4923,8 @@
     "log horizon 2"
    ],
    "popularity": 132429,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 21262,
@@ -4505,7 +4934,8 @@
     "end tale"
    ],
    "popularity": 131641,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 21878,
@@ -4515,7 +4945,8 @@
     "gabdro"
    ],
    "popularity": 131503,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 129196,
@@ -4526,7 +4957,8 @@
     "dungeon ni deai wo motomeru no wa machigatteiru darou ka iv shin shou meikyuu hen"
    ],
    "popularity": 131467,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 225,
@@ -4536,7 +4968,8 @@
     "dbgt"
    ],
    "popularity": 131450,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 110354,
@@ -4547,7 +4980,8 @@
     "bna brand new animal"
    ],
    "popularity": 131335,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 156092,
@@ -4558,7 +4992,8 @@
     "to be hero 3"
    ],
    "popularity": 131207,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 118375,
@@ -4569,7 +5004,8 @@
     "training in the secret dungeon"
    ],
    "popularity": 131167,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 127401,
@@ -4578,7 +5014,8 @@
     "platinum end"
    ],
    "popularity": 131051,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 137281,
@@ -4589,7 +5026,8 @@
     "aharen is unfathomable"
    ],
    "popularity": 130716,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 155907,
@@ -4598,7 +5036,8 @@
     "buddy daddies"
    ],
    "popularity": 130681,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 16417,
@@ -4607,7 +5046,8 @@
     "tamako market"
    ],
    "popularity": 130424,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 4081,
@@ -4618,7 +5058,8 @@
     "natsume yujincho"
    ],
    "popularity": 129675,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 18277,
@@ -4627,7 +5068,8 @@
     "strike the blood"
    ],
    "popularity": 129441,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 174788,
@@ -4636,7 +5078,8 @@
     "look back"
    ],
    "popularity": 129358,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 2476,
@@ -4646,7 +5089,8 @@
     "school days wer dir alles geben kann kann dir auch alles nehmen"
    ],
    "popularity": 129335,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 126213,
@@ -4657,7 +5101,8 @@
     "banished from the heroes party i decided to live a quiet life in the countryside"
    ],
    "popularity": 129248,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 98251,
@@ -4667,7 +5112,8 @@
     "ahogaru clueless girl"
    ],
    "popularity": 129039,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 110350,
@@ -4676,7 +5122,8 @@
     "id invaded"
    ],
    "popularity": 128741,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 21364,
@@ -4687,7 +5134,8 @@
     "gate jieitai kanochi nite kaku tatakaeri"
    ],
    "popularity": 128440,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 114085,
@@ -4698,7 +5146,8 @@
     "kemono incidents"
    ],
    "popularity": 128436,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 111790,
@@ -4709,7 +5158,8 @@
     "booru no michi"
    ],
    "popularity": 128067,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 21495,
@@ -4719,7 +5169,8 @@
     "tanaka kun wa itsumo kedaruge"
    ],
    "popularity": 127863,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 2993,
@@ -4730,7 +5181,8 @@
     "rosario and vampire"
    ],
    "popularity": 127817,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 151514,
@@ -4741,7 +5193,8 @@
     "chi chikyuu no undou ni tsuite"
    ],
    "popularity": 127671,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 8425,
@@ -4750,7 +5203,8 @@
     "gosick"
    ],
    "popularity": 127658,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 20607,
@@ -4759,7 +5213,8 @@
     "ping pong the animation"
    ],
    "popularity": 126872,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 116588,
@@ -4770,7 +5225,8 @@
     "kombattanten werden entsandt"
    ],
    "popularity": 126832,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 21499,
@@ -4780,7 +5236,8 @@
     "sousei no onmyouji"
    ],
    "popularity": 126758,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 20754,
@@ -4790,7 +5247,8 @@
     "gakkou gurashi"
    ],
    "popularity": 126716,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 142876,
@@ -4801,7 +5259,8 @@
     "dr stone ryuusui"
    ],
    "popularity": 126294,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 107226,
@@ -4812,7 +5271,8 @@
     "how many kilograms are the dumbbells you lift"
    ],
    "popularity": 126266,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 21745,
@@ -4823,7 +5283,8 @@
     "owarimonogatari 2"
    ],
    "popularity": 125142,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 132474,
@@ -4834,7 +5295,8 @@
     "kesatria tengkorak berkelana di dunia lain"
    ],
    "popularity": 125101,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 10800,
@@ -4844,7 +5306,8 @@
     "chihayafull"
    ],
    "popularity": 124814,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 107067,
@@ -4855,7 +5318,8 @@
     "rikekoi"
    ],
    "popularity": 124646,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 117343,
@@ -4865,7 +5329,8 @@
     "munou na nana"
    ],
    "popularity": 124371,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 20593,
@@ -4874,7 +5339,8 @@
     "hanamonogatari"
    ],
    "popularity": 124162,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 15315,
@@ -4884,7 +5350,8 @@
     "mondaiji tachi ga isekai kara kuru sou desu yo"
    ],
    "popularity": 123973,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 156067,
@@ -4895,7 +5362,8 @@
     "regarding the display of an outrageous skill which has incredible powers"
    ],
    "popularity": 123947,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 21341,
@@ -4906,7 +5374,8 @@
     "ajin semihumano"
    ],
    "popularity": 123796,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 7674,
@@ -4916,7 +5385,8 @@
     "bakuman 1st series"
    ],
    "popularity": 123413,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 1818,
@@ -4925,7 +5395,8 @@
     "claymore"
    ],
    "popularity": 123343,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 20785,
@@ -4934,7 +5405,8 @@
     "absolute duo"
    ],
    "popularity": 123113,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 145665,
@@ -4943,7 +5415,8 @@
     "nier automata ver1 1a"
    ],
    "popularity": 123097,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 20729,
@@ -4952,7 +5425,8 @@
     "world trigger"
    ],
    "popularity": 122714,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 139587,
@@ -4963,7 +5437,8 @@
     "i became the sword by transmigrating"
    ],
    "popularity": 122688,
-   "trending": true
+   "trending": true,
+   "trending_rank": null
   },
   {
    "id": 20918,
@@ -4973,7 +5448,8 @@
     "possession tale"
    ],
    "popularity": 122652,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 20519,
@@ -4983,7 +5459,8 @@
     "tamako love story"
    ],
    "popularity": 122284,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 21455,
@@ -4992,7 +5469,8 @@
     "new game"
    ],
    "popularity": 122149,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 11981,
@@ -5003,7 +5481,8 @@
     "mahou shoujo madoka magica"
    ],
    "popularity": 121844,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 108268,
@@ -5014,7 +5493,8 @@
     "honzuki no gekokujou shisho ni naru tame ni wa shudan wo erandeiraremasen"
    ],
    "popularity": 121774,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 17549,
@@ -5023,7 +5503,8 @@
     "non non biyori"
    ],
    "popularity": 121766,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 129188,
@@ -5032,7 +5513,8 @@
     "goblin slayer ii"
    ],
    "popularity": 121743,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 21860,
@@ -5043,7 +5525,8 @@
     "shuumatsu nani shitemasu ka isogashii desu ka sukutte moratte ii desu ka"
    ],
    "popularity": 121666,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 21719,
@@ -5053,7 +5536,8 @@
     "fate hf iii"
    ],
    "popularity": 121203,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 137667,
@@ -5064,7 +5548,8 @@
     "guimi zhi zhu xiaochou pian"
    ],
    "popularity": 120920,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 6347,
@@ -5075,7 +5560,8 @@
     "baka to test to shoukanjuu"
    ],
    "popularity": 120340,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 21365,
@@ -5084,7 +5570,8 @@
     "dagashi kashi"
    ],
    "popularity": 120319,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 172019,
@@ -5094,7 +5581,8 @@
     "dr stone"
    ],
    "popularity": 120264,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 1482,
@@ -5104,7 +5592,8 @@
     "d grey man"
    ],
    "popularity": 119001,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 185,
@@ -5114,7 +5603,8 @@
     "inisharu di"
    ],
    "popularity": 118818,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 101310,
@@ -5125,7 +5615,8 @@
     "to love or not to love"
    ],
    "popularity": 118510,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 146493,
@@ -5134,7 +5625,8 @@
     "ragna crimson"
    ],
    "popularity": 118461,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 141821,
@@ -5145,7 +5637,8 @@
     "slave of the magic capitals elite troops"
    ],
    "popularity": 118339,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 109298,
@@ -5156,7 +5649,8 @@
     "dont mess with the motion picture club"
    ],
    "popularity": 117286,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 20849,
@@ -5165,7 +5659,8 @@
     "god eater"
    ],
    "popularity": 116709,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 5681,
@@ -5174,7 +5669,8 @@
     "summer wars"
    ],
    "popularity": 116644,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 8841,
@@ -5184,7 +5680,8 @@
     "kore wa zombie desu ka"
    ],
    "popularity": 116591,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 98320,
@@ -5194,7 +5691,8 @@
     "koi to uso"
    ],
    "popularity": 116591,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 120646,
@@ -5205,7 +5703,8 @@
     "seniorku yang menyebalkan"
    ],
    "popularity": 116413,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 130586,
@@ -5216,7 +5715,8 @@
     "raja iblis terkuat sepanjang sejarah terlahir kembali sebagai figuran"
    ],
    "popularity": 116407,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 132052,
@@ -5226,7 +5726,8 @@
     "kakkou no iinazuke"
    ],
    "popularity": 116297,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 167336,
@@ -5235,7 +5736,8 @@
     "lazarus"
    ],
    "popularity": 116204,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 146850,
@@ -5246,7 +5748,8 @@
     "isekai farming vita contadina in un altro mondo"
    ],
    "popularity": 116044,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 268,
@@ -5256,7 +5759,8 @@
     "golden boy sasurai no obenkyou yarou"
    ],
    "popularity": 115857,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 14075,
@@ -5267,7 +5771,8 @@
     "zetsuen no tempest the civilization blaster"
    ],
    "popularity": 115781,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 142769,
@@ -5278,7 +5783,8 @@
     "natsuton"
    ],
    "popularity": 115325,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 6675,
@@ -5288,7 +5794,8 @@
     "red line"
    ],
    "popularity": 115025,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 16662,
@@ -5299,7 +5806,8 @@
     "el viento se levanta"
    ],
    "popularity": 114750,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 112667,
@@ -5310,7 +5818,8 @@
     "kimisen"
    ],
    "popularity": 114647,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 8795,
@@ -5321,7 +5830,8 @@
     "psg"
    ],
    "popularity": 114566,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 15051,
@@ -5330,7 +5840,8 @@
     "love live school idol project"
    ],
    "popularity": 114538,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 100722,
@@ -5341,7 +5852,8 @@
     "date a live 3"
    ],
    "popularity": 114529,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 146210,
@@ -5352,7 +5864,8 @@
     "kinsou no vermeil gakeppuchi majutsushi wa saikyou no yakusai to mahou sekai wo tsukisusumu"
    ],
    "popularity": 114330,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 114065,
@@ -5363,7 +5876,8 @@
     "bokurema"
    ],
    "popularity": 114257,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 66,
@@ -5373,7 +5887,8 @@
     "azumanga daiou the animation"
    ],
    "popularity": 113885,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 5630,
@@ -5383,7 +5898,8 @@
     "higashi no eden"
    ],
    "popularity": 113282,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 20812,
@@ -5393,7 +5909,8 @@
     "white box"
    ],
    "popularity": 113279,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 129190,
@@ -5404,7 +5921,8 @@
     "kiat pemulihan negara berutang ala pangeran genius"
    ],
    "popularity": 113110,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 104722,
@@ -5413,7 +5931,8 @@
     "assassins pride"
    ],
    "popularity": 112887,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 143653,
@@ -5424,7 +5943,8 @@
     "insomniaques"
    ],
    "popularity": 112791,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 105932,
@@ -5435,7 +5955,8 @@
     "araoto"
    ],
    "popularity": 112521,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 20981,
@@ -5446,7 +5967,8 @@
     "o rapaz e o monstro"
    ],
    "popularity": 112509,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 14833,
@@ -5457,7 +5979,8 @@
     "maoyuu maou yuusha"
    ],
    "popularity": 112501,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 140457,
@@ -5468,7 +5991,8 @@
     "yamemasu tsugi no shokuba ha mao jo"
    ],
    "popularity": 112348,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 2593,
@@ -5479,7 +6003,8 @@
     "kara no kyoukai"
    ],
    "popularity": 112336,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 104325,
@@ -5489,7 +6014,8 @@
     "nande koko ni sensei ga"
    ],
    "popularity": 112158,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 141249,
@@ -5500,7 +6026,8 @@
     "bsd 4"
    ],
    "popularity": 111821,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 20652,
@@ -5511,7 +6038,8 @@
     "drrr 2 shou"
    ],
    "popularity": 111754,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 97886,
@@ -5522,7 +6050,8 @@
     "bloodline battlefront and beyond"
    ],
    "popularity": 111724,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 8675,
@@ -5531,7 +6060,8 @@
     "seitokai yakuindomo"
    ],
    "popularity": 111415,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 585,
@@ -5542,7 +6072,8 @@
     "if you listen carefully"
    ],
    "popularity": 111363,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 153930,
@@ -5552,7 +6083,8 @@
     "la asesina del romance"
    ],
    "popularity": 111049,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 21639,
@@ -5562,7 +6094,8 @@
     "hip whip girl"
    ],
    "popularity": 110992,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 99425,
@@ -5571,7 +6104,8 @@
     "promare"
    ],
    "popularity": 110974,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 105914,
@@ -5582,7 +6116,8 @@
     "senko si rubah penolong"
    ],
    "popularity": 110607,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 136934,
@@ -5593,7 +6128,8 @@
     "motokano"
    ],
    "popularity": 110509,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 132473,
@@ -5603,7 +6139,8 @@
     "saihate no paladin"
    ],
    "popularity": 110398,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 7711,
@@ -5614,7 +6151,8 @@
     "karigurashi no arrietti"
    ],
    "popularity": 110025,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 175977,
@@ -5625,7 +6163,8 @@
     "mi amiga nokotan es un ciervo"
    ],
    "popularity": 109926,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 572,
@@ -5636,7 +6175,8 @@
     "nausicaa of the valley of the wind"
    ],
    "popularity": 109859,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 104454,
@@ -5645,7 +6185,8 @@
     "isekai quartet"
    ],
    "popularity": 109747,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 139498,
@@ -5656,7 +6197,8 @@
     "tensei shitara slime datta ken"
    ],
    "popularity": 108351,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 9513,
@@ -5665,7 +6207,8 @@
     "beelzebub"
    ],
    "popularity": 108202,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 99088,
@@ -5674,7 +6217,8 @@
     "pluto"
    ],
    "popularity": 108042,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 156415,
@@ -5685,7 +6229,8 @@
     "dainanaoji"
    ],
    "popularity": 107940,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 20646,
@@ -5696,7 +6241,8 @@
     "inobato"
    ],
    "popularity": 107831,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 113311,
@@ -5705,7 +6251,8 @@
     "kakushigoto"
    ],
    "popularity": 107819,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 158928,
@@ -5716,7 +6263,8 @@
     "spy family code"
    ],
    "popularity": 107108,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 7593,
@@ -5726,7 +6274,8 @@
     "kiss x sis"
    ],
    "popularity": 107096,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 169580,
@@ -5737,7 +6286,8 @@
     "i became friends with the second cutest girl in my class"
    ],
    "popularity": 106935,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 530,
@@ -5749,7 +6299,9 @@
    ],
    "popularity": 106841,
    "trending": false,
-   "seed": true
+   "trending_rank": null,
+   "seed": true,
+   "seed_rank": 22
   },
   {
    "id": 21686,
@@ -5760,7 +6312,8 @@
     "watashimote"
    ],
    "popularity": 106839,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 107663,
@@ -5770,7 +6323,8 @@
     "kanata no astra"
    ],
    "popularity": 106338,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 103302,
@@ -5781,7 +6335,8 @@
     "stop at this sound"
    ],
    "popularity": 106335,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 99424,
@@ -5790,7 +6345,8 @@
     "ssss gridman"
    ],
    "popularity": 106282,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 14967,
@@ -5801,7 +6357,8 @@
     "boku wa tomodachi ga sukunai"
    ],
    "popularity": 105921,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 170130,
@@ -5812,7 +6369,8 @@
     "chillin different world life of the ex brave candidate was cheat from lv2"
    ],
    "popularity": 105752,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 21390,
@@ -5822,7 +6380,8 @@
     "gakusen toshi asterisk 2"
    ],
    "popularity": 105542,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 141774,
@@ -5833,7 +6392,8 @@
     "party people kongming"
    ],
    "popularity": 105260,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 105018,
@@ -5844,7 +6404,8 @@
     "ride your wave juntos en el mar"
    ],
    "popularity": 105158,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 20632,
@@ -5855,7 +6416,8 @@
     "aldnoah zero let justice be done though the heavens fall"
    ],
    "popularity": 104931,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 232,
@@ -5867,7 +6429,9 @@
    ],
    "popularity": 104690,
    "trending": false,
-   "seed": true
+   "trending_rank": null,
+   "seed": true,
+   "seed_rank": 23
   },
   {
    "id": 98596,
@@ -5878,7 +6442,8 @@
     "imoto sae ireba ii"
    ],
    "popularity": 104649,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 10161,
@@ -5887,7 +6452,8 @@
     "no 6"
    ],
    "popularity": 104558,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 116673,
@@ -5896,7 +6462,8 @@
     "burn the witch"
    ],
    "popularity": 104415,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 98503,
@@ -5906,7 +6473,8 @@
     "gakuen babysitters"
    ],
    "popularity": 104375,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 97592,
@@ -5917,7 +6485,8 @@
     "entrevistas con chicas monstruo"
    ],
    "popularity": 104250,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 156039,
@@ -5928,7 +6497,8 @@
     "bousyoku"
    ],
    "popularity": 104230,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 8937,
@@ -5939,7 +6509,8 @@
     "toaru majutsu no index 2"
    ],
    "popularity": 104156,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 6707,
@@ -5950,7 +6521,8 @@
     "kuroshitsuji 2"
    ],
    "popularity": 104113,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 10110,
@@ -5959,7 +6531,8 @@
     "mayo chiki"
    ],
    "popularity": 104056,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 101281,
@@ -5970,7 +6543,8 @@
     "carole y tuesday"
    ],
    "popularity": 103515,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 107625,
@@ -5981,7 +6555,8 @@
     "palavras que borbulham como refrigerante"
    ],
    "popularity": 103417,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 101547,
@@ -5990,7 +6565,8 @@
     "isekai cheat magician"
    ],
    "popularity": 103398,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 16011,
@@ -5999,7 +6575,8 @@
     "tokyo ravens"
    ],
    "popularity": 103387,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 125038,
@@ -6009,7 +6586,8 @@
     "shadow house"
    ],
    "popularity": 103182,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 101351,
@@ -6019,7 +6597,8 @@
     "white sugar garden black salt cage"
    ],
    "popularity": 103159,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 21665,
@@ -6029,7 +6608,8 @@
     "perfect bones"
    ],
    "popularity": 103144,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 180367,
@@ -6038,7 +6618,8 @@
     "witch watch"
    ],
    "popularity": 103059,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 7088,
@@ -6049,7 +6630,8 @@
     "ichiban ushiro no dai mao"
    ],
    "popularity": 102911,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 387,
@@ -6060,7 +6642,8 @@
     "une fille qui a des ailes grises"
    ],
    "popularity": 102830,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 10162,
@@ -6071,7 +6654,8 @@
     "white rabbit candy"
    ],
    "popularity": 102637,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 144553,
@@ -6081,7 +6665,8 @@
     "saikyou onmyouji no isekai tenseiki"
    ],
    "popularity": 102623,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 116741,
@@ -6092,7 +6677,8 @@
     "tensei shitara slime datta ken tensura nikki"
    ],
    "popularity": 102597,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 116242,
@@ -6103,7 +6689,8 @@
     "im standing on 1 000 000 lives"
    ],
    "popularity": 102427,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 110353,
@@ -6112,7 +6699,8 @@
     "deca dence"
    ],
    "popularity": 102414,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 14349,
@@ -6123,7 +6711,8 @@
     "wakate animator ikusei project"
    ],
    "popularity": 102243,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 3457,
@@ -6134,7 +6723,8 @@
     "el caballero vampiro"
    ],
    "popularity": 102217,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 10490,
@@ -6143,7 +6733,8 @@
     "blood c"
    ],
    "popularity": 102186,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 107961,
@@ -6154,7 +6745,8 @@
     "kawaikereba hentai demo suki ni natte kuremasu ka"
    ],
    "popularity": 102016,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 20701,
@@ -6164,7 +6756,8 @@
     "ookami shoujo to kuro ouji"
    ],
    "popularity": 102010,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 153658,
@@ -6175,7 +6768,8 @@
     "haikyuu gomi suteba no kessen"
    ],
    "popularity": 101216,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 157198,
@@ -6185,7 +6779,8 @@
     "dmdp"
    ],
    "popularity": 101188,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 101316,
@@ -6196,7 +6791,8 @@
     "irozuku sekai no ashita kara"
    ],
    "popularity": 100823,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 21188,
@@ -6206,7 +6802,8 @@
     "saijaku muhai no bahamut"
    ],
    "popularity": 100761,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 21851,
@@ -6216,7 +6813,8 @@
     "busou shoujo machiavellianism"
    ],
    "popularity": 100750,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 20483,
@@ -6226,7 +6824,8 @@
     "mikakunin de shinkoukei"
    ],
    "popularity": 100378,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 6033,
@@ -6237,7 +6836,8 @@
     "dragonball kai"
    ],
    "popularity": 100220,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 129191,
@@ -6247,7 +6847,8 @@
     "shikkakumon no saikyou kenja"
    ],
    "popularity": 100182,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 109020,
@@ -6257,7 +6858,8 @@
     "yesterday wo utatte"
    ],
    "popularity": 100151,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 20541,
@@ -6268,7 +6870,8 @@
     "heat haze days"
    ],
    "popularity": 100065,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 3002,
@@ -6279,7 +6882,8 @@
     "gyakkyou burai kaiji"
    ],
    "popularity": 99733,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 145260,
@@ -6289,7 +6893,8 @@
     "kuro no shoukanshi"
    ],
    "popularity": 99607,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 71,
@@ -6300,7 +6905,8 @@
     "furumeta"
    ],
    "popularity": 99261,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 108617,
@@ -6311,7 +6917,8 @@
     "somari and the guardian of the forest"
    ],
    "popularity": 99240,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 179966,
@@ -6322,7 +6929,8 @@
     "silent witch chinmoku no majo no kakushigoto"
    ],
    "popularity": 99186,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 20968,
@@ -6333,7 +6941,8 @@
     "kokosake"
    ],
    "popularity": 99182,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 101903,
@@ -6344,7 +6953,8 @@
     "kazetsuyo"
    ],
    "popularity": 99150,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 183161,
@@ -6355,7 +6965,8 @@
     "tbate"
    ],
    "popularity": 99098,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 100526,
@@ -6366,7 +6977,8 @@
     "3d kanojo real girl"
    ],
    "popularity": 98981,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 116005,
@@ -6375,7 +6987,8 @@
     "noblesse"
    ],
    "popularity": 98911,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 107871,
@@ -6385,7 +6998,8 @@
     "priconne"
    ],
    "popularity": 98831,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 173694,
@@ -6396,7 +7010,8 @@
     "hazure waku no joutai ijou skill de saikyou ni natta ore ga subete wo juurin suru made"
    ],
    "popularity": 98806,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 106240,
@@ -6405,7 +7020,8 @@
     "hello world"
    ],
    "popularity": 98728,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 5341,
@@ -6415,7 +7031,8 @@
     "ookami to koushinryou ii"
    ],
    "popularity": 98697,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 186052,
@@ -6425,7 +7042,8 @@
     "mizu zokusei no mahou tsukai"
    ],
    "popularity": 98512,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 163623,
@@ -6435,7 +7053,8 @@
     "giji harem"
    ],
    "popularity": 98451,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 98385,
@@ -6446,7 +7065,8 @@
     "koiame"
    ],
    "popularity": 98433,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 148969,
@@ -6457,7 +7077,8 @@
     "kubo tidak akan membiarkanku tak terlihat"
    ],
    "popularity": 98354,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 1604,
@@ -6468,7 +7089,8 @@
     "katekyo hitman reborn"
    ],
    "popularity": 98263,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 355,
@@ -6479,7 +7101,8 @@
     "ognistooka shana"
    ],
    "popularity": 97913,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 112649,
@@ -6490,7 +7113,8 @@
     "lasdan"
    ],
    "popularity": 97895,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 21676,
@@ -6501,7 +7125,8 @@
     "dungeon ni deai wo motomeru no wa machigatteiru darou ka gaiden"
    ],
    "popularity": 97776,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 151252,
@@ -6512,7 +7137,8 @@
     "pria es dan rekan wanitanya yang keren"
    ],
    "popularity": 97655,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 12531,
@@ -6523,7 +7149,8 @@
     "sakamichi no aporon"
    ],
    "popularity": 97561,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 118419,
@@ -6533,7 +7160,8 @@
     "kamisama ni natta hi"
    ],
    "popularity": 97485,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 16049,
@@ -6544,7 +7172,8 @@
     "toaru kagaku no railgun"
    ],
    "popularity": 97342,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 486,
@@ -6555,7 +7184,8 @@
     "kino no tabi the beautiful world"
    ],
    "popularity": 97110,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 152137,
@@ -6566,7 +7196,8 @@
     "disqualified from another world"
    ],
    "popularity": 96681,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 111734,
@@ -6576,7 +7207,8 @@
     "given"
    ],
    "popularity": 96513,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 20057,
@@ -6585,7 +7217,8 @@
     "space dandy"
    ],
    "popularity": 96202,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 15225,
@@ -6596,7 +7229,8 @@
     "henneko"
    ],
    "popularity": 96017,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 199547,
@@ -6606,7 +7240,8 @@
     "marriage toxin"
    ],
    "popularity": 95919,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 11013,
@@ -6617,7 +7252,8 @@
     "youko x boku ss"
    ],
    "popularity": 95915,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 5958,
@@ -6627,7 +7263,8 @@
     "sora no otoshimono"
    ],
    "popularity": 95835,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 134732,
@@ -6637,7 +7274,8 @@
     "ao ashi playmaker"
    ],
    "popularity": 95707,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 12445,
@@ -6647,7 +7285,8 @@
     "tasogare otome amnesia"
    ],
    "popularity": 94932,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 2246,
@@ -6656,7 +7295,8 @@
     "mononoke"
    ],
    "popularity": 94836,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 21517,
@@ -6666,7 +7306,8 @@
     "renai boukun"
    ],
    "popularity": 94672,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 155963,
@@ -6677,7 +7318,8 @@
     "dosanko gyaru is mega cute"
    ],
    "popularity": 94312,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 13659,
@@ -6688,7 +7330,8 @@
     "my little sister cant be this cute 2"
    ],
    "popularity": 94120,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 178869,
@@ -6699,7 +7342,8 @@
     "clevatess the king of devil beasts"
    ],
    "popularity": 93894,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 146625,
@@ -6709,7 +7353,8 @@
     "project engage"
    ],
    "popularity": 93814,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 171046,
@@ -6720,7 +7365,8 @@
     "aobuta"
    ],
    "popularity": 93730,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 162896,
@@ -6731,7 +7377,8 @@
     "nigewaka"
    ],
    "popularity": 93670,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 98514,
@@ -6742,7 +7389,8 @@
     "uma musume"
    ],
    "popularity": 93465,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 170695,
@@ -6753,7 +7401,8 @@
     "ore wa subete wo parry suru gyaku kanchigai no sekai saikyou wa boukensha ni naritai"
    ],
    "popularity": 93431,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 6956,
@@ -6763,7 +7412,8 @@
     "working"
    ],
    "popularity": 93383,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 125368,
@@ -6774,7 +7424,8 @@
     "kaguya sama love is war"
    ],
    "popularity": 93364,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 142455,
@@ -6784,7 +7435,8 @@
     "burbujas"
    ],
    "popularity": 93216,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 13161,
@@ -6795,7 +7447,8 @@
     "hagure yuusha no aesthetica"
    ],
    "popularity": 92981,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 59,
@@ -6804,7 +7457,8 @@
     "chobits"
    ],
    "popularity": 92832,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 20590,
@@ -6815,7 +7469,8 @@
     "shingeki no bahamut"
    ],
    "popularity": 92818,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 154967,
@@ -6826,7 +7481,8 @@
     "ao buta"
    ],
    "popularity": 92192,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 153629,
@@ -6837,7 +7493,8 @@
     "magirevo"
    ],
    "popularity": 92114,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 168374,
@@ -6848,7 +7505,8 @@
     "loop 7 kaime no akuyaku reijou wa moto tekikoku de jiyuu kimama na hanayome seikatsu wo mankitsu suru"
    ],
    "popularity": 92010,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 98861,
@@ -6859,7 +7517,8 @@
     "full time expert"
    ],
    "popularity": 91972,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 21509,
@@ -6870,7 +7529,8 @@
     "danganronpa 3 the end of kibougamine gakuen mirai hen"
    ],
    "popularity": 91925,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 136707,
@@ -6880,7 +7540,8 @@
     "isekai yakkyoku"
    ],
    "popularity": 91852,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 160188,
@@ -6891,7 +7552,8 @@
     "sukinako ga megane wo wasureta"
    ],
    "popularity": 91772,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 759,
@@ -6901,7 +7563,8 @@
     "rodzice chrzestni z tokio"
    ],
    "popularity": 91468,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 119683,
@@ -6910,7 +7573,8 @@
     "edens zero"
    ],
    "popularity": 91421,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 19221,
@@ -6921,7 +7585,8 @@
     "noukome"
    ],
    "popularity": 91377,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 1889,
@@ -6931,7 +7596,8 @@
     "higurashi no naku koro ni kai"
    ],
    "popularity": 91337,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 157397,
@@ -6942,7 +7608,8 @@
     "my dreamy realist"
    ],
    "popularity": 91321,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 45,
@@ -6953,7 +7620,8 @@
     "samurai x"
    ],
    "popularity": 91316,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 21006,
@@ -6964,7 +7632,8 @@
     "le eden de la grisaia"
    ],
    "popularity": 91272,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 21110,
@@ -6975,7 +7644,8 @@
     "shinmai maou no testament burst"
    ],
    "popularity": 91209,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 6114,
@@ -6986,7 +7656,8 @@
     "rainbow the seven from compound two cell six"
    ],
    "popularity": 91107,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 99540,
@@ -6997,7 +7668,8 @@
     "nanatsu no taizai"
    ],
    "popularity": 91065,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 12413,
@@ -7006,7 +7678,8 @@
     "jormungand"
    ],
    "popularity": 91028,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 8676,
@@ -7015,7 +7688,8 @@
     "amagami ss"
    ],
    "popularity": 90521,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 98820,
@@ -7024,7 +7698,8 @@
     "just because"
    ],
    "popularity": 89935,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 10495,
@@ -7035,7 +7710,8 @@
     "yryr"
    ],
    "popularity": 89722,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 237,
@@ -7046,7 +7722,8 @@
     "eureka 7"
    ],
    "popularity": 89489,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 179955,
@@ -7057,7 +7734,8 @@
     "katainaka no ossan kensei ni naru tada no inaka no kenjutsu shihan datta noni taisei shita deshitachi ga ore wo houttekurenai ken"
    ],
    "popularity": 89406,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 151040,
@@ -7066,7 +7744,8 @@
     "trigun stampede"
    ],
    "popularity": 89404,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 20879,
@@ -7077,7 +7756,8 @@
     "drrr 2 ten"
    ],
    "popularity": 89269,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 154459,
@@ -7088,7 +7768,8 @@
     "keikenzumi na kimi to keiken zero na ore ga otsukiai suru hanashi"
    ],
    "popularity": 89260,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 186497,
@@ -7099,7 +7780,8 @@
     "parede de gelo"
    ],
    "popularity": 89258,
-   "trending": true
+   "trending": true,
+   "trending_rank": null
   },
   {
    "id": 161474,
@@ -7110,7 +7792,8 @@
     "ao buta"
    ],
    "popularity": 89215,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 21051,
@@ -7121,7 +7804,8 @@
     "the numbers"
    ],
    "popularity": 89159,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 1292,
@@ -7130,7 +7814,8 @@
     "afro samurai"
    ],
    "popularity": 89125,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 20555,
@@ -7141,7 +7826,8 @@
     "souvenirs de marnie"
    ],
    "popularity": 89036,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 20031,
@@ -7151,7 +7837,8 @@
     "d fragments"
    ],
    "popularity": 89022,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 14131,
@@ -7162,7 +7849,8 @@
     "gup"
    ],
    "popularity": 88718,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 146953,
@@ -7173,7 +7861,8 @@
     "masamune kun no revenge"
    ],
    "popularity": 88684,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 100179,
@@ -7184,7 +7873,8 @@
     "tadakun wa koi wo shinai"
    ],
    "popularity": 88682,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 129192,
@@ -7195,7 +7885,8 @@
     "tensei kenja no isekai life"
    ],
    "popularity": 88515,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 124675,
@@ -7206,7 +7897,8 @@
     "osananajimi ga zettai ni makenai love kome"
    ],
    "popularity": 88494,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 148048,
@@ -7217,7 +7909,8 @@
     "kaminaki sekai no kamisama katsudou"
    ],
    "popularity": 88442,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 153332,
@@ -7228,7 +7921,8 @@
     "tensei kizoku no isekai boukenroku"
    ],
    "popularity": 88420,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 112802,
@@ -7238,7 +7932,8 @@
     "uramichi oniisan"
    ],
    "popularity": 88287,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 98005,
@@ -7248,7 +7943,8 @@
     "ballroom e youkoso"
    ],
    "popularity": 88255,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 12549,
@@ -7259,7 +7955,8 @@
     "dakara boku ha h ga dekinai"
    ],
    "popularity": 88113,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 138882,
@@ -7269,7 +7966,8 @@
     "kumichou musume to sewagakari"
    ],
    "popularity": 88042,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 108388,
@@ -7280,7 +7978,8 @@
     "choyoyu"
    ],
    "popularity": 88040,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 132010,
@@ -7291,7 +7990,8 @@
     "koiseka"
    ],
    "popularity": 87896,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 21520,
@@ -7301,7 +8001,8 @@
     "calendar tale"
    ],
    "popularity": 87797,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 106509,
@@ -7312,7 +8013,8 @@
     "that time i got reincarnated as a slime"
    ],
    "popularity": 87726,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 26,
@@ -7321,7 +8023,8 @@
     "texhnolyze"
    ],
    "popularity": 87704,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 11433,
@@ -7332,7 +8035,8 @@
     "natsumachi"
    ],
    "popularity": 87636,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 20462,
@@ -7343,7 +8047,8 @@
     "hitsugi no chaika"
    ],
    "popularity": 87628,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 15037,
@@ -7353,7 +8058,8 @@
     "corpse party tortured souls bougyakusareta tamashii no jukyou"
    ],
    "popularity": 87559,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 147642,
@@ -7364,7 +8070,8 @@
     "tuua"
    ],
    "popularity": 87491,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 186794,
@@ -7375,7 +8082,8 @@
     "sutetsuyo"
    ],
    "popularity": 87427,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 481,
@@ -7386,7 +8094,8 @@
     "yugioh"
    ],
    "popularity": 87280,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 129277,
@@ -7396,7 +8105,8 @@
     "shinigami bocchan to kuro maid"
    ],
    "popularity": 87199,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 170732,
@@ -7407,7 +8117,8 @@
     "dungeon ni deai wo motomeru no wa machigatteiru darou ka v houjou no megami hen"
    ],
    "popularity": 87158,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 111314,
@@ -7418,7 +8129,8 @@
     "uzumaki spirala"
    ],
    "popularity": 87044,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 100815,
@@ -7428,7 +8140,8 @@
     "continued end tale"
    ],
    "popularity": 87017,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 104723,
@@ -7439,7 +8152,8 @@
     "do you like your mom her normal attack is two attacks at full power"
    ],
    "popularity": 86986,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 19369,
@@ -7448,7 +8162,8 @@
     "outbreak company"
    ],
    "popularity": 86819,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 21659,
@@ -7458,7 +8173,8 @@
     "amaama to inazuma"
    ],
    "popularity": 86778,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 820,
@@ -7469,7 +8185,8 @@
     "logh"
    ],
    "popularity": 86761,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 20809,
@@ -7480,7 +8197,8 @@
     "the king of the magic bullet and vanadis"
    ],
    "popularity": 86407,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 20503,
@@ -7490,7 +8208,8 @@
     "witchcraft works"
    ],
    "popularity": 86258,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 132456,
@@ -7501,7 +8220,8 @@
     "niepokonana jahy"
    ],
    "popularity": 86239,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 154391,
@@ -7511,7 +8231,8 @@
     "jitsu wa ore saikyou deshita"
    ],
    "popularity": 85992,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 190327,
@@ -7522,7 +8243,8 @@
     "jojo no kimyou na bouken steel ball run"
    ],
    "popularity": 85797,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 100483,
@@ -7533,7 +8255,8 @@
     "yuragisou no yuuna san"
    ],
    "popularity": 85778,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 10721,
@@ -7543,7 +8266,8 @@
     "mawaru penguindrum"
    ],
    "popularity": 85522,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 130591,
@@ -7554,7 +8278,8 @@
     "bisco si pemakan karat"
    ],
    "popularity": 85442,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 148116,
@@ -7564,7 +8289,8 @@
     "hyouken no majutsushi ga sekai wo suberu"
    ],
    "popularity": 85408,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 20735,
@@ -7575,7 +8301,8 @@
     "danna ga nani o itte iruka wakaranai ken"
    ],
    "popularity": 85401,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 12467,
@@ -7586,7 +8313,8 @@
     "mgx"
    ],
    "popularity": 85398,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 21362,
@@ -7595,7 +8323,8 @@
     "hundred"
    ],
    "popularity": 85396,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 126791,
@@ -7606,7 +8335,8 @@
     "kyuukyoku shinka shita full dive rpg ga genjitsu yori mo kusogee dattara"
    ],
    "popularity": 85337,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 21096,
@@ -7617,7 +8347,8 @@
     "classmates"
    ],
    "popularity": 85314,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 166617,
@@ -7626,7 +8357,8 @@
     "fate strange fake"
    ],
    "popularity": 85208,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 106319,
@@ -7636,7 +8368,8 @@
     "hachi nan tte sore wa nai deshou"
    ],
    "popularity": 85104,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 105989,
@@ -7646,7 +8379,8 @@
     "midara na ao chan wa benkyou ga dekinai"
    ],
    "popularity": 85090,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 103275,
@@ -7657,7 +8391,8 @@
     "fate grand order"
    ],
    "popularity": 85066,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 160900,
@@ -7667,7 +8402,8 @@
     "hametsu no oukoku"
    ],
    "popularity": 84818,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 97768,
@@ -7677,7 +8413,8 @@
     "grancrest senki"
    ],
    "popularity": 84639,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 207141,
@@ -7687,7 +8424,8 @@
     "yani neko"
    ],
    "popularity": 84604,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 57,
@@ -7697,7 +8435,8 @@
     "beck mongolian chop squad"
    ],
    "popularity": 84264,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 152681,
@@ -7707,7 +8446,8 @@
     "gimai seikatsu"
    ],
    "popularity": 84175,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 99531,
@@ -7716,7 +8456,8 @@
     "devils line"
    ],
    "popularity": 84126,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 116605,
@@ -7726,7 +8467,8 @@
     "date a live"
    ],
    "popularity": 83907,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 11785,
@@ -7737,7 +8479,8 @@
     "haiyore nyaruko san"
    ],
    "popularity": 83773,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 114446,
@@ -7748,7 +8491,8 @@
     "higurashi no naku koro ni gou"
    ],
    "popularity": 83564,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 2605,
@@ -7759,7 +8503,8 @@
     "goodbye teacher despair"
    ],
    "popularity": 83451,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 12477,
@@ -7769,7 +8514,8 @@
     "sakasama no patema"
    ],
    "popularity": 83406,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 163292,
@@ -7779,7 +8525,8 @@
     "shinmai ossan bouken sha saikyou party ni shinu hodo kitaerarete muteki ni naru"
    ],
    "popularity": 83405,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 20972,
@@ -7790,7 +8537,8 @@
     "descending stories showa genroku rakugo shinju"
    ],
    "popularity": 83263,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 18247,
@@ -7801,7 +8549,8 @@
     "is2"
    ],
    "popularity": 83124,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 126288,
@@ -7812,7 +8561,8 @@
     "sasaki i miyano"
    ],
    "popularity": 83002,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 163263,
@@ -7823,7 +8573,8 @@
     "bsd 5"
    ],
    "popularity": 82942,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 170019,
@@ -7834,7 +8585,8 @@
     "the angel next door spoils me rotten"
    ],
    "popularity": 82801,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 21626,
@@ -7843,7 +8595,8 @@
     "handa kun"
    ],
    "popularity": 82577,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 440,
@@ -7854,7 +8607,8 @@
     "la rivoluzione di utena"
    ],
    "popularity": 82501,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 156023,
@@ -7865,7 +8619,8 @@
     "maou no ore ga dorei elf wo yome ni shitanda ga dou medereba ii"
    ],
    "popularity": 82389,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 112788,
@@ -7876,7 +8631,8 @@
     "seaside stranger"
    ],
    "popularity": 82336,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 177474,
@@ -7887,7 +8643,8 @@
     "tougen anki dark demon of paradise"
    ],
    "popularity": 82173,
-   "trending": true
+   "trending": true,
+   "trending_rank": null
   },
   {
    "id": 1281,
@@ -7898,7 +8655,8 @@
     "ghosts at school"
    ],
    "popularity": 82014,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 115740,
@@ -7909,7 +8667,8 @@
     "the man picked up by the gods"
    ],
    "popularity": 81699,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 164702,
@@ -7920,7 +8679,8 @@
     "kanteiskill"
    ],
    "popularity": 81534,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 235,
@@ -7931,7 +8691,8 @@
     "case closed"
    ],
    "popularity": 81303,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 123802,
@@ -7942,7 +8703,8 @@
     "the power of the saint is all around"
    ],
    "popularity": 81235,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 105074,
@@ -7953,7 +8715,8 @@
     "magical senpai"
    ],
    "popularity": 81179,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 163076,
@@ -7964,7 +8727,8 @@
     "akuyaku reijou level 99"
    ],
    "popularity": 81164,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 20880,
@@ -7975,7 +8739,8 @@
     "drrr 2 ketsu"
    ],
    "popularity": 81100,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 111428,
@@ -7986,7 +8751,8 @@
     "maoujou de oyasumi"
    ],
    "popularity": 81086,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 21457,
@@ -7997,7 +8763,8 @@
     "konobi"
    ],
    "popularity": 80917,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 20529,
@@ -8007,7 +8774,8 @@
     "bokura wa minna kawaisou"
    ],
    "popularity": 80893,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 597,
@@ -8018,7 +8786,8 @@
     "haru en el reino de los gatos"
    ],
    "popularity": 80851,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 158417,
@@ -8029,7 +8798,8 @@
     "ranger reject"
    ],
    "popularity": 80733,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 150695,
@@ -8040,7 +8810,8 @@
     "penjinak binatang yang ditendang dari regu pahlawan bertemu gadis bertelinga hewan dari ras terkuat"
    ],
    "popularity": 80714,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 97617,
@@ -8050,7 +8821,8 @@
     "isekai shokudou"
    ],
    "popularity": 80639,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 104052,
@@ -8061,7 +8833,8 @@
     "star crossing skies"
    ],
    "popularity": 80503,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 162780,
@@ -8072,7 +8845,8 @@
     "i admire magical girls and"
    ],
    "popularity": 80200,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 5042,
@@ -8082,7 +8856,8 @@
     "kiss sis"
    ],
    "popularity": 80177,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 15379,
@@ -8092,7 +8867,8 @@
     "kotoura san"
    ],
    "popularity": 80114,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 20021,
@@ -8103,7 +8879,8 @@
     "s a o extra edition"
    ],
    "popularity": 80108,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 141902,
@@ -8114,7 +8891,8 @@
     "one piece film 15"
    ],
    "popularity": 80039,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 178462,
@@ -8125,7 +8903,8 @@
     "kurakon"
    ],
    "popularity": 79867,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 158028,
@@ -8136,7 +8915,8 @@
     "sokushicheat"
    ],
    "popularity": 79811,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 9289,
@@ -8147,7 +8927,8 @@
     "hana saku iroha"
    ],
    "popularity": 79696,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 99693,
@@ -8157,7 +8938,8 @@
     "p5a"
    ],
    "popularity": 79651,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 13663,
@@ -8168,7 +8950,8 @@
     "toloveru darkness"
    ],
    "popularity": 79613,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 104252,
@@ -8178,7 +8961,8 @@
     "maou sama retry"
    ],
    "popularity": 79573,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 119675,
@@ -8187,7 +8971,8 @@
     "shaman king"
    ],
    "popularity": 79527,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 175872,
@@ -8198,7 +8983,8 @@
     "yami healer"
    ],
    "popularity": 79242,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 21410,
@@ -8209,7 +8995,8 @@
     "nejimaki seirei senki tenkyou no alderamin"
    ],
    "popularity": 79224,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 20663,
@@ -8220,7 +9007,8 @@
     "seirei tsukai no kenbu blade dance"
    ],
    "popularity": 79079,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 109287,
@@ -8231,7 +9019,8 @@
     "adashima"
    ],
    "popularity": 78720,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 21460,
@@ -8241,7 +9030,8 @@
     "hibike euphonium 2"
    ],
    "popularity": 78714,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 10080,
@@ -8252,7 +9042,8 @@
     "kami nomi zo shiru sekai 2"
    ],
    "popularity": 78653,
-   "trending": false
+   "trending": false,
+   "trending_rank": null
   },
   {
    "id": 180136,
@@ -8263,7 +9054,8 @@
     "the exiled reincarnated heavy knight is unrivaled in game knowledge"
    ],
    "popularity": 75564,
-   "trending": true
+   "trending": true,
+   "trending_rank": 14
   },
   {
    "id": 212888,
@@ -8274,7 +9066,8 @@
     "tempal item no chikara"
    ],
    "popularity": 58683,
-   "trending": true
+   "trending": true,
+   "trending_rank": 23
   },
   {
    "id": 205909,
@@ -8284,7 +9077,8 @@
     "hotaru no yomeiri"
    ],
    "popularity": 51712,
-   "trending": true
+   "trending": true,
+   "trending_rank": 10
   },
   {
    "id": 210482,
@@ -8295,7 +9089,8 @@
     "jojo no kimyou na bouken steel ball run 2nd and"
    ],
    "popularity": 49959,
-   "trending": true
+   "trending": true,
+   "trending_rank": 8
   },
   {
    "id": 191656,
@@ -8306,7 +9101,8 @@
     "namaanaru"
    ],
    "popularity": 49034,
-   "trending": true
+   "trending": true,
+   "trending_rank": 2
   },
   {
    "id": 207329,
@@ -8317,7 +9113,20 @@
     "tsuihou sareta cheat fuyo majutsushi wa kimama na second life wo ouka suru ore wa buki dake ja naku arayuru mono ni kyouka point wo fuyo dekiru shi ore no ishi de itsudemo kouka wo kaijo dekiru kedo nokotta hitotachi daijoubu"
    ],
    "popularity": 45098,
-   "trending": true
+   "trending": true,
+   "trending_rank": 24
+  },
+  {
+   "id": 172192,
+   "key": "a returners magic should be",
+   "terms": [
+    "a returners magic should be",
+    "kikansha no mahou wa tokubetsu desu",
+    "gwihwanjaui mabeobeun"
+   ],
+   "popularity": 34652,
+   "trending": true,
+   "trending_rank": 44
   },
   {
    "id": 169581,
@@ -8328,7 +9137,8 @@
     "magical explorer reborn as a side character in a fantasy dating sim"
    ],
    "popularity": 25364,
-   "trending": true
+   "trending": true,
+   "trending_rank": 5
   },
   {
    "id": 202250,
@@ -8339,7 +9149,8 @@
     "kashita maryoku wa revo barai de kyousei choushuu"
    ],
    "popularity": 25158,
-   "trending": true
+   "trending": true,
+   "trending_rank": 1
   },
   {
    "id": 204389,
@@ -8349,7 +9160,20 @@
     "yasei no last boss ga arawareta"
    ],
    "popularity": 24507,
-   "trending": true
+   "trending": true,
+   "trending_rank": 6
+  },
+  {
+   "id": 212503,
+   "key": "the iceblade sorcerer shall rule the world ii",
+   "terms": [
+    "the iceblade sorcerer shall rule the world ii",
+    "hyouken no majutsushi ga sekai wo suberu ii",
+    "the iceblade sorcerer shall rule the world"
+   ],
+   "popularity": 22821,
+   "trending": true,
+   "trending_rank": 47
   },
   {
    "id": 211778,
@@ -8360,7 +9184,8 @@
     "sekai saikyou no majo hajimemashita watashi dake kouryaku site wo mireru sekai de jiyuu ni ikimasu"
    ],
    "popularity": 20659,
-   "trending": true
+   "trending": true,
+   "trending_rank": 45
   },
   {
    "id": 187402,
@@ -8371,18 +9196,8 @@
     "daiseijo"
    ],
    "popularity": 19467,
-   "trending": true
-  },
-  {
-   "id": 206401,
-   "key": "fx fighter kurumi chan",
-   "terms": [
-    "fx fighter kurumi chan",
-    "fx senshi kurumi chan",
-    "kurumi si pejuang forex"
-   ],
-   "popularity": 18970,
-   "trending": true
+   "trending": true,
+   "trending_rank": 7
   },
   {
    "id": 209872,
@@ -8392,7 +9207,8 @@
     "ranma 1 2 2024"
    ],
    "popularity": 18238,
-   "trending": true
+   "trending": true,
+   "trending_rank": 11
   },
   {
    "id": 180894,
@@ -8403,7 +9219,8 @@
     "romelia senki maou wo taoshita nochi mo jinrui yabasou dakara guntai soshiki shita"
    ],
    "popularity": 18057,
-   "trending": true
+   "trending": true,
+   "trending_rank": 9
   },
   {
    "id": 195571,
@@ -8413,7 +9230,20 @@
     "shuiro no kamen"
    ],
    "popularity": 17131,
-   "trending": true
+   "trending": true,
+   "trending_rank": 18
+  },
+  {
+   "id": 186742,
+   "key": "a certain dark item",
+   "terms": [
+    "a certain dark item",
+    "toaru anbu no item",
+    "a certain dark sides item"
+   ],
+   "popularity": 16532,
+   "trending": true,
+   "trending_rank": 30
   },
   {
    "id": 203275,
@@ -8424,7 +9254,8 @@
     "demokure"
    ],
    "popularity": 8014,
-   "trending": true
+   "trending": true,
+   "trending_rank": 19
   },
   {
    "id": 212799,
@@ -8435,7 +9266,8 @@
     "os sete cavaleiros do reino marronnier"
    ],
    "popularity": 7452,
-   "trending": true
+   "trending": true,
+   "trending_rank": 34
   },
   {
    "id": 203473,
@@ -8445,16 +9277,8 @@
     "kyoufu collector"
    ],
    "popularity": 6960,
-   "trending": true
-  },
-  {
-   "id": 209562,
-   "key": "vertex force",
-   "terms": [
-    "vertex force"
-   ],
-   "popularity": 4932,
-   "trending": true
+   "trending": true,
+   "trending_rank": 36
   },
   {
    "id": 219679,
@@ -8463,7 +9287,8 @@
     "yuusha party ni kawaii ko ga ita no de kokuhaku shitemita"
    ],
    "popularity": 0,
-   "trending": true
+   "trending": true,
+   "trending_rank": 21
   },
   {
    "id": null,
@@ -8473,7 +9298,8 @@
    ],
    "popularity": 0,
    "trending": false,
-   "seed": true
+   "seed": true,
+   "seed_rank": 0
   },
   {
    "id": null,
@@ -8483,7 +9309,8 @@
    ],
    "popularity": 0,
    "trending": false,
-   "seed": true
+   "seed": true,
+   "seed_rank": 1
   },
   {
    "id": null,
@@ -8493,7 +9320,8 @@
    ],
    "popularity": 0,
    "trending": false,
-   "seed": true
+   "seed": true,
+   "seed_rank": 2
   },
   {
    "id": null,
@@ -8503,7 +9331,8 @@
    ],
    "popularity": 0,
    "trending": false,
-   "seed": true
+   "seed": true,
+   "seed_rank": 3
   },
   {
    "id": null,
@@ -8513,7 +9342,8 @@
    ],
    "popularity": 0,
    "trending": false,
-   "seed": true
+   "seed": true,
+   "seed_rank": 4
   },
   {
    "id": null,
@@ -8523,7 +9353,8 @@
    ],
    "popularity": 0,
    "trending": false,
-   "seed": true
+   "seed": true,
+   "seed_rank": 5
   },
   {
    "id": null,
@@ -8533,7 +9364,8 @@
    ],
    "popularity": 0,
    "trending": false,
-   "seed": true
+   "seed": true,
+   "seed_rank": 6
   },
   {
    "id": null,
@@ -8543,7 +9375,8 @@
    ],
    "popularity": 0,
    "trending": false,
-   "seed": true
+   "seed": true,
+   "seed_rank": 7
   },
   {
    "id": null,
@@ -8553,7 +9386,8 @@
    ],
    "popularity": 0,
    "trending": false,
-   "seed": true
+   "seed": true,
+   "seed_rank": 8
   },
   {
    "id": null,
@@ -8563,7 +9397,8 @@
    ],
    "popularity": 0,
    "trending": false,
-   "seed": true
+   "seed": true,
+   "seed_rank": 9
   },
   {
    "id": null,
@@ -8573,7 +9408,8 @@
    ],
    "popularity": 0,
    "trending": false,
-   "seed": true
+   "seed": true,
+   "seed_rank": 10
   },
   {
    "id": null,
@@ -8583,7 +9419,8 @@
    ],
    "popularity": 0,
    "trending": false,
-   "seed": true
+   "seed": true,
+   "seed_rank": 11
   },
   {
    "id": null,
@@ -8593,7 +9430,8 @@
    ],
    "popularity": 0,
    "trending": false,
-   "seed": true
+   "seed": true,
+   "seed_rank": 12
   },
   {
    "id": null,
@@ -8603,7 +9441,8 @@
    ],
    "popularity": 0,
    "trending": false,
-   "seed": true
+   "seed": true,
+   "seed_rank": 13
   },
   {
    "id": null,
@@ -8613,7 +9452,8 @@
    ],
    "popularity": 0,
    "trending": false,
-   "seed": true
+   "seed": true,
+   "seed_rank": 14
   },
   {
    "id": null,
@@ -8623,7 +9463,8 @@
    ],
    "popularity": 0,
    "trending": false,
-   "seed": true
+   "seed": true,
+   "seed_rank": 15
   },
   {
    "id": null,
@@ -8633,7 +9474,8 @@
    ],
    "popularity": 0,
    "trending": false,
-   "seed": true
+   "seed": true,
+   "seed_rank": 16
   },
   {
    "id": null,
@@ -8643,7 +9485,8 @@
    ],
    "popularity": 0,
    "trending": false,
-   "seed": true
+   "seed": true,
+   "seed_rank": 17
   },
   {
    "id": null,
@@ -8653,7 +9496,8 @@
    ],
    "popularity": 0,
    "trending": false,
-   "seed": true
+   "seed": true,
+   "seed_rank": 18
   },
   {
    "id": null,
@@ -8663,7 +9507,8 @@
    ],
    "popularity": 0,
    "trending": false,
-   "seed": true
+   "seed": true,
+   "seed_rank": 19
   },
   {
    "id": null,
@@ -8673,7 +9518,8 @@
    ],
    "popularity": 0,
    "trending": false,
-   "seed": true
+   "seed": true,
+   "seed_rank": 20
   },
   {
    "id": null,
@@ -8683,7 +9529,8 @@
    ],
    "popularity": 0,
    "trending": false,
-   "seed": true
+   "seed": true,
+   "seed_rank": 21
   },
   {
    "id": null,
@@ -8693,7 +9540,8 @@
    ],
    "popularity": 0,
    "trending": false,
-   "seed": true
+   "seed": true,
+   "seed_rank": 24
   },
   {
    "id": null,
@@ -8703,7 +9551,8 @@
    ],
    "popularity": 0,
    "trending": false,
-   "seed": true
+   "seed": true,
+   "seed_rank": 25
   },
   {
    "id": null,
@@ -8713,7 +9562,8 @@
    ],
    "popularity": 0,
    "trending": false,
-   "seed": true
+   "seed": true,
+   "seed_rank": 26
   }
  ]
 }

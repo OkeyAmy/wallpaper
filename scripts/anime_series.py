@@ -47,6 +47,11 @@ PER_PAGE = 50
 REFRESH_DAYS = 7
 REQUEST_PACING = 1.2        # AniList allows ~90 requests/minute
 
+# The rotation counts from this date, so the most popular titles come first
+# rather than at a random offset determined by the calendar ordinal. The
+# catalogue is sorted by popularity; five new titles are covered each day.
+ROTATION_EPOCH = date(2026, 11, 8)
+
 # Franchises that are not `type: ANIME` on AniList but are anime-styled and
 # large on Wallhaven. Genshin Impact alone has 5,000+ all-time results. These
 # are a supplement, not the discovery mechanism: the catalogue still grows by
@@ -169,9 +174,9 @@ def _query(sort: str, page: int, tries: int = 3) -> dict:
     raise ValueError(str(last))
 
 
-def _seed_entry(term: str) -> dict:
+def _seed_entry(term: str, rank: int) -> dict:
     return {"id": None, "key": term, "terms": [term], "popularity": 0,
-            "trending": False, "seed": True}
+            "trending": False, "seed": True, "seed_rank": rank}
 
 
 def with_seeds(catalogue: dict) -> dict:
@@ -183,14 +188,17 @@ def with_seeds(catalogue: dict) -> dict:
     """
     series = list(catalogue.get("series") or [])
     by_key = {s.get("key"): s for s in series if s.get("key")}
-    for raw in EXTRA_TITLES:
+    for rank, raw in enumerate(EXTRA_TITLES):
         key = clean_title(raw)
         if not key:
             continue
         if key in by_key:
-            by_key[key]["seed"] = True
+            entry = by_key[key]
+            entry["seed"] = True
+            if entry.get("seed_rank") is None:
+                entry["seed_rank"] = rank
             continue
-        entry = _seed_entry(key)
+        entry = _seed_entry(key, rank)
         series.append(entry)
         by_key[key] = entry
     catalogue["series"] = series
@@ -202,8 +210,8 @@ def fetch(popular_pages: int = POPULAR_PAGES,
     """Build the catalogue from AniList's popular and trending lists."""
     media: dict[int, dict] = {}
 
-    def add(page: dict, trending: bool) -> None:
-        for entry in page.get("media") or []:
+    def add(page: dict, trending: bool, offset: int = 0) -> None:
+        for index, entry in enumerate(page.get("media") or []):
             mid = entry.get("id")
             if not mid or entry.get("isAdult"):
                 continue
@@ -218,9 +226,12 @@ def fetch(popular_pages: int = POPULAR_PAGES,
                     "terms": terms,
                     "popularity": int(entry.get("popularity") or 0),
                     "trending": trending,
+                    "trending_rank": offset + index if trending else None,
                 }
             else:
                 current["trending"] = current["trending"] or trending
+                if trending and current.get("trending_rank") is None:
+                    current["trending_rank"] = offset + index
                 for term in terms:
                     if term not in current["terms"] and len(current["terms"]) < 3:
                         current["terms"].append(term)
@@ -234,7 +245,7 @@ def fetch(popular_pages: int = POPULAR_PAGES,
 
     for page_no in range(1, trending_pages + 1):
         page = _query("TRENDING_DESC", page_no)
-        add(page, trending=True)
+        add(page, trending=True, offset=(page_no - 1) * PER_PAGE)
         if not page.get("pageInfo", {}).get("hasNextPage"):
             break
         time.sleep(REQUEST_PACING)
@@ -325,17 +336,29 @@ def pick(catalogue: dict, day: date, count: int = 5,
     series = catalogue.get("series") or []
     if not series:
         return []
-    day_index = day.toordinal()
+    elapsed = max(0, (day - ROTATION_EPOCH).days)
 
     def window(items: list[dict], want: int) -> list[dict]:
         if not items or want <= 0:
             return []
-        start = (day_index * want) % len(items)
+        start = (elapsed * want) % len(items)
         return [items[(start + i) % len(items)] for i in range(min(want, len(items)))]
 
+    # Trending is ordered by AniList's own trending rank, not by popularity:
+    # otherwise the "currently airing" slot would go to a classic that the
+    # popular rotation already covers.
+    trending = sorted(
+        (s for s in series if s.get("trending")),
+        key=lambda s: (s.get("trending_rank") is None,
+                       s.get("trending_rank") or 0))
+
+    seeds = sorted(
+        (s for s in series if s.get("seed")),
+        key=lambda s: (s.get("seed_rank") is None, s.get("seed_rank") or 0))
+
     groups = [
-        window([s for s in series if s.get("trending")], trending_count),
-        window([s for s in series if s.get("seed")], seed_count),
+        window(trending, trending_count),
+        window(seeds, seed_count),
         window(series, count),
     ]
     seen, out = set(), []

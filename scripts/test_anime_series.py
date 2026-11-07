@@ -17,7 +17,8 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
 from anime_series import (
-    _stale, clean_title, main_title, pick, series_axes, title_terms, with_seeds,
+    ROTATION_EPOCH, _stale, clean_title, main_title, pick, series_axes,
+    title_terms, with_seeds,
 )
 
 
@@ -99,11 +100,29 @@ class PickTests(unittest.TestCase):
         ]
         seen = set()
         for offset in range(10):
-            day = date(2026, 1, 1) + timedelta(days=offset)
+            day = ROTATION_EPOCH + timedelta(days=offset)
             for entry in pick({"series": series}, day, count=3,
                               trending_count=0, seed_count=0):
                 seen.add(entry["key"])
         self.assertEqual(seen, {f"s{i}" for i in range(10)})
+
+    def test_first_day_starts_at_the_top(self):
+        entries = pick(catalogue(), ROTATION_EPOCH, count=2,
+                       trending_count=0, seed_count=0)
+        self.assertEqual([e["key"] for e in entries], ["a", "b"])
+
+    def test_trending_is_ordered_by_trending_rank(self):
+        cat = {"series": [
+            {"key": "popular", "terms": ["popular"], "popularity": 100,
+             "trending": False},
+            {"key": "trending-late", "terms": ["trending-late"],
+             "popularity": 90, "trending": True, "trending_rank": 1},
+            {"key": "trending-first", "terms": ["trending-first"],
+             "popularity": 10, "trending": True, "trending_rank": 0},
+        ]}
+        entries = pick(cat, ROTATION_EPOCH, count=0,
+                       trending_count=1, seed_count=0)
+        self.assertEqual([e["key"] for e in entries], ["trending-first"])
 
     def test_axes_search_all_time_by_views(self):
         axes = series_axes(catalogue(), date(2026, 11, 7), count=1,
@@ -126,6 +145,15 @@ class SeedTests(unittest.TestCase):
                            "popularity": 5, "trending": False}]}
         with_seeds(cat)
         self.assertTrue(cat["series"][0]["seed"])
+
+    def test_seeds_start_with_the_highest_yield_franchise(self):
+        cat = with_seeds({"series": []})
+        by_key = {s["key"]: s for s in cat["series"]}
+        self.assertEqual(by_key["genshin impact"]["seed_rank"], 0)
+        self.assertEqual(by_key["honkai star rail"]["seed_rank"], 1)
+        entries = pick(cat, ROTATION_EPOCH, count=0,
+                       trending_count=0, seed_count=1)
+        self.assertEqual([e["key"] for e in entries], ["genshin impact"])
 
 
 class StaleTests(unittest.TestCase):
