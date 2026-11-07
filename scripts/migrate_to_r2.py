@@ -39,7 +39,7 @@ def main() -> int:
     migrated_keys: list[str] = []
 
     for it in items:
-        for key in (it.get("file"), it.get("thumb")):
+        for key in {it.get("file"), it.get("thumb"), it.get("preview")}:
             if not key:
                 continue
             blob = local.read(key)

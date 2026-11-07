@@ -39,6 +39,8 @@ const state = {
   seed: Date.now(),
   cdn: '',
   page: 0,
+  lbToken: 0,
+  warmed: new Set(),
 };
 
 /* ── colour utils ────────────────────────────────────────────── */
@@ -152,6 +154,36 @@ const debounce = (fn, ms) => {
   let t;
   return (...a) => { clearTimeout(t); t = setTimeout(() => fn(...a), ms); };
 };
+
+/* ── speculative preview loading ─────────────────────────────── */
+// The lightbox paints a 2560px preview (~80-160 KB) rather than the full
+// 1-5 MB file, so warming one is cheap. Hover/focus on a tile is the strongest
+// signal that a click is coming; pointerdown covers touch, where there is no
+// hover to learn from. The full-resolution file is never warmed here — it is
+// only fetched when the download button is used.
+const frugal = () => {
+  const c = navigator.connection;
+  return Boolean(c && (c.saveData || /(^|-)2g$|^3g$/.test(c.effectiveType || '')));
+};
+
+function warmPreview(it) {
+  if (!it || state.warmed.has(it.id) || frugal()) return;
+  state.warmed.add(it.id);
+  const img = new Image();
+  img.decoding = 'async';
+  img.src = safePath(it.preview || it.file);
+}
+
+function warmNeighbors(i) {
+  const n = state.view.length;
+  if (n < 2 || frugal()) return;
+  const run = () => {
+    warmPreview(state.view[(i + 1) % n]);
+    warmPreview(state.view[(i - 1 + n) % n]);
+  };
+  if ('requestIdleCallback' in window) requestIdleCallback(run, { timeout: 1500 });
+  else setTimeout(run, 700);
+}
 
 /* ── boot ────────────────────────────────────────────────────── */
 async function boot() {
@@ -340,6 +372,19 @@ function cell(it, absIndex, stagger) {
   }
 
   el.addEventListener('click', () => openLb(absIndex, el));
+
+  // desktop: a short hover is enough intent to start the 100 KB preview;
+  // the delay keeps a mouse merely crossing the grid from fetching tiles
+  let warmTimer = 0;
+  const warmNow = () => { clearTimeout(warmTimer); warmPreview(it); };
+  el.addEventListener('pointerenter', () => {
+    clearTimeout(warmTimer);
+    warmTimer = setTimeout(() => warmPreview(it), 120);
+  });
+  el.addEventListener('pointerleave', () => clearTimeout(warmTimer));
+  el.addEventListener('focus', warmNow);
+  el.addEventListener('pointerdown', warmNow, { passive: true });
+
   return el;
 }
 
@@ -400,6 +445,7 @@ function openLb(i, sourceEl) {
 
   paintLb(it, i);
   lb.hidden = false;
+  sizeLbFrame(it);          // now that the stage has layout (paint can't size it while hidden)
   document.body.classList.add('lb-open');
   requestAnimationFrame(() => lb.classList.add('is-open'));
   $('#lbNext').focus({ preventScroll: true });
@@ -431,12 +477,52 @@ function openFromHash() {
   openLb(i, target);
 }
 
+/* Fit the frame to the stage's content box on both axes. CSS can cap a
+   single axis (`max-width`, `max-height`) but cannot size a box so that it
+   satisfies both — a portrait image capped by width overflows the stage's
+   height on phones. Measuring the content box here also keeps the frame
+   exact while the panel reflows, instead of relying on viewport units that
+   disagree with the grid's actual row height. */
+function sizeLbFrame(it) {
+  if (!it || lb.hidden) return;
+  const stage = $('.lb__stage');
+  const frame = $('#lbFrame');
+  const cs = getComputedStyle(stage);
+  const boxW = stage.clientWidth  - parseFloat(cs.paddingLeft) - parseFloat(cs.paddingRight);
+  const boxH = stage.clientHeight - parseFloat(cs.paddingTop)  - parseFloat(cs.paddingBottom);
+  if (!(boxW > 0 && boxH > 0)) return;
+
+  const ar = it.w && it.h ? it.w / it.h : 1.5;
+  let w = boxW, h = w / ar;
+  if (h > boxH) { h = boxH; w = h * ar; }
+
+  // round down so sub-pixel rounding can never push the frame past the box
+  frame.style.width  = `${Math.floor(w)}px`;
+  frame.style.height = `${Math.floor(h)}px`;
+  frame.style.setProperty('--ar', String(ar));
+}
+
 function paintLb(it, i) {
   const img = $('#lbImg');
+  const thumb = $('#lbThumb');
+  const frame = $('#lbFrame');
   const full = safePath(it.file);
+  const preview = safePath(it.preview || it.file);
+  const token = ++state.lbToken;
+
+  if (it.w && it.h) frame.style.setProperty('--ar', String(it.w / it.h));
+  sizeLbFrame(it);
+
+  // The square that opened the lightbox has already downloaded this thumb,
+  // so it is available in the same frame. It stays behind the preview as a
+  // blurred backdrop until the (much smaller than full) preview decodes.
+  thumb.src = safePath(it.thumb);
+  thumb.alt = '';
+
   img.classList.remove('is-loaded');
-  img.src = full;
   img.alt = describe(it);
+  img.fetchPriority = 'high';
+  img.src = preview;
 
   $('#lbIdx').textContent   = `${String(i + 1).padStart(2, '0')}/${String(state.view.length).padStart(2, '0')}`;
   $('#lbTitle').textContent = subjectOf(it) || 'UNTITLED';
@@ -474,18 +560,45 @@ function paintLb(it, i) {
   if (perma) { src.href = perma; src.hidden = false; }
   else { src.removeAttribute('href'); src.hidden = true; }
 
-  const done = () => img.classList.add('is-loaded');
-  if (img.complete && img.naturalWidth) done();
-  else img.addEventListener('load', done, { once: true });
+  // Reveal only after decode, and only if this item is still the one on
+  // screen — stepping quickly through the lightbox must not let an earlier
+  // image's load event reveal the current one.
+  const reveal = () => {
+    if (token !== state.lbToken) return;
+    const show = () => { if (token === state.lbToken) img.classList.add('is-loaded'); };
+    if (img.decode) img.decode().then(show, show);
+    else show();
+  };
+  img.onload = reveal;
+  img.onerror = () => {
+    if (token !== state.lbToken) return;
+    // A manifest written before previews existed has no `preview` field, and
+    // an interrupted backfill can leave one advertised but absent. Fall back
+    // to the full file once rather than showing nothing.
+    if (preview !== full) {
+      img.onerror = null;
+      img.src = full;
+    }
+  };
+  if (img.complete && img.naturalWidth) reveal();
 
+  warmNeighbors(i);
   syncHash(it);
 }
 
 function closeLb() {
   if (lb.hidden) return;
+  state.lbToken++;
   lb.classList.remove('is-open');
   document.body.classList.remove('lb-open');
-  const end = () => { lb.hidden = true; $('#lbImg').removeAttribute('src'); };
+  const end = () => {
+    lb.hidden = true;
+    const img = $('#lbImg');
+    img.classList.remove('is-loaded');
+    img.onload = img.onerror = null;
+    img.removeAttribute('src');
+    $('#lbThumb').removeAttribute('src');
+  };
   REDUCED.matches ? end() : setTimeout(end, 260);
   lastFocus?.focus?.({ preventScroll: true });
   state.lbIndex = -1;
@@ -641,6 +754,14 @@ function wire() {
 
   $('#pagePrev').addEventListener('click', () => goToPage(state.page - 1));
   $('#pageNext').addEventListener('click', () => goToPage(state.page + 1));
+
+  // The stage's size is grid-derived, so a viewport change (desktop window,
+  // phone rotation, mobile URL bar) needs the frame re-fitted. Debounced so
+  // a drag-resize doesn't thrash layout on every frame.
+  addEventListener('resize', debounce(() => {
+    if (lb.hidden) return;
+    sizeLbFrame(state.view[state.lbIndex]);
+  }, 120));
 
   document.addEventListener('keydown', onKey);
 }

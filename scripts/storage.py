@@ -60,6 +60,10 @@ class LocalStorage:
     def exists(self, key: str) -> bool:
         return (ROOT / key).exists()
 
+    def size(self, key: str) -> int:
+        path = ROOT / key
+        return path.stat().st_size if path.exists() else 0
+
     def read(self, key: str) -> bytes | None:
         path = ROOT / key
         return path.read_bytes() if path.exists() else None
@@ -113,6 +117,13 @@ class R2Storage:
             return True
         except ClientError:
             return False
+
+    def size(self, key: str) -> int:
+        from botocore.exceptions import ClientError
+        try:
+            return self.client.head_object(Bucket=self.bucket, Key=key)["ContentLength"]
+        except ClientError:
+            return 0
 
     def read(self, key: str) -> bytes | None:
         from botocore.exceptions import ClientError

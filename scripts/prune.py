@@ -49,8 +49,10 @@ def main() -> int:
     running = 0
     for it in items:
         # thumbnails are roughly a tenth of the full image; approximating
-        # rather than stat-ing every object keeps this a single pass
-        size = int(it.get("bytes", 0) * 1.1)
+        # rather than stat-ing every object keeps this a single pass.
+        # previews are recorded exactly because build_previews.py already
+        # knows their size, so they only add one term.
+        size = int(it.get("bytes", 0) * 1.1) + int(it.get("preview_bytes", 0))
         if len(keep) >= args.max_items or running + size > args.max_bytes:
             drop.append(it)
         else:
@@ -68,10 +70,10 @@ def main() -> int:
         record_removed(drop, "pruned", date.today().isoformat())
     freed = 0
     for it in drop:
-        freed += int(it.get("bytes", 0) * 1.1)
+        freed += int(it.get("bytes", 0) * 1.1) + int(it.get("preview_bytes", 0))
         print(f"  - {it.get('id')}  {it.get('title', '')[:40]}")
         if not args.dry_run:
-            for key in (it.get("file"), it.get("thumb")):
+            for key in {it.get("file"), it.get("thumb"), it.get("preview")}:
                 if key:
                     store.delete(key)
 

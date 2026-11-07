@@ -120,8 +120,8 @@ def check_images(sample: int) -> None:
         cdn = ""
 
     for it in random.sample(items, min(sample, len(items))):
-        for key in ("file", "thumb"):
-            url = f"{cdn}/{it[key]}" if cdn else f"{SITE}/{it[key]}"
+        for key in {it["file"], it["thumb"], it.get("preview", "")} - {""}:
+            url = f"{cdn}/{key}" if cdn else f"{SITE}/{key}"
             try:
                 r = requests.head(url, headers=UA, timeout=TIMEOUT)
             except requests.RequestException as e:

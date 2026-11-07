@@ -36,8 +36,8 @@ import requests
 from PIL import Image
 
 from pipeline import (
-    FULL_QUALITY, MANIFEST, MAX_EDGE, THUMB_QUALITY, THUMB_WIDTH,
-    _encode, sha256_bytes,
+    FULL_QUALITY, MANIFEST, MAX_EDGE, PREVIEW_METHOD, PREVIEW_QUALITY,
+    THUMB_QUALITY, THUMB_WIDTH, _encode, make_preview, sha256_bytes,
 )
 from storage import get_storage
 
@@ -165,6 +165,19 @@ def main() -> int:
                 thumb = img.copy()
                 thumb.thumbnail((THUMB_WIDTH, THUMB_WIDTH * 3), Image.Resampling.LANCZOS)
                 store.put(it["thumb"], _encode(thumb, THUMB_QUALITY))
+
+                # the preview is derived from the same decoded image; leaving
+                # the old one in place would keep serving the previous encode
+                preview = make_preview(img, len(new_bytes))
+                if preview is None:
+                    it["preview"] = it["file"]
+                    it["preview_bytes"] = 0
+                else:
+                    preview_key = f"wallpapers/previews/{it['id']}.webp"
+                    data = _encode(preview, PREVIEW_QUALITY, PREVIEW_METHOD)
+                    store.put(preview_key, data)
+                    it["preview"] = preview_key
+                    it["preview_bytes"] = len(data)
 
                 it["q"] = FULL_QUALITY
 

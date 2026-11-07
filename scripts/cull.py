@@ -113,7 +113,7 @@ def main() -> int:
         else:
             referenced = set()
             for it in items:
-                referenced.update((it["file"], it["thumb"]))
+                referenced.update((it["file"], it["thumb"], it.get("preview", "")))
             referenced.discard("")
             # The crop index is referenced by no item but is not an orphan:
             # deleting it would silently turn crop-duplicate detection off.
@@ -143,7 +143,8 @@ def main() -> int:
                     break
                 token = page.get("NextContinuationToken")
             n_bytes = sum(sizes.get(k, 0) for k in orphan_keys)
-            n_bytes += sum(it.get("bytes", 0) * 1.1 for it in doomed)
+            n_bytes += sum(it.get("bytes", 0) * 1.1 + it.get("preview_bytes", 0)
+                           for it in doomed)
         print(f"\nDRY RUN — nothing deleted (~{n_bytes / 1e6:.0f} MB would be freed)")
         return 0
 
@@ -154,8 +155,9 @@ def main() -> int:
     record_removed(doomed, "culled", date.today().isoformat())
 
     for it in doomed:
-        for key in (it.get("file"), it.get("thumb")):
-            store.delete(key)
+        for key in {it.get("file"), it.get("thumb"), it.get("preview")}:
+            if key:
+                store.delete(key)
         print(f"  - {it['id']} removed")
 
     for key in orphan_keys:

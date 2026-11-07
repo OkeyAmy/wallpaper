@@ -31,7 +31,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800;900&family=JetBrains+Mono:wght@300;400;500;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/assets/style.css?v=6190134d">
+<link rel="stylesheet" href="/assets/style.css?v=5d597eb8">
 <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
 </head>
 <body>
@@ -257,7 +257,10 @@
   <div class="lb__scrim" data-close></div>
 
   <figure class="lb__stage">
-    <img class="lb__img" id="lbImg" alt="">
+    <div class="lb__frame" id="lbFrame">
+      <img class="lb__img lb__thumb" id="lbThumb" alt="" aria-hidden="true" decoding="async">
+      <img class="lb__img" id="lbImg" alt="" decoding="async">
+    </div>
     <figcaption class="lb__hud">
       <div class="lb__hudl">
         <span class="tag tag--red" id="lbIdx">01/01</span>
@@ -287,6 +290,6 @@
   </aside>
 </div>
 
-<script src="/assets/app.js?v=cc9ac569" type="module"></script>
+<script src="/assets/app.js?v=bfb22eb4" type="module"></script>
 </body>
 </html>

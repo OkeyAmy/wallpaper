@@ -40,6 +40,18 @@ MAX_EDGE = 3840                  # cap the long edge; 4K is the useful ceiling
 FULL_QUALITY = 92
 THUMB_WIDTH = 640
 THUMB_QUALITY = 72
+# Display-size preview, used by the lightbox instead of the full-resolution
+# file. The largest the lightbox can ever draw an image is roughly a 4K
+# viewport minus the side panel; 2560px covers that with headroom on normal
+# and HiDPI screens, at a third to a quarter of the full file's bytes.
+# The full file is still what the download button hands over.
+PREVIEW_WIDTH = 2560
+PREVIEW_QUALITY = 78
+PREVIEW_METHOD = 4               # preview is transient; method 4 is ~20% cheaper than 5
+# Below this, the full file is already cheaper to fetch than a second encode
+# would be to produce. Above it, even a display-sized image is re-encoded at
+# preview quality — a 500 KB 1800px file becomes a 230 KB one.
+PREVIEW_SMALL_BYTES = 250_000
 PALETTE_SIZE = 5
 DHASH_DISTANCE = 6               # <= this many differing bits == duplicate
 
@@ -50,10 +62,12 @@ class Item:
     id: str
     file: str
     thumb: str
+    preview: str
     w: int
     h: int
     ratio: str
     bytes: int
+    preview_bytes: int
     palette: list[str]
     source: str
     added: str
@@ -296,13 +310,30 @@ def slugify(text: str, limit: int = 70) -> str:
 
 # --- ingest ----------------------------------------------------------------
 
-def _encode(img: Image.Image, quality: int) -> bytes:
+def _encode(img: Image.Image, quality: int, method: int = 5) -> bytes:
     """WebP bytes for an image, without touching the filesystem — the storage
     backend decides where (or whether) they land on disk."""
     import io
     buf = io.BytesIO()
-    img.convert("RGB").save(buf, "WEBP", quality=quality, method=5)
+    img.convert("RGB").save(buf, "WEBP", quality=quality, method=method)
     return buf.getvalue()
+
+
+def make_preview(img: Image.Image, source_bytes: int = 0) -> Image.Image | None:
+    """Downscale to PREVIEW_WIDTH, or None when no preview is worth making.
+
+    None means "use the full file as the preview". That is the right answer
+    when the source is already small in both dimensions and bytes: re-encoding
+    a 1600px / 180 KB source at preview quality would add a lossy pass for no
+    meaningful byte win.
+    """
+    display_sized = max(img.width, img.height) <= PREVIEW_WIDTH
+    if display_sized and source_bytes and source_bytes <= PREVIEW_SMALL_BYTES:
+        return None
+    preview = img.copy()
+    if not display_sized:
+        preview.thumbnail((PREVIEW_WIDTH, PREVIEW_WIDTH), Image.Resampling.LANCZOS)
+    return preview
 
 
 def ingest_image(
@@ -406,24 +437,38 @@ def ingest_image(
 
     full_key = f"wallpapers/{ident}.webp"
     thumb_key = f"wallpapers/thumbs/{ident}.webp"
+    preview_key = f"wallpapers/previews/{ident}.webp"
 
     full_bytes = _encode(full, FULL_QUALITY)
     thumb = img.copy()
     thumb.thumbnail((THUMB_WIDTH, THUMB_WIDTH * 3), Image.Resampling.LANCZOS)
     thumb_bytes = _encode(thumb, THUMB_QUALITY)
 
+    preview = make_preview(full, len(full_bytes))
+    if preview is None:
+        # already display-sized; the full file doubles as the preview
+        preview_key = full_key
+        preview_bytes = 0
+    else:
+        preview_data = _encode(preview, PREVIEW_QUALITY, PREVIEW_METHOD)
+        preview_bytes = len(preview_data)
+
     store.put(full_key, full_bytes)
     store.put(thumb_key, thumb_bytes)
+    if preview is not None:
+        store.put(preview_key, preview_data)
     crops.add(ident, img)
 
     return Item(
         id=ident,
         file=full_key,
         thumb=thumb_key,
+        preview=preview_key,
         w=full.width,
         h=full.height,
         ratio=aspect_label(full.width, full.height),
         bytes=len(full_bytes),
+        preview_bytes=preview_bytes,
         palette=palette,
         source=source,
         added=added,
@@ -537,5 +582,6 @@ def discard(item: Item, storage=None) -> None:
     ingest), never as a generic "reject this candidate" step.
     """
     store = storage or get_storage()
-    for key in (item.file, item.thumb):
-        store.delete(key)
+    for key in {item.file, item.thumb, item.preview}:
+        if key:
+            store.delete(key)
