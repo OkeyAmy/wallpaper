@@ -10,7 +10,7 @@ on:
         default: "40"
       max_new_wallhaven:
         description: "Max Wallhaven wallpapers to add this run"
-        default: "20"
+        default: "30"
       max_items:
         description: "Archive size cap (older entries are pruned)"
         default: "4000"
@@ -102,7 +102,7 @@ jobs:
         # step turns the failure into a red run after the commit.
         continue-on-error: true
         env:
-          MAX_NEW: ${{ inputs.max_new_wallhaven || '20' }}
+          MAX_NEW: ${{ inputs.max_new_wallhaven || '30' }}
         run: |
           case "$MAX_NEW" in
             ''|*[!0-9]*) echo "max_new_wallhaven must be an integer" >&2; exit 1 ;;

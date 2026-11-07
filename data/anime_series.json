@@ -1,0 +1,8719 @@
+{
+ "source": "anilist",
+ "fetched": "2026-11-07",
+ "series": [
+  {
+   "id": 16498,
+   "key": "attack on titan",
+   "terms": [
+    "attack on titan",
+    "shingeki no kyojin",
+    "snk"
+   ],
+   "popularity": 1076213,
+   "trending": true
+  },
+  {
+   "id": 101922,
+   "key": "demon slayer",
+   "terms": [
+    "demon slayer",
+    "demon slayer kimetsu no yaiba",
+    "kimetsu no yaiba"
+   ],
+   "popularity": 1012667,
+   "trending": false
+  },
+  {
+   "id": 113415,
+   "key": "jujutsu kaisen",
+   "terms": [
+    "jujutsu kaisen",
+    "jjk",
+    "sorcery fight"
+   ],
+   "popularity": 993915,
+   "trending": false
+  },
+  {
+   "id": 1535,
+   "key": "death note",
+   "terms": [
+    "death note",
+    "carnet de la mort"
+   ],
+   "popularity": 980752,
+   "trending": true
+  },
+  {
+   "id": 21459,
+   "key": "my hero academia",
+   "terms": [
+    "my hero academia",
+    "boku no hero academia",
+    "bnha"
+   ],
+   "popularity": 888851,
+   "trending": false
+  },
+  {
+   "id": 11061,
+   "key": "hunter x hunter",
+   "terms": [
+    "hunter x hunter",
+    "hunter hunter",
+    "hxh"
+   ],
+   "popularity": 856106,
+   "trending": true
+  },
+  {
+   "id": 21087,
+   "key": "one punch man",
+   "terms": [
+    "one punch man",
+    "opm",
+    "wanpanman"
+   ],
+   "popularity": 779319,
+   "trending": false
+  },
+  {
+   "id": 21,
+   "key": "one piece",
+   "terms": [
+    "one piece",
+    "allarrembaggio",
+    "tutti allarrembaggio"
+   ],
+   "popularity": 767285,
+   "trending": true
+  },
+  {
+   "id": 20605,
+   "key": "tokyo ghoul",
+   "terms": [
+    "tokyo ghoul",
+    "tokyo kushu"
+   ],
+   "popularity": 753211,
+   "trending": false
+  },
+  {
+   "id": 5114,
+   "key": "fullmetal alchemist",
+   "terms": [
+    "fullmetal alchemist",
+    "fullmetal alchemist brotherhood",
+    "hagane no renkinjutsushi"
+   ],
+   "popularity": 742690,
+   "trending": true
+  },
+  {
+   "id": 20,
+   "key": "naruto",
+   "terms": [
+    "naruto",
+    "naruto shippuden",
+    "naruto shippuuden"
+   ],
+   "popularity": 739925,
+   "trending": true
+  },
+  {
+   "id": 11757,
+   "key": "sword art online",
+   "terms": [
+    "sword art online",
+    "s a o",
+    "sao"
+   ],
+   "popularity": 731468,
+   "trending": false
+  },
+  {
+   "id": 20954,
+   "key": "a silent voice",
+   "terms": [
+    "a silent voice",
+    "koe no katachi",
+    "the shape of voice"
+   ],
+   "popularity": 731361,
+   "trending": false
+  },
+  {
+   "id": 21519,
+   "key": "your name",
+   "terms": [
+    "your name",
+    "kimi no na wa",
+    "mi a neved"
+   ],
+   "popularity": 727497,
+   "trending": false,
+   "seed": true
+  },
+  {
+   "id": 127230,
+   "key": "chainsaw man",
+   "terms": [
+    "chainsaw man",
+    "csm"
+   ],
+   "popularity": 650697,
+   "trending": true
+  },
+  {
+   "id": 101759,
+   "key": "the promised neverland",
+   "terms": [
+    "the promised neverland",
+    "yakusoku no neverland",
+    "yakuneba"
+   ],
+   "popularity": 642376,
+   "trending": false
+  },
+  {
+   "id": 20755,
+   "key": "assassination classroom",
+   "terms": [
+    "assassination classroom",
+    "ansatsu kyoushitsu"
+   ],
+   "popularity": 638377,
+   "trending": false
+  },
+  {
+   "id": 21507,
+   "key": "mob psycho 100",
+   "terms": [
+    "mob psycho 100"
+   ],
+   "popularity": 638057,
+   "trending": false
+  },
+  {
+   "id": 21355,
+   "key": "re zero",
+   "terms": [
+    "re zero",
+    "re zero starting life in another world",
+    "re zero kara hajimeru isekai seikatsu"
+   ],
+   "popularity": 636835,
+   "trending": true
+  },
+  {
+   "id": 20665,
+   "key": "your lie in april",
+   "terms": [
+    "your lie in april",
+    "shigatsu wa kimi no uso",
+    "kimiuso"
+   ],
+   "popularity": 624056,
+   "trending": false
+  },
+  {
+   "id": 21234,
+   "key": "erased",
+   "terms": [
+    "erased",
+    "boku dake ga inai machi",
+    "bokumachi"
+   ],
+   "popularity": 615424,
+   "trending": false
+  },
+  {
+   "id": 9253,
+   "key": "steins gate",
+   "terms": [
+    "steins gate",
+    "s g",
+    "steins gate egoistic poriomania"
+   ],
+   "popularity": 605873,
+   "trending": false
+  },
+  {
+   "id": 97940,
+   "key": "black clover",
+   "terms": [
+    "black clover",
+    "black clover sword of the wizard king",
+    "black clover mahou tei no ken"
+   ],
+   "popularity": 602802,
+   "trending": true
+  },
+  {
+   "id": 20464,
+   "key": "haikyu",
+   "terms": [
+    "haikyu",
+    "haikyuu",
+    "high kyuu"
+   ],
+   "popularity": 592590,
+   "trending": false
+  },
+  {
+   "id": 101291,
+   "key": "rascal does not dream of bunny girl senpai",
+   "terms": [
+    "rascal does not dream of bunny girl senpai",
+    "seishun buta yarou wa bunny girl senpai no yume wo minai",
+    "aobuta"
+   ],
+   "popularity": 591099,
+   "trending": false
+  },
+  {
+   "id": 140960,
+   "key": "spy x family",
+   "terms": [
+    "spy x family",
+    "spy family",
+    "sxf"
+   ],
+   "popularity": 582248,
+   "trending": false
+  },
+  {
+   "id": 101921,
+   "key": "kaguya sama",
+   "terms": [
+    "kaguya sama",
+    "kaguya sama love is war",
+    "kaguya sama wa kokurasetai"
+   ],
+   "popularity": 569277,
+   "trending": false
+  },
+  {
+   "id": 105333,
+   "key": "dr stone",
+   "terms": [
+    "dr stone",
+    "dcst",
+    "dr stone stone wars"
+   ],
+   "popularity": 564807,
+   "trending": false
+  },
+  {
+   "id": 101348,
+   "key": "vinland saga",
+   "terms": [
+    "vinland saga"
+   ],
+   "popularity": 558908,
+   "trending": false
+  },
+  {
+   "id": 21827,
+   "key": "violet evergarden",
+   "terms": [
+    "violet evergarden",
+    "violet evergarden the",
+    "violet evergarden le film"
+   ],
+   "popularity": 556867,
+   "trending": false
+  },
+  {
+   "id": 124080,
+   "key": "horimiya",
+   "terms": [
+    "horimiya",
+    "horimiya the missing pieces",
+    "horimiya piece"
+   ],
+   "popularity": 554516,
+   "trending": false
+  },
+  {
+   "id": 4224,
+   "key": "toradora",
+   "terms": [
+    "toradora",
+    "tiger x dragon"
+   ],
+   "popularity": 550948,
+   "trending": false
+  },
+  {
+   "id": 19815,
+   "key": "no game no life",
+   "terms": [
+    "no game no life",
+    "ngnl",
+    "nogenora"
+   ],
+   "popularity": 548616,
+   "trending": false
+  },
+  {
+   "id": 20613,
+   "key": "akame ga kill",
+   "terms": [
+    "akame ga kill",
+    "akame ga kiru",
+    "red eyes sword"
+   ],
+   "popularity": 548437,
+   "trending": false
+  },
+  {
+   "id": 20447,
+   "key": "noragami",
+   "terms": [
+    "noragami",
+    "stray god"
+   ],
+   "popularity": 546444,
+   "trending": false
+  },
+  {
+   "id": 20789,
+   "key": "the seven deadly sins",
+   "terms": [
+    "the seven deadly sins",
+    "nanatsu no taizai",
+    "7ds"
+   ],
+   "popularity": 537717,
+   "trending": false
+  },
+  {
+   "id": 269,
+   "key": "bleach",
+   "terms": [
+    "bleach",
+    "bleach thousand year blood war",
+    "bleach sennen kessen hen"
+   ],
+   "popularity": 535793,
+   "trending": true
+  },
+  {
+   "id": 21202,
+   "key": "konosuba",
+   "terms": [
+    "konosuba",
+    "konosuba gods blessing on this wonderful world",
+    "kono subarashii sekai ni shukufuku wo"
+   ],
+   "popularity": 527864,
+   "trending": false
+  },
+  {
+   "id": 1575,
+   "key": "code geass",
+   "terms": [
+    "code geass",
+    "code geass lelouch of the rebellion",
+    "code geass hangyaku no lelouch"
+   ],
+   "popularity": 512354,
+   "trending": true
+  },
+  {
+   "id": 99423,
+   "key": "darling in the franxx",
+   "terms": [
+    "darling in the franxx",
+    "ditf",
+    "darlifra"
+   ],
+   "popularity": 509225,
+   "trending": false
+  },
+  {
+   "id": 20623,
+   "key": "parasyte",
+   "terms": [
+    "parasyte",
+    "parasyte the maxim",
+    "kiseijuu"
+   ],
+   "popularity": 508586,
+   "trending": false
+  },
+  {
+   "id": 30,
+   "key": "neon genesis evangelion",
+   "terms": [
+    "neon genesis evangelion",
+    "shin seiki evangelion",
+    "nge"
+   ],
+   "popularity": 504928,
+   "trending": false
+  },
+  {
+   "id": 154587,
+   "key": "frieren",
+   "terms": [
+    "frieren",
+    "frieren beyond journeys end",
+    "sousou no frieren"
+   ],
+   "popularity": 497143,
+   "trending": true
+  },
+  {
+   "id": 105310,
+   "key": "fire force",
+   "terms": [
+    "fire force",
+    "enen no shouboutai",
+    "enen no shouboutai ni no shou"
+   ],
+   "popularity": 492911,
+   "trending": false
+  },
+  {
+   "id": 199,
+   "key": "spirited away",
+   "terms": [
+    "spirited away",
+    "sen to chihiro no kamikakushi",
+    "le voyage de chihiro"
+   ],
+   "popularity": 488910,
+   "trending": false
+  },
+  {
+   "id": 14719,
+   "key": "jojos bizarre adventure tv",
+   "terms": [
+    "jojos bizarre adventure tv",
+    "jojo no kimyou na bouken tv",
+    "jojo no kimyou na bouken"
+   ],
+   "popularity": 488425,
+   "trending": false
+  },
+  {
+   "id": 1,
+   "key": "cowboy bebop",
+   "terms": [
+    "cowboy bebop",
+    "kowboj bebop",
+    "cowboy bebop the knockin on heavens door"
+   ],
+   "popularity": 475672,
+   "trending": false
+  },
+  {
+   "id": 101280,
+   "key": "that time i got reincarnated as a slime",
+   "terms": [
+    "that time i got reincarnated as a slime",
+    "tensei shitara slime datta ken",
+    "tensura"
+   ],
+   "popularity": 474361,
+   "trending": true
+  },
+  {
+   "id": 20931,
+   "key": "death parade",
+   "terms": [
+    "death parade"
+   ],
+   "popularity": 473762,
+   "trending": false
+  },
+  {
+   "id": 108465,
+   "key": "mushoku tensei",
+   "terms": [
+    "mushoku tensei",
+    "mushoku tensei jobless reincarnation",
+    "mushoku tensei isekai ittara honki dasu"
+   ],
+   "popularity": 471074,
+   "trending": true
+  },
+  {
+   "id": 99263,
+   "key": "the rising of the shield hero",
+   "terms": [
+    "the rising of the shield hero",
+    "tate no yuusha no nariagari"
+   ],
+   "popularity": 469256,
+   "trending": false
+  },
+  {
+   "id": 9919,
+   "key": "blue exorcist",
+   "terms": [
+    "blue exorcist",
+    "ao no exorcist",
+    "ao no futsumashi"
+   ],
+   "popularity": 467362,
+   "trending": false
+  },
+  {
+   "id": 98314,
+   "key": "kakegurui",
+   "terms": [
+    "kakegurui",
+    "kakegurui compulsive gambler",
+    "kakegurui das leben ist ein spiel"
+   ],
+   "popularity": 462333,
+   "trending": false
+  },
+  {
+   "id": 151807,
+   "key": "solo leveling",
+   "terms": [
+    "solo leveling",
+    "ore dake level up na ken",
+    "na honjaman level up"
+   ],
+   "popularity": 461209,
+   "trending": false
+  },
+  {
+   "id": 20594,
+   "key": "sword art online ii",
+   "terms": [
+    "sword art online ii",
+    "sao2",
+    "ggo"
+   ],
+   "popularity": 458503,
+   "trending": false
+  },
+  {
+   "id": 98659,
+   "key": "classroom of the elite",
+   "terms": [
+    "classroom of the elite",
+    "youkoso jitsuryoku shijou shugi no kyoushitsu e",
+    "youjitsu"
+   ],
+   "popularity": 456833,
+   "trending": false
+  },
+  {
+   "id": 101338,
+   "key": "mob psycho 100 ii",
+   "terms": [
+    "mob psycho 100 ii",
+    "mob psycho hyaku"
+   ],
+   "popularity": 456556,
+   "trending": false
+  },
+  {
+   "id": 120120,
+   "key": "tokyo revengers",
+   "terms": [
+    "tokyo revengers",
+    "tokyo revengers seiya kessen hen",
+    "tokyo revengers christmas showdown"
+   ],
+   "popularity": 454083,
+   "trending": true
+  },
+  {
+   "id": 6547,
+   "key": "angel beats",
+   "terms": [
+    "angel beats"
+   ],
+   "popularity": 449497,
+   "trending": false
+  },
+  {
+   "id": 131573,
+   "key": "jujutsu kaisen 0",
+   "terms": [
+    "jujutsu kaisen 0",
+    "jjk 0",
+    "jujutsu kaisen"
+   ],
+   "popularity": 447512,
+   "trending": false
+  },
+  {
+   "id": 132405,
+   "key": "my dress up darling",
+   "terms": [
+    "my dress up darling",
+    "sono bisque doll wa koi wo suru",
+    "sono kisekae ningyou wa koi wo suru"
+   ],
+   "popularity": 441858,
+   "trending": false
+  },
+  {
+   "id": 20997,
+   "key": "charlotte",
+   "terms": [
+    "charlotte"
+   ],
+   "popularity": 441459,
+   "trending": false
+  },
+  {
+   "id": 10620,
+   "key": "the future diary",
+   "terms": [
+    "the future diary",
+    "mirai nikki",
+    "the future diary redial"
+   ],
+   "popularity": 437471,
+   "trending": false
+  },
+  {
+   "id": 21311,
+   "key": "bungo stray dogs",
+   "terms": [
+    "bungo stray dogs",
+    "bungou stray dogs",
+    "bsd"
+   ],
+   "popularity": 427448,
+   "trending": false
+  },
+  {
+   "id": 18679,
+   "key": "kill la kill",
+   "terms": [
+    "kill la kill",
+    "kiru ra kiru",
+    "klk"
+   ],
+   "popularity": 420840,
+   "trending": false
+  },
+  {
+   "id": 20850,
+   "key": "tokyo ghoul a",
+   "terms": [
+    "tokyo ghoul a",
+    "tokyo kushu 2",
+    "tokyo ghoul root a"
+   ],
+   "popularity": 413295,
+   "trending": false
+  },
+  {
+   "id": 20832,
+   "key": "overlord",
+   "terms": [
+    "overlord",
+    "over lord"
+   ],
+   "popularity": 412764,
+   "trending": false
+  },
+  {
+   "id": 97986,
+   "key": "made in abyss",
+   "terms": [
+    "made in abyss",
+    "made in abyss dawn of the deep soul",
+    "made in abyss fukaki tamashii no reimei"
+   ],
+   "popularity": 412703,
+   "trending": false
+  },
+  {
+   "id": 120377,
+   "key": "cyberpunk",
+   "terms": [
+    "cyberpunk",
+    "cyberpunk edgerunners",
+    "cyberpunk edgerunners 2"
+   ],
+   "popularity": 408506,
+   "trending": true
+  },
+  {
+   "id": 20923,
+   "key": "food wars",
+   "terms": [
+    "food wars",
+    "shokugeki no souma",
+    "food wars the first plate"
+   ],
+   "popularity": 408506,
+   "trending": false
+  },
+  {
+   "id": 20920,
+   "key": "is it wrong to try to pick up girls in a dungeon",
+   "terms": [
+    "is it wrong to try to pick up girls in a dungeon",
+    "dungeon ni deai wo motomeru no wa machigatteiru darou ka",
+    "danmachi"
+   ],
+   "popularity": 403420,
+   "trending": false
+  },
+  {
+   "id": 15809,
+   "key": "the devil is a part timer",
+   "terms": [
+    "the devil is a part timer",
+    "hataraku maou sama",
+    "raja iblis nyambi"
+   ],
+   "popularity": 401453,
+   "trending": false
+  },
+  {
+   "id": 3588,
+   "key": "soul eater",
+   "terms": [
+    "soul eater"
+   ],
+   "popularity": 401266,
+   "trending": false
+  },
+  {
+   "id": 9989,
+   "key": "anohana",
+   "terms": [
+    "anohana",
+    "anohana the flower we saw that day",
+    "ano hi mita hana no namae wo bokutachi wa mada shiranai"
+   ],
+   "popularity": 399368,
+   "trending": false
+  },
+  {
+   "id": 171018,
+   "key": "dan da dan",
+   "terms": [
+    "dan da dan",
+    "dandadan",
+    "dan da dan first encounter"
+   ],
+   "popularity": 397849,
+   "trending": false
+  },
+  {
+   "id": 11111,
+   "key": "another",
+   "terms": [
+    "another"
+   ],
+   "popularity": 391320,
+   "trending": false
+  },
+  {
+   "id": 14813,
+   "key": "my teen romantic comedy snafu",
+   "terms": [
+    "my teen romantic comedy snafu",
+    "yahari ore no seishun love come wa machigatteiru",
+    "oregairu"
+   ],
+   "popularity": 389498,
+   "trending": false
+  },
+  {
+   "id": 2001,
+   "key": "gurren lagann",
+   "terms": [
+    "gurren lagann",
+    "tengen toppa gurren lagann",
+    "heavenly breakthrough gurren lagann"
+   ],
+   "popularity": 388321,
+   "trending": false
+  },
+  {
+   "id": 6702,
+   "key": "fairy tail",
+   "terms": [
+    "fairy tail",
+    "fairy tail 3",
+    "fairy tail series 3"
+   ],
+   "popularity": 386324,
+   "trending": false
+  },
+  {
+   "id": 99750,
+   "key": "i want to eat your pancreas",
+   "terms": [
+    "i want to eat your pancreas",
+    "kimi no suizou wo tabetai",
+    "voglio mangiare il tuo pancreas"
+   ],
+   "popularity": 383123,
+   "trending": false
+  },
+  {
+   "id": 101347,
+   "key": "dororo",
+   "terms": [
+    "dororo"
+   ],
+   "popularity": 381251,
+   "trending": false
+  },
+  {
+   "id": 21170,
+   "key": "assassination classroom second season",
+   "terms": [
+    "assassination classroom second season",
+    "ansatsu kyoushitsu",
+    "assassination classroom"
+   ],
+   "popularity": 375183,
+   "trending": false
+  },
+  {
+   "id": 128893,
+   "key": "hells paradise",
+   "terms": [
+    "hells paradise",
+    "jigokuraku"
+   ],
+   "popularity": 372331,
+   "trending": false
+  },
+  {
+   "id": 431,
+   "key": "howl s moving castle",
+   "terms": [
+    "howl s moving castle",
+    "howl no ugoku shiro",
+    "hauru no ugoku shiro"
+   ],
+   "popularity": 369924,
+   "trending": false
+  },
+  {
+   "id": 21804,
+   "key": "the disastrous life of saiki k",
+   "terms": [
+    "the disastrous life of saiki k",
+    "saiki kusuo no nan",
+    "saiki kusuo no nan 2"
+   ],
+   "popularity": 366171,
+   "trending": false
+  },
+  {
+   "id": 106286,
+   "key": "weathering with you",
+   "terms": [
+    "weathering with you",
+    "tenki no ko",
+    "el tiempo contigo"
+   ],
+   "popularity": 362567,
+   "trending": false,
+   "seed": true
+  },
+  {
+   "id": 13601,
+   "key": "psycho pass",
+   "terms": [
+    "psycho pass"
+   ],
+   "popularity": 361665,
+   "trending": false
+  },
+  {
+   "id": 14741,
+   "key": "love chunibyo and other delusions",
+   "terms": [
+    "love chunibyo and other delusions",
+    "chuunibyou demo koi ga shitai",
+    "chu 2 byo demo koi ga shitai"
+   ],
+   "popularity": 359731,
+   "trending": false
+  },
+  {
+   "id": 98460,
+   "key": "devilman crybaby",
+   "terms": [
+    "devilman crybaby"
+   ],
+   "popularity": 358496,
+   "trending": false
+  },
+  {
+   "id": 12189,
+   "key": "hyouka",
+   "terms": [
+    "hyouka",
+    "hyouka forbidden secrets"
+   ],
+   "popularity": 357397,
+   "trending": false
+  },
+  {
+   "id": 10087,
+   "key": "fate zero",
+   "terms": [
+    "fate zero",
+    "f z"
+   ],
+   "popularity": 352932,
+   "trending": false
+  },
+  {
+   "id": 20474,
+   "key": "jojos bizarre adventure",
+   "terms": [
+    "jojos bizarre adventure",
+    "jojos bizarre adventure stardust crusaders",
+    "jojo no kimyou na bouken"
+   ],
+   "popularity": 351622,
+   "trending": false
+  },
+  {
+   "id": 19,
+   "key": "monster",
+   "terms": [
+    "monster"
+   ],
+   "popularity": 350694,
+   "trending": true
+  },
+  {
+   "id": 5081,
+   "key": "bakemonogatari",
+   "terms": [
+    "bakemonogatari",
+    "monster tale",
+    "monogatari"
+   ],
+   "popularity": 347709,
+   "trending": false
+  },
+  {
+   "id": 161645,
+   "key": "the apothecary diaries",
+   "terms": [
+    "the apothecary diaries",
+    "kusuriya no hitorigoto",
+    "drugstore soliloquy"
+   ],
+   "popularity": 342892,
+   "trending": true
+  },
+  {
+   "id": 115230,
+   "key": "tower of god",
+   "terms": [
+    "tower of god",
+    "kami no tou",
+    "kami no tou tower of god"
+   ],
+   "popularity": 340897,
+   "trending": false
+  },
+  {
+   "id": 150672,
+   "key": "oshi no ko",
+   "terms": [
+    "oshi no ko",
+    "favorite girl",
+    "my idols child"
+   ],
+   "popularity": 337278,
+   "trending": false
+  },
+  {
+   "id": 20829,
+   "key": "seraph of the end",
+   "terms": [
+    "seraph of the end",
+    "seraph of the end vampire reign",
+    "owari no seraph"
+   ],
+   "popularity": 334484,
+   "trending": false
+  },
+  {
+   "id": 21776,
+   "key": "miss kobayashis dragon maid",
+   "terms": [
+    "miss kobayashis dragon maid",
+    "kobayashi san chi no maidragon",
+    "kobayashi san chi no maid dragon"
+   ],
+   "popularity": 334256,
+   "trending": false
+  },
+  {
+   "id": 137822,
+   "key": "blue lock",
+   "terms": [
+    "blue lock",
+    "blue lock vs u 20 japan"
+   ],
+   "popularity": 333856,
+   "trending": false
+  },
+  {
+   "id": 99578,
+   "key": "wotakoi",
+   "terms": [
+    "wotakoi",
+    "wotakoi love is hard for otaku",
+    "wotaku ni koi wa muzukashii"
+   ],
+   "popularity": 333671,
+   "trending": false
+  },
+  {
+   "id": 116589,
+   "key": "86 eighty six",
+   "terms": [
+    "86 eighty six"
+   ],
+   "popularity": 333566,
+   "trending": false
+  },
+  {
+   "id": 9756,
+   "key": "puella magi madoka magica",
+   "terms": [
+    "puella magi madoka magica",
+    "mahou shoujo madoka magica",
+    "mahou shoujo madoka magika"
+   ],
+   "popularity": 333013,
+   "trending": false
+  },
+  {
+   "id": 103572,
+   "key": "the quintessential quintuplets",
+   "terms": [
+    "the quintessential quintuplets",
+    "go toubun no hanayome",
+    "5 toubun no hanayome"
+   ],
+   "popularity": 330624,
+   "trending": false
+  },
+  {
+   "id": 133965,
+   "key": "komi cant communicate",
+   "terms": [
+    "komi cant communicate",
+    "komi san wa komyushou desu",
+    "comi san ha comyusho desu"
+   ],
+   "popularity": 327232,
+   "trending": false
+  },
+  {
+   "id": 130298,
+   "key": "the eminence in shadow",
+   "terms": [
+    "the eminence in shadow",
+    "kage no jitsuryokusha ni naritakute",
+    "to be a power in the shadows"
+   ],
+   "popularity": 324382,
+   "trending": false
+  },
+  {
+   "id": 114535,
+   "key": "to your eternity",
+   "terms": [
+    "to your eternity",
+    "fumetsu no anata e",
+    "to you the immortal"
+   ],
+   "popularity": 322935,
+   "trending": false
+  },
+  {
+   "id": 11617,
+   "key": "high school dxd",
+   "terms": [
+    "high school dxd",
+    "highschool dxd"
+   ],
+   "popularity": 320466,
+   "trending": false
+  },
+  {
+   "id": 105334,
+   "key": "fruits basket",
+   "terms": [
+    "fruits basket",
+    "fruits basket zenpen",
+    "furuba"
+   ],
+   "popularity": 316449,
+   "trending": false
+  },
+  {
+   "id": 21128,
+   "key": "noragami aragoto",
+   "terms": [
+    "noragami aragoto"
+   ],
+   "popularity": 314812,
+   "trending": false
+  },
+  {
+   "id": 100388,
+   "key": "banana fish",
+   "terms": [
+    "banana fish"
+   ],
+   "popularity": 313628,
+   "trending": false
+  },
+  {
+   "id": 113813,
+   "key": "rent a girlfriend",
+   "terms": [
+    "rent a girlfriend",
+    "kanojo okarishimasu",
+    "id like to borrow a girlfriend"
+   ],
+   "popularity": 313002,
+   "trending": false
+  },
+  {
+   "id": 100240,
+   "key": "tokyo ghoul re",
+   "terms": [
+    "tokyo ghoul re"
+   ],
+   "popularity": 312929,
+   "trending": false
+  },
+  {
+   "id": 101165,
+   "key": "goblin slayer",
+   "terms": [
+    "goblin slayer",
+    "goblin slayer goblins crown",
+    "goblin slayer korona"
+   ],
+   "popularity": 308398,
+   "trending": false
+  },
+  {
+   "id": 164,
+   "key": "princess mononoke",
+   "terms": [
+    "princess mononoke",
+    "mononoke hime",
+    "la princesa mononoke"
+   ],
+   "popularity": 307430,
+   "trending": false
+  },
+  {
+   "id": 2167,
+   "key": "clannad",
+   "terms": [
+    "clannad",
+    "clannad after story"
+   ],
+   "popularity": 305788,
+   "trending": false
+  },
+  {
+   "id": 116006,
+   "key": "the god of high school",
+   "terms": [
+    "the god of high school",
+    "goh"
+   ],
+   "popularity": 303628,
+   "trending": false
+  },
+  {
+   "id": 918,
+   "key": "gintama",
+   "terms": [
+    "gintama",
+    "gin tama",
+    "silver soul"
+   ],
+   "popularity": 301219,
+   "trending": true
+  },
+  {
+   "id": 106625,
+   "key": "haikyu to the top",
+   "terms": [
+    "haikyu to the top",
+    "haikyuu to the top",
+    "haikyu"
+   ],
+   "popularity": 298228,
+   "trending": false
+  },
+  {
+   "id": 6746,
+   "key": "durarara",
+   "terms": [
+    "durarara",
+    "drrr"
+   ],
+   "popularity": 297949,
+   "trending": false
+  },
+  {
+   "id": 151801,
+   "key": "mashle",
+   "terms": [
+    "mashle",
+    "mashle magic and muscles",
+    "mashle kami shinkakusha kouho senbatsu shiken hen"
+   ],
+   "popularity": 297561,
+   "trending": false
+  },
+  {
+   "id": 20661,
+   "key": "terror in resonance",
+   "terms": [
+    "terror in resonance",
+    "zankyou no terror",
+    "terror in tokyo"
+   ],
+   "popularity": 296205,
+   "trending": false
+  },
+  {
+   "id": 7054,
+   "key": "maid sama",
+   "terms": [
+    "maid sama",
+    "kaichou wa maid sama",
+    "kaicho wa maidsama"
+   ],
+   "popularity": 292738,
+   "trending": false
+  },
+  {
+   "id": 11771,
+   "key": "kurokos basketball",
+   "terms": [
+    "kurokos basketball",
+    "kuroko no basket",
+    "kuroko no basuke"
+   ],
+   "popularity": 291533,
+   "trending": false
+  },
+  {
+   "id": 8074,
+   "key": "high school of the dead",
+   "terms": [
+    "high school of the dead",
+    "gakuen mokushiroku",
+    "gakuen mokushiroku highschool of the dead"
+   ],
+   "popularity": 291483,
+   "trending": false
+  },
+  {
+   "id": 153288,
+   "key": "kaiju no 8",
+   "terms": [
+    "kaiju no 8",
+    "kaijuu 8 gou",
+    "monster 8"
+   ],
+   "popularity": 291364,
+   "trending": false
+  },
+  {
+   "id": 141391,
+   "key": "call of the night",
+   "terms": [
+    "call of the night",
+    "yofukashi no uta",
+    "song of the night walkers"
+   ],
+   "popularity": 290238,
+   "trending": false
+  },
+  {
+   "id": 124845,
+   "key": "wonder egg priority",
+   "terms": [
+    "wonder egg priority",
+    "wonegg",
+    "wep"
+   ],
+   "popularity": 288450,
+   "trending": false
+  },
+  {
+   "id": 21613,
+   "key": "saga of tanya the evil",
+   "terms": [
+    "saga of tanya the evil",
+    "youjo senki",
+    "saga of tanya the evil the"
+   ],
+   "popularity": 285688,
+   "trending": false
+  },
+  {
+   "id": 523,
+   "key": "my neighbor totoro",
+   "terms": [
+    "my neighbor totoro",
+    "tonari no totoro",
+    "my neighbour totoro"
+   ],
+   "popularity": 285211,
+   "trending": false
+  },
+  {
+   "id": 205,
+   "key": "samurai champloo",
+   "terms": [
+    "samurai champloo"
+   ],
+   "popularity": 285198,
+   "trending": false
+  },
+  {
+   "id": 5680,
+   "key": "k on",
+   "terms": [
+    "k on",
+    "keion",
+    "keion 2"
+   ],
+   "popularity": 284316,
+   "trending": false
+  },
+  {
+   "id": 18153,
+   "key": "beyond the boundary",
+   "terms": [
+    "beyond the boundary",
+    "kyoukai no kanata",
+    "beyond the horizon"
+   ],
+   "popularity": 283216,
+   "trending": false
+  },
+  {
+   "id": 20698,
+   "key": "my teen romantic comedy snafu too",
+   "terms": [
+    "my teen romantic comedy snafu too",
+    "yahari ore no seishun love come wa machigatteiru zoku",
+    "oregairu zoku"
+   ],
+   "popularity": 281627,
+   "trending": false
+  },
+  {
+   "id": 13759,
+   "key": "the pet girl of sakurasou",
+   "terms": [
+    "the pet girl of sakurasou",
+    "sakurasou no pet na kanojo",
+    "sakura sou no pet na kanojo"
+   ],
+   "popularity": 281364,
+   "trending": false
+  },
+  {
+   "id": 226,
+   "key": "elfen lied",
+   "terms": [
+    "elfen lied",
+    "elfen song",
+    "elfic song"
+   ],
+   "popularity": 280790,
+   "trending": false
+  },
+  {
+   "id": 130003,
+   "key": "bocchi the rock",
+   "terms": [
+    "bocchi the rock",
+    "btr"
+   ],
+   "popularity": 273110,
+   "trending": false
+  },
+  {
+   "id": 112301,
+   "key": "the misfit of demon king academy",
+   "terms": [
+    "the misfit of demon king academy",
+    "the misfit of demon king academy historys strongest demon king reincarnates and goes to school with his descendants",
+    "maou gakuin no futekigousha"
+   ],
+   "popularity": 272550,
+   "trending": false
+  },
+  {
+   "id": 18897,
+   "key": "nisekoi",
+   "terms": [
+    "nisekoi",
+    "nisekoi false love",
+    "nisekoi2 false love"
+   ],
+   "popularity": 272271,
+   "trending": false
+  },
+  {
+   "id": 120697,
+   "key": "dont toy with me miss nagatoro",
+   "terms": [
+    "dont toy with me miss nagatoro",
+    "ijiranaide nagatoro san",
+    "jangan main main denganku nona nagatoro serangan ke 2"
+   ],
+   "popularity": 272160,
+   "trending": false
+  },
+  {
+   "id": 98437,
+   "key": "overlord ii",
+   "terms": [
+    "overlord ii",
+    "over lord 2"
+   ],
+   "popularity": 271375,
+   "trending": false
+  },
+  {
+   "id": 17895,
+   "key": "golden time",
+   "terms": [
+    "golden time"
+   ],
+   "popularity": 270957,
+   "trending": false
+  },
+  {
+   "id": 140439,
+   "key": "mob psycho 100 iii",
+   "terms": [
+    "mob psycho 100 iii"
+   ],
+   "popularity": 270770,
+   "trending": false
+  },
+  {
+   "id": 19603,
+   "key": "fate stay night",
+   "terms": [
+    "fate stay night",
+    "fate stay night unlimited blade works",
+    "fate ubw"
+   ],
+   "popularity": 269532,
+   "trending": false
+  },
+  {
+   "id": 178025,
+   "key": "gachiakuta",
+   "terms": [
+    "gachiakuta"
+   ],
+   "popularity": 268211,
+   "trending": false
+  },
+  {
+   "id": 14227,
+   "key": "my little monster",
+   "terms": [
+    "my little monster",
+    "tonari no kaibutsu kun",
+    "tonari no kaibutsukun"
+   ],
+   "popularity": 266126,
+   "trending": false
+  },
+  {
+   "id": 104157,
+   "key": "rascal does not dream of a dreaming girl",
+   "terms": [
+    "rascal does not dream of a dreaming girl",
+    "seishun buta yarou wa yumemiru shoujo no yume wo minai",
+    "ao buta"
+   ],
+   "popularity": 265813,
+   "trending": false
+  },
+  {
+   "id": 4898,
+   "key": "black butler",
+   "terms": [
+    "black butler",
+    "kuroshitsuji",
+    "kuro shitsuji"
+   ],
+   "popularity": 264772,
+   "trending": false
+  },
+  {
+   "id": 21049,
+   "key": "relife",
+   "terms": [
+    "relife",
+    "relife kanketsu hen"
+   ],
+   "popularity": 264457,
+   "trending": false
+  },
+  {
+   "id": 813,
+   "key": "dragon ball z",
+   "terms": [
+    "dragon ball z",
+    "dbz",
+    "dragonball z"
+   ],
+   "popularity": 264256,
+   "trending": false
+  },
+  {
+   "id": 20458,
+   "key": "the irregular at magic high school",
+   "terms": [
+    "the irregular at magic high school",
+    "mahouka koukou no rettousei",
+    "the irregular at magic high school visitor arc"
+   ],
+   "popularity": 263944,
+   "trending": false
+  },
+  {
+   "id": 21518,
+   "key": "food wars the second plate",
+   "terms": [
+    "food wars the second plate",
+    "shokugeki no souma",
+    "shokugeki no souma ni no sara"
+   ],
+   "popularity": 263465,
+   "trending": false
+  },
+  {
+   "id": 20872,
+   "key": "plastic memories",
+   "terms": [
+    "plastic memories",
+    "plamemo"
+   ],
+   "popularity": 263329,
+   "trending": false
+  },
+  {
+   "id": 853,
+   "key": "ouran high school host club",
+   "terms": [
+    "ouran high school host club",
+    "ouran koukou host club",
+    "ohran koko host club"
+   ],
+   "popularity": 262459,
+   "trending": false
+  },
+  {
+   "id": 107660,
+   "key": "beastars",
+   "terms": [
+    "beastars",
+    "beastars o lobo bom"
+   ],
+   "popularity": 261610,
+   "trending": false
+  },
+  {
+   "id": 339,
+   "key": "serial experiments lain",
+   "terms": [
+    "serial experiments lain",
+    "wirtualna lain"
+   ],
+   "popularity": 258838,
+   "trending": false
+  },
+  {
+   "id": 146984,
+   "key": "attack on titan the final chapters 1",
+   "terms": [
+    "attack on titan the final chapters 1",
+    "shingeki no kyojin",
+    "shingeki no kyojin the kanketsu hen zenpen"
+   ],
+   "popularity": 257273,
+   "trending": false
+  },
+  {
+   "id": 889,
+   "key": "black lagoon",
+   "terms": [
+    "black lagoon",
+    "black lagoon the second barrage",
+    "black lagoon second season"
+   ],
+   "popularity": 256925,
+   "trending": false
+  },
+  {
+   "id": 6045,
+   "key": "kimi ni todoke",
+   "terms": [
+    "kimi ni todoke",
+    "kimi ni todoke from me to you",
+    "reaching you"
+   ],
+   "popularity": 256286,
+   "trending": false
+  },
+  {
+   "id": 1689,
+   "key": "5 centimeters per second",
+   "terms": [
+    "5 centimeters per second",
+    "byousoku 5 centimeter",
+    "five centimeters per second"
+   ],
+   "popularity": 253938,
+   "trending": false
+  },
+  {
+   "id": 6880,
+   "key": "deadman wonderland",
+   "terms": [
+    "deadman wonderland"
+   ],
+   "popularity": 253379,
+   "trending": false
+  },
+  {
+   "id": 20807,
+   "key": "prison school",
+   "terms": [
+    "prison school",
+    "kangoku gakuen"
+   ],
+   "popularity": 252909,
+   "trending": false
+  },
+  {
+   "id": 171627,
+   "key": "chainsaw man the",
+   "terms": [
+    "chainsaw man the",
+    "chainsaw man the reze arc",
+    "chainsaw man"
+   ],
+   "popularity": 252139,
+   "trending": false
+  },
+  {
+   "id": 15583,
+   "key": "date a live",
+   "terms": [
+    "date a live"
+   ],
+   "popularity": 251586,
+   "trending": false
+  },
+  {
+   "id": 116267,
+   "key": "tonikawa",
+   "terms": [
+    "tonikawa",
+    "tonikawa over the moon for you",
+    "tonikaku kawaii"
+   ],
+   "popularity": 251391,
+   "trending": false
+  },
+  {
+   "id": 16782,
+   "key": "the garden of words",
+   "terms": [
+    "the garden of words",
+    "kotonoha no niwa",
+    "koto no ha no niwa"
+   ],
+   "popularity": 251223,
+   "trending": false
+  },
+  {
+   "id": 101474,
+   "key": "overlord iii",
+   "terms": [
+    "overlord iii",
+    "over lord 3"
+   ],
+   "popularity": 251209,
+   "trending": false
+  },
+  {
+   "id": 21092,
+   "key": "chivalry of a failed knight",
+   "terms": [
+    "chivalry of a failed knight",
+    "rakudai kishi no cavalry",
+    "rakudai kishi no eiyuutan"
+   ],
+   "popularity": 250426,
+   "trending": false
+  },
+  {
+   "id": 437,
+   "key": "perfect blue",
+   "terms": [
+    "perfect blue"
+   ],
+   "popularity": 250268,
+   "trending": false
+  },
+  {
+   "id": 98436,
+   "key": "the ancient magus bride",
+   "terms": [
+    "the ancient magus bride",
+    "mahoutsukai no yome",
+    "mahou tsukai no yome"
+   ],
+   "popularity": 249540,
+   "trending": false
+  },
+  {
+   "id": 20596,
+   "key": "blue spring ride",
+   "terms": [
+    "blue spring ride",
+    "ao haru ride",
+    "aoharaido"
+   ],
+   "popularity": 248554,
+   "trending": false
+  },
+  {
+   "id": 21857,
+   "key": "masamune kuns revenge",
+   "terms": [
+    "masamune kuns revenge",
+    "masamune kun no revenge"
+   ],
+   "popularity": 248459,
+   "trending": false
+  },
+  {
+   "id": 101167,
+   "key": "is it wrong to try to pick up girls in a dungeon ii",
+   "terms": [
+    "is it wrong to try to pick up girls in a dungeon ii",
+    "dungeon ni deai wo motomeru no wa machigatteiru darou ka ii",
+    "danmachi ii"
+   ],
+   "popularity": 248131,
+   "trending": false
+  },
+  {
+   "id": 159831,
+   "key": "zom 100",
+   "terms": [
+    "zom 100",
+    "zom 100 bucket list of the dead",
+    "zom 100 zombie ni naru made ni shitai 100 no koto"
+   ],
+   "popularity": 247163,
+   "trending": false
+  },
+  {
+   "id": 10165,
+   "key": "nichijou",
+   "terms": [
+    "nichijou",
+    "nichijou my ordinary life",
+    "everyday"
+   ],
+   "popularity": 244575,
+   "trending": false
+  },
+  {
+   "id": 10793,
+   "key": "guilty crown",
+   "terms": [
+    "guilty crown"
+   ],
+   "popularity": 244455,
+   "trending": false
+  },
+  {
+   "id": 108463,
+   "key": "toilet bound hanako kun",
+   "terms": [
+    "toilet bound hanako kun",
+    "jibaku shounen hanako kun"
+   ],
+   "popularity": 242008,
+   "trending": false
+  },
+  {
+   "id": 21679,
+   "key": "bungo stray dogs 2",
+   "terms": [
+    "bungo stray dogs 2",
+    "bungou stray dogs",
+    "bsd 2"
+   ],
+   "popularity": 241874,
+   "trending": false
+  },
+  {
+   "id": 102351,
+   "key": "tokyo ghoul re 2",
+   "terms": [
+    "tokyo ghoul re 2"
+   ],
+   "popularity": 241554,
+   "trending": false
+  },
+  {
+   "id": 17265,
+   "key": "log horizon",
+   "terms": [
+    "log horizon"
+   ],
+   "popularity": 241400,
+   "trending": false
+  },
+  {
+   "id": 100922,
+   "key": "grand blue dreaming",
+   "terms": [
+    "grand blue dreaming",
+    "grand blue"
+   ],
+   "popularity": 240493,
+   "trending": false
+  },
+  {
+   "id": 100876,
+   "key": "kakegurui xx",
+   "terms": [
+    "kakegurui xx",
+    "kakegurui",
+    "kakegurui compulsive gambler 2"
+   ],
+   "popularity": 240099,
+   "trending": false
+  },
+  {
+   "id": 21647,
+   "key": "orange",
+   "terms": [
+    "orange"
+   ],
+   "popularity": 239545,
+   "trending": false
+  },
+  {
+   "id": 223,
+   "key": "dragon ball",
+   "terms": [
+    "dragon ball",
+    "dragonball",
+    "bola de drac"
+   ],
+   "popularity": 239236,
+   "trending": false
+  },
+  {
+   "id": 109261,
+   "key": "the quintessential quintuplets 2",
+   "terms": [
+    "the quintessential quintuplets 2",
+    "go toubun no hanayome",
+    "the five wedded brides"
+   ],
+   "popularity": 238513,
+   "trending": false
+  },
+  {
+   "id": 147105,
+   "key": "witch hat atelier",
+   "terms": [
+    "witch hat atelier",
+    "tongari boushi no atelier",
+    "atelier of witch hat"
+   ],
+   "popularity": 238191,
+   "trending": true
+  },
+  {
+   "id": 124153,
+   "key": "sk8 the infinity",
+   "terms": [
+    "sk8 the infinity",
+    "sk eight"
+   ],
+   "popularity": 238094,
+   "trending": false
+  },
+  {
+   "id": 16592,
+   "key": "danganronpa",
+   "terms": [
+    "danganronpa",
+    "danganronpa the animation",
+    "danganronpa kibou no gakuen to zetsubou no koukousei the animation"
+   ],
+   "popularity": 236282,
+   "trending": false
+  },
+  {
+   "id": 47,
+   "key": "akira",
+   "terms": [
+    "akira"
+   ],
+   "popularity": 235910,
+   "trending": false
+  },
+  {
+   "id": 14513,
+   "key": "magi",
+   "terms": [
+    "magi",
+    "magi the labyrinth of magic",
+    "magi the kingdom of magic"
+   ],
+   "popularity": 235809,
+   "trending": false
+  },
+  {
+   "id": 100668,
+   "key": "arifureta",
+   "terms": [
+    "arifureta",
+    "arifureta from commonplace to worlds strongest",
+    "arifureta shokugyou de sekai saikyou"
+   ],
+   "popularity": 235206,
+   "trending": false
+  },
+  {
+   "id": 21709,
+   "key": "yuri on ice",
+   "terms": [
+    "yuri on ice",
+    "yuuri on ice"
+   ],
+   "popularity": 234451,
+   "trending": false
+  },
+  {
+   "id": 110349,
+   "key": "great pretender",
+   "terms": [
+    "great pretender",
+    "el timador timado",
+    "el gran farsante"
+   ],
+   "popularity": 234374,
+   "trending": false
+  },
+  {
+   "id": 20727,
+   "key": "blood blockade battlefront",
+   "terms": [
+    "blood blockade battlefront",
+    "kekkai sensen"
+   ],
+   "popularity": 233702,
+   "trending": false
+  },
+  {
+   "id": 21875,
+   "key": "no game no life zero",
+   "terms": [
+    "no game no life zero",
+    "no game no life",
+    "ngnl zero"
+   ],
+   "popularity": 233359,
+   "trending": false
+  },
+  {
+   "id": 153518,
+   "key": "delicious in dungeon",
+   "terms": [
+    "delicious in dungeon",
+    "dungeon meshi",
+    "dungeon food"
+   ],
+   "popularity": 232592,
+   "trending": false
+  },
+  {
+   "id": 129201,
+   "key": "summer time rendering",
+   "terms": [
+    "summer time rendering",
+    "summer time render",
+    "summertime render"
+   ],
+   "popularity": 231273,
+   "trending": false
+  },
+  {
+   "id": 99255,
+   "key": "food wars the third plate",
+   "terms": [
+    "food wars the third plate",
+    "shokugeki no souma",
+    "shokugeki no souma san no sara"
+   ],
+   "popularity": 230540,
+   "trending": false
+  },
+  {
+   "id": 108489,
+   "key": "my teen romantic comedy snafu climax",
+   "terms": [
+    "my teen romantic comedy snafu climax",
+    "yahari ore no seishun love come wa machigatteiru kan",
+    "oregairu 3"
+   ],
+   "popularity": 228823,
+   "trending": false
+  },
+  {
+   "id": 97938,
+   "key": "boruto",
+   "terms": [
+    "boruto",
+    "boruto naruto next generations",
+    "boruto naruto the"
+   ],
+   "popularity": 228356,
+   "trending": false
+  },
+  {
+   "id": 113717,
+   "key": "ranking of kings",
+   "terms": [
+    "ranking of kings",
+    "ousama ranking",
+    "king ranking"
+   ],
+   "popularity": 228207,
+   "trending": false
+  },
+  {
+   "id": 177709,
+   "key": "sakamoto days",
+   "terms": [
+    "sakamoto days"
+   ],
+   "popularity": 228158,
+   "trending": false
+  },
+  {
+   "id": 103139,
+   "key": "domestic girlfriend",
+   "terms": [
+    "domestic girlfriend",
+    "domestic na kanojo",
+    "domekano"
+   ],
+   "popularity": 226710,
+   "trending": false
+  },
+  {
+   "id": 21127,
+   "key": "steins gate 0",
+   "terms": [
+    "steins gate 0",
+    "s g0",
+    "steins gate 0 23 divide by zero"
+   ],
+   "popularity": 226412,
+   "trending": false
+  },
+  {
+   "id": 20668,
+   "key": "monthly girls nozaki kun",
+   "terms": [
+    "monthly girls nozaki kun",
+    "gekkan shoujo nozaki kun",
+    "revista mensual para chicas nozaki"
+   ],
+   "popularity": 225336,
+   "trending": false
+  },
+  {
+   "id": 21175,
+   "key": "dragon ball super",
+   "terms": [
+    "dragon ball super",
+    "dbs",
+    "dragonball super"
+   ],
+   "popularity": 222919,
+   "trending": false
+  },
+  {
+   "id": 99629,
+   "key": "angels of death",
+   "terms": [
+    "angels of death",
+    "satsuriku no tenshi",
+    "angel of massacre"
+   ],
+   "popularity": 221392,
+   "trending": false
+  },
+  {
+   "id": 127911,
+   "key": "shikimoris not just a cutie",
+   "terms": [
+    "shikimoris not just a cutie",
+    "kawaii dake ja nai shikimori san",
+    "shikimori nest pas juste mignonne"
+   ],
+   "popularity": 221353,
+   "trending": false
+  },
+  {
+   "id": 20770,
+   "key": "yona of the dawn",
+   "terms": [
+    "yona of the dawn",
+    "akatsuki no yona",
+    "akayona"
+   ],
+   "popularity": 221126,
+   "trending": false
+  },
+  {
+   "id": 181444,
+   "key": "the fragrant flower blooms with dignity",
+   "terms": [
+    "the fragrant flower blooms with dignity",
+    "kaoru hana wa rin to saku",
+    "bloom"
+   ],
+   "popularity": 220050,
+   "trending": false
+  },
+  {
+   "id": 155783,
+   "key": "tengoku daimakyo",
+   "terms": [
+    "tengoku daimakyo",
+    "tengoku daimakyou",
+    "heavenly delusion"
+   ],
+   "popularity": 217574,
+   "trending": false
+  },
+  {
+   "id": 21366,
+   "key": "march comes in like a lion",
+   "terms": [
+    "march comes in like a lion",
+    "3 gatsu no lion",
+    "sangatsu no lion"
+   ],
+   "popularity": 217053,
+   "trending": false
+  },
+  {
+   "id": 143270,
+   "key": "lycoris recoil",
+   "terms": [
+    "lycoris recoil",
+    "lycoreco"
+   ],
+   "popularity": 215194,
+   "trending": false
+  },
+  {
+   "id": 131646,
+   "key": "the case study of vanitas",
+   "terms": [
+    "the case study of vanitas",
+    "vanitas no carte",
+    "vanitas no karte"
+   ],
+   "popularity": 214518,
+   "trending": false
+  },
+  {
+   "id": 108430,
+   "key": "given",
+   "terms": [
+    "given"
+   ],
+   "popularity": 214016,
+   "trending": false
+  },
+  {
+   "id": 162804,
+   "key": "alya sometimes hides her feelings in russian",
+   "terms": [
+    "alya sometimes hides her feelings in russian",
+    "tokidoki bosotto rossiya go de dereru tonari no alya san",
+    "roshidere"
+   ],
+   "popularity": 213509,
+   "trending": false
+  },
+  {
+   "id": 154965,
+   "key": "my love story with yamada kun at lv999",
+   "terms": [
+    "my love story with yamada kun at lv999",
+    "yamada kun to lv999 no koi wo suru",
+    "loving yamada at lv999"
+   ],
+   "popularity": 212468,
+   "trending": false
+  },
+  {
+   "id": 877,
+   "key": "nana",
+   "terms": [
+    "nana"
+   ],
+   "popularity": 212331,
+   "trending": false
+  },
+  {
+   "id": 20910,
+   "key": "shimoneta",
+   "terms": [
+    "shimoneta",
+    "shimoneta a boring world where the concept of dirty jokes doesnt exist",
+    "shimoneta to iu gainen ga sonzai shinai taikutsu na sekai"
+   ],
+   "popularity": 210879,
+   "trending": false
+  },
+  {
+   "id": 227,
+   "key": "flcl",
+   "terms": [
+    "flcl",
+    "fooly cooly",
+    "furi kuri"
+   ],
+   "popularity": 210312,
+   "trending": false
+  },
+  {
+   "id": 101004,
+   "key": "how not to summon a demon lord",
+   "terms": [
+    "how not to summon a demon lord",
+    "isekai maou to shoukan shoujo no dorei majutsu",
+    "the king of darkness another world story"
+   ],
+   "popularity": 209995,
+   "trending": false
+  },
+  {
+   "id": 129898,
+   "key": "the worlds finest assassin gets reincarnated in another world as an aristocrat",
+   "terms": [
+    "the worlds finest assassin gets reincarnated in another world as an aristocrat",
+    "sekai saikou no ansatsusha isekai kizoku ni tensei suru",
+    "ansatsu kizoku"
+   ],
+   "popularity": 209222,
+   "trending": false
+  },
+  {
+   "id": 1210,
+   "key": "welcome to the n h k",
+   "terms": [
+    "welcome to the n h k",
+    "nhk ni youkoso",
+    "welcome to the nhk"
+   ],
+   "popularity": 207683,
+   "trending": false
+  },
+  {
+   "id": 578,
+   "key": "grave of the fireflies",
+   "terms": [
+    "grave of the fireflies",
+    "hotaru no haka",
+    "tombstone for fireflies"
+   ],
+   "popularity": 206587,
+   "trending": false
+  },
+  {
+   "id": 131518,
+   "key": "dr stone new world",
+   "terms": [
+    "dr stone new world",
+    "dr stone"
+   ],
+   "popularity": 206567,
+   "trending": false
+  },
+  {
+   "id": 142770,
+   "key": "suzume",
+   "terms": [
+    "suzume",
+    "suzume no tojimari"
+   ],
+   "popularity": 206486,
+   "trending": false,
+   "seed": true
+  },
+  {
+   "id": 21421,
+   "key": "kiznaiver",
+   "terms": [
+    "kiznaiver"
+   ],
+   "popularity": 205401,
+   "trending": false
+  },
+  {
+   "id": 21700,
+   "key": "akashic records of bastard magic instructor",
+   "terms": [
+    "akashic records of bastard magic instructor",
+    "rokudenashi majutsu koushi to akashic records",
+    "rokuaka"
+   ],
+   "popularity": 204331,
+   "trending": false
+  },
+  {
+   "id": 100977,
+   "key": "cells at work",
+   "terms": [
+    "cells at work",
+    "hataraku saibou",
+    "les brigades immunitaires"
+   ],
+   "popularity": 204248,
+   "trending": false
+  },
+  {
+   "id": 105156,
+   "key": "cautious hero",
+   "terms": [
+    "cautious hero",
+    "cautious hero the hero is overpowered but overly cautious",
+    "shinchou yuusha"
+   ],
+   "popularity": 204245,
+   "trending": false
+  },
+  {
+   "id": 849,
+   "key": "the melancholy of haruhi suzumiya",
+   "terms": [
+    "the melancholy of haruhi suzumiya",
+    "suzumiya haruhi no yuuutsu",
+    "la malinconia di haruhi suzumiya"
+   ],
+   "popularity": 203956,
+   "trending": false
+  },
+  {
+   "id": 112124,
+   "key": "is it wrong to try to pick up girls in a dungeon iii",
+   "terms": [
+    "is it wrong to try to pick up girls in a dungeon iii",
+    "dungeon ni deai wo motomeru no wa machigatteiru darou ka iii",
+    "dungeon ni deai o motomeru no wa machigatte iru darouka familia myth iii"
+   ],
+   "popularity": 203218,
+   "trending": false
+  },
+  {
+   "id": 21711,
+   "key": "91 days",
+   "terms": [
+    "91 days",
+    "91days"
+   ],
+   "popularity": 201738,
+   "trending": false
+  },
+  {
+   "id": 20994,
+   "key": "gate",
+   "terms": [
+    "gate",
+    "gate jieitai kanochi nite kaku tatakaeri"
+   ],
+   "popularity": 201297,
+   "trending": false
+  },
+  {
+   "id": 20631,
+   "key": "trinity seven",
+   "terms": [
+    "trinity seven",
+    "trinity seven 7 nin no mahoutsukai",
+    "trinity seven shichinin no mahoutsukai"
+   ],
+   "popularity": 201104,
+   "trending": false
+  },
+  {
+   "id": 103223,
+   "key": "bungo stray dogs 3",
+   "terms": [
+    "bungo stray dogs 3",
+    "bungou stray dogs",
+    "bsd 3"
+   ],
+   "popularity": 200703,
+   "trending": false
+  },
+  {
+   "id": 21196,
+   "key": "kabaneri of the iron fortress",
+   "terms": [
+    "kabaneri of the iron fortress",
+    "koutetsujou no kabaneri",
+    "kabaneri de la fortaleza de hierro"
+   ],
+   "popularity": 200515,
+   "trending": false
+  },
+  {
+   "id": 15451,
+   "key": "high school dxd new",
+   "terms": [
+    "high school dxd new",
+    "high school dxd 2",
+    "highschool dxd 2"
+   ],
+   "popularity": 200466,
+   "trending": false
+  },
+  {
+   "id": 98291,
+   "key": "tsuredure children",
+   "terms": [
+    "tsuredure children",
+    "tsurezure children",
+    "tsure x dure children"
+   ],
+   "popularity": 199506,
+   "trending": false
+  },
+  {
+   "id": 20457,
+   "key": "black bullet",
+   "terms": [
+    "black bullet"
+   ],
+   "popularity": 198586,
+   "trending": false
+  },
+  {
+   "id": 21403,
+   "key": "sword art online the",
+   "terms": [
+    "sword art online the",
+    "sword art online the ordinal scale",
+    "sword art online"
+   ],
+   "popularity": 198191,
+   "trending": false
+  },
+  {
+   "id": 457,
+   "key": "mushi shi",
+   "terms": [
+    "mushi shi",
+    "mushishi"
+   ],
+   "popularity": 197459,
+   "trending": false
+  },
+  {
+   "id": 10408,
+   "key": "into the forest of fireflies light",
+   "terms": [
+    "into the forest of fireflies light",
+    "hotarubi no mori e",
+    "to the forest of firefly lights"
+   ],
+   "popularity": 197444,
+   "trending": false
+  },
+  {
+   "id": 163270,
+   "key": "wind breaker",
+   "terms": [
+    "wind breaker",
+    "wbk",
+    "wb 2"
+   ],
+   "popularity": 196668,
+   "trending": false
+  },
+  {
+   "id": 151970,
+   "key": "shangri la frontier",
+   "terms": [
+    "shangri la frontier",
+    "shanfro",
+    "shangri la frontier kusoge hunter kami ge ni idoman to su"
+   ],
+   "popularity": 196663,
+   "trending": false
+  },
+  {
+   "id": 11843,
+   "key": "daily lives of high school boys",
+   "terms": [
+    "daily lives of high school boys",
+    "danshi koukousei no nichijou",
+    "nichibros"
+   ],
+   "popularity": 196470,
+   "trending": false
+  },
+  {
+   "id": 12355,
+   "key": "wolf children",
+   "terms": [
+    "wolf children",
+    "ookami kodomo no ame to yuki",
+    "the wolf children ame and yuki"
+   ],
+   "popularity": 196466,
+   "trending": false
+  },
+  {
+   "id": 114963,
+   "key": "a whisker away",
+   "terms": [
+    "a whisker away",
+    "nakitai watashi wa neko wo kaburu",
+    "nakineko"
+   ],
+   "popularity": 194551,
+   "trending": false
+  },
+  {
+   "id": 105228,
+   "key": "dorohedoro",
+   "terms": [
+    "dorohedoro"
+   ],
+   "popularity": 194441,
+   "trending": false
+  },
+  {
+   "id": 4654,
+   "key": "a certain magical index",
+   "terms": [
+    "a certain magical index",
+    "toaru majutsu no index",
+    "toaru majutsu no kinsho mokuroku"
+   ],
+   "popularity": 194041,
+   "trending": false
+  },
+  {
+   "id": 21595,
+   "key": "havent you heard im sakamoto",
+   "terms": [
+    "havent you heard im sakamoto",
+    "sakamoto desu ga",
+    "sakamoto pour vous servir"
+   ],
+   "popularity": 193758,
+   "trending": false
+  },
+  {
+   "id": 11887,
+   "key": "kokoro connect",
+   "terms": [
+    "kokoro connect",
+    "kokoroco"
+   ],
+   "popularity": 193555,
+   "trending": false
+  },
+  {
+   "id": 2251,
+   "key": "baccano",
+   "terms": [
+    "baccano"
+   ],
+   "popularity": 192381,
+   "trending": false
+  },
+  {
+   "id": 20966,
+   "key": "yamada and the seven witches",
+   "terms": [
+    "yamada and the seven witches",
+    "yamada kun to 7 nin no majo",
+    "yamadakun to nananin no majo"
+   ],
+   "popularity": 192186,
+   "trending": false
+  },
+  {
+   "id": 2890,
+   "key": "ponyo",
+   "terms": [
+    "ponyo",
+    "gake no ue no ponyo",
+    "ponyo on the cliff by the sea"
+   ],
+   "popularity": 191365,
+   "trending": false
+  },
+  {
+   "id": 114232,
+   "key": "higehiro",
+   "terms": [
+    "higehiro",
+    "higehiro after being rejected i shaved and took in a high school runaway",
+    "hige wo soru soshite joshikousei wo hirou"
+   ],
+   "popularity": 190542,
+   "trending": false
+  },
+  {
+   "id": 113596,
+   "key": "josee the tiger and the fish",
+   "terms": [
+    "josee the tiger and the fish",
+    "josee to tora to sakanatachi",
+    "josee to tora to sakana tachi"
+   ],
+   "popularity": 190493,
+   "trending": false
+  },
+  {
+   "id": 512,
+   "key": "kikis delivery service",
+   "terms": [
+    "kikis delivery service",
+    "majo no takkyuubin",
+    "majotaku"
+   ],
+   "popularity": 189822,
+   "trending": false
+  },
+  {
+   "id": 33,
+   "key": "berserk",
+   "terms": [
+    "berserk",
+    "kenpuu denki berserk",
+    "kenfu denki berserk"
+   ],
+   "popularity": 189741,
+   "trending": false
+  },
+  {
+   "id": 777,
+   "key": "hellsing ultimate",
+   "terms": [
+    "hellsing ultimate",
+    "hellsing"
+   ],
+   "popularity": 189593,
+   "trending": false
+  },
+  {
+   "id": 21685,
+   "key": "eromanga sensei",
+   "terms": [
+    "eromanga sensei",
+    "ero manga sensei"
+   ],
+   "popularity": 188906,
+   "trending": false
+  },
+  {
+   "id": 100112,
+   "key": "wise mans grandchild",
+   "terms": [
+    "wise mans grandchild",
+    "kenja no mago",
+    "the wise grandson"
+   ],
+   "popularity": 188534,
+   "trending": false
+  },
+  {
+   "id": 20626,
+   "key": "fairy tail series 2",
+   "terms": [
+    "fairy tail series 2",
+    "fairy tail",
+    "fairy tail 2"
+   ],
+   "popularity": 188364,
+   "trending": false
+  },
+  {
+   "id": 11597,
+   "key": "nisemonogatari",
+   "terms": [
+    "nisemonogatari",
+    "fake tale"
+   ],
+   "popularity": 188343,
+   "trending": false
+  },
+  {
+   "id": 21428,
+   "key": "grimgar of fantasy and ash",
+   "terms": [
+    "grimgar of fantasy and ash",
+    "hai to gensou no grimgar",
+    "grimgar"
+   ],
+   "popularity": 186635,
+   "trending": false
+  },
+  {
+   "id": 106479,
+   "key": "bofuri",
+   "terms": [
+    "bofuri",
+    "bofuri i dont want to get hurt so ill max out my defense",
+    "itai no wa iya nano de bougyoryoku ni kyokufuri shitai to omoimasu"
+   ],
+   "popularity": 186062,
+   "trending": false
+  },
+  {
+   "id": 16894,
+   "key": "kurokos basketball 2",
+   "terms": [
+    "kurokos basketball 2",
+    "kuroko no basket",
+    "kuroko no basuke 2"
+   ],
+   "popularity": 185830,
+   "trending": false
+  },
+  {
+   "id": 18507,
+   "key": "free",
+   "terms": [
+    "free",
+    "free iwatobi swim club",
+    "free eternal summer"
+   ],
+   "popularity": 185108,
+   "trending": false
+  },
+  {
+   "id": 21058,
+   "key": "snow white with the red hair",
+   "terms": [
+    "snow white with the red hair",
+    "akagami no shirayuki hime",
+    "shirayuki aux cheveux rouges"
+   ],
+   "popularity": 184704,
+   "trending": false
+  },
+  {
+   "id": 21701,
+   "key": "scums wish",
+   "terms": [
+    "scums wish",
+    "kuzu no honkai",
+    "desejos proibidos"
+   ],
+   "popularity": 184647,
+   "trending": false
+  },
+  {
+   "id": 2966,
+   "key": "spice and wolf",
+   "terms": [
+    "spice and wolf",
+    "ookami to koushinryou",
+    "spice and wolf merchant meets the wise wolf"
+   ],
+   "popularity": 184480,
+   "trending": false
+  },
+  {
+   "id": 128546,
+   "key": "vivy",
+   "terms": [
+    "vivy",
+    "vivy fluorite eyes song"
+   ],
+   "popularity": 183676,
+   "trending": false
+  },
+  {
+   "id": 174576,
+   "key": "wistoria",
+   "terms": [
+    "wistoria",
+    "wistoria wand and sword",
+    "tsue to tsurugi no wistoria"
+   ],
+   "popularity": 183130,
+   "trending": false
+  },
+  {
+   "id": 97994,
+   "key": "blend s",
+   "terms": [
+    "blend s"
+   ],
+   "popularity": 183027,
+   "trending": false
+  },
+  {
+   "id": 133844,
+   "key": "overlord iv",
+   "terms": [
+    "overlord iv",
+    "overlord 4"
+   ],
+   "popularity": 182449,
+   "trending": false
+  },
+  {
+   "id": 151806,
+   "key": "tomo chan is a girl",
+   "terms": [
+    "tomo chan is a girl",
+    "tomo chan wa onnanoko",
+    "tomo chan wa onna no ko"
+   ],
+   "popularity": 181626,
+   "trending": false
+  },
+  {
+   "id": 20657,
+   "key": "saekano",
+   "terms": [
+    "saekano",
+    "saekano how to raise a boring girlfriend",
+    "saenai heroine no sodatekata"
+   ],
+   "popularity": 181284,
+   "trending": false
+  },
+  {
+   "id": 13125,
+   "key": "from the new world",
+   "terms": [
+    "from the new world",
+    "shinsekai yori",
+    "shin sekai yori"
+   ],
+   "popularity": 180869,
+   "trending": false
+  },
+  {
+   "id": 126403,
+   "key": "link click",
+   "terms": [
+    "link click",
+    "shiguang dailiren",
+    "time agent"
+   ],
+   "popularity": 180597,
+   "trending": false
+  },
+  {
+   "id": 934,
+   "key": "when they cry",
+   "terms": [
+    "when they cry",
+    "higurashi no naku koro ni",
+    "when the cicadas cry"
+   ],
+   "popularity": 180493,
+   "trending": false
+  },
+  {
+   "id": 43,
+   "key": "ghost in the shell",
+   "terms": [
+    "ghost in the shell",
+    "ghost in the shell koukaku kidoutai",
+    "gits"
+   ],
+   "popularity": 180410,
+   "trending": false
+  },
+  {
+   "id": 20745,
+   "key": "high school dxd born",
+   "terms": [
+    "high school dxd born",
+    "high school dxd 3",
+    "highschool dxd 3"
+   ],
+   "popularity": 180345,
+   "trending": false
+  },
+  {
+   "id": 143338,
+   "key": "the angel next door spoils me rotten",
+   "terms": [
+    "the angel next door spoils me rotten",
+    "otonari no tenshi sama ni itsunomanika dame ningen ni sareteita ken",
+    "meu anjo de vizinha me mima demais"
+   ],
+   "popularity": 179970,
+   "trending": false
+  },
+  {
+   "id": 2025,
+   "key": "darker than black",
+   "terms": [
+    "darker than black",
+    "darker than black kuro no keiyakusha",
+    "darker than black black contractor"
+   ],
+   "popularity": 179779,
+   "trending": false
+  },
+  {
+   "id": 124194,
+   "key": "fruits basket the",
+   "terms": [
+    "fruits basket the",
+    "fruits basket",
+    "fruits basket the final"
+   ],
+   "popularity": 179604,
+   "trending": false
+  },
+  {
+   "id": 245,
+   "key": "gto",
+   "terms": [
+    "gto",
+    "gto great teacher onizuka",
+    "gto the animation"
+   ],
+   "popularity": 179142,
+   "trending": false
+  },
+  {
+   "id": 109963,
+   "key": "food wars the fourth plate",
+   "terms": [
+    "food wars the fourth plate",
+    "shokugeki no souma",
+    "shokugeki no souma shin no sara"
+   ],
+   "popularity": 178683,
+   "trending": false
+  },
+  {
+   "id": 125206,
+   "key": "tsukimichi",
+   "terms": [
+    "tsukimichi",
+    "tsukimichi moonlit fantasy",
+    "tsuki ga michibiku isekai douchuu"
+   ],
+   "popularity": 178612,
+   "trending": false
+  },
+  {
+   "id": 97766,
+   "key": "gamers",
+   "terms": [
+    "gamers",
+    "gamers amano keita to seishun continue",
+    "gamers keita amano and youth continue"
+   ],
+   "popularity": 177481,
+   "trending": false
+  },
+  {
+   "id": 2236,
+   "key": "the girl who leapt through time",
+   "terms": [
+    "the girl who leapt through time",
+    "toki wo kakeru shoujo",
+    "toki wo kakeru shojo"
+   ],
+   "popularity": 177001,
+   "trending": false
+  },
+  {
+   "id": 97922,
+   "key": "inuyashiki last hero",
+   "terms": [
+    "inuyashiki last hero",
+    "inuyashiki"
+   ],
+   "popularity": 176823,
+   "trending": false
+  },
+  {
+   "id": 105190,
+   "key": "darwins game",
+   "terms": [
+    "darwins game"
+   ],
+   "popularity": 176347,
+   "trending": false
+  },
+  {
+   "id": 249,
+   "key": "inuyasha",
+   "terms": [
+    "inuyasha",
+    "inu yasha"
+   ],
+   "popularity": 175841,
+   "trending": false
+  },
+  {
+   "id": 14467,
+   "key": "k eine weitere geschichte",
+   "terms": [
+    "k eine weitere geschichte"
+   ],
+   "popularity": 175632,
+   "trending": false
+  },
+  {
+   "id": 20987,
+   "key": "himouto umaru chan",
+   "terms": [
+    "himouto umaru chan"
+   ],
+   "popularity": 175283,
+   "trending": false
+  },
+  {
+   "id": 14713,
+   "key": "kamisama kiss",
+   "terms": [
+    "kamisama kiss",
+    "kamisama hajimemashita",
+    "kami sama hajimemashita"
+   ],
+   "popularity": 173875,
+   "trending": false
+  },
+  {
+   "id": 17074,
+   "key": "monogatari series second season",
+   "terms": [
+    "monogatari series second season",
+    "monogatari series",
+    "nekomonogatari white"
+   ],
+   "popularity": 173798,
+   "trending": false
+  },
+  {
+   "id": 21093,
+   "key": "monster musume",
+   "terms": [
+    "monster musume",
+    "monster musume everyday life with monster girls",
+    "monster musume no iru nichijou"
+   ],
+   "popularity": 173613,
+   "trending": false
+  },
+  {
+   "id": 6,
+   "key": "trigun",
+   "terms": [
+    "trigun"
+   ],
+   "popularity": 173202,
+   "trending": false
+  },
+  {
+   "id": 107693,
+   "key": "welcome to demon school iruma kun",
+   "terms": [
+    "welcome to demon school iruma kun",
+    "mairimashita iruma kun",
+    "mairimashita iruma kun 2"
+   ],
+   "popularity": 172720,
+   "trending": false
+  },
+  {
+   "id": 99468,
+   "key": "teasing master takagi san",
+   "terms": [
+    "teasing master takagi san",
+    "karakai jouzu no takagi san",
+    "skilled teaser takagi san"
+   ],
+   "popularity": 172634,
+   "trending": false
+  },
+  {
+   "id": 141949,
+   "key": "more than a married couple but not lovers",
+   "terms": [
+    "more than a married couple but not lovers",
+    "fuufu ijou koibito miman",
+    "more than a couple less than lovers"
+   ],
+   "popularity": 172306,
+   "trending": false
+  },
+  {
+   "id": 162314,
+   "key": "attack on titan the final chapters 2",
+   "terms": [
+    "attack on titan the final chapters 2",
+    "shingeki no kyojin",
+    "shingeki no kyojin the kanketsu hen kouhen"
+   ],
+   "popularity": 171949,
+   "trending": false
+  },
+  {
+   "id": 131565,
+   "key": "takt op destiny",
+   "terms": [
+    "takt op destiny"
+   ],
+   "popularity": 171390,
+   "trending": false
+  },
+  {
+   "id": 141014,
+   "key": "tomodachi game",
+   "terms": [
+    "tomodachi game",
+    "friend game",
+    "tomodachi game los juegos de la amistad"
+   ],
+   "popularity": 170591,
+   "trending": false
+  },
+  {
+   "id": 100183,
+   "key": "sword art online alternative",
+   "terms": [
+    "sword art online alternative",
+    "sword art online alternative gun gale online",
+    "sao alternative gun gale online"
+   ],
+   "popularity": 169600,
+   "trending": false
+  },
+  {
+   "id": 99426,
+   "key": "a place further than the universe",
+   "terms": [
+    "a place further than the universe",
+    "sora yori mo tooi basho",
+    "uchuu yorimo toui basho"
+   ],
+   "popularity": 169575,
+   "trending": false
+  },
+  {
+   "id": 21858,
+   "key": "little witch academia tv",
+   "terms": [
+    "little witch academia tv",
+    "lwa tv",
+    "det lille hekseakademiet"
+   ],
+   "popularity": 169266,
+   "trending": false
+  },
+  {
+   "id": 9260,
+   "key": "kizumonogatari",
+   "terms": [
+    "kizumonogatari",
+    "kizumonogatari tekketsu",
+    "kizumonogatari i"
+   ],
+   "popularity": 169263,
+   "trending": false
+  },
+  {
+   "id": 10719,
+   "key": "haganai",
+   "terms": [
+    "haganai",
+    "boku wa tomodachi ga sukunai",
+    "i dont have many friends"
+   ],
+   "popularity": 168486,
+   "trending": false
+  },
+  {
+   "id": 98444,
+   "key": "laid back camp",
+   "terms": [
+    "laid back camp",
+    "yuru camp",
+    "yurucamp"
+   ],
+   "popularity": 168477,
+   "trending": false
+  },
+  {
+   "id": 167152,
+   "key": "sentenced to be a hero",
+   "terms": [
+    "sentenced to be a hero",
+    "yuusha kei ni shosu",
+    "yuusha kei ni shosu choubatsu yuusha 9004 tai keimu kiroku"
+   ],
+   "popularity": 168474,
+   "trending": false
+  },
+  {
+   "id": 107717,
+   "key": "miss kobayashis dragon maid s",
+   "terms": [
+    "miss kobayashis dragon maid s",
+    "kobayashi san chi no maidragon s",
+    "kobayashi san chi no maid dragon"
+   ],
+   "popularity": 167995,
+   "trending": false
+  },
+  {
+   "id": 20602,
+   "key": "amagi brilliant park",
+   "terms": [
+    "amagi brilliant park",
+    "amaburi",
+    "cudowny park amagi"
+   ],
+   "popularity": 167324,
+   "trending": false
+  },
+  {
+   "id": 116566,
+   "key": "akudama drive",
+   "terms": [
+    "akudama drive"
+   ],
+   "popularity": 166925,
+   "trending": false
+  },
+  {
+   "id": 14345,
+   "key": "btooom",
+   "terms": [
+    "btooom"
+   ],
+   "popularity": 166612,
+   "trending": false
+  },
+  {
+   "id": 153152,
+   "key": "the dangers in my heart",
+   "terms": [
+    "the dangers in my heart",
+    "boku no kokoro no yabai yatsu",
+    "bokuyaba"
+   ],
+   "popularity": 166092,
+   "trending": false
+  },
+  {
+   "id": 114888,
+   "key": "the millionaire detective",
+   "terms": [
+    "the millionaire detective",
+    "the millionaire detective balance unlimited",
+    "fugou keiji"
+   ],
+   "popularity": 165314,
+   "trending": false
+  },
+  {
+   "id": 20725,
+   "key": "kurokos basketball 3",
+   "terms": [
+    "kurokos basketball 3",
+    "kuroko no basket",
+    "kuroko no basuke 3"
+   ],
+   "popularity": 165310,
+   "trending": false
+  },
+  {
+   "id": 131083,
+   "key": "mieruko chan",
+   "terms": [
+    "mieruko chan",
+    "mieruko gadis yang bisa melihat hantu",
+    "girl that can see it"
+   ],
+   "popularity": 165151,
+   "trending": false
+  },
+  {
+   "id": 20678,
+   "key": "the testament of sister new devil",
+   "terms": [
+    "the testament of sister new devil",
+    "shinmai maou no testament",
+    "shinmai maou no keiyakusha"
+   ],
+   "popularity": 164983,
+   "trending": false
+  },
+  {
+   "id": 107201,
+   "key": "in spectre",
+   "terms": [
+    "in spectre",
+    "kyokou suiri"
+   ],
+   "popularity": 164797,
+   "trending": false
+  },
+  {
+   "id": 98707,
+   "key": "land of the lustrous",
+   "terms": [
+    "land of the lustrous",
+    "houseki no kuni",
+    "das land der juwelen"
+   ],
+   "popularity": 163087,
+   "trending": false
+  },
+  {
+   "id": 125426,
+   "key": "the way of the househusband",
+   "terms": [
+    "the way of the househusband",
+    "gokushufudou",
+    "la via del grembiule"
+   ],
+   "popularity": 162047,
+   "trending": false
+  },
+  {
+   "id": 392,
+   "key": "yu yu hakusho",
+   "terms": [
+    "yu yu hakusho",
+    "yu yu hakusho ghostfiles",
+    "yuu yuu hakusho"
+   ],
+   "popularity": 161252,
+   "trending": false
+  },
+  {
+   "id": 98202,
+   "key": "tsukigakirei",
+   "terms": [
+    "tsukigakirei",
+    "tsuki ga kirei",
+    "as the moon so beautiful"
+   ],
+   "popularity": 161248,
+   "trending": false
+  },
+  {
+   "id": 790,
+   "key": "ergo proxy",
+   "terms": [
+    "ergo proxy"
+   ],
+   "popularity": 160505,
+   "trending": false
+  },
+  {
+   "id": 114124,
+   "key": "moriarty the patriot",
+   "terms": [
+    "moriarty the patriot",
+    "yuukoku no moriarty"
+   ],
+   "popularity": 159707,
+   "trending": false
+  },
+  {
+   "id": 98491,
+   "key": "in another world with my smartphone",
+   "terms": [
+    "in another world with my smartphone",
+    "isekai wa smartphone to tomo ni",
+    "isesuma"
+   ],
+   "popularity": 159545,
+   "trending": false
+  },
+  {
+   "id": 20946,
+   "key": "my love story",
+   "terms": [
+    "my love story",
+    "ore monogatari",
+    "mon histoire"
+   ],
+   "popularity": 159498,
+   "trending": false
+  },
+  {
+   "id": 1943,
+   "key": "paprika",
+   "terms": [
+    "paprika"
+   ],
+   "popularity": 159437,
+   "trending": false
+  },
+  {
+   "id": 21131,
+   "key": "the asterisk war",
+   "terms": [
+    "the asterisk war",
+    "gakusen toshi asterisk",
+    "academy battle city asterisk"
+   ],
+   "popularity": 159222,
+   "trending": false
+  },
+  {
+   "id": 1195,
+   "key": "the familiar of zero",
+   "terms": [
+    "the familiar of zero",
+    "zero no tsukaima",
+    "zeros familiar"
+   ],
+   "popularity": 158999,
+   "trending": false
+  },
+  {
+   "id": 128705,
+   "key": "blue period",
+   "terms": [
+    "blue period",
+    "periodo azul"
+   ],
+   "popularity": 157052,
+   "trending": false
+  },
+  {
+   "id": 14289,
+   "key": "say i love you",
+   "terms": [
+    "say i love you",
+    "sukitte ii na yo",
+    "sukinayo"
+   ],
+   "popularity": 156936,
+   "trending": false
+  },
+  {
+   "id": 103632,
+   "key": "so im a spider so what",
+   "terms": [
+    "so im a spider so what",
+    "kumo desu ga nani ka"
+   ],
+   "popularity": 156931,
+   "trending": false
+  },
+  {
+   "id": 170942,
+   "key": "blue box",
+   "terms": [
+    "blue box",
+    "ao no hako",
+    "la caja azul"
+   ],
+   "popularity": 156896,
+   "trending": false
+  },
+  {
+   "id": 6213,
+   "key": "a certain scientific railgun",
+   "terms": [
+    "a certain scientific railgun",
+    "toaru kagaku no railgun",
+    "toaru kagaku no choudenjihou"
+   ],
+   "popularity": 156857,
+   "trending": false
+  },
+  {
+   "id": 16742,
+   "key": "watamote",
+   "terms": [
+    "watamote",
+    "watamote no matter how i look at it its you guys fault im not popular",
+    "watashi ga motenai no wa dou kangaetemo omaera ga warui"
+   ],
+   "popularity": 156582,
+   "trending": false
+  },
+  {
+   "id": 103871,
+   "key": "zombie land saga",
+   "terms": [
+    "zombie land saga",
+    "zombieland saga"
+   ],
+   "popularity": 156532,
+   "trending": false
+  },
+  {
+   "id": 112609,
+   "key": "wandering witch",
+   "terms": [
+    "wandering witch",
+    "wandering witch the journey of elaina",
+    "majo no tabitabi"
+   ],
+   "popularity": 155910,
+   "trending": false
+  },
+  {
+   "id": 20722,
+   "key": "barakamon",
+   "terms": [
+    "barakamon"
+   ],
+   "popularity": 155147,
+   "trending": false
+  },
+  {
+   "id": 153845,
+   "key": "i got a cheat skill in another world and became unrivaled in the real world too",
+   "terms": [
+    "i got a cheat skill in another world and became unrivaled in the real world too",
+    "isekai de cheat skill wo te ni shita ore wa genjitsu sekai wo mo musou suru",
+    "isekai de cheat skill wo te ni shita ore wa genjitsu sekai wo mo musou suru level up wa jinsei wo kaeta"
+   ],
+   "popularity": 155016,
+   "trending": false
+  },
+  {
+   "id": 108241,
+   "key": "gleipnir",
+   "terms": [
+    "gleipnir"
+   ],
+   "popularity": 154944,
+   "trending": false
+  },
+  {
+   "id": 20912,
+   "key": "sound euphonium",
+   "terms": [
+    "sound euphonium",
+    "hibike euphonium"
+   ],
+   "popularity": 154094,
+   "trending": false
+  },
+  {
+   "id": 115113,
+   "key": "uzaki chan wants to hang out",
+   "terms": [
+    "uzaki chan wants to hang out",
+    "uzaki chan wa asobitai"
+   ],
+   "popularity": 153510,
+   "trending": false
+  },
+  {
+   "id": 128547,
+   "key": "oddtaxi",
+   "terms": [
+    "oddtaxi",
+    "odd taxi"
+   ],
+   "popularity": 153459,
+   "trending": false
+  },
+  {
+   "id": 15689,
+   "key": "nekomonogatari black",
+   "terms": [
+    "nekomonogatari black",
+    "nekomonogatari kuro"
+   ],
+   "popularity": 152363,
+   "trending": false
+  },
+  {
+   "id": 114043,
+   "key": "food wars the fifth plate",
+   "terms": [
+    "food wars the fifth plate",
+    "shokugeki no souma",
+    "shokugeki no souma gou no sara"
+   ],
+   "popularity": 151350,
+   "trending": false
+  },
+  {
+   "id": 100077,
+   "key": "hinamatsuri",
+   "terms": [
+    "hinamatsuri"
+   ],
+   "popularity": 151081,
+   "trending": false
+  },
+  {
+   "id": 7785,
+   "key": "the tatami galaxy",
+   "terms": [
+    "the tatami galaxy",
+    "yojouhan shinwa taikei",
+    "yojo han shinwa taikei"
+   ],
+   "popularity": 150935,
+   "trending": false
+  },
+  {
+   "id": 97863,
+   "key": "my first girlfriend is a gal",
+   "terms": [
+    "my first girlfriend is a gal",
+    "hajimete no gal",
+    "hajimete no gyaru"
+   ],
+   "popularity": 150817,
+   "trending": false
+  },
+  {
+   "id": 527,
+   "key": "pok mon",
+   "terms": [
+    "pok mon",
+    "pocket monsters",
+    "pokemon"
+   ],
+   "popularity": 150758,
+   "trending": false
+  },
+  {
+   "id": 19163,
+   "key": "date a live ii",
+   "terms": [
+    "date a live ii",
+    "date a live 2"
+   ],
+   "popularity": 150707,
+   "trending": false
+  },
+  {
+   "id": 101001,
+   "key": "asobi asobase",
+   "terms": [
+    "asobi asobase",
+    "asobi asobase workshop of fun"
+   ],
+   "popularity": 150646,
+   "trending": false
+  },
+  {
+   "id": 7311,
+   "key": "the disappearance of haruhi suzumiya",
+   "terms": [
+    "the disappearance of haruhi suzumiya",
+    "suzumiya haruhi no shoushitsu",
+    "la disparition de haruhi suzumiya"
+   ],
+   "popularity": 150316,
+   "trending": false
+  },
+  {
+   "id": 104647,
+   "key": "my next life as a villainess",
+   "terms": [
+    "my next life as a villainess",
+    "my next life as a villainess all routes lead to doom",
+    "otome game no hametsu flag shika nai akuyaku reijou ni tensei shiteshimatta"
+   ],
+   "popularity": 150119,
+   "trending": false
+  },
+  {
+   "id": 99457,
+   "key": "maquia",
+   "terms": [
+    "maquia",
+    "maquia when the promised flower blooms",
+    "sayonara no asa ni yakusoku no hana wo kazarou"
+   ],
+   "popularity": 149375,
+   "trending": false
+  },
+  {
+   "id": 185407,
+   "key": "takopis original sin",
+   "terms": [
+    "takopis original sin",
+    "takopii no genzai"
+   ],
+   "popularity": 148933,
+   "trending": false
+  },
+  {
+   "id": 270,
+   "key": "hellsing",
+   "terms": [
+    "hellsing"
+   ],
+   "popularity": 148508,
+   "trending": false
+  },
+  {
+   "id": 263,
+   "key": "hajime no ippo",
+   "terms": [
+    "hajime no ippo",
+    "hajime no ippo the fighting",
+    "the first step"
+   ],
+   "popularity": 148484,
+   "trending": false
+  },
+  {
+   "id": 8769,
+   "key": "oreimo",
+   "terms": [
+    "oreimo",
+    "ore no imouto ga konna ni kawaii wake ga nai",
+    "my little sister cant be this cute"
+   ],
+   "popularity": 148401,
+   "trending": false
+  },
+  {
+   "id": 177689,
+   "key": "the summer hikaru died",
+   "terms": [
+    "the summer hikaru died",
+    "hikaru ga shinda natsu",
+    "der sommer in dem hikaru starb"
+   ],
+   "popularity": 148267,
+   "trending": false
+  },
+  {
+   "id": 21290,
+   "key": "and you thought there is never a girl online",
+   "terms": [
+    "and you thought there is never a girl online",
+    "netoge no yome wa onnanoko ja nai to omotta",
+    "netoyome"
+   ],
+   "popularity": 148058,
+   "trending": false
+  },
+  {
+   "id": 20791,
+   "key": "fate stay night heavens feel i presage flower",
+   "terms": [
+    "fate stay night heavens feel i presage flower",
+    "fate hf"
+   ],
+   "popularity": 147921,
+   "trending": false
+  },
+  {
+   "id": 1887,
+   "key": "lucky star",
+   "terms": [
+    "lucky star"
+   ],
+   "popularity": 147768,
+   "trending": false
+  },
+  {
+   "id": 17729,
+   "key": "the fruit of grisaia",
+   "terms": [
+    "the fruit of grisaia",
+    "grisaia no kajitsu",
+    "le fruit de la grisaia"
+   ],
+   "popularity": 147667,
+   "trending": false
+  },
+  {
+   "id": 2759,
+   "key": "evangelion",
+   "terms": [
+    "evangelion",
+    "evangelion 1 0 you are not alone",
+    "evangelion shin"
+   ],
+   "popularity": 147043,
+   "trending": false
+  },
+  {
+   "id": 147103,
+   "key": "my happy marriage",
+   "terms": [
+    "my happy marriage",
+    "watashi no shiawase na kekkon",
+    "watakon"
+   ],
+   "popularity": 146868,
+   "trending": false
+  },
+  {
+   "id": 97832,
+   "key": "citrus",
+   "terms": [
+    "citrus"
+   ],
+   "popularity": 146093,
+   "trending": false
+  },
+  {
+   "id": 195600,
+   "key": "daemons of the shadow realm",
+   "terms": [
+    "daemons of the shadow realm",
+    "yomi no tsugai",
+    "yomitsuga"
+   ],
+   "popularity": 145716,
+   "trending": false
+  },
+  {
+   "id": 16870,
+   "key": "the last",
+   "terms": [
+    "the last",
+    "the last naruto the",
+    "naruto 10"
+   ],
+   "popularity": 145569,
+   "trending": false
+  },
+  {
+   "id": 114121,
+   "key": "the daily life of the immortal king",
+   "terms": [
+    "the daily life of the immortal king",
+    "xian wang de richang shenghuo",
+    "la vida diaria del rey inmortal"
+   ],
+   "popularity": 145261,
+   "trending": false
+  },
+  {
+   "id": 112443,
+   "key": "bottom tier character tomozaki",
+   "terms": [
+    "bottom tier character tomozaki",
+    "jaku chara tomozaki kun"
+   ],
+   "popularity": 145071,
+   "trending": false
+  },
+  {
+   "id": 166794,
+   "key": "a sign of affection",
+   "terms": [
+    "a sign of affection",
+    "yubisaki to renren",
+    "ein zeichen der zuneigung"
+   ],
+   "popularity": 144338,
+   "trending": false
+  },
+  {
+   "id": 101168,
+   "key": "plunderer",
+   "terms": [
+    "plunderer"
+   ],
+   "popularity": 144298,
+   "trending": false
+  },
+  {
+   "id": 3455,
+   "key": "to love ru",
+   "terms": [
+    "to love ru",
+    "to love you",
+    "toloveru"
+   ],
+   "popularity": 143683,
+   "trending": false
+  },
+  {
+   "id": 126546,
+   "key": "seirei gensouki",
+   "terms": [
+    "seirei gensouki",
+    "seirei gensouki spirit chronicles"
+   ],
+   "popularity": 143649,
+   "trending": false
+  },
+  {
+   "id": 117612,
+   "key": "how a realist hero rebuilt the kingdom",
+   "terms": [
+    "how a realist hero rebuilt the kingdom",
+    "genjitsu shugi yuusha no oukoku saikenki",
+    "genjitsushugisha no oukokukaizouki"
+   ],
+   "popularity": 143270,
+   "trending": false
+  },
+  {
+   "id": 97888,
+   "key": "baki",
+   "terms": [
+    "baki"
+   ],
+   "popularity": 142315,
+   "trending": false
+  },
+  {
+   "id": 112608,
+   "key": "ive been killing slimes for 300 years and maxed out my level",
+   "terms": [
+    "ive been killing slimes for 300 years and maxed out my level",
+    "slime taoshite 300 nen shiranai uchi ni level max ni nattemashita",
+    "slime 300"
+   ],
+   "popularity": 142270,
+   "trending": false
+  },
+  {
+   "id": 11577,
+   "key": "steins gate the load region of d j vu",
+   "terms": [
+    "steins gate the load region of d j vu",
+    "steins gate",
+    "steins gate fuka ryouiki no d j vu"
+   ],
+   "popularity": 142256,
+   "trending": false
+  },
+  {
+   "id": 104464,
+   "key": "oresuki",
+   "terms": [
+    "oresuki",
+    "oresuki are you the only one who loves me",
+    "ore wo suki nano wa omae dake ka yo"
+   ],
+   "popularity": 142140,
+   "trending": false
+  },
+  {
+   "id": 11633,
+   "key": "blood lad",
+   "terms": [
+    "blood lad"
+   ],
+   "popularity": 141989,
+   "trending": false
+  },
+  {
+   "id": 99699,
+   "key": "golden kamuy",
+   "terms": [
+    "golden kamuy",
+    "golden kamui"
+   ],
+   "popularity": 141910,
+   "trending": false
+  },
+  {
+   "id": 100298,
+   "key": "megalobox",
+   "terms": [
+    "megalobox",
+    "megalo box"
+   ],
+   "popularity": 140773,
+   "trending": false
+  },
+  {
+   "id": 20513,
+   "key": "psycho pass 2",
+   "terms": [
+    "psycho pass 2"
+   ],
+   "popularity": 140556,
+   "trending": false
+  },
+  {
+   "id": 2034,
+   "key": "lovely complex",
+   "terms": [
+    "lovely complex",
+    "love com"
+   ],
+   "popularity": 140343,
+   "trending": false
+  },
+  {
+   "id": 99420,
+   "key": "girls last tour",
+   "terms": [
+    "girls last tour",
+    "shoujo shuumatsu ryokou",
+    "glt"
+   ],
+   "popularity": 140328,
+   "trending": false
+  },
+  {
+   "id": 97767,
+   "key": "high school dxd hero",
+   "terms": [
+    "high school dxd hero",
+    "high school dxd 4",
+    "highschool dxd 4"
+   ],
+   "popularity": 140183,
+   "trending": false
+  },
+  {
+   "id": 21306,
+   "key": "myriad colors phantom world",
+   "terms": [
+    "myriad colors phantom world",
+    "musaigen no phantom world"
+   ],
+   "popularity": 140147,
+   "trending": false
+  },
+  {
+   "id": 101573,
+   "key": "bloom into you",
+   "terms": [
+    "bloom into you",
+    "yagate kimi ni naru",
+    "yagakimi"
+   ],
+   "popularity": 140070,
+   "trending": false
+  },
+  {
+   "id": 16067,
+   "key": "a lull in the sea",
+   "terms": [
+    "a lull in the sea",
+    "nagi no asukara",
+    "nagiasu"
+   ],
+   "popularity": 139434,
+   "trending": false
+  },
+  {
+   "id": 97907,
+   "key": "death march to the parallel world rhapsody",
+   "terms": [
+    "death march to the parallel world rhapsody",
+    "death march kara hajimaru isekai kyousoukyoku",
+    "pawai maut berujung rapsodi dunia lain"
+   ],
+   "popularity": 139288,
+   "trending": false
+  },
+  {
+   "id": 132126,
+   "key": "sonny boy",
+   "terms": [
+    "sonny boy"
+   ],
+   "popularity": 139046,
+   "trending": false
+  },
+  {
+   "id": 125428,
+   "key": "high rise invasion",
+   "terms": [
+    "high rise invasion",
+    "tenkuu shinpan",
+    "sky high survival"
+   ],
+   "popularity": 138845,
+   "trending": false
+  },
+  {
+   "id": 20773,
+   "key": "gangsta",
+   "terms": [
+    "gangsta"
+   ],
+   "popularity": 138419,
+   "trending": false
+  },
+  {
+   "id": 162694,
+   "key": "the 100 girlfriends who really really really really really love you",
+   "terms": [
+    "the 100 girlfriends who really really really really really love you",
+    "kimi no koto ga dai dai dai dai daisuki na 100 nin no kanojo",
+    "100 kanojo"
+   ],
+   "popularity": 138367,
+   "trending": false
+  },
+  {
+   "id": 99726,
+   "key": "recovery of an mmo junkie",
+   "terms": [
+    "recovery of an mmo junkie",
+    "net juu no susume",
+    "neto juu no susume"
+   ],
+   "popularity": 137869,
+   "trending": false
+  },
+  {
+   "id": 97980,
+   "key": "re creators",
+   "terms": [
+    "re creators",
+    "re criadores"
+   ],
+   "popularity": 137589,
+   "trending": false
+  },
+  {
+   "id": 196187,
+   "key": "smoking behind the supermarket with you",
+   "terms": [
+    "smoking behind the supermarket with you",
+    "super no ura de yani suu futari",
+    "behind the supermarket smoking with you"
+   ],
+   "popularity": 137496,
+   "trending": true
+  },
+  {
+   "id": 11499,
+   "key": "sankarea",
+   "terms": [
+    "sankarea",
+    "sankarea undying love"
+   ],
+   "popularity": 137248,
+   "trending": false
+  },
+  {
+   "id": 8525,
+   "key": "the world god only knows",
+   "terms": [
+    "the world god only knows",
+    "kami nomi zo shiru sekai",
+    "kaminomi"
+   ],
+   "popularity": 136952,
+   "trending": false
+  },
+  {
+   "id": 135806,
+   "key": "uncle from another world",
+   "terms": [
+    "uncle from another world",
+    "isekai oji san",
+    "ojisan in another world"
+   ],
+   "popularity": 136540,
+   "trending": false
+  },
+  {
+   "id": 141911,
+   "key": "skip and loafer",
+   "terms": [
+    "skip and loafer",
+    "skip to loafer"
+   ],
+   "popularity": 136185,
+   "trending": false
+  },
+  {
+   "id": 21123,
+   "key": "drifters",
+   "terms": [
+    "drifters"
+   ],
+   "popularity": 136103,
+   "trending": false
+  },
+  {
+   "id": 171457,
+   "key": "makeine",
+   "terms": [
+    "makeine",
+    "makeine too many losing heroines",
+    "make heroine ga oosugiru"
+   ],
+   "popularity": 135957,
+   "trending": false
+  },
+  {
+   "id": 6594,
+   "key": "katanagatari",
+   "terms": [
+    "katanagatari",
+    "sword story"
+   ],
+   "popularity": 135816,
+   "trending": false
+  },
+  {
+   "id": 20955,
+   "key": "rokka",
+   "terms": [
+    "rokka",
+    "rokka braves of the six flowers",
+    "rokka no yuusha"
+   ],
+   "popularity": 135731,
+   "trending": false
+  },
+  {
+   "id": 9041,
+   "key": "infinite stratos",
+   "terms": [
+    "infinite stratos",
+    "is infinite stratos"
+   ],
+   "popularity": 135392,
+   "trending": false
+  },
+  {
+   "id": 513,
+   "key": "castle in the sky",
+   "terms": [
+    "castle in the sky",
+    "tenkuu no shiro laputa",
+    "tenkuu no shiro rapyuta"
+   ],
+   "popularity": 135177,
+   "trending": false
+  },
+  {
+   "id": 142074,
+   "key": "trapped in a dating sim",
+   "terms": [
+    "trapped in a dating sim",
+    "trapped in a dating sim the world of otome games is tough for mobs",
+    "otomege sekai wa mob ni kibishii sekai desu"
+   ],
+   "popularity": 134862,
+   "trending": false
+  },
+  {
+   "id": 154116,
+   "key": "undead unluck",
+   "terms": [
+    "undead unluck"
+   ],
+   "popularity": 134835,
+   "trending": false
+  },
+  {
+   "id": 127399,
+   "key": "record of ragnarok",
+   "terms": [
+    "record of ragnarok",
+    "shuumatsu no valkyrie",
+    "shuumatsu no walkure"
+   ],
+   "popularity": 134642,
+   "trending": false
+  },
+  {
+   "id": 126192,
+   "key": "girlfriend girlfriend",
+   "terms": [
+    "girlfriend girlfriend",
+    "kanojo mo kanojo",
+    "kanokano"
+   ],
+   "popularity": 134613,
+   "trending": false
+  },
+  {
+   "id": 14749,
+   "key": "oreshura",
+   "terms": [
+    "oreshura",
+    "ore no kanojo to osananajimi ga shuraba sugiru",
+    "my girlfriend and childhood friend fight too much"
+   ],
+   "popularity": 134006,
+   "trending": false
+  },
+  {
+   "id": 11759,
+   "key": "accel world",
+   "terms": [
+    "accel world",
+    "accelerated world"
+   ],
+   "popularity": 133990,
+   "trending": false
+  },
+  {
+   "id": 323,
+   "key": "paranoia agent",
+   "terms": [
+    "paranoia agent",
+    "mousou dairinin"
+   ],
+   "popularity": 133990,
+   "trending": false
+  },
+  {
+   "id": 184951,
+   "key": "you and i are polar opposites",
+   "terms": [
+    "you and i are polar opposites",
+    "seihantai na kimi to boku"
+   ],
+   "popularity": 133982,
+   "trending": false
+  },
+  {
+   "id": 98035,
+   "key": "fate apocrypha",
+   "terms": [
+    "fate apocrypha"
+   ],
+   "popularity": 133956,
+   "trending": false
+  },
+  {
+   "id": 128712,
+   "key": "the detective is already dead",
+   "terms": [
+    "the detective is already dead",
+    "tantei wa mou shindeiru",
+    "la detective esta muerta"
+   ],
+   "popularity": 133818,
+   "trending": false
+  },
+  {
+   "id": 137908,
+   "key": "the wrong way to use healing magic",
+   "terms": [
+    "the wrong way to use healing magic",
+    "chiyu mahou no machigatta tsukaikata",
+    "penggunaan sihir penyembuh yang keliru"
+   ],
+   "popularity": 133302,
+   "trending": false
+  },
+  {
+   "id": 103900,
+   "key": "we never learn",
+   "terms": [
+    "we never learn",
+    "we never learn bokuben",
+    "bokutachi wa benkyou ga dekinai"
+   ],
+   "popularity": 133202,
+   "trending": false
+  },
+  {
+   "id": 7724,
+   "key": "shiki",
+   "terms": [
+    "shiki",
+    "corpse demon"
+   ],
+   "popularity": 133161,
+   "trending": false
+  },
+  {
+   "id": 21718,
+   "key": "fate stay night heavens feel ii lost butterfly",
+   "terms": [
+    "fate stay night heavens feel ii lost butterfly",
+    "fate hf ii"
+   ],
+   "popularity": 132546,
+   "trending": false
+  },
+  {
+   "id": 20671,
+   "key": "log horizon 2",
+   "terms": [
+    "log horizon 2"
+   ],
+   "popularity": 132429,
+   "trending": false
+  },
+  {
+   "id": 21262,
+   "key": "owarimonogatari",
+   "terms": [
+    "owarimonogatari",
+    "end tale"
+   ],
+   "popularity": 131641,
+   "trending": false
+  },
+  {
+   "id": 21878,
+   "key": "gabriel dropout",
+   "terms": [
+    "gabriel dropout",
+    "gabdro"
+   ],
+   "popularity": 131503,
+   "trending": false
+  },
+  {
+   "id": 129196,
+   "key": "is it wrong to try to pick up girls in a dungeon iv",
+   "terms": [
+    "is it wrong to try to pick up girls in a dungeon iv",
+    "dungeon ni deai wo motomeru no wa machigatteiru darou ka iv",
+    "dungeon ni deai wo motomeru no wa machigatteiru darou ka iv shin shou meikyuu hen"
+   ],
+   "popularity": 131467,
+   "trending": false
+  },
+  {
+   "id": 225,
+   "key": "dragon ball gt",
+   "terms": [
+    "dragon ball gt",
+    "dbgt"
+   ],
+   "popularity": 131450,
+   "trending": false
+  },
+  {
+   "id": 110354,
+   "key": "bna",
+   "terms": [
+    "bna",
+    "brand new animal",
+    "bna brand new animal"
+   ],
+   "popularity": 131335,
+   "trending": false
+  },
+  {
+   "id": 156092,
+   "key": "to be hero x",
+   "terms": [
+    "to be hero x",
+    "tu bian yingxiong x",
+    "to be hero 3"
+   ],
+   "popularity": 131207,
+   "trending": false
+  },
+  {
+   "id": 118375,
+   "key": "the hidden dungeon only i can enter",
+   "terms": [
+    "the hidden dungeon only i can enter",
+    "ore dake haireru kakushi dungeon",
+    "training in the secret dungeon"
+   ],
+   "popularity": 131167,
+   "trending": false
+  },
+  {
+   "id": 127401,
+   "key": "platinum end",
+   "terms": [
+    "platinum end"
+   ],
+   "popularity": 131051,
+   "trending": false
+  },
+  {
+   "id": 137281,
+   "key": "aharen san wa hakarenai",
+   "terms": [
+    "aharen san wa hakarenai",
+    "aharen is indecipherable",
+    "aharen is unfathomable"
+   ],
+   "popularity": 130716,
+   "trending": false
+  },
+  {
+   "id": 155907,
+   "key": "buddy daddies",
+   "terms": [
+    "buddy daddies"
+   ],
+   "popularity": 130681,
+   "trending": false
+  },
+  {
+   "id": 16417,
+   "key": "tamako market",
+   "terms": [
+    "tamako market"
+   ],
+   "popularity": 130424,
+   "trending": false
+  },
+  {
+   "id": 4081,
+   "key": "natsumes book of friends",
+   "terms": [
+    "natsumes book of friends",
+    "natsume yuujinchou",
+    "natsume yujincho"
+   ],
+   "popularity": 129675,
+   "trending": false
+  },
+  {
+   "id": 18277,
+   "key": "strike the blood",
+   "terms": [
+    "strike the blood"
+   ],
+   "popularity": 129441,
+   "trending": false
+  },
+  {
+   "id": 174788,
+   "key": "look back",
+   "terms": [
+    "look back"
+   ],
+   "popularity": 129358,
+   "trending": false
+  },
+  {
+   "id": 2476,
+   "key": "school days tv",
+   "terms": [
+    "school days tv",
+    "school days wer dir alles geben kann kann dir auch alles nehmen"
+   ],
+   "popularity": 129335,
+   "trending": false
+  },
+  {
+   "id": 126213,
+   "key": "banished from the heros party i decided to live a quiet life in the countryside",
+   "terms": [
+    "banished from the heros party i decided to live a quiet life in the countryside",
+    "shin no nakama ja nai to yuusha no party wo oidasareta node henkyou de slow life suru koto ni shimashita",
+    "banished from the heroes party i decided to live a quiet life in the countryside"
+   ],
+   "popularity": 129248,
+   "trending": false
+  },
+  {
+   "id": 98251,
+   "key": "aho girl",
+   "terms": [
+    "aho girl",
+    "ahogaru clueless girl"
+   ],
+   "popularity": 129039,
+   "trending": false
+  },
+  {
+   "id": 110350,
+   "key": "id invaded",
+   "terms": [
+    "id invaded"
+   ],
+   "popularity": 128741,
+   "trending": false
+  },
+  {
+   "id": 21364,
+   "key": "gate 2",
+   "terms": [
+    "gate 2",
+    "gate",
+    "gate jieitai kanochi nite kaku tatakaeri"
+   ],
+   "popularity": 128440,
+   "trending": false
+  },
+  {
+   "id": 114085,
+   "key": "kemono jihen",
+   "terms": [
+    "kemono jihen",
+    "monster incidents",
+    "kemono incidents"
+   ],
+   "popularity": 128436,
+   "trending": false
+  },
+  {
+   "id": 111790,
+   "key": "haikyu land vs air",
+   "terms": [
+    "haikyu land vs air",
+    "haikyuu riku vs kuu",
+    "booru no michi"
+   ],
+   "popularity": 128067,
+   "trending": false
+  },
+  {
+   "id": 21495,
+   "key": "tanaka kun is always listless",
+   "terms": [
+    "tanaka kun is always listless",
+    "tanaka kun wa itsumo kedaruge"
+   ],
+   "popularity": 127863,
+   "trending": false
+  },
+  {
+   "id": 2993,
+   "key": "rosario vampire",
+   "terms": [
+    "rosario vampire",
+    "rosario to vampire",
+    "rosario and vampire"
+   ],
+   "popularity": 127817,
+   "trending": false
+  },
+  {
+   "id": 151514,
+   "key": "orb",
+   "terms": [
+    "orb",
+    "orb on the movements of the earth",
+    "chi chikyuu no undou ni tsuite"
+   ],
+   "popularity": 127671,
+   "trending": false
+  },
+  {
+   "id": 8425,
+   "key": "gosick",
+   "terms": [
+    "gosick"
+   ],
+   "popularity": 127658,
+   "trending": false
+  },
+  {
+   "id": 20607,
+   "key": "ping pong the animation",
+   "terms": [
+    "ping pong the animation"
+   ],
+   "popularity": 126872,
+   "trending": false
+  },
+  {
+   "id": 116588,
+   "key": "combatants will be dispatched",
+   "terms": [
+    "combatants will be dispatched",
+    "sentouin hakenshimasu",
+    "kombattanten werden entsandt"
+   ],
+   "popularity": 126832,
+   "trending": false
+  },
+  {
+   "id": 21499,
+   "key": "twin star exorcists",
+   "terms": [
+    "twin star exorcists",
+    "sousei no onmyouji"
+   ],
+   "popularity": 126758,
+   "trending": false
+  },
+  {
+   "id": 20754,
+   "key": "school live",
+   "terms": [
+    "school live",
+    "gakkou gurashi"
+   ],
+   "popularity": 126716,
+   "trending": false
+  },
+  {
+   "id": 142876,
+   "key": "dr stone episode ryusui",
+   "terms": [
+    "dr stone episode ryusui",
+    "dr stone",
+    "dr stone ryuusui"
+   ],
+   "popularity": 126294,
+   "trending": false
+  },
+  {
+   "id": 107226,
+   "key": "how heavy are the dumbbells you lift",
+   "terms": [
+    "how heavy are the dumbbells you lift",
+    "dumbbell nan kilo moteru",
+    "how many kilograms are the dumbbells you lift"
+   ],
+   "popularity": 126266,
+   "trending": false
+  },
+  {
+   "id": 21745,
+   "key": "owarimonogatari second season",
+   "terms": [
+    "owarimonogatari second season",
+    "owarimonogatari ge",
+    "owarimonogatari 2"
+   ],
+   "popularity": 125142,
+   "trending": false
+  },
+  {
+   "id": 132474,
+   "key": "skeleton knight in another world",
+   "terms": [
+    "skeleton knight in another world",
+    "gaikotsu kishi sama tadaima isekai e odekakechuu",
+    "kesatria tengkorak berkelana di dunia lain"
+   ],
+   "popularity": 125101,
+   "trending": false
+  },
+  {
+   "id": 10800,
+   "key": "chihayafuru",
+   "terms": [
+    "chihayafuru",
+    "chihayafull"
+   ],
+   "popularity": 124814,
+   "trending": false
+  },
+  {
+   "id": 107067,
+   "key": "science fell in love so i tried to prove it",
+   "terms": [
+    "science fell in love so i tried to prove it",
+    "rikei ga koi ni ochita no de shoumei shitemita",
+    "rikekoi"
+   ],
+   "popularity": 124646,
+   "trending": false
+  },
+  {
+   "id": 117343,
+   "key": "talentless nana",
+   "terms": [
+    "talentless nana",
+    "munou na nana"
+   ],
+   "popularity": 124371,
+   "trending": false
+  },
+  {
+   "id": 20593,
+   "key": "hanamonogatari",
+   "terms": [
+    "hanamonogatari"
+   ],
+   "popularity": 124162,
+   "trending": false
+  },
+  {
+   "id": 15315,
+   "key": "problem children are coming from another world arent they",
+   "terms": [
+    "problem children are coming from another world arent they",
+    "mondaiji tachi ga isekai kara kuru sou desu yo"
+   ],
+   "popularity": 123973,
+   "trending": false
+  },
+  {
+   "id": 156067,
+   "key": "campfire cooking in another world with my absurd skill",
+   "terms": [
+    "campfire cooking in another world with my absurd skill",
+    "tondemo skill de isekai hourou meshi",
+    "regarding the display of an outrageous skill which has incredible powers"
+   ],
+   "popularity": 123947,
+   "trending": false
+  },
+  {
+   "id": 21341,
+   "key": "ajin",
+   "terms": [
+    "ajin",
+    "ajin demi human",
+    "ajin semihumano"
+   ],
+   "popularity": 123796,
+   "trending": false
+  },
+  {
+   "id": 7674,
+   "key": "bakuman",
+   "terms": [
+    "bakuman",
+    "bakuman 1st series"
+   ],
+   "popularity": 123413,
+   "trending": false
+  },
+  {
+   "id": 1818,
+   "key": "claymore",
+   "terms": [
+    "claymore"
+   ],
+   "popularity": 123343,
+   "trending": false
+  },
+  {
+   "id": 20785,
+   "key": "absolute duo",
+   "terms": [
+    "absolute duo"
+   ],
+   "popularity": 123113,
+   "trending": false
+  },
+  {
+   "id": 145665,
+   "key": "nier automata ver1 1a",
+   "terms": [
+    "nier automata ver1 1a"
+   ],
+   "popularity": 123097,
+   "trending": false
+  },
+  {
+   "id": 20729,
+   "key": "world trigger",
+   "terms": [
+    "world trigger"
+   ],
+   "popularity": 122714,
+   "trending": false
+  },
+  {
+   "id": 139587,
+   "key": "reincarnated as a sword",
+   "terms": [
+    "reincarnated as a sword",
+    "tensei shitara ken deshita",
+    "i became the sword by transmigrating"
+   ],
+   "popularity": 122688,
+   "trending": true
+  },
+  {
+   "id": 20918,
+   "key": "tsukimonogatari",
+   "terms": [
+    "tsukimonogatari",
+    "possession tale"
+   ],
+   "popularity": 122652,
+   "trending": false
+  },
+  {
+   "id": 20519,
+   "key": "tamako",
+   "terms": [
+    "tamako",
+    "tamako love story"
+   ],
+   "popularity": 122284,
+   "trending": false
+  },
+  {
+   "id": 21455,
+   "key": "new game",
+   "terms": [
+    "new game"
+   ],
+   "popularity": 122149,
+   "trending": false
+  },
+  {
+   "id": 11981,
+   "key": "puella magi madoka magica the",
+   "terms": [
+    "puella magi madoka magica the",
+    "puella magi madoka magica the rebellion",
+    "mahou shoujo madoka magica"
+   ],
+   "popularity": 121844,
+   "trending": false
+  },
+  {
+   "id": 108268,
+   "key": "ascendance of a bookworm",
+   "terms": [
+    "ascendance of a bookworm",
+    "honzuki no gekokujou",
+    "honzuki no gekokujou shisho ni naru tame ni wa shudan wo erandeiraremasen"
+   ],
+   "popularity": 121774,
+   "trending": false
+  },
+  {
+   "id": 17549,
+   "key": "non non biyori",
+   "terms": [
+    "non non biyori"
+   ],
+   "popularity": 121766,
+   "trending": false
+  },
+  {
+   "id": 129188,
+   "key": "goblin slayer ii",
+   "terms": [
+    "goblin slayer ii"
+   ],
+   "popularity": 121743,
+   "trending": false
+  },
+  {
+   "id": 21860,
+   "key": "worldend",
+   "terms": [
+    "worldend",
+    "worldend what are you doing at the end of the world are you busy will you save us",
+    "shuumatsu nani shitemasu ka isogashii desu ka sukutte moratte ii desu ka"
+   ],
+   "popularity": 121666,
+   "trending": false
+  },
+  {
+   "id": 21719,
+   "key": "fate stay night heavens feel iii spring song",
+   "terms": [
+    "fate stay night heavens feel iii spring song",
+    "fate hf iii"
+   ],
+   "popularity": 121203,
+   "trending": false
+  },
+  {
+   "id": 137667,
+   "key": "lord of mysteries",
+   "terms": [
+    "lord of mysteries",
+    "guimi zhi zhu",
+    "guimi zhi zhu xiaochou pian"
+   ],
+   "popularity": 120920,
+   "trending": false
+  },
+  {
+   "id": 6347,
+   "key": "baka and test",
+   "terms": [
+    "baka and test",
+    "baka and test summon the beasts",
+    "baka to test to shoukanjuu"
+   ],
+   "popularity": 120340,
+   "trending": false
+  },
+  {
+   "id": 21365,
+   "key": "dagashi kashi",
+   "terms": [
+    "dagashi kashi"
+   ],
+   "popularity": 120319,
+   "trending": false
+  },
+  {
+   "id": 172019,
+   "key": "dr stone science future",
+   "terms": [
+    "dr stone science future",
+    "dr stone"
+   ],
+   "popularity": 120264,
+   "trending": false
+  },
+  {
+   "id": 1482,
+   "key": "d gray man",
+   "terms": [
+    "d gray man",
+    "d grey man"
+   ],
+   "popularity": 119001,
+   "trending": false
+  },
+  {
+   "id": 185,
+   "key": "initial d",
+   "terms": [
+    "initial d",
+    "inisharu di"
+   ],
+   "popularity": 118818,
+   "trending": false
+  },
+  {
+   "id": 101310,
+   "key": "boarding school juliet",
+   "terms": [
+    "boarding school juliet",
+    "kishuku gakkou no juliet",
+    "to love or not to love"
+   ],
+   "popularity": 118510,
+   "trending": false
+  },
+  {
+   "id": 146493,
+   "key": "ragna crimson",
+   "terms": [
+    "ragna crimson"
+   ],
+   "popularity": 118461,
+   "trending": false
+  },
+  {
+   "id": 141821,
+   "key": "chained soldier",
+   "terms": [
+    "chained soldier",
+    "mato seihei no slave",
+    "slave of the magic capitals elite troops"
+   ],
+   "popularity": 118339,
+   "trending": false
+  },
+  {
+   "id": 109298,
+   "key": "keep your hands off eizouken",
+   "terms": [
+    "keep your hands off eizouken",
+    "eizouken ni wa te wo dasu na",
+    "dont mess with the motion picture club"
+   ],
+   "popularity": 117286,
+   "trending": false
+  },
+  {
+   "id": 20849,
+   "key": "god eater",
+   "terms": [
+    "god eater"
+   ],
+   "popularity": 116709,
+   "trending": false
+  },
+  {
+   "id": 5681,
+   "key": "summer wars",
+   "terms": [
+    "summer wars"
+   ],
+   "popularity": 116644,
+   "trending": false
+  },
+  {
+   "id": 8841,
+   "key": "is this a zombie",
+   "terms": [
+    "is this a zombie",
+    "kore wa zombie desu ka"
+   ],
+   "popularity": 116591,
+   "trending": false
+  },
+  {
+   "id": 98320,
+   "key": "love and lies",
+   "terms": [
+    "love and lies",
+    "koi to uso"
+   ],
+   "popularity": 116591,
+   "trending": false
+  },
+  {
+   "id": 120646,
+   "key": "my senpai is annoying",
+   "terms": [
+    "my senpai is annoying",
+    "senpai ga uzai kouhai no hanashi",
+    "seniorku yang menyebalkan"
+   ],
+   "popularity": 116413,
+   "trending": false
+  },
+  {
+   "id": 130586,
+   "key": "the greatest demon lord is reborn as a typical nobody",
+   "terms": [
+    "the greatest demon lord is reborn as a typical nobody",
+    "shijou saikyou no daimaou murabito a ni tensei suru",
+    "raja iblis terkuat sepanjang sejarah terlahir kembali sebagai figuran"
+   ],
+   "popularity": 116407,
+   "trending": false
+  },
+  {
+   "id": 132052,
+   "key": "a couple of cuckoos",
+   "terms": [
+    "a couple of cuckoos",
+    "kakkou no iinazuke"
+   ],
+   "popularity": 116297,
+   "trending": false
+  },
+  {
+   "id": 167336,
+   "key": "lazarus",
+   "terms": [
+    "lazarus"
+   ],
+   "popularity": 116204,
+   "trending": false
+  },
+  {
+   "id": 146850,
+   "key": "farming life in another world",
+   "terms": [
+    "farming life in another world",
+    "isekai nonbiri nouka",
+    "isekai farming vita contadina in un altro mondo"
+   ],
+   "popularity": 116044,
+   "trending": false
+  },
+  {
+   "id": 268,
+   "key": "golden boy",
+   "terms": [
+    "golden boy",
+    "golden boy sasurai no obenkyou yarou"
+   ],
+   "popularity": 115857,
+   "trending": false
+  },
+  {
+   "id": 14075,
+   "key": "blast of tempest",
+   "terms": [
+    "blast of tempest",
+    "zetsuen no tempest",
+    "zetsuen no tempest the civilization blaster"
+   ],
+   "popularity": 115781,
+   "trending": false
+  },
+  {
+   "id": 142769,
+   "key": "the tunnel to summer the exit of goodbyes",
+   "terms": [
+    "the tunnel to summer the exit of goodbyes",
+    "natsu e no tunnel sayonara no deguchi",
+    "natsuton"
+   ],
+   "popularity": 115325,
+   "trending": false
+  },
+  {
+   "id": 6675,
+   "key": "redline",
+   "terms": [
+    "redline",
+    "red line"
+   ],
+   "popularity": 115025,
+   "trending": false
+  },
+  {
+   "id": 16662,
+   "key": "the wind rises",
+   "terms": [
+    "the wind rises",
+    "kaze tachinu",
+    "el viento se levanta"
+   ],
+   "popularity": 114750,
+   "trending": false
+  },
+  {
+   "id": 112667,
+   "key": "our last crusade or the rise of a new world",
+   "terms": [
+    "our last crusade or the rise of a new world",
+    "kimi to boku no saigo no senjo arui wa sekai ga hajimaru seisen",
+    "kimisen"
+   ],
+   "popularity": 114647,
+   "trending": false
+  },
+  {
+   "id": 8795,
+   "key": "panty and stocking with garterbelt",
+   "terms": [
+    "panty and stocking with garterbelt",
+    "pansto",
+    "psg"
+   ],
+   "popularity": 114566,
+   "trending": false
+  },
+  {
+   "id": 15051,
+   "key": "love live school idol project",
+   "terms": [
+    "love live school idol project"
+   ],
+   "popularity": 114538,
+   "trending": false
+  },
+  {
+   "id": 100722,
+   "key": "date a live iii",
+   "terms": [
+    "date a live iii",
+    "date a live",
+    "date a live 3"
+   ],
+   "popularity": 114529,
+   "trending": false
+  },
+  {
+   "id": 146210,
+   "key": "vermeil in gold",
+   "terms": [
+    "vermeil in gold",
+    "kinsou no vermeil",
+    "kinsou no vermeil gakeppuchi majutsushi wa saikyou no yakusai to mahou sekai wo tsukisusumu"
+   ],
+   "popularity": 114330,
+   "trending": false
+  },
+  {
+   "id": 114065,
+   "key": "remake our life",
+   "terms": [
+    "remake our life",
+    "bokutachi no remake",
+    "bokurema"
+   ],
+   "popularity": 114257,
+   "trending": false
+  },
+  {
+   "id": 66,
+   "key": "azumanga daioh",
+   "terms": [
+    "azumanga daioh",
+    "azumanga daiou the animation"
+   ],
+   "popularity": 113885,
+   "trending": false
+  },
+  {
+   "id": 5630,
+   "key": "eden of the east",
+   "terms": [
+    "eden of the east",
+    "higashi no eden"
+   ],
+   "popularity": 113282,
+   "trending": false
+  },
+  {
+   "id": 20812,
+   "key": "shirobako",
+   "terms": [
+    "shirobako",
+    "white box"
+   ],
+   "popularity": 113279,
+   "trending": false
+  },
+  {
+   "id": 129190,
+   "key": "the genius princes guide to raising a nation out of debt",
+   "terms": [
+    "the genius princes guide to raising a nation out of debt",
+    "tensai ouji no akaji kokka saisei jutsu",
+    "kiat pemulihan negara berutang ala pangeran genius"
+   ],
+   "popularity": 113110,
+   "trending": false
+  },
+  {
+   "id": 104722,
+   "key": "assassins pride",
+   "terms": [
+    "assassins pride"
+   ],
+   "popularity": 112887,
+   "trending": false
+  },
+  {
+   "id": 143653,
+   "key": "insomniacs after school",
+   "terms": [
+    "insomniacs after school",
+    "kimi wa houkago insomnia",
+    "insomniaques"
+   ],
+   "popularity": 112791,
+   "trending": false
+  },
+  {
+   "id": 105932,
+   "key": "o maidens in your savage season",
+   "terms": [
+    "o maidens in your savage season",
+    "araburu kisetsu no otome domo yo",
+    "araoto"
+   ],
+   "popularity": 112521,
+   "trending": false
+  },
+  {
+   "id": 20981,
+   "key": "the boy and the beast",
+   "terms": [
+    "the boy and the beast",
+    "bakemono no ko",
+    "o rapaz e o monstro"
+   ],
+   "popularity": 112509,
+   "trending": false
+  },
+  {
+   "id": 14833,
+   "key": "maoyu",
+   "terms": [
+    "maoyu",
+    "maoyu archenemy and hero",
+    "maoyuu maou yuusha"
+   ],
+   "popularity": 112501,
+   "trending": false
+  },
+  {
+   "id": 140457,
+   "key": "im quitting heroing",
+   "terms": [
+    "im quitting heroing",
+    "yuusha yamemasu",
+    "yamemasu tsugi no shokuba ha mao jo"
+   ],
+   "popularity": 112348,
+   "trending": false
+  },
+  {
+   "id": 2593,
+   "key": "the garden of sinners chapter 1",
+   "terms": [
+    "the garden of sinners chapter 1",
+    "the garden of sinners chapter 1 thanatos overlooking view",
+    "kara no kyoukai"
+   ],
+   "popularity": 112336,
+   "trending": false
+  },
+  {
+   "id": 104325,
+   "key": "why the hell are you here teacher",
+   "terms": [
+    "why the hell are you here teacher",
+    "nande koko ni sensei ga"
+   ],
+   "popularity": 112158,
+   "trending": false
+  },
+  {
+   "id": 141249,
+   "key": "bungo stray dogs 4",
+   "terms": [
+    "bungo stray dogs 4",
+    "bungou stray dogs",
+    "bsd 4"
+   ],
+   "popularity": 111821,
+   "trending": false
+  },
+  {
+   "id": 20652,
+   "key": "durarara x2",
+   "terms": [
+    "durarara x2",
+    "durarara 2 shou",
+    "drrr 2 shou"
+   ],
+   "popularity": 111754,
+   "trending": false
+  },
+  {
+   "id": 97886,
+   "key": "blood blockade battlefront and beyond",
+   "terms": [
+    "blood blockade battlefront and beyond",
+    "kekkai sensen and beyond",
+    "bloodline battlefront and beyond"
+   ],
+   "popularity": 111724,
+   "trending": false
+  },
+  {
+   "id": 8675,
+   "key": "seitokai yakuindomo",
+   "terms": [
+    "seitokai yakuindomo"
+   ],
+   "popularity": 111415,
+   "trending": false
+  },
+  {
+   "id": 585,
+   "key": "whisper of the heart",
+   "terms": [
+    "whisper of the heart",
+    "mimi wo sumaseba",
+    "if you listen carefully"
+   ],
+   "popularity": 111363,
+   "trending": false
+  },
+  {
+   "id": 153930,
+   "key": "romantic killer",
+   "terms": [
+    "romantic killer",
+    "la asesina del romance"
+   ],
+   "popularity": 111049,
+   "trending": false
+  },
+  {
+   "id": 21639,
+   "key": "keijo",
+   "terms": [
+    "keijo",
+    "hip whip girl"
+   ],
+   "popularity": 110992,
+   "trending": false
+  },
+  {
+   "id": 99425,
+   "key": "promare",
+   "terms": [
+    "promare"
+   ],
+   "popularity": 110974,
+   "trending": false
+  },
+  {
+   "id": 105914,
+   "key": "the helpful fox senko san",
+   "terms": [
+    "the helpful fox senko san",
+    "sewayaki kitsune no senko san",
+    "senko si rubah penolong"
+   ],
+   "popularity": 110607,
+   "trending": false
+  },
+  {
+   "id": 136934,
+   "key": "my stepmoms daughter is my ex",
+   "terms": [
+    "my stepmoms daughter is my ex",
+    "mamahaha no tsurego ga motokano datta",
+    "motokano"
+   ],
+   "popularity": 110509,
+   "trending": false
+  },
+  {
+   "id": 132473,
+   "key": "the faraway paladin",
+   "terms": [
+    "the faraway paladin",
+    "saihate no paladin"
+   ],
+   "popularity": 110398,
+   "trending": false
+  },
+  {
+   "id": 7711,
+   "key": "the secret world of arrietty",
+   "terms": [
+    "the secret world of arrietty",
+    "karigurashi no arrietty",
+    "karigurashi no arrietti"
+   ],
+   "popularity": 110025,
+   "trending": false
+  },
+  {
+   "id": 175977,
+   "key": "my deer friend nokotan",
+   "terms": [
+    "my deer friend nokotan",
+    "shikanoko nokonoko koshitantan",
+    "mi amiga nokotan es un ciervo"
+   ],
+   "popularity": 109926,
+   "trending": false
+  },
+  {
+   "id": 572,
+   "key": "nausica of the valley of the wind",
+   "terms": [
+    "nausica of the valley of the wind",
+    "kaze no tani no nausica",
+    "nausicaa of the valley of the wind"
+   ],
+   "popularity": 109859,
+   "trending": false
+  },
+  {
+   "id": 104454,
+   "key": "isekai quartet",
+   "terms": [
+    "isekai quartet"
+   ],
+   "popularity": 109747,
+   "trending": false
+  },
+  {
+   "id": 139498,
+   "key": "that time i got reincarnated as a slime the",
+   "terms": [
+    "that time i got reincarnated as a slime the",
+    "that time i got reincarnated as a slime the scarlet bond",
+    "tensei shitara slime datta ken"
+   ],
+   "popularity": 108351,
+   "trending": false
+  },
+  {
+   "id": 9513,
+   "key": "beelzebub",
+   "terms": [
+    "beelzebub"
+   ],
+   "popularity": 108202,
+   "trending": false
+  },
+  {
+   "id": 99088,
+   "key": "pluto",
+   "terms": [
+    "pluto"
+   ],
+   "popularity": 108042,
+   "trending": false
+  },
+  {
+   "id": 156415,
+   "key": "i was reincarnated as the 7th prince so i can take my time perfecting my magical ability",
+   "terms": [
+    "i was reincarnated as the 7th prince so i can take my time perfecting my magical ability",
+    "tensei shitara dai nana ouji datta node kimamani majutsu wo kiwamemasu",
+    "dainanaoji"
+   ],
+   "popularity": 107940,
+   "trending": false
+  },
+  {
+   "id": 20646,
+   "key": "when supernatural battles became commonplace",
+   "terms": [
+    "when supernatural battles became commonplace",
+    "inou battle wa nichijou kei no naka de",
+    "inobato"
+   ],
+   "popularity": 107831,
+   "trending": false
+  },
+  {
+   "id": 113311,
+   "key": "kakushigoto",
+   "terms": [
+    "kakushigoto"
+   ],
+   "popularity": 107819,
+   "trending": false
+  },
+  {
+   "id": 158928,
+   "key": "spy x family code",
+   "terms": [
+    "spy x family code",
+    "spy x family code white",
+    "spy family code"
+   ],
+   "popularity": 107108,
+   "trending": false
+  },
+  {
+   "id": 7593,
+   "key": "kiss sis tv",
+   "terms": [
+    "kiss sis tv",
+    "kiss x sis"
+   ],
+   "popularity": 107096,
+   "trending": false
+  },
+  {
+   "id": 169580,
+   "key": "i made friends with the second prettiest girl in my class",
+   "terms": [
+    "i made friends with the second prettiest girl in my class",
+    "class de 2 banme ni kawaii onnanoko to tomodachi ni natta",
+    "i became friends with the second cutest girl in my class"
+   ],
+   "popularity": 106935,
+   "trending": false
+  },
+  {
+   "id": 530,
+   "key": "sailor moon",
+   "terms": [
+    "sailor moon",
+    "bishoujo senshi sailor moon",
+    "pretty soldier sailor moon"
+   ],
+   "popularity": 106841,
+   "trending": false,
+   "seed": true
+  },
+  {
+   "id": 21686,
+   "key": "kiss him not me",
+   "terms": [
+    "kiss him not me",
+    "watashi ga motete dousunda",
+    "watashimote"
+   ],
+   "popularity": 106839,
+   "trending": false
+  },
+  {
+   "id": 107663,
+   "key": "astra lost in space",
+   "terms": [
+    "astra lost in space",
+    "kanata no astra"
+   ],
+   "popularity": 106338,
+   "trending": false
+  },
+  {
+   "id": 103302,
+   "key": "kono oto tomare",
+   "terms": [
+    "kono oto tomare",
+    "kono oto tomare sounds of life",
+    "stop at this sound"
+   ],
+   "popularity": 106335,
+   "trending": false
+  },
+  {
+   "id": 99424,
+   "key": "ssss gridman",
+   "terms": [
+    "ssss gridman"
+   ],
+   "popularity": 106282,
+   "trending": false
+  },
+  {
+   "id": 14967,
+   "key": "haganai next",
+   "terms": [
+    "haganai next",
+    "boku wa tomodachi ga sukunai next",
+    "boku wa tomodachi ga sukunai"
+   ],
+   "popularity": 105921,
+   "trending": false
+  },
+  {
+   "id": 170130,
+   "key": "chillin in another world with level 2 super cheat powers",
+   "terms": [
+    "chillin in another world with level 2 super cheat powers",
+    "lv2 kara cheat datta moto yuusha kouho no mattari isekai life",
+    "chillin different world life of the ex brave candidate was cheat from lv2"
+   ],
+   "popularity": 105752,
+   "trending": false
+  },
+  {
+   "id": 21390,
+   "key": "the asterisk war 2",
+   "terms": [
+    "the asterisk war 2",
+    "gakusen toshi asterisk 2"
+   ],
+   "popularity": 105542,
+   "trending": false
+  },
+  {
+   "id": 141774,
+   "key": "ya boy kongming",
+   "terms": [
+    "ya boy kongming",
+    "paripi koumei",
+    "party people kongming"
+   ],
+   "popularity": 105260,
+   "trending": false
+  },
+  {
+   "id": 105018,
+   "key": "ride your wave",
+   "terms": [
+    "ride your wave",
+    "kimi to nami ni noretara",
+    "ride your wave juntos en el mar"
+   ],
+   "popularity": 105158,
+   "trending": false
+  },
+  {
+   "id": 20632,
+   "key": "aldnoah zero",
+   "terms": [
+    "aldnoah zero",
+    "a z",
+    "aldnoah zero let justice be done though the heavens fall"
+   ],
+   "popularity": 104931,
+   "trending": false
+  },
+  {
+   "id": 232,
+   "key": "cardcaptor sakura",
+   "terms": [
+    "cardcaptor sakura",
+    "ccs",
+    "cardcaptors"
+   ],
+   "popularity": 104690,
+   "trending": false,
+   "seed": true
+  },
+  {
+   "id": 98596,
+   "key": "a sisters all you need",
+   "terms": [
+    "a sisters all you need",
+    "imouto sae ireba ii",
+    "imoto sae ireba ii"
+   ],
+   "popularity": 104649,
+   "trending": false
+  },
+  {
+   "id": 10161,
+   "key": "no 6",
+   "terms": [
+    "no 6"
+   ],
+   "popularity": 104558,
+   "trending": false
+  },
+  {
+   "id": 116673,
+   "key": "burn the witch",
+   "terms": [
+    "burn the witch"
+   ],
+   "popularity": 104415,
+   "trending": false
+  },
+  {
+   "id": 98503,
+   "key": "school babysitters",
+   "terms": [
+    "school babysitters",
+    "gakuen babysitters"
+   ],
+   "popularity": 104375,
+   "trending": false
+  },
+  {
+   "id": 97592,
+   "key": "interviews with monster girls",
+   "terms": [
+    "interviews with monster girls",
+    "demi chan wa kataritai",
+    "entrevistas con chicas monstruo"
+   ],
+   "popularity": 104250,
+   "trending": false
+  },
+  {
+   "id": 156039,
+   "key": "berserk of gluttony",
+   "terms": [
+    "berserk of gluttony",
+    "boushoku no berserk",
+    "bousyoku"
+   ],
+   "popularity": 104230,
+   "trending": false
+  },
+  {
+   "id": 8937,
+   "key": "a certain magical index ii",
+   "terms": [
+    "a certain magical index ii",
+    "toaru majutsu no index ii",
+    "toaru majutsu no index 2"
+   ],
+   "popularity": 104156,
+   "trending": false
+  },
+  {
+   "id": 6707,
+   "key": "black butler ii",
+   "terms": [
+    "black butler ii",
+    "kuroshitsuji ii",
+    "kuroshitsuji 2"
+   ],
+   "popularity": 104113,
+   "trending": false
+  },
+  {
+   "id": 10110,
+   "key": "mayo chiki",
+   "terms": [
+    "mayo chiki"
+   ],
+   "popularity": 104056,
+   "trending": false
+  },
+  {
+   "id": 101281,
+   "key": "carole and tuesday",
+   "terms": [
+    "carole and tuesday",
+    "c and t",
+    "carole y tuesday"
+   ],
+   "popularity": 103515,
+   "trending": false
+  },
+  {
+   "id": 107625,
+   "key": "words bubble up like soda pop",
+   "terms": [
+    "words bubble up like soda pop",
+    "cider no you ni kotoba ga wakiagaru",
+    "palavras que borbulham como refrigerante"
+   ],
+   "popularity": 103417,
+   "trending": false
+  },
+  {
+   "id": 101547,
+   "key": "isekai cheat magician",
+   "terms": [
+    "isekai cheat magician"
+   ],
+   "popularity": 103398,
+   "trending": false
+  },
+  {
+   "id": 16011,
+   "key": "tokyo ravens",
+   "terms": [
+    "tokyo ravens"
+   ],
+   "popularity": 103387,
+   "trending": false
+  },
+  {
+   "id": 125038,
+   "key": "shadows house",
+   "terms": [
+    "shadows house",
+    "shadow house"
+   ],
+   "popularity": 103182,
+   "trending": false
+  },
+  {
+   "id": 101351,
+   "key": "happy sugar life",
+   "terms": [
+    "happy sugar life",
+    "white sugar garden black salt cage"
+   ],
+   "popularity": 103159,
+   "trending": false
+  },
+  {
+   "id": 21665,
+   "key": "b the beginning",
+   "terms": [
+    "b the beginning",
+    "perfect bones"
+   ],
+   "popularity": 103144,
+   "trending": false
+  },
+  {
+   "id": 180367,
+   "key": "witch watch",
+   "terms": [
+    "witch watch"
+   ],
+   "popularity": 103059,
+   "trending": false
+  },
+  {
+   "id": 7088,
+   "key": "demon king daimao",
+   "terms": [
+    "demon king daimao",
+    "ichiban ushiro no daimaou",
+    "ichiban ushiro no dai mao"
+   ],
+   "popularity": 102911,
+   "trending": false
+  },
+  {
+   "id": 387,
+   "key": "haibane renmei",
+   "terms": [
+    "haibane renmei",
+    "charcoal feather federation",
+    "une fille qui a des ailes grises"
+   ],
+   "popularity": 102830,
+   "trending": false
+  },
+  {
+   "id": 10162,
+   "key": "bunny drop",
+   "terms": [
+    "bunny drop",
+    "usagi drop",
+    "white rabbit candy"
+   ],
+   "popularity": 102637,
+   "trending": false
+  },
+  {
+   "id": 144553,
+   "key": "the reincarnation of the strongest exorcist in another world",
+   "terms": [
+    "the reincarnation of the strongest exorcist in another world",
+    "saikyou onmyouji no isekai tenseiki"
+   ],
+   "popularity": 102623,
+   "trending": false
+  },
+  {
+   "id": 116741,
+   "key": "the slime diaries",
+   "terms": [
+    "the slime diaries",
+    "tensei shitara slime datta ken",
+    "tensei shitara slime datta ken tensura nikki"
+   ],
+   "popularity": 102597,
+   "trending": false
+  },
+  {
+   "id": 116242,
+   "key": "im standing on a million lives",
+   "terms": [
+    "im standing on a million lives",
+    "100 man no inochi no ue ni ore wa tatteiru",
+    "im standing on 1 000 000 lives"
+   ],
+   "popularity": 102427,
+   "trending": false
+  },
+  {
+   "id": 110353,
+   "key": "deca dence",
+   "terms": [
+    "deca dence"
+   ],
+   "popularity": 102414,
+   "trending": false
+  },
+  {
+   "id": 14349,
+   "key": "little witch academia",
+   "terms": [
+    "little witch academia",
+    "lwa",
+    "wakate animator ikusei project"
+   ],
+   "popularity": 102243,
+   "trending": false
+  },
+  {
+   "id": 3457,
+   "key": "vampire knight",
+   "terms": [
+    "vampire knight",
+    "vampire kishi",
+    "el caballero vampiro"
+   ],
+   "popularity": 102217,
+   "trending": false
+  },
+  {
+   "id": 10490,
+   "key": "blood c",
+   "terms": [
+    "blood c"
+   ],
+   "popularity": 102186,
+   "trending": false
+  },
+  {
+   "id": 107961,
+   "key": "hensuki",
+   "terms": [
+    "hensuki",
+    "hensuki are you willing to fall in love with a pervert as long as shes a cutie",
+    "kawaikereba hentai demo suki ni natte kuremasu ka"
+   ],
+   "popularity": 102016,
+   "trending": false
+  },
+  {
+   "id": 20701,
+   "key": "wolf girl and black prince",
+   "terms": [
+    "wolf girl and black prince",
+    "ookami shoujo to kuro ouji"
+   ],
+   "popularity": 102010,
+   "trending": false
+  },
+  {
+   "id": 153658,
+   "key": "haikyu the dumpster battle",
+   "terms": [
+    "haikyu the dumpster battle",
+    "haikyuu",
+    "haikyuu gomi suteba no kessen"
+   ],
+   "popularity": 101216,
+   "trending": false
+  },
+  {
+   "id": 157198,
+   "key": "dead mount death play",
+   "terms": [
+    "dead mount death play",
+    "dmdp"
+   ],
+   "popularity": 101188,
+   "trending": false
+  },
+  {
+   "id": 101316,
+   "key": "iroduku",
+   "terms": [
+    "iroduku",
+    "iroduku the world in colors",
+    "irozuku sekai no ashita kara"
+   ],
+   "popularity": 100823,
+   "trending": false
+  },
+  {
+   "id": 21188,
+   "key": "undefeated bahamut chronicle",
+   "terms": [
+    "undefeated bahamut chronicle",
+    "saijaku muhai no bahamut"
+   ],
+   "popularity": 100761,
+   "trending": false
+  },
+  {
+   "id": 21851,
+   "key": "armed girls machiavellism",
+   "terms": [
+    "armed girls machiavellism",
+    "busou shoujo machiavellianism"
+   ],
+   "popularity": 100750,
+   "trending": false
+  },
+  {
+   "id": 20483,
+   "key": "engaged to the unidentified",
+   "terms": [
+    "engaged to the unidentified",
+    "mikakunin de shinkoukei"
+   ],
+   "popularity": 100378,
+   "trending": false
+  },
+  {
+   "id": 6033,
+   "key": "dragon ball z kai",
+   "terms": [
+    "dragon ball z kai",
+    "dragon ball kai",
+    "dragonball kai"
+   ],
+   "popularity": 100220,
+   "trending": false
+  },
+  {
+   "id": 129191,
+   "key": "the strongest sage with the weakest crest",
+   "terms": [
+    "the strongest sage with the weakest crest",
+    "shikkakumon no saikyou kenja"
+   ],
+   "popularity": 100182,
+   "trending": false
+  },
+  {
+   "id": 109020,
+   "key": "sing yesterday for me",
+   "terms": [
+    "sing yesterday for me",
+    "yesterday wo utatte"
+   ],
+   "popularity": 100151,
+   "trending": false
+  },
+  {
+   "id": 20541,
+   "key": "mekakucity actors",
+   "terms": [
+    "mekakucity actors",
+    "kagerou days",
+    "heat haze days"
+   ],
+   "popularity": 100065,
+   "trending": false
+  },
+  {
+   "id": 3002,
+   "key": "kaiji",
+   "terms": [
+    "kaiji",
+    "kaiji ultimate survivor",
+    "gyakkyou burai kaiji"
+   ],
+   "popularity": 99733,
+   "trending": false
+  },
+  {
+   "id": 145260,
+   "key": "black summoner",
+   "terms": [
+    "black summoner",
+    "kuro no shoukanshi"
+   ],
+   "popularity": 99607,
+   "trending": false
+  },
+  {
+   "id": 71,
+   "key": "full metal panic",
+   "terms": [
+    "full metal panic",
+    "fmp",
+    "furumeta"
+   ],
+   "popularity": 99261,
+   "trending": false
+  },
+  {
+   "id": 108617,
+   "key": "somali and the forest spirit",
+   "terms": [
+    "somali and the forest spirit",
+    "somali to mori no kamisama",
+    "somari and the guardian of the forest"
+   ],
+   "popularity": 99240,
+   "trending": false
+  },
+  {
+   "id": 179966,
+   "key": "secrets of the silent witch",
+   "terms": [
+    "secrets of the silent witch",
+    "silent witch",
+    "silent witch chinmoku no majo no kakushigoto"
+   ],
+   "popularity": 99186,
+   "trending": false
+  },
+  {
+   "id": 20968,
+   "key": "the anthem of the heart",
+   "terms": [
+    "the anthem of the heart",
+    "kokoro ga sakebitagatterun da",
+    "kokosake"
+   ],
+   "popularity": 99182,
+   "trending": false
+  },
+  {
+   "id": 101903,
+   "key": "run with the wind",
+   "terms": [
+    "run with the wind",
+    "kaze ga tsuyoku fuiteiru",
+    "kazetsuyo"
+   ],
+   "popularity": 99150,
+   "trending": false
+  },
+  {
+   "id": 183161,
+   "key": "the beginning after the end",
+   "terms": [
+    "the beginning after the end",
+    "saikyou no ousama nidome no jinsei wa nani wo suru",
+    "tbate"
+   ],
+   "popularity": 99098,
+   "trending": false
+  },
+  {
+   "id": 100526,
+   "key": "real girl",
+   "terms": [
+    "real girl",
+    "3d kanojo",
+    "3d kanojo real girl"
+   ],
+   "popularity": 98981,
+   "trending": false
+  },
+  {
+   "id": 116005,
+   "key": "noblesse",
+   "terms": [
+    "noblesse"
+   ],
+   "popularity": 98911,
+   "trending": false
+  },
+  {
+   "id": 107871,
+   "key": "princess connect re dive",
+   "terms": [
+    "princess connect re dive",
+    "priconne"
+   ],
+   "popularity": 98831,
+   "trending": false
+  },
+  {
+   "id": 173694,
+   "key": "failure frame",
+   "terms": [
+    "failure frame",
+    "failure frame i became the strongest and annihilated everything with low level spells",
+    "hazure waku no joutai ijou skill de saikyou ni natta ore ga subete wo juurin suru made"
+   ],
+   "popularity": 98806,
+   "trending": false
+  },
+  {
+   "id": 106240,
+   "key": "hello world",
+   "terms": [
+    "hello world"
+   ],
+   "popularity": 98728,
+   "trending": false
+  },
+  {
+   "id": 5341,
+   "key": "spice and wolf ii",
+   "terms": [
+    "spice and wolf ii",
+    "ookami to koushinryou ii"
+   ],
+   "popularity": 98697,
+   "trending": false
+  },
+  {
+   "id": 186052,
+   "key": "the water magician",
+   "terms": [
+    "the water magician",
+    "mizu zokusei no mahou tsukai"
+   ],
+   "popularity": 98512,
+   "trending": false
+  },
+  {
+   "id": 163623,
+   "key": "pseudo harem",
+   "terms": [
+    "pseudo harem",
+    "giji harem"
+   ],
+   "popularity": 98451,
+   "trending": false
+  },
+  {
+   "id": 98385,
+   "key": "after the rain",
+   "terms": [
+    "after the rain",
+    "koi wa ameagari no you ni",
+    "koiame"
+   ],
+   "popularity": 98433,
+   "trending": false
+  },
+  {
+   "id": 148969,
+   "key": "kubo wont let me be invisible",
+   "terms": [
+    "kubo wont let me be invisible",
+    "kubo san wa mob wo yurusanai",
+    "kubo tidak akan membiarkanku tak terlihat"
+   ],
+   "popularity": 98354,
+   "trending": false
+  },
+  {
+   "id": 1604,
+   "key": "reborn",
+   "terms": [
+    "reborn",
+    "katekyou hitman reborn",
+    "katekyo hitman reborn"
+   ],
+   "popularity": 98263,
+   "trending": false
+  },
+  {
+   "id": 355,
+   "key": "shakugan no shana",
+   "terms": [
+    "shakugan no shana",
+    "shana of the burning eyes",
+    "ognistooka shana"
+   ],
+   "popularity": 97913,
+   "trending": false
+  },
+  {
+   "id": 112649,
+   "key": "suppose a kid from the last dungeon boonies moved to a starter town",
+   "terms": [
+    "suppose a kid from the last dungeon boonies moved to a starter town",
+    "tatoeba last dungeon mae no mura no shounen ga joban no machi de kurasu youna monogatari",
+    "lasdan"
+   ],
+   "popularity": 97895,
+   "trending": false
+  },
+  {
+   "id": 21676,
+   "key": "sword oratoria",
+   "terms": [
+    "sword oratoria",
+    "sword oratoria is it wrong to try to pick up girls in a dungeon on the side",
+    "dungeon ni deai wo motomeru no wa machigatteiru darou ka gaiden"
+   ],
+   "popularity": 97776,
+   "trending": false
+  },
+  {
+   "id": 151252,
+   "key": "the ice guy and his cool female colleague",
+   "terms": [
+    "the ice guy and his cool female colleague",
+    "koori zokusei danshi to cool na douryou joshi",
+    "pria es dan rekan wanitanya yang keren"
+   ],
+   "popularity": 97655,
+   "trending": false
+  },
+  {
+   "id": 12531,
+   "key": "kids on the slope",
+   "terms": [
+    "kids on the slope",
+    "sakamichi no apollon",
+    "sakamichi no aporon"
+   ],
+   "popularity": 97561,
+   "trending": false
+  },
+  {
+   "id": 118419,
+   "key": "the day i became a god",
+   "terms": [
+    "the day i became a god",
+    "kamisama ni natta hi"
+   ],
+   "popularity": 97485,
+   "trending": false
+  },
+  {
+   "id": 16049,
+   "key": "a certain scientific railgun s",
+   "terms": [
+    "a certain scientific railgun s",
+    "toaru kagaku no railgun s",
+    "toaru kagaku no railgun"
+   ],
+   "popularity": 97342,
+   "trending": false
+  },
+  {
+   "id": 486,
+   "key": "kinos journey",
+   "terms": [
+    "kinos journey",
+    "kino no tabi",
+    "kino no tabi the beautiful world"
+   ],
+   "popularity": 97110,
+   "trending": false
+  },
+  {
+   "id": 152137,
+   "key": "no longer allowed in another world",
+   "terms": [
+    "no longer allowed in another world",
+    "isekai shikkaku",
+    "disqualified from another world"
+   ],
+   "popularity": 96681,
+   "trending": false
+  },
+  {
+   "id": 111734,
+   "key": "given the",
+   "terms": [
+    "given the",
+    "given"
+   ],
+   "popularity": 96513,
+   "trending": false
+  },
+  {
+   "id": 20057,
+   "key": "space dandy",
+   "terms": [
+    "space dandy"
+   ],
+   "popularity": 96202,
+   "trending": false
+  },
+  {
+   "id": 15225,
+   "key": "hentai prince and the stony cat",
+   "terms": [
+    "hentai prince and the stony cat",
+    "hentai ouji to warawanai neko",
+    "henneko"
+   ],
+   "popularity": 96017,
+   "trending": false
+  },
+  {
+   "id": 199547,
+   "key": "marriagetoxin",
+   "terms": [
+    "marriagetoxin",
+    "marriage toxin"
+   ],
+   "popularity": 95919,
+   "trending": false
+  },
+  {
+   "id": 11013,
+   "key": "inu x boku secret service",
+   "terms": [
+    "inu x boku secret service",
+    "inu boku ss",
+    "youko x boku ss"
+   ],
+   "popularity": 95915,
+   "trending": false
+  },
+  {
+   "id": 5958,
+   "key": "heavens lost property",
+   "terms": [
+    "heavens lost property",
+    "sora no otoshimono"
+   ],
+   "popularity": 95835,
+   "trending": false
+  },
+  {
+   "id": 134732,
+   "key": "aoashi",
+   "terms": [
+    "aoashi",
+    "ao ashi playmaker"
+   ],
+   "popularity": 95707,
+   "trending": false
+  },
+  {
+   "id": 12445,
+   "key": "dusk maiden of amnesia",
+   "terms": [
+    "dusk maiden of amnesia",
+    "tasogare otome amnesia"
+   ],
+   "popularity": 94932,
+   "trending": false
+  },
+  {
+   "id": 2246,
+   "key": "mononoke",
+   "terms": [
+    "mononoke"
+   ],
+   "popularity": 94836,
+   "trending": false
+  },
+  {
+   "id": 21517,
+   "key": "love tyrant",
+   "terms": [
+    "love tyrant",
+    "renai boukun"
+   ],
+   "popularity": 94672,
+   "trending": false
+  },
+  {
+   "id": 155963,
+   "key": "hokkaido gals are super adorable",
+   "terms": [
+    "hokkaido gals are super adorable",
+    "dosanko gal wa namara menkoi",
+    "dosanko gyaru is mega cute"
+   ],
+   "popularity": 94312,
+   "trending": false
+  },
+  {
+   "id": 13659,
+   "key": "oreimo 2",
+   "terms": [
+    "oreimo 2",
+    "ore no imouto ga konna ni kawaii wake ga nai",
+    "my little sister cant be this cute 2"
+   ],
+   "popularity": 94120,
+   "trending": false
+  },
+  {
+   "id": 178869,
+   "key": "clevatess",
+   "terms": [
+    "clevatess",
+    "clevatess majuu no ou to akago to kabane no yuusha",
+    "clevatess the king of devil beasts"
+   ],
+   "popularity": 93894,
+   "trending": false
+  },
+  {
+   "id": 146625,
+   "key": "engage kiss",
+   "terms": [
+    "engage kiss",
+    "project engage"
+   ],
+   "popularity": 93814,
+   "trending": false
+  },
+  {
+   "id": 171046,
+   "key": "rascal does not dream of santa claus",
+   "terms": [
+    "rascal does not dream of santa claus",
+    "seishun buta yarou wa santa claus no yume wo minai",
+    "aobuta"
+   ],
+   "popularity": 93730,
+   "trending": false
+  },
+  {
+   "id": 162896,
+   "key": "the elusive samurai",
+   "terms": [
+    "the elusive samurai",
+    "nige jouzu no wakagimi",
+    "nigewaka"
+   ],
+   "popularity": 93670,
+   "trending": false
+  },
+  {
+   "id": 98514,
+   "key": "umamusume",
+   "terms": [
+    "umamusume",
+    "umamusume pretty derby",
+    "uma musume"
+   ],
+   "popularity": 93465,
+   "trending": false
+  },
+  {
+   "id": 170695,
+   "key": "i parry everything",
+   "terms": [
+    "i parry everything",
+    "ore wa subete wo parry suru",
+    "ore wa subete wo parry suru gyaku kanchigai no sekai saikyou wa boukensha ni naritai"
+   ],
+   "popularity": 93431,
+   "trending": false
+  },
+  {
+   "id": 6956,
+   "key": "wagnaria",
+   "terms": [
+    "wagnaria",
+    "working"
+   ],
+   "popularity": 93383,
+   "trending": false
+  },
+  {
+   "id": 125368,
+   "key": "kaguya sama wa kokurasetai",
+   "terms": [
+    "kaguya sama wa kokurasetai",
+    "kaguya sama wa kokurasetai tensaitachi no renai zunousen",
+    "kaguya sama love is war"
+   ],
+   "popularity": 93364,
+   "trending": false
+  },
+  {
+   "id": 142455,
+   "key": "bubble",
+   "terms": [
+    "bubble",
+    "burbujas"
+   ],
+   "popularity": 93216,
+   "trending": false
+  },
+  {
+   "id": 13161,
+   "key": "aesthetica of a rogue hero",
+   "terms": [
+    "aesthetica of a rogue hero",
+    "hagure yuusha no estetica",
+    "hagure yuusha no aesthetica"
+   ],
+   "popularity": 92981,
+   "trending": false
+  },
+  {
+   "id": 59,
+   "key": "chobits",
+   "terms": [
+    "chobits"
+   ],
+   "popularity": 92832,
+   "trending": false
+  },
+  {
+   "id": 20590,
+   "key": "rage of bahamut",
+   "terms": [
+    "rage of bahamut",
+    "rage of bahamut genesis",
+    "shingeki no bahamut"
+   ],
+   "popularity": 92818,
+   "trending": false
+  },
+  {
+   "id": 154967,
+   "key": "rascal does not dream of a sister venturing out",
+   "terms": [
+    "rascal does not dream of a sister venturing out",
+    "seishun buta yarou wa odekake sister no yume wo minai",
+    "ao buta"
+   ],
+   "popularity": 92192,
+   "trending": false
+  },
+  {
+   "id": 153629,
+   "key": "the magical revolution of the reincarnated princess and the genius young lady",
+   "terms": [
+    "the magical revolution of the reincarnated princess and the genius young lady",
+    "tensei oujo to tensai reijou no mahou kakumei",
+    "magirevo"
+   ],
+   "popularity": 92114,
+   "trending": false
+  },
+  {
+   "id": 168374,
+   "key": "7th time loop",
+   "terms": [
+    "7th time loop",
+    "7th time loop the villainess enjoys a carefree life married to her worst enemy",
+    "loop 7 kaime no akuyaku reijou wa moto tekikoku de jiyuu kimama na hanayome seikatsu wo mankitsu suru"
+   ],
+   "popularity": 92010,
+   "trending": false
+  },
+  {
+   "id": 98861,
+   "key": "the kings avatar",
+   "terms": [
+    "the kings avatar",
+    "quanzhi gaoshou",
+    "full time expert"
+   ],
+   "popularity": 91972,
+   "trending": false
+  },
+  {
+   "id": 21509,
+   "key": "danganronpa 3",
+   "terms": [
+    "danganronpa 3",
+    "danganronpa 3 the end of hopes peak high school future arc",
+    "danganronpa 3 the end of kibougamine gakuen mirai hen"
+   ],
+   "popularity": 91925,
+   "trending": false
+  },
+  {
+   "id": 136707,
+   "key": "parallel world pharmacy",
+   "terms": [
+    "parallel world pharmacy",
+    "isekai yakkyoku"
+   ],
+   "popularity": 91852,
+   "trending": false
+  },
+  {
+   "id": 160188,
+   "key": "the girl i like forgot her glasses",
+   "terms": [
+    "the girl i like forgot her glasses",
+    "suki na ko ga megane wo wasureta",
+    "sukinako ga megane wo wasureta"
+   ],
+   "popularity": 91772,
+   "trending": false
+  },
+  {
+   "id": 759,
+   "key": "tokyo godfathers",
+   "terms": [
+    "tokyo godfathers",
+    "rodzice chrzestni z tokio"
+   ],
+   "popularity": 91468,
+   "trending": false
+  },
+  {
+   "id": 119683,
+   "key": "edens zero",
+   "terms": [
+    "edens zero"
+   ],
+   "popularity": 91421,
+   "trending": false
+  },
+  {
+   "id": 19221,
+   "key": "my mental choices are completely interfering with my school romantic comedy",
+   "terms": [
+    "my mental choices are completely interfering with my school romantic comedy",
+    "ore no nounai sentakushi ga gakuen love comedy wo zenryoku de jama shiteiru",
+    "noukome"
+   ],
+   "popularity": 91377,
+   "trending": false
+  },
+  {
+   "id": 1889,
+   "key": "when they cry kai",
+   "terms": [
+    "when they cry kai",
+    "higurashi no naku koro ni kai"
+   ],
+   "popularity": 91337,
+   "trending": false
+  },
+  {
+   "id": 157397,
+   "key": "the dreaming boy is a realist",
+   "terms": [
+    "the dreaming boy is a realist",
+    "yumemiru danshi wa genjitsushugisha",
+    "my dreamy realist"
+   ],
+   "popularity": 91321,
+   "trending": false
+  },
+  {
+   "id": 45,
+   "key": "rurouni kenshin",
+   "terms": [
+    "rurouni kenshin",
+    "rurouni kenshin meiji kenkaku romantan",
+    "samurai x"
+   ],
+   "popularity": 91316,
+   "trending": false
+  },
+  {
+   "id": 21006,
+   "key": "the eden of grisaia",
+   "terms": [
+    "the eden of grisaia",
+    "grisaia no rakuen",
+    "le eden de la grisaia"
+   ],
+   "popularity": 91272,
+   "trending": false
+  },
+  {
+   "id": 21110,
+   "key": "the testament of sister new devil burst",
+   "terms": [
+    "the testament of sister new devil burst",
+    "shinmai maou no testament",
+    "shinmai maou no testament burst"
+   ],
+   "popularity": 91209,
+   "trending": false
+  },
+  {
+   "id": 6114,
+   "key": "rainbow",
+   "terms": [
+    "rainbow",
+    "rainbow nisha rokubou no shichinin",
+    "rainbow the seven from compound two cell six"
+   ],
+   "popularity": 91107,
+   "trending": false
+  },
+  {
+   "id": 99540,
+   "key": "the seven deadly sins the",
+   "terms": [
+    "the seven deadly sins the",
+    "the seven deadly sins the prisoners of the sky",
+    "nanatsu no taizai"
+   ],
+   "popularity": 91065,
+   "trending": false
+  },
+  {
+   "id": 12413,
+   "key": "jormungand",
+   "terms": [
+    "jormungand"
+   ],
+   "popularity": 91028,
+   "trending": false
+  },
+  {
+   "id": 8676,
+   "key": "amagami ss",
+   "terms": [
+    "amagami ss"
+   ],
+   "popularity": 90521,
+   "trending": false
+  },
+  {
+   "id": 98820,
+   "key": "just because",
+   "terms": [
+    "just because"
+   ],
+   "popularity": 89935,
+   "trending": false
+  },
+  {
+   "id": 10495,
+   "key": "yuruyuri",
+   "terms": [
+    "yuruyuri",
+    "yuru yuri",
+    "yryr"
+   ],
+   "popularity": 89722,
+   "trending": false
+  },
+  {
+   "id": 237,
+   "key": "eureka seven",
+   "terms": [
+    "eureka seven",
+    "koukyoushihen eureka seven",
+    "eureka 7"
+   ],
+   "popularity": 89489,
+   "trending": false
+  },
+  {
+   "id": 179955,
+   "key": "from old country bumpkin to master swordsman",
+   "terms": [
+    "from old country bumpkin to master swordsman",
+    "katainaka no ossan kensei ni naru",
+    "katainaka no ossan kensei ni naru tada no inaka no kenjutsu shihan datta noni taisei shita deshitachi ga ore wo houttekurenai ken"
+   ],
+   "popularity": 89406,
+   "trending": false
+  },
+  {
+   "id": 151040,
+   "key": "trigun stampede",
+   "terms": [
+    "trigun stampede"
+   ],
+   "popularity": 89404,
+   "trending": false
+  },
+  {
+   "id": 20879,
+   "key": "durarara x2 the second arc",
+   "terms": [
+    "durarara x2 the second arc",
+    "durarara 2 ten",
+    "drrr 2 ten"
+   ],
+   "popularity": 89269,
+   "trending": false
+  },
+  {
+   "id": 154459,
+   "key": "our dating story",
+   "terms": [
+    "our dating story",
+    "our dating story the experienced you and the inexperienced me",
+    "keikenzumi na kimi to keiken zero na ore ga otsukiai suru hanashi"
+   ],
+   "popularity": 89260,
+   "trending": false
+  },
+  {
+   "id": 186497,
+   "key": "the ramparts of ice",
+   "terms": [
+    "the ramparts of ice",
+    "koori no jouheki",
+    "parede de gelo"
+   ],
+   "popularity": 89258,
+   "trending": true
+  },
+  {
+   "id": 161474,
+   "key": "rascal does not dream of a knapsack kid",
+   "terms": [
+    "rascal does not dream of a knapsack kid",
+    "seishun buta yarou wa randoseru girl no yume wo minai",
+    "ao buta"
+   ],
+   "popularity": 89215,
+   "trending": false
+  },
+  {
+   "id": 21051,
+   "key": "nanbaka",
+   "terms": [
+    "nanbaka",
+    "nambaka",
+    "the numbers"
+   ],
+   "popularity": 89159,
+   "trending": false
+  },
+  {
+   "id": 1292,
+   "key": "afro samurai",
+   "terms": [
+    "afro samurai"
+   ],
+   "popularity": 89125,
+   "trending": false
+  },
+  {
+   "id": 20555,
+   "key": "when marnie was there",
+   "terms": [
+    "when marnie was there",
+    "omoide no marnie",
+    "souvenirs de marnie"
+   ],
+   "popularity": 89036,
+   "trending": false
+  },
+  {
+   "id": 20031,
+   "key": "d frag",
+   "terms": [
+    "d frag",
+    "d fragments"
+   ],
+   "popularity": 89022,
+   "trending": false
+  },
+  {
+   "id": 14131,
+   "key": "girls und panzer",
+   "terms": [
+    "girls und panzer",
+    "garupan",
+    "gup"
+   ],
+   "popularity": 88718,
+   "trending": false
+  },
+  {
+   "id": 146953,
+   "key": "masamune kuns revenge r",
+   "terms": [
+    "masamune kuns revenge r",
+    "masamune kun no revenge r",
+    "masamune kun no revenge"
+   ],
+   "popularity": 88684,
+   "trending": false
+  },
+  {
+   "id": 100179,
+   "key": "tada never falls in love",
+   "terms": [
+    "tada never falls in love",
+    "tada kun wa koi wo shinai",
+    "tadakun wa koi wo shinai"
+   ],
+   "popularity": 88682,
+   "trending": false
+  },
+  {
+   "id": 129192,
+   "key": "my isekai life",
+   "terms": [
+    "my isekai life",
+    "my isekai life i gained a second character class and became the strongest sage in the world",
+    "tensei kenja no isekai life"
+   ],
+   "popularity": 88515,
+   "trending": false
+  },
+  {
+   "id": 124675,
+   "key": "osamake",
+   "terms": [
+    "osamake",
+    "osamake romcom where the childhood friend wont lose",
+    "osananajimi ga zettai ni makenai love kome"
+   ],
+   "popularity": 88494,
+   "trending": false
+  },
+  {
+   "id": 148048,
+   "key": "kamikatsu",
+   "terms": [
+    "kamikatsu",
+    "kamikatsu working for god in a godless world",
+    "kaminaki sekai no kamisama katsudou"
+   ],
+   "popularity": 88442,
+   "trending": false
+  },
+  {
+   "id": 153332,
+   "key": "the aristocrats otherworldly adventure",
+   "terms": [
+    "the aristocrats otherworldly adventure",
+    "the aristocrats otherworldly adventure serving gods who go too far",
+    "tensei kizoku no isekai boukenroku"
+   ],
+   "popularity": 88420,
+   "trending": false
+  },
+  {
+   "id": 112802,
+   "key": "life lessons with uramichi oniisan",
+   "terms": [
+    "life lessons with uramichi oniisan",
+    "uramichi oniisan"
+   ],
+   "popularity": 88287,
+   "trending": false
+  },
+  {
+   "id": 98005,
+   "key": "welcome to the ballroom",
+   "terms": [
+    "welcome to the ballroom",
+    "ballroom e youkoso"
+   ],
+   "popularity": 88255,
+   "trending": false
+  },
+  {
+   "id": 12549,
+   "key": "so i cant play h",
+   "terms": [
+    "so i cant play h",
+    "dakara boku wa h ga dekinai",
+    "dakara boku ha h ga dekinai"
+   ],
+   "popularity": 88113,
+   "trending": false
+  },
+  {
+   "id": 138882,
+   "key": "the yakuzas guide to babysitting",
+   "terms": [
+    "the yakuzas guide to babysitting",
+    "kumichou musume to sewagakari"
+   ],
+   "popularity": 88042,
+   "trending": false
+  },
+  {
+   "id": 108388,
+   "key": "high school prodigies have it easy even in another world",
+   "terms": [
+    "high school prodigies have it easy even in another world",
+    "choujin koukousei tachi wa isekai demo yoyuu de ikinuku you desu",
+    "choyoyu"
+   ],
+   "popularity": 88040,
+   "trending": false
+  },
+  {
+   "id": 132010,
+   "key": "love after world domination",
+   "terms": [
+    "love after world domination",
+    "koi wa sekai seifuku no ato de",
+    "koiseka"
+   ],
+   "popularity": 87896,
+   "trending": false
+  },
+  {
+   "id": 21520,
+   "key": "koyomimonogatari",
+   "terms": [
+    "koyomimonogatari",
+    "calendar tale"
+   ],
+   "popularity": 87797,
+   "trending": false
+  },
+  {
+   "id": 106509,
+   "key": "that time i got reincarnated as a slime oad",
+   "terms": [
+    "that time i got reincarnated as a slime oad",
+    "tensei shitara slime datta ken",
+    "that time i got reincarnated as a slime"
+   ],
+   "popularity": 87726,
+   "trending": false
+  },
+  {
+   "id": 26,
+   "key": "texhnolyze",
+   "terms": [
+    "texhnolyze"
+   ],
+   "popularity": 87704,
+   "trending": false
+  },
+  {
+   "id": 11433,
+   "key": "waiting in the summer",
+   "terms": [
+    "waiting in the summer",
+    "ano natsu de matteru",
+    "natsumachi"
+   ],
+   "popularity": 87636,
+   "trending": false
+  },
+  {
+   "id": 20462,
+   "key": "chaika",
+   "terms": [
+    "chaika",
+    "chaika the coffin princess",
+    "hitsugi no chaika"
+   ],
+   "popularity": 87628,
+   "trending": false
+  },
+  {
+   "id": 15037,
+   "key": "corpse party",
+   "terms": [
+    "corpse party",
+    "corpse party tortured souls bougyakusareta tamashii no jukyou"
+   ],
+   "popularity": 87559,
+   "trending": false
+  },
+  {
+   "id": 147642,
+   "key": "the unwanted undead adventurer",
+   "terms": [
+    "the unwanted undead adventurer",
+    "nozomanu fushi no boukensha",
+    "tuua"
+   ],
+   "popularity": 87491,
+   "trending": false
+  },
+  {
+   "id": 186794,
+   "key": "my status as an assassin obviously exceeds the heros",
+   "terms": [
+    "my status as an assassin obviously exceeds the heros",
+    "ansatsusha de aru ore no status ga yuusha yori mo akiraka ni tsuyoi no da ga",
+    "sutetsuyo"
+   ],
+   "popularity": 87427,
+   "trending": false
+  },
+  {
+   "id": 481,
+   "key": "yu gi oh",
+   "terms": [
+    "yu gi oh",
+    "yu gi oh duel monsters",
+    "yugioh"
+   ],
+   "popularity": 87280,
+   "trending": false
+  },
+  {
+   "id": 129277,
+   "key": "the duke of death and his maid",
+   "terms": [
+    "the duke of death and his maid",
+    "shinigami bocchan to kuro maid"
+   ],
+   "popularity": 87199,
+   "trending": false
+  },
+  {
+   "id": 170732,
+   "key": "is it wrong to try to pick up girls in a dungeon v",
+   "terms": [
+    "is it wrong to try to pick up girls in a dungeon v",
+    "dungeon ni deai wo motomeru no wa machigatteiru darou ka v",
+    "dungeon ni deai wo motomeru no wa machigatteiru darou ka v houjou no megami hen"
+   ],
+   "popularity": 87158,
+   "trending": false
+  },
+  {
+   "id": 111314,
+   "key": "uzumaki",
+   "terms": [
+    "uzumaki",
+    "the spiral",
+    "uzumaki spirala"
+   ],
+   "popularity": 87044,
+   "trending": false
+  },
+  {
+   "id": 100815,
+   "key": "zoku owarimonogatari",
+   "terms": [
+    "zoku owarimonogatari",
+    "continued end tale"
+   ],
+   "popularity": 87017,
+   "trending": false
+  },
+  {
+   "id": 104723,
+   "key": "do you love your mom and her two hit multi target attacks",
+   "terms": [
+    "do you love your mom and her two hit multi target attacks",
+    "tsuujou kougeki ga zentai kougeki de ni kai kougeki no okaasan wa suki desu ka",
+    "do you like your mom her normal attack is two attacks at full power"
+   ],
+   "popularity": 86986,
+   "trending": false
+  },
+  {
+   "id": 19369,
+   "key": "outbreak company",
+   "terms": [
+    "outbreak company"
+   ],
+   "popularity": 86819,
+   "trending": false
+  },
+  {
+   "id": 21659,
+   "key": "sweetness and lightning",
+   "terms": [
+    "sweetness and lightning",
+    "amaama to inazuma"
+   ],
+   "popularity": 86778,
+   "trending": false
+  },
+  {
+   "id": 820,
+   "key": "legend of the galactic heroes",
+   "terms": [
+    "legend of the galactic heroes",
+    "ginga eiyuu densetsu",
+    "logh"
+   ],
+   "popularity": 86761,
+   "trending": false
+  },
+  {
+   "id": 20809,
+   "key": "lord marksman and vanadis",
+   "terms": [
+    "lord marksman and vanadis",
+    "madan no ou to vanadis",
+    "the king of the magic bullet and vanadis"
+   ],
+   "popularity": 86407,
+   "trending": false
+  },
+  {
+   "id": 20503,
+   "key": "witch craft works",
+   "terms": [
+    "witch craft works",
+    "witchcraft works"
+   ],
+   "popularity": 86258,
+   "trending": false
+  },
+  {
+   "id": 132456,
+   "key": "the great jahy will not be defeated",
+   "terms": [
+    "the great jahy will not be defeated",
+    "jahy sama wa kujikenai",
+    "niepokonana jahy"
+   ],
+   "popularity": 86239,
+   "trending": false
+  },
+  {
+   "id": 154391,
+   "key": "am i actually the strongest",
+   "terms": [
+    "am i actually the strongest",
+    "jitsu wa ore saikyou deshita"
+   ],
+   "popularity": 85992,
+   "trending": false
+  },
+  {
+   "id": 190327,
+   "key": "steel ball run jojos bizarre adventure",
+   "terms": [
+    "steel ball run jojos bizarre adventure",
+    "jojo no kimyou na bouken",
+    "jojo no kimyou na bouken steel ball run"
+   ],
+   "popularity": 85797,
+   "trending": false
+  },
+  {
+   "id": 100483,
+   "key": "yuuna and the haunted hot springs",
+   "terms": [
+    "yuuna and the haunted hot springs",
+    "yuragi sou no yuuna san",
+    "yuragisou no yuuna san"
+   ],
+   "popularity": 85778,
+   "trending": false
+  },
+  {
+   "id": 10721,
+   "key": "penguindrum",
+   "terms": [
+    "penguindrum",
+    "mawaru penguindrum"
+   ],
+   "popularity": 85522,
+   "trending": false
+  },
+  {
+   "id": 130591,
+   "key": "sabikui bisco",
+   "terms": [
+    "sabikui bisco",
+    "rust eater bisco",
+    "bisco si pemakan karat"
+   ],
+   "popularity": 85442,
+   "trending": false
+  },
+  {
+   "id": 148116,
+   "key": "the iceblade sorcerer shall rule the world",
+   "terms": [
+    "the iceblade sorcerer shall rule the world",
+    "hyouken no majutsushi ga sekai wo suberu"
+   ],
+   "popularity": 85408,
+   "trending": false
+  },
+  {
+   "id": 20735,
+   "key": "i cant understand what my husband is saying",
+   "terms": [
+    "i cant understand what my husband is saying",
+    "danna ga nani wo itteiru ka wakaranai ken",
+    "danna ga nani o itte iruka wakaranai ken"
+   ],
+   "popularity": 85401,
+   "trending": false
+  },
+  {
+   "id": 12467,
+   "key": "mysterious girlfriend x",
+   "terms": [
+    "mysterious girlfriend x",
+    "nazo no kanojo x",
+    "mgx"
+   ],
+   "popularity": 85398,
+   "trending": false
+  },
+  {
+   "id": 21362,
+   "key": "hundred",
+   "terms": [
+    "hundred"
+   ],
+   "popularity": 85396,
+   "trending": false
+  },
+  {
+   "id": 126791,
+   "key": "full dive",
+   "terms": [
+    "full dive",
+    "full dive this ultimate next gen full dive rpg is even shittier than real life",
+    "kyuukyoku shinka shita full dive rpg ga genjitsu yori mo kusogee dattara"
+   ],
+   "popularity": 85337,
+   "trending": false
+  },
+  {
+   "id": 21096,
+   "key": "doukyuusei",
+   "terms": [
+    "doukyuusei",
+    "doukyuusei classmates",
+    "classmates"
+   ],
+   "popularity": 85314,
+   "trending": false
+  },
+  {
+   "id": 166617,
+   "key": "fate strange fake",
+   "terms": [
+    "fate strange fake"
+   ],
+   "popularity": 85208,
+   "trending": false
+  },
+  {
+   "id": 106319,
+   "key": "the 8th son are you kidding me",
+   "terms": [
+    "the 8th son are you kidding me",
+    "hachi nan tte sore wa nai deshou"
+   ],
+   "popularity": 85104,
+   "trending": false
+  },
+  {
+   "id": 105989,
+   "key": "ao chan cant study",
+   "terms": [
+    "ao chan cant study",
+    "midara na ao chan wa benkyou ga dekinai"
+   ],
+   "popularity": 85090,
+   "trending": false
+  },
+  {
+   "id": 103275,
+   "key": "fate grand order absolute demonic front",
+   "terms": [
+    "fate grand order absolute demonic front",
+    "fate grand order absolute demonic front babylonia",
+    "fate grand order"
+   ],
+   "popularity": 85066,
+   "trending": false
+  },
+  {
+   "id": 160900,
+   "key": "the kingdoms of ruin",
+   "terms": [
+    "the kingdoms of ruin",
+    "hametsu no oukoku"
+   ],
+   "popularity": 84818,
+   "trending": false
+  },
+  {
+   "id": 97768,
+   "key": "record of grancrest war",
+   "terms": [
+    "record of grancrest war",
+    "grancrest senki"
+   ],
+   "popularity": 84639,
+   "trending": false
+  },
+  {
+   "id": 207141,
+   "key": "chainsmoker cat",
+   "terms": [
+    "chainsmoker cat",
+    "yani neko"
+   ],
+   "popularity": 84604,
+   "trending": false
+  },
+  {
+   "id": 57,
+   "key": "beck",
+   "terms": [
+    "beck",
+    "beck mongolian chop squad"
+   ],
+   "popularity": 84264,
+   "trending": false
+  },
+  {
+   "id": 152681,
+   "key": "days with my stepsister",
+   "terms": [
+    "days with my stepsister",
+    "gimai seikatsu"
+   ],
+   "popularity": 84175,
+   "trending": false
+  },
+  {
+   "id": 99531,
+   "key": "devils line",
+   "terms": [
+    "devils line"
+   ],
+   "popularity": 84126,
+   "trending": false
+  },
+  {
+   "id": 116605,
+   "key": "date a live iv",
+   "terms": [
+    "date a live iv",
+    "date a live"
+   ],
+   "popularity": 83907,
+   "trending": false
+  },
+  {
+   "id": 11785,
+   "key": "nyaruko",
+   "terms": [
+    "nyaruko",
+    "nyaruko crawling with love",
+    "haiyore nyaruko san"
+   ],
+   "popularity": 83773,
+   "trending": false
+  },
+  {
+   "id": 114446,
+   "key": "higurashi",
+   "terms": [
+    "higurashi",
+    "higurashi when they cry gou",
+    "higurashi no naku koro ni gou"
+   ],
+   "popularity": 83564,
+   "trending": false
+  },
+  {
+   "id": 2605,
+   "key": "sayonara zetsubou sensei",
+   "terms": [
+    "sayonara zetsubou sensei",
+    "sayonara zetsubo sensei",
+    "goodbye teacher despair"
+   ],
+   "popularity": 83451,
+   "trending": false
+  },
+  {
+   "id": 12477,
+   "key": "patema inverted",
+   "terms": [
+    "patema inverted",
+    "sakasama no patema"
+   ],
+   "popularity": 83406,
+   "trending": false
+  },
+  {
+   "id": 163292,
+   "key": "the ossan newbie adventurer trained to death by the most powerful party became invincible",
+   "terms": [
+    "the ossan newbie adventurer trained to death by the most powerful party became invincible",
+    "shinmai ossan bouken sha saikyou party ni shinu hodo kitaerarete muteki ni naru"
+   ],
+   "popularity": 83405,
+   "trending": false
+  },
+  {
+   "id": 20972,
+   "key": "showa genroku rakugo shinju",
+   "terms": [
+    "showa genroku rakugo shinju",
+    "shouwa genroku rakugo shinjuu",
+    "descending stories showa genroku rakugo shinju"
+   ],
+   "popularity": 83263,
+   "trending": false
+  },
+  {
+   "id": 18247,
+   "key": "infinite stratos 2",
+   "terms": [
+    "infinite stratos 2",
+    "is infinite stratos 2",
+    "is2"
+   ],
+   "popularity": 83124,
+   "trending": false
+  },
+  {
+   "id": 126288,
+   "key": "sasaki and miyano",
+   "terms": [
+    "sasaki and miyano",
+    "sasaki to miyano",
+    "sasaki i miyano"
+   ],
+   "popularity": 83002,
+   "trending": false
+  },
+  {
+   "id": 163263,
+   "key": "bungo stray dogs 5",
+   "terms": [
+    "bungo stray dogs 5",
+    "bungou stray dogs",
+    "bsd 5"
+   ],
+   "popularity": 82942,
+   "trending": false
+  },
+  {
+   "id": 170019,
+   "key": "the angel next door spoils me rotten2",
+   "terms": [
+    "the angel next door spoils me rotten2",
+    "otonari no tenshi sama ni itsunomanika dame ningen ni sareteita ken",
+    "the angel next door spoils me rotten"
+   ],
+   "popularity": 82801,
+   "trending": false
+  },
+  {
+   "id": 21626,
+   "key": "handa kun",
+   "terms": [
+    "handa kun"
+   ],
+   "popularity": 82577,
+   "trending": false
+  },
+  {
+   "id": 440,
+   "key": "revolutionary girl utena",
+   "terms": [
+    "revolutionary girl utena",
+    "shoujo kakumei utena",
+    "la rivoluzione di utena"
+   ],
+   "popularity": 82501,
+   "trending": false
+  },
+  {
+   "id": 156023,
+   "key": "an archdemons dilemma",
+   "terms": [
+    "an archdemons dilemma",
+    "an archdemons dilemma how to love your elf bride",
+    "maou no ore ga dorei elf wo yome ni shitanda ga dou medereba ii"
+   ],
+   "popularity": 82389,
+   "trending": false
+  },
+  {
+   "id": 112788,
+   "key": "the stranger by the shore",
+   "terms": [
+    "the stranger by the shore",
+    "umibe no tranger",
+    "seaside stranger"
+   ],
+   "popularity": 82336,
+   "trending": false
+  },
+  {
+   "id": 177474,
+   "key": "tougen anki",
+   "terms": [
+    "tougen anki",
+    "tougen anki legend of the cursed blood",
+    "tougen anki dark demon of paradise"
+   ],
+   "popularity": 82173,
+   "trending": true
+  },
+  {
+   "id": 1281,
+   "key": "ghost stories",
+   "terms": [
+    "ghost stories",
+    "gakkou no kaidan",
+    "ghosts at school"
+   ],
+   "popularity": 82014,
+   "trending": false
+  },
+  {
+   "id": 115740,
+   "key": "by the grace of the gods",
+   "terms": [
+    "by the grace of the gods",
+    "kamitachi ni hirowareta otoko",
+    "the man picked up by the gods"
+   ],
+   "popularity": 81699,
+   "trending": false
+  },
+  {
+   "id": 164702,
+   "key": "as a reincarnated aristocrat ill use my appraisal skill to rise in the world",
+   "terms": [
+    "as a reincarnated aristocrat ill use my appraisal skill to rise in the world",
+    "tensei kizoku kantei skill de nariagaru",
+    "kanteiskill"
+   ],
+   "popularity": 81534,
+   "trending": false
+  },
+  {
+   "id": 235,
+   "key": "detective conan",
+   "terms": [
+    "detective conan",
+    "meitantei conan",
+    "case closed"
+   ],
+   "popularity": 81303,
+   "trending": false
+  },
+  {
+   "id": 123802,
+   "key": "the saints magic power is omnipotent",
+   "terms": [
+    "the saints magic power is omnipotent",
+    "seijo no maryoku wa bannou desu",
+    "the power of the saint is all around"
+   ],
+   "popularity": 81235,
+   "trending": false
+  },
+  {
+   "id": 105074,
+   "key": "magical sempai",
+   "terms": [
+    "magical sempai",
+    "tejina senpai",
+    "magical senpai"
+   ],
+   "popularity": 81179,
+   "trending": false
+  },
+  {
+   "id": 163076,
+   "key": "villainess level 99",
+   "terms": [
+    "villainess level 99",
+    "villainess level 99 i may be the hidden boss but im not the demon lord",
+    "akuyaku reijou level 99"
+   ],
+   "popularity": 81164,
+   "trending": false
+  },
+  {
+   "id": 20880,
+   "key": "durarara x2 the third arc",
+   "terms": [
+    "durarara x2 the third arc",
+    "durarara 2 ketsu",
+    "drrr 2 ketsu"
+   ],
+   "popularity": 81100,
+   "trending": false
+  },
+  {
+   "id": 111428,
+   "key": "sleepy princess in the demon castle",
+   "terms": [
+    "sleepy princess in the demon castle",
+    "maou jou de oyasumi",
+    "maoujou de oyasumi"
+   ],
+   "popularity": 81086,
+   "trending": false
+  },
+  {
+   "id": 21457,
+   "key": "this art club has a problem",
+   "terms": [
+    "this art club has a problem",
+    "kono bijutsu bu ni wa mondai ga aru",
+    "konobi"
+   ],
+   "popularity": 80917,
+   "trending": false
+  },
+  {
+   "id": 20529,
+   "key": "the kawai complex guide to manors and hostel behavior",
+   "terms": [
+    "the kawai complex guide to manors and hostel behavior",
+    "bokura wa minna kawaisou"
+   ],
+   "popularity": 80893,
+   "trending": false
+  },
+  {
+   "id": 597,
+   "key": "the cat returns",
+   "terms": [
+    "the cat returns",
+    "neko no ongaeshi",
+    "haru en el reino de los gatos"
+   ],
+   "popularity": 80851,
+   "trending": false
+  },
+  {
+   "id": 158417,
+   "key": "go go loser ranger",
+   "terms": [
+    "go go loser ranger",
+    "sentai daishikkaku",
+    "ranger reject"
+   ],
+   "popularity": 80733,
+   "trending": false
+  },
+  {
+   "id": 150695,
+   "key": "beast tamer",
+   "terms": [
+    "beast tamer",
+    "yuusha party wo tsuihou sareta beast tamer saikyoushu no nekomimi shoujo to deau",
+    "penjinak binatang yang ditendang dari regu pahlawan bertemu gadis bertelinga hewan dari ras terkuat"
+   ],
+   "popularity": 80714,
+   "trending": false
+  },
+  {
+   "id": 97617,
+   "key": "restaurant to another world",
+   "terms": [
+    "restaurant to another world",
+    "isekai shokudou"
+   ],
+   "popularity": 80639,
+   "trending": false
+  },
+  {
+   "id": 104052,
+   "key": "stars align",
+   "terms": [
+    "stars align",
+    "hoshiai no sora",
+    "star crossing skies"
+   ],
+   "popularity": 80503,
+   "trending": false
+  },
+  {
+   "id": 162780,
+   "key": "gushing over magical girls",
+   "terms": [
+    "gushing over magical girls",
+    "mahou shoujo ni akogarete",
+    "i admire magical girls and"
+   ],
+   "popularity": 80200,
+   "trending": false
+  },
+  {
+   "id": 5042,
+   "key": "kiss x sis",
+   "terms": [
+    "kiss x sis",
+    "kiss sis"
+   ],
+   "popularity": 80177,
+   "trending": false
+  },
+  {
+   "id": 15379,
+   "key": "the troubled life of miss kotoura",
+   "terms": [
+    "the troubled life of miss kotoura",
+    "kotoura san"
+   ],
+   "popularity": 80114,
+   "trending": false
+  },
+  {
+   "id": 20021,
+   "key": "sword art online extra edition",
+   "terms": [
+    "sword art online extra edition",
+    "sword art online",
+    "s a o extra edition"
+   ],
+   "popularity": 80108,
+   "trending": false
+  },
+  {
+   "id": 141902,
+   "key": "one piece film",
+   "terms": [
+    "one piece film",
+    "one piece film red",
+    "one piece film 15"
+   ],
+   "popularity": 80039,
+   "trending": false
+  },
+  {
+   "id": 178462,
+   "key": "im getting married to a girl i hate in my class",
+   "terms": [
+    "im getting married to a girl i hate in my class",
+    "class no daikirai na joshi to kekkon suru koto ni natta",
+    "kurakon"
+   ],
+   "popularity": 79867,
+   "trending": false
+  },
+  {
+   "id": 158028,
+   "key": "my instant death ability is overpowered",
+   "terms": [
+    "my instant death ability is overpowered",
+    "sokushi cheat ga saikyou sugite isekai no yatsura ga marude aite ni naranai n desu ga",
+    "sokushicheat"
+   ],
+   "popularity": 79811,
+   "trending": false
+  },
+  {
+   "id": 9289,
+   "key": "hanasaku iroha blossoms for tomorrow",
+   "terms": [
+    "hanasaku iroha blossoms for tomorrow",
+    "hanasaku iroha",
+    "hana saku iroha"
+   ],
+   "popularity": 79696,
+   "trending": false
+  },
+  {
+   "id": 99693,
+   "key": "persona5 the animation",
+   "terms": [
+    "persona5 the animation",
+    "p5a"
+   ],
+   "popularity": 79651,
+   "trending": false
+  },
+  {
+   "id": 13663,
+   "key": "to love ru darkness",
+   "terms": [
+    "to love ru darkness",
+    "to love ru trouble darkness",
+    "toloveru darkness"
+   ],
+   "popularity": 79613,
+   "trending": false
+  },
+  {
+   "id": 104252,
+   "key": "demon lord retry",
+   "terms": [
+    "demon lord retry",
+    "maou sama retry"
+   ],
+   "popularity": 79573,
+   "trending": false
+  },
+  {
+   "id": 119675,
+   "key": "shaman king",
+   "terms": [
+    "shaman king"
+   ],
+   "popularity": 79527,
+   "trending": false
+  },
+  {
+   "id": 175872,
+   "key": "the brilliant healers new life in the shadows",
+   "terms": [
+    "the brilliant healers new life in the shadows",
+    "isshun de chiryou shiteita no ni yakutatazu to tsuihou sareta tensai chiyushi yami healer toshite tanoshiku ikiru",
+    "yami healer"
+   ],
+   "popularity": 79242,
+   "trending": false
+  },
+  {
+   "id": 21410,
+   "key": "alderamin on the sky",
+   "terms": [
+    "alderamin on the sky",
+    "nejimaki seirei senki",
+    "nejimaki seirei senki tenkyou no alderamin"
+   ],
+   "popularity": 79224,
+   "trending": false
+  },
+  {
+   "id": 20663,
+   "key": "blade dance of the elementalers",
+   "terms": [
+    "blade dance of the elementalers",
+    "seirei tsukai no blade dance",
+    "seirei tsukai no kenbu blade dance"
+   ],
+   "popularity": 79079,
+   "trending": false
+  },
+  {
+   "id": 109287,
+   "key": "adachi and shimamura",
+   "terms": [
+    "adachi and shimamura",
+    "adachi to shimamura",
+    "adashima"
+   ],
+   "popularity": 78720,
+   "trending": false
+  },
+  {
+   "id": 21460,
+   "key": "sound euphonium 2",
+   "terms": [
+    "sound euphonium 2",
+    "hibike euphonium 2"
+   ],
+   "popularity": 78714,
+   "trending": false
+  },
+  {
+   "id": 10080,
+   "key": "the world god only knows ii",
+   "terms": [
+    "the world god only knows ii",
+    "kami nomi zo shiru sekai ii",
+    "kami nomi zo shiru sekai 2"
+   ],
+   "popularity": 78653,
+   "trending": false
+  },
+  {
+   "id": 180136,
+   "key": "the exiled heavy knight knows how to game the system",
+   "terms": [
+    "the exiled heavy knight knows how to game the system",
+    "tsuihou sareta tensei juukishi wa game chishiki de musou suru",
+    "the exiled reincarnated heavy knight is unrivaled in game knowledge"
+   ],
+   "popularity": 75564,
+   "trending": true
+  },
+  {
+   "id": 212888,
+   "key": "overgeared",
+   "terms": [
+    "overgeared",
+    "tempal",
+    "tempal item no chikara"
+   ],
+   "popularity": 58683,
+   "trending": true
+  },
+  {
+   "id": 205909,
+   "key": "firefly wedding",
+   "terms": [
+    "firefly wedding",
+    "hotaru no yomeiri"
+   ],
+   "popularity": 51712,
+   "trending": true
+  },
+  {
+   "id": 210482,
+   "key": "steel ball run jojos bizarre adventure 2nd",
+   "terms": [
+    "steel ball run jojos bizarre adventure 2nd",
+    "jojo no kimyou na bouken",
+    "jojo no kimyou na bouken steel ball run 2nd and"
+   ],
+   "popularity": 49959,
+   "trending": true
+  },
+  {
+   "id": 191656,
+   "key": "even the student council has its holes",
+   "terms": [
+    "even the student council has its holes",
+    "seitokai ni mo ana wa aru",
+    "namaanaru"
+   ],
+   "popularity": 49034,
+   "trending": true
+  },
+  {
+   "id": 207329,
+   "key": "the laid off cheat granting mage enjoys a second lease on life",
+   "terms": [
+    "the laid off cheat granting mage enjoys a second lease on life",
+    "tsuihou sareta cheat fuyo majutsushi wa kimama na second life wo ouka suru",
+    "tsuihou sareta cheat fuyo majutsushi wa kimama na second life wo ouka suru ore wa buki dake ja naku arayuru mono ni kyouka point wo fuyo dekiru shi ore no ishi de itsudemo kouka wo kaijo dekiru kedo nokotta hitotachi daijoubu"
+   ],
+   "popularity": 45098,
+   "trending": true
+  },
+  {
+   "id": 169581,
+   "key": "magical explorer",
+   "terms": [
+    "magical explorer",
+    "magical explorer eroge no yuujin chara ni tensei shitakedo game chishiki tsukatte jiyuu ni ikiru",
+    "magical explorer reborn as a side character in a fantasy dating sim"
+   ],
+   "popularity": 25364,
+   "trending": true
+  },
+  {
+   "id": 202250,
+   "key": "magic repo man",
+   "terms": [
+    "magic repo man",
+    "magic repo man dumped by my party ill cash in with a cute support fairy to become the strongest",
+    "kashita maryoku wa revo barai de kyousei choushuu"
+   ],
+   "popularity": 25158,
+   "trending": true
+  },
+  {
+   "id": 204389,
+   "key": "a wild last boss appeared",
+   "terms": [
+    "a wild last boss appeared",
+    "yasei no last boss ga arawareta"
+   ],
+   "popularity": 24507,
+   "trending": true
+  },
+  {
+   "id": 211778,
+   "key": "the worlds strongest witch",
+   "terms": [
+    "the worlds strongest witch",
+    "sekai saikyou no majo hajimemashita",
+    "sekai saikyou no majo hajimemashita watashi dake kouryaku site wo mireru sekai de jiyuu ni ikimasu"
+   ],
+   "popularity": 20659,
+   "trending": true
+  },
+  {
+   "id": 187402,
+   "key": "a tale of the secret saint",
+   "terms": [
+    "a tale of the secret saint",
+    "tensei shita dai seijo wa seijo de aru koto wo hita kakusu",
+    "daiseijo"
+   ],
+   "popularity": 19467,
+   "trending": true
+  },
+  {
+   "id": 206401,
+   "key": "fx fighter kurumi chan",
+   "terms": [
+    "fx fighter kurumi chan",
+    "fx senshi kurumi chan",
+    "kurumi si pejuang forex"
+   ],
+   "popularity": 18970,
+   "trending": true
+  },
+  {
+   "id": 209872,
+   "key": "ranma1 2 2024",
+   "terms": [
+    "ranma1 2 2024",
+    "ranma 1 2 2024"
+   ],
+   "popularity": 18238,
+   "trending": true
+  },
+  {
+   "id": 180894,
+   "key": "romelia war chronicle",
+   "terms": [
+    "romelia war chronicle",
+    "romelia senki",
+    "romelia senki maou wo taoshita nochi mo jinrui yabasou dakara guntai soshiki shita"
+   ],
+   "popularity": 18057,
+   "trending": true
+  },
+  {
+   "id": 195571,
+   "key": "the vermilion mask",
+   "terms": [
+    "the vermilion mask",
+    "shuiro no kamen"
+   ],
+   "popularity": 17131,
+   "trending": true
+  },
+  {
+   "id": 203275,
+   "key": "devils crest",
+   "terms": [
+    "devils crest",
+    "demons crest",
+    "demokure"
+   ],
+   "popularity": 8014,
+   "trending": true
+  },
+  {
+   "id": 212799,
+   "key": "the seven knights of the marronnier kingdom",
+   "terms": [
+    "the seven knights of the marronnier kingdom",
+    "marronnier oukoku no shichinin no kishi",
+    "os sete cavaleiros do reino marronnier"
+   ],
+   "popularity": 7452,
+   "trending": true
+  },
+  {
+   "id": 203473,
+   "key": "horror collector",
+   "terms": [
+    "horror collector",
+    "kyoufu collector"
+   ],
+   "popularity": 6960,
+   "trending": true
+  },
+  {
+   "id": 209562,
+   "key": "vertex force",
+   "terms": [
+    "vertex force"
+   ],
+   "popularity": 4932,
+   "trending": true
+  },
+  {
+   "id": 219679,
+   "key": "yuusha party ni kawaii ko ga ita no de kokuhaku shitemita",
+   "terms": [
+    "yuusha party ni kawaii ko ga ita no de kokuhaku shitemita"
+   ],
+   "popularity": 0,
+   "trending": true
+  },
+  {
+   "id": null,
+   "key": "genshin impact",
+   "terms": [
+    "genshin impact"
+   ],
+   "popularity": 0,
+   "trending": false,
+   "seed": true
+  },
+  {
+   "id": null,
+   "key": "honkai star rail",
+   "terms": [
+    "honkai star rail"
+   ],
+   "popularity": 0,
+   "trending": false,
+   "seed": true
+  },
+  {
+   "id": null,
+   "key": "honkai impact 3rd",
+   "terms": [
+    "honkai impact 3rd"
+   ],
+   "popularity": 0,
+   "trending": false,
+   "seed": true
+  },
+  {
+   "id": null,
+   "key": "zenless zone zero",
+   "terms": [
+    "zenless zone zero"
+   ],
+   "popularity": 0,
+   "trending": false,
+   "seed": true
+  },
+  {
+   "id": null,
+   "key": "wuthering waves",
+   "terms": [
+    "wuthering waves"
+   ],
+   "popularity": 0,
+   "trending": false,
+   "seed": true
+  },
+  {
+   "id": null,
+   "key": "blue archive",
+   "terms": [
+    "blue archive"
+   ],
+   "popularity": 0,
+   "trending": false,
+   "seed": true
+  },
+  {
+   "id": null,
+   "key": "azur lane",
+   "terms": [
+    "azur lane"
+   ],
+   "popularity": 0,
+   "trending": false,
+   "seed": true
+  },
+  {
+   "id": null,
+   "key": "arknights",
+   "terms": [
+    "arknights"
+   ],
+   "popularity": 0,
+   "trending": false,
+   "seed": true
+  },
+  {
+   "id": null,
+   "key": "girls frontline",
+   "terms": [
+    "girls frontline"
+   ],
+   "popularity": 0,
+   "trending": false,
+   "seed": true
+  },
+  {
+   "id": null,
+   "key": "punishing gray raven",
+   "terms": [
+    "punishing gray raven"
+   ],
+   "popularity": 0,
+   "trending": false,
+   "seed": true
+  },
+  {
+   "id": null,
+   "key": "fate grand order",
+   "terms": [
+    "fate grand order"
+   ],
+   "popularity": 0,
+   "trending": false,
+   "seed": true
+  },
+  {
+   "id": null,
+   "key": "touhou project",
+   "terms": [
+    "touhou project"
+   ],
+   "popularity": 0,
+   "trending": false,
+   "seed": true
+  },
+  {
+   "id": null,
+   "key": "vocaloid",
+   "terms": [
+    "vocaloid"
+   ],
+   "popularity": 0,
+   "trending": false,
+   "seed": true
+  },
+  {
+   "id": null,
+   "key": "hatsune miku",
+   "terms": [
+    "hatsune miku"
+   ],
+   "popularity": 0,
+   "trending": false,
+   "seed": true
+  },
+  {
+   "id": null,
+   "key": "league of legends",
+   "terms": [
+    "league of legends"
+   ],
+   "popularity": 0,
+   "trending": false,
+   "seed": true
+  },
+  {
+   "id": null,
+   "key": "final fantasy",
+   "terms": [
+    "final fantasy"
+   ],
+   "popularity": 0,
+   "trending": false,
+   "seed": true
+  },
+  {
+   "id": null,
+   "key": "nier automata",
+   "terms": [
+    "nier automata"
+   ],
+   "popularity": 0,
+   "trending": false,
+   "seed": true
+  },
+  {
+   "id": null,
+   "key": "persona 5",
+   "terms": [
+    "persona 5"
+   ],
+   "popularity": 0,
+   "trending": false,
+   "seed": true
+  },
+  {
+   "id": null,
+   "key": "fire emblem",
+   "terms": [
+    "fire emblem"
+   ],
+   "popularity": 0,
+   "trending": false,
+   "seed": true
+  },
+  {
+   "id": null,
+   "key": "the legend of zelda",
+   "terms": [
+    "the legend of zelda"
+   ],
+   "popularity": 0,
+   "trending": false,
+   "seed": true
+  },
+  {
+   "id": null,
+   "key": "pokemon",
+   "terms": [
+    "pokemon"
+   ],
+   "popularity": 0,
+   "trending": false,
+   "seed": true
+  },
+  {
+   "id": null,
+   "key": "digimon",
+   "terms": [
+    "digimon"
+   ],
+   "popularity": 0,
+   "trending": false,
+   "seed": true
+  },
+  {
+   "id": null,
+   "key": "ranma 1 2",
+   "terms": [
+    "ranma 1 2"
+   ],
+   "popularity": 0,
+   "trending": false,
+   "seed": true
+  },
+  {
+   "id": null,
+   "key": "urusei yatsura",
+   "terms": [
+    "urusei yatsura"
+   ],
+   "popularity": 0,
+   "trending": false,
+   "seed": true
+  },
+  {
+   "id": null,
+   "key": "studio ghibli",
+   "terms": [
+    "studio ghibli"
+   ],
+   "popularity": 0,
+   "trending": false,
+   "seed": true
+  }
+ ]
+}

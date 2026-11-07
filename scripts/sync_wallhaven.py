@@ -27,8 +27,17 @@ edge, the top result 4096x2304). anime-pictures.net was also tried and
 rejected — its list API returns `tags_count` but no tag *names*, which would
 leave the blocklist and creative_score blind.
 
+Two strategies are combined. A rotating catalogue of anime titles from
+AniList (scripts/anime_series.py) gives each run a handful of named series —
+Bleach, Hunter x Hunter, whatever is airing — searched all-time by views so
+older shows are not invisible. The generic toplist/random axes remain as a
+fallback for art that belongs to no franchise. Pages advance automatically
+once the previous page is fully archived or rejected, so a series with 30
+pages of wallpapers keeps yielding instead of stopping at page one.
+
+    python scripts/anime_series.py --refresh
     python scripts/sync_wallhaven.py --dry-run --max-new 20
-    python scripts/sync_wallhaven.py --max-new 20
+    python scripts/sync_wallhaven.py --max-new 30
 """
 
 from __future__ import annotations
@@ -41,6 +50,7 @@ from datetime import date
 
 import requests
 
+import anime_series
 from pipeline import (
     DATA_DIR, MANIFEST, Item, ingest_image, load_items, removed_permalinks,
     save_crop_index, select_tags,
@@ -64,13 +74,13 @@ PURITY = "100"
 # tags), so the pacing here is not politeness, it is the documented limit.
 REQUEST_PACING = 1.5
 
-# Deterministic and popularity-ranked respectively, plus a random draw so the
-# feed keeps finding things after the top of the list is exhausted — the same
-# three-axis shape sync_danbooru.py uses, for the same reason.
+# Fallback axes for art that belongs to no particular franchise. Wallhaven's
+# toplist only ranges up to a year, so it is shallow and mostly absorbed; the
+# random axis keeps sampling the long tail. Named series come from
+# anime_series.py and are searched all-time by views.
 QUERIES = [
-    {"sorting": "toplist", "topRange": "1y", "pages": 6},
-    {"sorting": "toplist", "topRange": "1M", "pages": 3},
-    {"sorting": "random", "pages": 4},
+    {"sorting": "toplist", "topRange": "1y", "pages": 2},
+    {"sorting": "random", "pages": 2},
 ]
 
 # Wallhaven ids are short alphanumeric strings ("9oo8k1") and Danbooru's are
@@ -124,21 +134,29 @@ def get(url: str, params: dict | None = None) -> dict | None:
         return None
 
 
-def search_page(axis: dict, page: int) -> list[dict] | None:
+def search(axis: dict, page: int) -> dict | None:
     params = {"categories": CATEGORIES, "purity": PURITY,
               "sorting": axis["sorting"], "page": page}
     if axis.get("topRange"):
         params["topRange"] = axis["topRange"]
-    body = get(SEARCH, params)
-    if body is None:
-        return None
-    return body.get("data", []) or []
+    if axis.get("q"):
+        params["q"] = axis["q"]
+    return get(SEARCH, params)
 
 
 def main() -> int:
     ap = argparse.ArgumentParser()
-    ap.add_argument("--max-new", type=int, default=20)
+    ap.add_argument("--max-new", type=int, default=30)
     ap.add_argument("--min-views", type=int, default=MIN_VIEWS)
+    ap.add_argument("--series-per-run", type=int, default=3,
+                    help="popular anime series to search each run (0 disables)")
+    ap.add_argument("--trending-per-run", type=int, default=1,
+                    help="currently airing series to search each run")
+    ap.add_argument("--seed-per-run", type=int, default=1,
+                    help="game/classic franchises to search each run")
+    ap.add_argument("--max-pages", type=int, default=3,
+                    help="how far to walk into a series once earlier pages "
+                         "are archived or rejected")
     ap.add_argument("--dry-run", action="store_true",
                     help="report what would be accepted without downloading, "
                          "encoding, uploading or writing the manifest")
@@ -158,27 +176,75 @@ def main() -> int:
     pages_failed = 0
     today = date.today().isoformat()
 
+    if args.series_per_run or args.trending_per_run or args.seed_per_run:
+        catalogue = anime_series.load_or_refresh(save_new=not args.dry_run)
+        axes = anime_series.series_axes(
+            catalogue, date.today(),
+            args.series_per_run, args.trending_per_run, args.seed_per_run,
+            args.max_pages,
+        ) + [dict(a) for a in QUERIES]
+    else:
+        axes = [dict(a) for a in QUERIES]
+
+    # Ids already in the archive are skipped before the detail call. Crossover
+    # wallpapers are tagged with several series, so without this the same file
+    # is downloaded once per series and then discarded as a duplicate.
+    have = {str(it.get("permalink", "")).rsplit("/", 1)[-1]
+            for it in existing if it.get("source") == "wallhaven"}
+    have.discard("")
+
     def taken() -> int:
         return len(previewed) if args.dry_run else len(accepted)
 
-    for axis in QUERIES:
-        if taken() >= args.max_new:
-            break
-        label = f"{axis['sorting']}{'/' + axis['topRange'] if axis.get('topRange') else ''}"
-        print(f"── wallhaven {label}  ({axis['pages']} pages)")
-        for page in range(1, axis["pages"] + 1):
+    # One unproductive axis must not spend the whole run's request budget on
+    # detail calls. The allowance is generous for a normal series, which
+    # accepts about half of what it looks at, and stops the random fallback
+    # from checking a hundred low-quality plates for one keeper.
+    fair = max(1, args.max_new // max(1, len(axes)))
+
+    def run_axis(axis: dict, limit: int | None) -> None:
+        nonlocal pages_ok, pages_failed, rejected
+        axis_start = taken()
+        check_budget = max(18, fair * 4)
+        checks = 0
+        max_pages = axis.get("max_pages", axis.get("pages", 1))
+        page = 1
+        while page <= max_pages:
             if taken() >= args.max_new:
-                break
-            posts = search_page(axis, page)
-            if posts is None:
+                return
+            if limit is not None and taken() - axis_start >= limit:
+                return
+
+            body = search(axis, page)
+            if body is None:
                 pages_failed += 1
-                continue
+                axis["done"] = True
+                return
             pages_ok += 1
+            posts = body.get("data") or []
+            total = int((body.get("meta") or {}).get("total") or 0)
+
+            # A transliterated title Wallhaven does not tag as such falls
+            # through to the next variant before the series is abandoned.
+            if axis.get("q") and page == 1 and total == 0:
+                fallbacks = axis.get("fallback_terms") or []
+                if fallbacks:
+                    print(f"  (no results for {axis['q']!r}; "
+                          f"trying {fallbacks[0]!r})")
+                    axis["q"] = fallbacks.pop(0)
+                    continue
+                print(f"  (no results for {axis['q']!r})")
+                axis["done"] = True
+                return
+
+            unseen = 0
             for post in posts:
                 if taken() >= args.max_new:
-                    break
+                    return
+                if limit is not None and taken() - axis_start >= limit:
+                    return
                 wid = str(post.get("id") or "")
-                if not wid or wid in rejects:
+                if not wid or wid in have or wid in rejects:
                     continue
                 if post.get("url", f"https://wallhaven.cc/w/{wid}") in removed:
                     continue
@@ -196,6 +262,11 @@ def main() -> int:
                     rejected += 1
                     continue
 
+                if checks >= check_budget:
+                    axis["done"] = True
+                    return
+                checks += 1
+                unseen += 1
                 time.sleep(REQUEST_PACING)
                 detail = (get(DETAIL.format(id=wid)) or {}).get("data") or {}
                 tags = [normalise(t.get("name")) for t in detail.get("tags", [])]
@@ -232,6 +303,7 @@ def main() -> int:
                     previewed.append({"id": wid, "creative": rank, "views": views,
                                       "favs": pseudo_score, "wh": f"{w}x{h}",
                                       "url": post.get("url", "")})
+                    have.add(wid)
                     print(f"  ? {wid}  creative={rank:.2f}  views={views}  {w}×{h}")
                     continue
 
@@ -271,9 +343,45 @@ def main() -> int:
                     continue
 
                 accepted.append(item)
+                have.add(wid)
                 print(f"  + {item.id}  {item.w}×{item.h}  creative={item.creative:.2f}"
                       f"  {item.title[:40]}")
                 time.sleep(REQUEST_PACING)
+
+            if axis.get("adaptive"):
+                # A fully absorbed page means the next visit should start one
+                # page deeper. This is what lets a 36-page series keep yielding
+                # without carrying a cursor file.
+                if unseen == 0 and page < max_pages:
+                    page += 1
+                    continue
+                axis["done"] = True
+                return
+            page += 1
+        axis["done"] = True
+
+    # Spread the budget across the picked series instead of letting the first
+    # one consume it; a leftover pass then gives unused budget back to the
+    # axes that still have material.
+    for axis in axes:
+        label = axis.get("label")
+        if label:
+            print(f"── wallhaven {label}  q={axis['q']!r}  "
+                  f"(up to {axis.get('max_pages')} pages)")
+        else:
+            shown = f"{axis['sorting']}{'/' + axis['topRange'] if axis.get('topRange') else ''}"
+            print(f"── wallhaven {shown}  ({axis.get('pages')} pages)")
+        if taken() >= args.max_new:
+            break
+        run_axis(axis, fair)
+
+    if taken() < args.max_new:
+        for axis in axes:
+            if axis.get("done"):
+                continue
+            run_axis(axis, None)
+            if taken() >= args.max_new:
+                break
 
     if pages_failed and not pages_ok:
         print(f"! every search request to Wallhaven failed ({pages_failed}) — "

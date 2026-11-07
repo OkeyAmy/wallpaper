@@ -78,6 +78,27 @@ Set in `scripts/pipeline.py`:
   `data/removed.json` and never re-fetched, from any source
 - Danbooru queries are `rating:general` only
 
+### Wallhaven discovery
+
+Wallhaven's generic toplist only reaches one year back, so it is shallow and
+quickly absorbed. `scripts/anime_series.py` keeps a catalogue of anime titles
+from AniList (free, keyless; the top 1,000 by popularity, merged by franchise)
+and refreshes it weekly. Each sync rotates through a few of them — plus one
+currently airing show and one game/classic seed such as Genshin Impact or
+Sailor Moon — and searches all-time by views. That is much deeper than the
+toplist: Bleach is 68 results in the last year but 864 all-time, Hunter x
+Hunter 5 vs 263, Inuyasha 0 vs 56.
+
+Pages advance by themselves: once every result on a page is archived or in
+the reject ledger, the next visit walks one page deeper, so a 36-page series
+keeps yielding without a cursor file. Wallhaven ids already in the archive
+are skipped before the detail call, so a crossover wallpaper is not
+downloaded once per series it is tagged with.
+
+The catalogue is committed, so the sync does not depend on AniList at run
+time. If the weekly refresh fails, the previous list is used; if there has
+never been one, the generic axes still run.
+
 ## Adding your own wallpapers
 
 Drop image files into `incoming/` and run `scripts/ingest_local.py`. To credit
