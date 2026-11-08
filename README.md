@@ -64,8 +64,8 @@ Set in `scripts/pipeline.py`:
 
 - Minimum 1280×720; anything smaller is rejected
 - Long edge capped at 3840px
-- WebP quality 92 (full size), plus a 640px thumbnail; the lightbox can
-  download JPG (universal), PNG (lossless), or the original WebP
+- WebP quality 92 (full size), plus a 640px thumbnail; the download button
+  writes a lossless PNG of that master
 - Deduplicated by SHA-256 **and** by difference hash, so the same image
   reposted at a different size or JPEG quality is caught too
 - Rejected as a duplicate before anything is uploaded, not after — a

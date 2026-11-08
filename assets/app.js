@@ -655,21 +655,13 @@ async function copyText(text, btn) {
   }
 }
 
-/* Wallpapers are archived as WebP q92. Some phones and wallpaper pickers do
-   not accept WebP, so the download offers the formats that do:
-
-     JPG   universal, q98 (a second lossy pass, but visually near-transparent)
-     PNG   lossless relative to the stored master; files are much larger
-     WebP  the stored master itself, byte-for-byte
-
-   The conversion runs in the browser because the Worker has no image codec.
-   /dl/ is same-origin, so the canvas is not tainted and can be exported. */
-const DOWNLOAD_JPEG_QUALITY = 0.98;
-
-async function convertAndDownload(it, format, btn) {
+/* The archive stores WebP q92. The download decodes that master and writes a
+   PNG: PNG adds no loss of its own, and every wallpaper picker and phone
+   accepts it. The canvas is same-origin (/dl/) so it can be exported, and the
+   conversion runs in the browser because the Worker has no image codec. */
+async function downloadPng(it, btn) {
   const basename = it.file.split('/').pop();
   const stem = basename.replace(/\.\w+$/, '');
-  const png = format === 'png';
   const was = btn.textContent;
   btn.textContent = '↓ PREPARING…';
   btn.setAttribute('aria-disabled', 'true');
@@ -682,29 +674,27 @@ async function convertAndDownload(it, format, btn) {
     const canvas = document.createElement('canvas');
     canvas.width = bitmap.width;
     canvas.height = bitmap.height;
-    // The pipeline stores RGB; an opaque context avoids an alpha channel
-    // (smaller PNG, and JPEG has no transparency to lose).
+    // The pipeline stores RGB; an opaque context avoids an alpha channel and
+    // keeps the PNG smaller.
     canvas.getContext('2d', { alpha: false }).drawImage(bitmap, 0, 0);
     bitmap.close();
 
-    const outBlob = await new Promise(resolve =>
-      canvas.toBlob(resolve, png ? 'image/png' : 'image/jpeg',
-                    png ? undefined : DOWNLOAD_JPEG_QUALITY));
+    const outBlob = await new Promise(resolve => canvas.toBlob(resolve, 'image/png'));
     if (!outBlob) throw new Error('canvas export produced nothing');
 
     const url = URL.createObjectURL(outBlob);
     const a = document.createElement('a');
     a.href = url;
-    a.download = `${stem}.${png ? 'png' : 'jpg'}`;
+    a.download = `${stem}.png`;
     document.body.appendChild(a);
     a.click();
     a.remove();
     setTimeout(() => URL.revokeObjectURL(url), 4000);
   } catch (err) {
-    // decode or export failed (memory ceiling on a huge PNG) — the original
+    // decode or export failed (memory ceiling on a huge image) — the stored
     // WebP is still a working wallpaper, and a button that does nothing is
     // worse than one that hands over the master format.
-    console.error(`[wallpaper] ${format} export failed, falling back to WebP:`, err);
+    console.error('[wallpaper] PNG export failed, falling back to WebP:', err);
     location.href = `/dl/${basename}`;
   } finally {
     btn.textContent = was;
@@ -764,11 +754,8 @@ function wire() {
   $('#lbDl').addEventListener('click', e => {
     const it = state.view[state.lbIndex];
     if (!it) return;
-    // The anchor already points at /dl/<file> and downloads the WebP master;
-    // only JPG/PNG need the canvas conversion.
-    if ($('#lbFmt').value === 'webp') return;
     e.preventDefault();
-    convertAndDownload(it, $('#lbFmt').value, e.currentTarget);
+    downloadPng(it, e.currentTarget);
   });
   $('#lbCopy').addEventListener('click', e => {
     const it = state.view[state.lbIndex];

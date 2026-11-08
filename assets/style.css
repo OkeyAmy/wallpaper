@@ -751,22 +751,6 @@ kbd {
 
 .lb__acts { display: grid; gap: 6px; }
 .lb__acts .btn { justify-content: center; }
-.lb__fmt {
-  display: flex; align-items: center; justify-content: space-between;
-  gap: .6rem; padding: .55rem .65rem;
-  border: 1px solid var(--line);
-  color: var(--dim);
-  font-size: 9.5px; letter-spacing: .13em; text-transform: uppercase;
-}
-.lb__fmt:focus-within { border-color: var(--line-hi); }
-.lb__fmt select {
-  flex: 1; min-width: 0;
-  background: transparent; border: 0; outline: none;
-  color: var(--fg);
-  font: 500 10.5px var(--mono);
-  letter-spacing: .02em; text-transform: none; cursor: pointer;
-}
-.lb__fmt option { background: var(--bg-2); color: var(--fg); }
 
 .lb__nav { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; margin-top: auto; }
 .lb__nav button {
