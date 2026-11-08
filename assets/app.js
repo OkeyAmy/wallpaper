@@ -655,66 +655,12 @@ async function copyText(text, btn) {
   }
 }
 
-/* Wallpapers are stored as WebP, which not every wallpaper picker and phone
-   lock screen accepts, so the download is re-encoded to JPEG in the browser —
-   there's no server-side image codec here, and adding one would mean a
-   Worker-side WASM decoder.
-
-   JPEG rather than PNG: the source is already lossy, so PNG cannot recover
-   anything, it only stores the same q82 artifacts without compressing them —
-   measured at 3.99 MB against JPEG's 550 KB for one 3360×1440 wallpaper. The
-   pipeline converts every image to RGB before encoding, so there is no
-   transparency for JPEG to drop.
-
-   The fetch goes through /dl/ rather than straight to the CDN so it stays
-   same-origin: R2 sends no CORS headers, and a cross-origin image taints the
-   canvas, which makes toBlob throw instead of returning a file. */
-// High, because this is a second lossy pass over an already-lossy source and
-// the artifacts compound. 0.95 costs ~180 KB over 0.92 on a 3360x1440 image;
-// R2 charges no egress, so the bytes are free and the pixels are not.
-const DOWNLOAD_QUALITY = 0.95;
-
-async function convertAndDownload(it, btn) {
-  const basename = it.file.split('/').pop();
-  const stem = basename.replace(/\.\w+$/, '');
-  const was = btn.textContent;
-  btn.textContent = '↓ PREPARING…';
-  btn.setAttribute('aria-disabled', 'true');
-
-  try {
-    const res = await fetch(`/dl/${basename}`);
-    if (!res.ok) throw new Error(`HTTP ${res.status}`);
-    const bitmap = await createImageBitmap(await res.blob());
-
-    const canvas = document.createElement('canvas');
-    canvas.width = bitmap.width;
-    canvas.height = bitmap.height;
-    canvas.getContext('2d').drawImage(bitmap, 0, 0);
-    bitmap.close();
-
-    const outBlob = await new Promise(resolve =>
-      canvas.toBlob(resolve, 'image/jpeg', DOWNLOAD_QUALITY));
-    if (!outBlob) throw new Error('canvas export produced nothing');
-
-    const url = URL.createObjectURL(outBlob);
-    const a = document.createElement('a');
-    a.href = url;
-    a.download = `${stem}.jpg`;
-    document.body.appendChild(a);
-    a.click();
-    a.remove();
-    setTimeout(() => URL.revokeObjectURL(url), 4000);
-  } catch (err) {
-    // decode or export failed (memory ceiling on a huge image, blocked
-    // canvas) — the original WebP is still a working wallpaper, and a button
-    // that does nothing is worse than one that hands over the source format
-    console.error('[wallpaper] JPEG conversion failed, falling back to WebP:', err);
-    location.href = `/dl/${basename}`;
-  } finally {
-    btn.textContent = was;
-    btn.removeAttribute('aria-disabled');
-  }
-}
+/* The download is the archived WebP itself, byte-for-byte. It used to be
+   re-encoded to JPEG in a canvas for lock-screen compatibility, but that is a
+   second lossy pass over an already-lossy master — measured at 41–45 dB
+   against the stored file, which is exactly the "downloaded copy looks worse"
+   artifact. Browsers, Android and iOS all display WebP; `/dl/` already sets
+   Content-Disposition, so the anchor is a real download link. */
 
 /* ── wiring ──────────────────────────────────────────────────── */
 function wire() {
@@ -765,14 +711,6 @@ function wire() {
   lb.addEventListener('click', e => { if (e.target.closest('[data-close]')) closeLb(); });
   $('#lbPrev').addEventListener('click', () => stepLb(-1));
   $('#lbNext').addEventListener('click', () => stepLb(1));
-  $('#lbDl').addEventListener('click', e => {
-    const it = state.view[state.lbIndex];
-    if (!it) return;
-    // the anchor's href still points at /dl/, so this stays a real link for
-    // middle-click and "save link as" — and is what runs if the script breaks
-    e.preventDefault();
-    convertAndDownload(it, e.currentTarget);
-  });
   $('#lbCopy').addEventListener('click', e => {
     const it = state.view[state.lbIndex];
     if (it) copyText((it.palette || []).join('\n'), e.currentTarget);

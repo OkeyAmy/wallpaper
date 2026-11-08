@@ -35,7 +35,7 @@ MAX_EDGE = 3840                  # cap the long edge; 4K is the useful ceiling
 # original (4098 KB JPEG): q82 stored it in 228 KB, q92 in 545 KB, q95 in
 # 848 KB. q82 was costing visible detail in gradients and fine linework for a
 # saving that buys nothing here — R2 gives 10 GB free and charges no egress,
-# and the whole archive is 60 MB. q92 is the knee of that curve; q95 is 3.7x
+# and the archive is only a few GB. q92 is the knee of that curve; q95 is 3.7x
 # the bytes for a difference you have to pixel-peep to find.
 FULL_QUALITY = 92
 THUMB_WIDTH = 640
