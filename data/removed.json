@@ -215,6 +215,24 @@
    "dhash": "2365753333332d1f",
    "why": "culled",
    "removed": "2026-11-01"
+  },
+  {
+   "id": "b829f8b9027b",
+   "source": "wallhaven",
+   "permalink": "https://wallhaven.cc/w/mdv2lm",
+   "sha256": "b829f8b9027b5cb7113167ed233b0612d38e3980f33471ce1bed8affe96659f1",
+   "dhash": "3632727634786864",
+   "why": "culled",
+   "removed": "2026-11-08"
+  },
+  {
+   "id": "810597b38ba5",
+   "source": "wallhaven",
+   "permalink": "https://wallhaven.cc/w/nmrq7m",
+   "sha256": "810597b38ba58958172732ceb0d86138de35ea43dfdee0c0a24678626b65a721",
+   "dhash": "46c7c7c6c6d656f8",
+   "why": "culled",
+   "removed": "2026-11-08"
   }
  ]
 }
