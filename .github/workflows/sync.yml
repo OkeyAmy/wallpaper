@@ -81,7 +81,8 @@ jobs:
       - name: Pull new wallpapers (Danbooru)
         id: danbooru
         # A dead source must not block the healthy one. The final step turns
-        # any failure here into a red run, after Wallhaven and the commit.
+        # an outage into a warning after Wallhaven and the commit, and a
+        # non-outage failure into a red run.
         continue-on-error: true
         env:
           MAX_NEW: ${{ inputs.max_new || '40' }}
@@ -89,7 +90,16 @@ jobs:
           case "$MAX_NEW" in
             ''|*[!0-9]*) echo "max_new must be an integer" >&2; exit 1 ;;
           esac
+          # Exit 3 means every request to the source failed — an upstream
+          # outage, not a bug here. Record it so the final step can warn (and
+          # keep the run green) instead of failing the whole pipeline; any
+          # other non-zero exit remains a hard failure.
+          set +e
           python scripts/sync_danbooru.py --max-new "$MAX_NEW" --fail-on-outage
+          code=$?
+          set -e
+          [ "$code" = "3" ] && touch "$RUNNER_TEMP/danbooru.outage"
+          exit "$code"
 
       # A wallpaper community rather than an art archive, so it carries the
       # designed edits Danbooru never has. No key: SFW search is open, and the
@@ -99,7 +109,7 @@ jobs:
         id: wallhaven
         # Same contract as the Danbooru step: a dead source leaves the
         # manifest untouched, the healthy source still lands, and the final
-        # step turns the failure into a red run after the commit.
+        # step turns an outage into a warning after the commit.
         continue-on-error: true
         env:
           MAX_NEW: ${{ inputs.max_new_wallhaven || '30' }}
@@ -107,7 +117,12 @@ jobs:
           case "$MAX_NEW" in
             ''|*[!0-9]*) echo "max_new_wallhaven must be an integer" >&2; exit 1 ;;
           esac
+          set +e
           python scripts/sync_wallhaven.py --max-new "$MAX_NEW" --fail-on-outage
+          code=$?
+          set -e
+          [ "$code" = "3" ] && touch "$RUNNER_TEMP/wallhaven.outage"
+          exit "$code"
 
       - name: Prune to the free-tier ceiling
         env:
@@ -195,15 +210,48 @@ jobs:
 
       # A failed source must be visible without blocking the healthy source.
       # The sync steps above are continue-on-error, so by the time we get here
-      # anything they added is already committed; this only colours the run red.
+      # anything they added is already committed.
+      #
+      # Red is reserved for a real problem: a source that failed for a reason
+      # other than an outage (exit != 3), or every source being unreachable.
+      # One upstream outage while another source still commits is a warning —
+      # the archive is intact, and a red cross every day of a multi-day
+      # Danbooru outage trains people to ignore the signal.
       - name: Report failed sources
         if: always()
         run: |
           failed=""
           [ "${{ steps.danbooru.outcome }}" = "failure" ] && failed="$failed danbooru"
           [ "${{ steps.wallhaven.outcome }}" = "failure" ] && failed="$failed wallhaven"
-          if [ -n "$failed" ]; then
-            echo "::error::source failed:$failed — its manifest was left untouched"
+          if [ -z "$failed" ]; then
+            echo "all sources reachable"
+            exit 0
+          fi
+
+          outage=""
+          for source in $failed; do
+            if [ -f "$RUNNER_TEMP/$source.outage" ]; then
+              outage="$outage $source"
+            else
+              echo "::error::$source failed for a reason other than an outage"
+              exit 1
+            fi
+          done
+
+          healthy=0
+          [ "${{ steps.danbooru.outcome }}" = "success" ] && healthy=$((healthy + 1))
+          [ "${{ steps.wallhaven.outcome }}" = "success" ] && healthy=$((healthy + 1))
+
+          if [ "$healthy" -eq 0 ]; then
+            echo "::error::all sources unreachable:$outage — nothing was added"
             exit 1
           fi
-          echo "all sources reachable"
+
+          {
+            echo "### Source outage:$outage"
+            echo ""
+            echo "The failed source's manifest was left untouched. The healthy"
+            echo "source still committed and the publish gate passed."
+          } >> "$GITHUB_STEP_SUMMARY"
+          echo "::warning::source outage:$outage — its manifest was left untouched; the archive was still updated"
+          exit 0

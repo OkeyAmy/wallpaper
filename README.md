@@ -191,10 +191,10 @@ treat it as a floor, not a suggestion:
   already stores every published set.
 
 A total source outage is also made visible: each sync exits non-zero when
-every request to its source fails, but the steps are `continue-on-error`, so
-the healthy source still lands and the run only turns red at the end. The
-outage never blocks a good commit, and it never silently looks like a quiet
-day either.
+every request to its source fails. The steps are `continue-on-error`, so the
+healthy source still lands and commits. If at least one source committed, the
+run ends with a warning naming the outage; if every source is unreachable, or
+a source failed for a reason other than an outage, the run is red.
 
 ## Usage analytics
 
