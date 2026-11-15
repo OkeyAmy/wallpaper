@@ -233,6 +233,33 @@
    "dhash": "46c7c7c6c6d656f8",
    "why": "culled",
    "removed": "2026-11-08"
+  },
+  {
+   "id": "6405bf0b5994",
+   "source": "danbooru",
+   "permalink": "https://danbooru.donmai.us/posts/8581773",
+   "sha256": "6405bf0b59942962affee9f4340f7946650a3f747a1525b3cf5b3f2e0fd534d4",
+   "dhash": "e2e474d4d85b7b0f",
+   "why": "culled",
+   "removed": "2026-11-15"
+  },
+  {
+   "id": "7fc5ac3cebb0",
+   "source": "danbooru",
+   "permalink": "https://danbooru.donmai.us/posts/5388862",
+   "sha256": "7fc5ac3cebb0077ac1873d1f971381e64d5ea402ed9b44c692722b300d083a0e",
+   "dhash": "ce1637372f868627",
+   "why": "culled",
+   "removed": "2026-11-15"
+  },
+  {
+   "id": "e143864160b3",
+   "source": "danbooru",
+   "permalink": "https://danbooru.donmai.us/posts/9971439",
+   "sha256": "e143864160b38e056de835caccf90844f0cffa37b3f0c4b2ed75638f4be4f812",
+   "dhash": "3230c69686269293",
+   "why": "culled",
+   "removed": "2026-11-15"
   }
  ]
 }
