@@ -808,7 +808,7 @@ def build_headers() -> str:
     ``img-src 'self'`` would silently block every wallpaper on the site.
     """
     base = asset_base()
-    img_src = f"'self' data: {base}" if base else "'self' data:"
+    img_src = f"'self' blob: data: {base}" if base else "'self' blob: data:"
 
     csp = (
         "default-src 'self'; "

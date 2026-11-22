@@ -34,7 +34,7 @@
      preconnect hides DNS+TLS+TCP behind the page's own load -->
 <link rel="preconnect" href="https://cdn.okeyamy.xyz" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800;900&family=JetBrains+Mono:wght@300;400;500;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/assets/style.css?v=5d597eb8">
+<link rel="stylesheet" href="/assets/style.css?v=a6b58157">
 <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
 </head>
 <body>
@@ -293,6 +293,21 @@
   </aside>
 </div>
 
-<script src="/assets/app.js?v=025f9705" type="module"></script>
+<!-- ══ iOS SAVE SHEET ═════════════════════════════════════════════ -->
+<div class="save" id="save" hidden role="dialog" aria-modal="true" aria-label="Save wallpaper">
+  <div class="save__top">
+    <span class="save__hint" id="saveHint" aria-live="polite">PREPARING…</span>
+    <button class="save__x" id="saveClose" aria-label="Close">✕</button>
+  </div>
+  <div class="save__stage">
+    <img class="save__img" id="saveImg" alt="" decoding="async">
+  </div>
+  <div class="save__acts">
+    <button class="btn btn--red" id="saveShare" hidden>SAVE</button>
+    <a class="btn" id="saveFile" hidden download>FILE</a>
+  </div>
+</div>
+
+<script src="/assets/app.js?v=6703509e" type="module"></script>
 </body>
 </html>

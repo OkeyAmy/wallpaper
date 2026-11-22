@@ -767,6 +767,54 @@ kbd {
 
 body.lb-open { overflow: hidden; }
 
+/* ═══ iOS SAVE SHEET ═════════════════════════════════════════════
+   Shown only by the iOS branch in app.js. Full-screen so the PNG is the
+   only thing on screen and a long-press lands on the image itself. */
+.save {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  /* dvh keeps the actions clear of Safari's collapsing bottom toolbar */
+  height: 100vh;
+  height: 100dvh;
+  z-index: 1200;
+  display: grid;
+  grid-template-rows: auto minmax(0, 1fr) auto;
+  background: #060606;
+  padding-top: env(safe-area-inset-top);
+  padding-left: env(safe-area-inset-left);
+  padding-right: env(safe-area-inset-right);
+}
+.save__top {
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 1rem;
+  padding: .7rem 1rem;
+  font-size: 10px; letter-spacing: .14em; color: var(--dim);
+}
+.save__x {
+  width: 2.2rem; height: 2.2rem;
+  display: grid; place-items: center;
+  font-size: 14px; color: var(--fg);
+  border: 1px solid var(--line);
+}
+.save__x:active { transform: scale(.96); }
+.save__stage {
+  min-width: 0; min-height: 0;
+  display: grid; place-items: center;
+  padding: 0 .75rem;
+}
+.save__img {
+  max-width: 100%; max-height: 100%;
+  object-fit: contain;
+  /* keep the iOS image menu (Save to Photos) available on long-press */
+  -webkit-touch-callout: default;
+}
+.save__acts {
+  display: grid; gap: 6px;
+  padding: .8rem 1rem calc(.8rem + env(safe-area-inset-bottom));
+}
+.save__acts .btn { justify-content: center; }
+body.save-open { overflow: hidden; }
+
 /* ═══ RESPONSIVE ═══════════════════════════════════════════════ */
 @media (max-width: 900px) {
   .head { grid-template-columns: 1fr; align-items: start; }

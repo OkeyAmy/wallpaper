@@ -15,6 +15,12 @@ const PAGE_SIZE = 100;                 // wallpapers shown per page
 const EAGER_CELLS = 4;
 const REDUCED = matchMedia('(prefers-reduced-motion: reduce)');
 
+// All iOS browsers are WebKit: a blob click after an await loses the gesture,
+// and a download lands in Files, where the wallpaper picker cannot see it.
+// iOS gets its own save sheet; every other platform keeps the existing flow.
+const IS_IOS = /iP(hone|ad|od)/.test(navigator.userAgent) ||
+  (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+
 const HUES = [
   { id: 'red',    label: 'RED',    range: [345, 15],  swatch: '#C0392B' },
   { id: 'orange', label: 'ORANGE', range: [15, 45],   swatch: '#D2792B' },
@@ -41,6 +47,12 @@ const state = {
   page: 0,
   lbToken: 0,
   warmed: new Set(),
+  dlBusy: false,
+  saveBusy: false,
+  saveToken: 0,
+  saveBlob: null,
+  saveUrl: '',
+  saveName: '',
 };
 
 /* ── colour utils ────────────────────────────────────────────── */
@@ -518,6 +530,7 @@ function sizeLbFrame(it) {
 }
 
 function paintLb(it, i) {
+  closeSaveSheet();   // stepping to another item must not leave a stale image
   const img = $('#lbImg');
   const thumb = $('#lbThumb');
   const frame = $('#lbFrame');
@@ -655,48 +668,162 @@ async function copyText(text, btn) {
   }
 }
 
-/* The archive stores WebP q92. The download decodes that master and writes a
+/* The archive stores WebP q92. A download decodes that master and writes a
    PNG: PNG adds no loss of its own, and every wallpaper picker and phone
    accepts it. The canvas is same-origin (/dl/) so it can be exported, and the
-   conversion runs in the browser because the Worker has no image codec. */
+   conversion runs in the browser because the Worker has no image codec.
+
+   iOS needs a different exit: a synthetic <a download> fired after an await
+   has lost the user gesture, and even a successful save goes to Files, which
+   the wallpaper picker cannot read. iOS therefore never takes the blob path —
+   it shows the full-resolution PNG in a save sheet that can go to Photos. */
+const PNG_MAX_PX = 15_500_000;   // headroom under Safari's 16,777,216 ceiling
+
+function decodeViaImg(blob) {
+  return new Promise((resolve, reject) => {
+    const url = URL.createObjectURL(blob);
+    const img = new Image();
+    img.onload = () => { URL.revokeObjectURL(url); resolve(img); };
+    img.onerror = () => { URL.revokeObjectURL(url); reject(new Error('decode failed')); };
+    img.src = url;
+  });
+}
+
+async function pngBlobFor(it) {
+  const basename = String(it.file || '').split('/').pop();
+  if (!basename) throw new Error('no file');
+  const res = await fetch(`/dl/${basename}`);
+  if (!res.ok) throw new Error(`HTTP ${res.status}`);
+  const src = await res.blob();
+
+  let bitmap;
+  try { bitmap = await createImageBitmap(src); }
+  catch { bitmap = await decodeViaImg(src); }   // older WebKit
+
+  try {
+    const k = Math.min(1, Math.sqrt(PNG_MAX_PX / (bitmap.width * bitmap.height)));
+    let w = Math.max(1, Math.floor(bitmap.width * k));
+    let h = Math.max(1, Math.floor(bitmap.height * k));
+
+    // Safari can return null instead of throwing when a 4K encode runs out
+    // of memory. Step down once or twice rather than hand back nothing.
+    for (let i = 0; i < 3; i++) {
+      const canvas = document.createElement('canvas');
+      canvas.width = w;
+      canvas.height = h;
+      // The pipeline stores RGB; an opaque context avoids an alpha channel
+      // and keeps the PNG smaller.
+      canvas.getContext('2d', { alpha: false }).drawImage(bitmap, 0, 0, w, h);
+      const out = await new Promise(r => canvas.toBlob(r, 'image/png'));
+      if (out) return { blob: out, name: `${basename.replace(/\.\w+$/, '')}.png` };
+      canvas.width = canvas.height = 0;   // release the backing store
+      w = Math.max(1, Math.floor(w * 0.75));
+      h = Math.max(1, Math.floor(h * 0.75));
+    }
+    throw new Error('canvas export produced nothing');
+  } finally {
+    bitmap.close?.();
+  }
+}
+
 async function downloadPng(it, btn) {
-  const basename = it.file.split('/').pop();
-  const stem = basename.replace(/\.\w+$/, '');
+  if (state.dlBusy) return;
+  state.dlBusy = true;
+  const token = state.lbToken;
   const was = btn.textContent;
   btn.textContent = '↓ PREPARING…';
   btn.setAttribute('aria-disabled', 'true');
 
   try {
-    const res = await fetch(`/dl/${basename}`);
-    if (!res.ok) throw new Error(`HTTP ${res.status}`);
-    const bitmap = await createImageBitmap(await res.blob());
-
-    const canvas = document.createElement('canvas');
-    canvas.width = bitmap.width;
-    canvas.height = bitmap.height;
-    // The pipeline stores RGB; an opaque context avoids an alpha channel and
-    // keeps the PNG smaller.
-    canvas.getContext('2d', { alpha: false }).drawImage(bitmap, 0, 0);
-    bitmap.close();
-
-    const outBlob = await new Promise(resolve => canvas.toBlob(resolve, 'image/png'));
-    if (!outBlob) throw new Error('canvas export produced nothing');
-
-    const url = URL.createObjectURL(outBlob);
+    const { blob, name } = await pngBlobFor(it);
+    if (token !== state.lbToken) return;   // the reader moved on
+    const url = URL.createObjectURL(blob);
     const a = document.createElement('a');
     a.href = url;
-    a.download = `${stem}.png`;
+    a.download = name;
     document.body.appendChild(a);
     a.click();
     a.remove();
-    setTimeout(() => URL.revokeObjectURL(url), 4000);
+    // a 20 MB PNG can take a moment to leave; don't pull the URL out early
+    setTimeout(() => URL.revokeObjectURL(url), 60_000);
   } catch (err) {
     // decode or export failed (memory ceiling on a huge image) — the stored
     // WebP is still a working wallpaper, and a button that does nothing is
     // worse than one that hands over the master format.
     console.error('[wallpaper] PNG export failed, falling back to WebP:', err);
-    location.href = `/dl/${basename}`;
+    if (token === state.lbToken) {
+      location.href = `/dl/${String(it.file || '').split('/').pop()}`;
+    }
   } finally {
+    state.dlBusy = false;
+    btn.textContent = was;
+    btn.removeAttribute('aria-disabled');
+  }
+}
+
+/* ── iOS save sheet ──────────────────────────────────────────────
+   No web API writes to Photos. The reliable route is a real image the
+   reader can long-press → Save to Photos, with the share sheet as a
+   one-tap alternative. The PNG is prepared first, so the long-press always
+   targets the full-resolution file rather than the 2560px preview. */
+function openSaveSheet() {
+  const sheet = $('#save');
+  if (!sheet) return;
+  sheet.hidden = false;
+  document.body.classList.add('save-open');
+  $('#saveClose')?.focus({ preventScroll: true });
+}
+
+function closeSaveSheet() {
+  const sheet = $('#save');
+  if (!sheet || sheet.hidden) return;
+  sheet.hidden = true;
+  document.body.classList.remove('save-open');
+  $('#saveImg')?.removeAttribute('src');
+  if (state.saveUrl) { URL.revokeObjectURL(state.saveUrl); state.saveUrl = ''; }
+  state.saveBlob = null;
+  state.saveName = '';
+  state.saveToken++;                 // aborts a conversion still in flight
+}
+
+async function saveToPhotos(it, btn) {
+  if (state.saveBusy) return;
+  state.saveBusy = true;
+  const token = ++state.saveToken;
+  const was = btn.textContent;
+  btn.textContent = '↓ PREPARING…';
+  btn.setAttribute('aria-disabled', 'true');
+
+  $('#saveImg').removeAttribute('src');
+  $('#saveShare').hidden = true;
+  $('#saveFile').hidden = true;
+  $('#saveHint').textContent = 'PREPARING…';
+  openSaveSheet();
+
+  try {
+    const out = await pngBlobFor(it);
+    if (token !== state.saveToken) return;
+    state.saveBlob = out.blob;
+    state.saveName = out.name;
+    state.saveUrl = URL.createObjectURL(out.blob);
+    const img = $('#saveImg');
+    img.src = state.saveUrl;
+    img.alt = describe(it);
+    $('#saveHint').textContent = 'HOLD TO SAVE';
+
+    // The share sheet is a fresh tap, so activation is valid even though the
+    // conversion above was async. iOS requires files-only here.
+    const file = new File([out.blob], out.name, { type: 'image/png' });
+    if (navigator.canShare?.({ files: [file] })) $('#saveShare').hidden = false;
+  } catch (err) {
+    console.error('[wallpaper] save export failed:', err);
+    if (token !== state.saveToken) return;
+    $('#saveHint').textContent = 'USE FILE';
+    const file = $('#saveFile');
+    file.href = `/dl/${String(it.file || '').split('/').pop()}`;
+    file.hidden = false;
+  } finally {
+    state.saveBusy = false;
     btn.textContent = was;
     btn.removeAttribute('aria-disabled');
   }
@@ -754,8 +881,12 @@ function wire() {
   $('#lbDl').addEventListener('click', e => {
     const it = state.view[state.lbIndex];
     if (!it) return;
+    if (e.currentTarget.getAttribute('aria-disabled') === 'true') return;
     e.preventDefault();
-    downloadPng(it, e.currentTarget);
+    // iOS keeps the gesture for its own sheet; everywhere else the existing
+    // canvas → PNG download is unchanged.
+    if (IS_IOS) saveToPhotos(it, e.currentTarget);
+    else downloadPng(it, e.currentTarget);
   });
   $('#lbCopy').addEventListener('click', e => {
     const it = state.view[state.lbIndex];
@@ -765,6 +896,24 @@ function wire() {
     const b = e.target.closest('[data-hex]');
     if (b) copyText(b.dataset.hex, $('#lbCopy'));
   });
+
+  // iOS save sheet. The share button runs in its own click, so the gesture
+  // is intact when the sheet opens.
+  $('#saveClose').addEventListener('click', closeSaveSheet);
+  $('#saveShare').addEventListener('click', () => {
+    if (!state.saveBlob) return;
+    const file = new File([state.saveBlob], state.saveName || 'wallpaper.png',
+      { type: 'image/png' });
+    if (!navigator.canShare?.({ files: [file] })) return;
+    navigator.share({ files: [file] }).then(closeSaveSheet, () => {});
+  });
+
+  // Touch has no ESC key and no use for the shortcut suffix.
+  if (IS_IOS) {
+    $('#lbDl').textContent = '↓ SAVE PNG';
+    const x = $('.lb__x');
+    if (x) x.textContent = '✕';
+  }
 
   $('#pagePrev').addEventListener('click', () => goToPage(state.page - 1));
   $('#pageNext').addEventListener('click', () => goToPage(state.page + 1));
@@ -782,6 +931,12 @@ function wire() {
 
 function onKey(e) {
   const typing = /^(INPUT|TEXTAREA)$/.test(document.activeElement?.tagName);
+
+  const save = $('#save');
+  if (save && !save.hidden) {
+    if (e.key === 'Escape') { e.preventDefault(); closeSaveSheet(); }
+    return;
+  }
 
   if (e.key === 'Escape') {
     if (!lb.hidden) closeLb();
