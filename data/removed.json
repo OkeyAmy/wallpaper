@@ -260,6 +260,24 @@
    "dhash": "3230c69686269293",
    "why": "culled",
    "removed": "2026-11-15"
+  },
+  {
+   "id": "f03808c89049",
+   "source": "danbooru",
+   "permalink": "https://danbooru.donmai.us/posts/12230208",
+   "sha256": "f03808c8904910ba09c88d61a3a1423edabab774ae03442172f1f126d86350b8",
+   "dhash": "39696916522b2c44",
+   "why": "culled",
+   "removed": "2026-11-22"
+  },
+  {
+   "id": "babb1a6762a7",
+   "source": "danbooru",
+   "permalink": "https://danbooru.donmai.us/posts/12205257",
+   "sha256": "babb1a6762a72dc3de721a68f5447099a4e1a2246265d345bc21979141e233c9",
+   "dhash": "e88696053d574f23",
+   "why": "culled",
+   "removed": "2026-11-22"
   }
  ]
 }
