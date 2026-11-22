@@ -367,7 +367,7 @@ def _flat_band(lines: list[list[int]]) -> int:
 
 
 def _rows(grey: Image.Image) -> list[list[int]]:
-    px = list(grey.getdata())
+    px = list(grey.get_flattened_data())
     w = grey.width
     return [px[y * w:(y + 1) * w] for y in range(grey.height)]
 

@@ -108,7 +108,7 @@ def dhash(img: Image.Image, size: int = 8) -> str:
     quality, which sha256 cannot catch but this can.
     """
     small = img.convert("L").resize((size + 1, size), Image.Resampling.LANCZOS)
-    px = list(small.getdata())
+    px = list(small.get_flattened_data())
     bits = 0
     for row in range(size):
         base = row * (size + 1)
